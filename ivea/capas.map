@@ -1,0 +1,41 @@
+# -----------------------------------------------------------------
+# CAPAS DE LA IMPLEMENTACION DE MXSIG EN IVEA
+# -----------------------------------------------------------------
+
+
+# -----------------------------------------------------------------
+# 01.- MARCO GEOSTADISTICO DE REFERENCIA
+# -----------------------------------------------------------------
+
+LAYER
+    NAME "c30_ver"            #Estado de Veracruz
+    STATUS ON
+    TYPE POLYGON
+    
+    # 1. Indicamos a MapServer que lea de PostGIS
+    CONNECTIONTYPE POSTGIS
+    
+    # 2. Cadena de conexión
+    CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+    
+    # 3. Definición de la consulta: "the_geom FROM schema.nombre_tabla"
+    DATA "the_geom FROM ivea.veracruz USING UNIQUE gid USING SRID=900913"
+
+    CLASS
+        NAME "poligono"
+        STYLE
+            COLOR 50 150 250         # Relleno del polígono (RGB: Azul)
+            OPACITY 60               # Transparencia (Porcentaje en MapServer 7)
+            OUTLINECOLOR 0 50 150    # Color del borde (RGB: Azul Oscuro)
+            WIDTH 1.5                # Grosor del contorno
+        END
+    END
+END # Fin del LAYER
+
+
+
+# -----------------------------------------------------------------
+# 02.- OTRAS CAPAS DE INFORMACIÓN
+# -----------------------------------------------------------------
+
+INCLUDE "/opt/map/mdm60/ivea/coordinaciones.map"   #Coordinaciones de zona

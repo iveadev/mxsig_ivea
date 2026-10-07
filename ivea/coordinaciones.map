@@ -1,0 +1,559 @@
+# =================================================================
+# COORDINACIONES DE ZONA - IVEA
+# =================================================================
+
+# 1. TANTOYUCA (Naranja)
+LAYER
+    NAME "cz_01_tantoyuca"
+    STATUS ON
+    TYPE POLYGON
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+    DATA "the_geom FROM coordinaciones.cz_01_tantoyuca USING UNIQUE gid USING SRID=900913"
+    METADATA
+        "wms_title" "CZ 01 Tantoyuca"
+        "wms_enable_request" "*"
+    END
+    CLASS
+        NAME "Tantoyuca"
+        STYLE
+            COLOR 235 151 78
+            OUTLINECOLOR 60 60 60
+            WIDTH 0.8
+        END
+    END
+END
+
+# 3. CHICONTEPEC (Azul)
+LAYER
+    NAME "cz_03_chicontepec"
+    STATUS ON
+    TYPE POLYGON
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+    DATA "the_geom FROM coordinaciones.cz_03_chicontepec USING UNIQUE gid USING SRID=900913"
+    METADATA
+        "wms_title" "CZ 03 Chicontepec"
+        "wms_enable_request" "*"
+    END
+    CLASS
+        NAME "Chicontepec"
+        STYLE
+            COLOR 93 188 210
+            OUTLINECOLOR 60 60 60
+            WIDTH 0.8
+        END
+    END
+END
+
+# 4. TUXPAN (Morado)
+LAYER
+    NAME "cz_04_tuxpan"
+    STATUS ON
+    TYPE POLYGON
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+    DATA "the_geom FROM coordinaciones.cz_04_tuxpan USING UNIQUE gid USING SRID=900913"
+    METADATA
+        "wms_title" "CZ 04 Tuxpan"
+        "wms_enable_request" "*"
+    END
+    CLASS
+        NAME "Tuxpan"
+        STYLE
+            COLOR 158 53 147
+            OUTLINECOLOR 60 60 60
+            WIDTH 0.8
+        END
+    END
+END
+
+# 5. POZA RICA (Fucsia/Rosa)
+LAYER
+    NAME "cz_05_pozarica"
+    STATUS ON
+    TYPE POLYGON
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+    DATA "the_geom FROM coordinaciones.cz_05_pozarica USING UNIQUE gid USING SRID=900913"
+    METADATA
+        "wms_title" "CZ 05 Poza Rica"
+        "wms_enable_request" "*"
+    END
+    CLASS
+        NAME "Poza Rica"
+        STYLE
+            COLOR 196 46 96
+            OUTLINECOLOR 60 60 60
+            WIDTH 0.8
+        END
+    END
+END
+
+# 6. PAPANTLA (Verde)
+LAYER
+    NAME "cz_06_papantla"
+    STATUS ON
+    TYPE POLYGON
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+    DATA "the_geom FROM coordinaciones.cz_06_papantla USING UNIQUE gid USING SRID=900913"
+    METADATA
+        "wms_title" "CZ 06 Papantla"
+        "wms_enable_request" "*"
+    END
+    CLASS
+        NAME "Papantla"
+        STYLE
+            COLOR 74 163 113
+            OUTLINECOLOR 60 60 60
+            WIDTH 0.8
+        END
+    END
+END
+
+# 7. ESPINAL (Amarillo)
+LAYER
+    NAME "cz_07_espinal"
+    STATUS ON
+    TYPE POLYGON
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+    DATA "the_geom FROM coordinaciones.cz_07_espinal USING UNIQUE gid USING SRID=900913"
+    METADATA
+        "wms_title" "CZ 07 Espinal"
+        "wms_enable_request" "*"
+    END
+    CLASS
+        NAME "Espinal"
+        STYLE
+            COLOR 249 220 101
+            OUTLINECOLOR 60 60 60
+            WIDTH 0.8
+        END
+    END
+END
+
+# 8. MARTÍNEZ DE LA TORRE (Naranja)
+LAYER
+    NAME "cz_08_martinez"
+    STATUS ON
+    TYPE POLYGON
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+    DATA "the_geom FROM coordinaciones.cz_08_martinez USING UNIQUE gid USING SRID=900913"
+    METADATA
+        "wms_title" "CZ 08 Martinez"
+        "wms_enable_request" "*"
+    END
+    CLASS
+        NAME "Martinez"
+        STYLE
+            COLOR 235 151 78
+            OUTLINECOLOR 60 60 60
+            WIDTH 0.8
+        END
+    END
+END
+
+# 9. PEROTE (Azul)
+LAYER
+    NAME "cz_09_perote"
+    STATUS ON
+    TYPE POLYGON
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+    DATA "the_geom FROM coordinaciones.cz_09_perote USING UNIQUE gid USING SRID=900913"
+    METADATA
+        "wms_title" "CZ 09 Perote"
+        "wms_enable_request" "*"
+    END
+    CLASS
+        NAME "Perote"
+        STYLE
+            COLOR 93 188 210
+            OUTLINECOLOR 60 60 60
+            WIDTH 0.8
+        END
+    END
+END
+
+# 10. XALAPA (Morado)
+LAYER
+    NAME "cz_10_xalapa"
+    STATUS ON
+    TYPE POLYGON
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+    DATA "the_geom FROM coordinaciones.cz_10_xalapa USING UNIQUE gid USING SRID=900913"
+    METADATA
+        "wms_title" "CZ 10 Xalapa"
+        "wms_enable_request" "*"
+    END
+    CLASS
+        NAME "Xalapa"
+        STYLE
+            COLOR 158 53 147
+            OUTLINECOLOR 60 60 60
+            WIDTH 0.8
+        END
+    END
+END
+
+# 11. COATEPEC (Fucsia/Rosa)
+LAYER
+    NAME "cz_11_coatepec"
+    STATUS ON
+    TYPE POLYGON
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+    DATA "the_geom FROM coordinaciones.cz_11_coatepec USING UNIQUE gid USING SRID=900913"
+    METADATA
+        "wms_title" "CZ 11 Coatepec"
+        "wms_enable_request" "*"
+    END
+    CLASS
+        NAME "Coatepec"
+        STYLE
+            COLOR 196 46 96
+            OUTLINECOLOR 60 60 60
+            WIDTH 0.8
+        END
+    END
+END
+
+# 12. HUATUSCO (Verde)
+LAYER
+    NAME "cz_12_huatusco"
+    STATUS ON
+    TYPE POLYGON
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+    DATA "the_geom FROM coordinaciones.cz_12_huatusco USING UNIQUE gid USING SRID=900913"
+    METADATA
+        "wms_title" "CZ 12 Huatusco"
+        "wms_enable_request" "*"
+    END
+    CLASS
+        NAME "Huatusco"
+        STYLE
+            COLOR 74 163 113
+            OUTLINECOLOR 60 60 60
+            WIDTH 0.8
+        END
+    END
+END
+
+# 13. ORIZABA (Amarillo)
+LAYER
+    NAME "cz_13_orizaba"
+    STATUS ON
+    TYPE POLYGON
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+    DATA "the_geom FROM coordinaciones.cz_13_orizaba USING UNIQUE gid USING SRID=900913"
+    METADATA
+        "wms_title" "CZ 13 Orizaba"
+        "wms_enable_request" "*"
+    END
+    CLASS
+        NAME "Orizaba"
+        STYLE
+            COLOR 249 220 101
+            OUTLINECOLOR 60 60 60
+            WIDTH 0.8
+        END
+    END
+END
+
+# 14. CÓRDOBA (Naranja)
+LAYER
+    NAME "cz_14_cordoba"
+    STATUS ON
+    TYPE POLYGON
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+    DATA "the_geom FROM coordinaciones.cz_14_cordoba USING UNIQUE gid USING SRID=900913"
+    METADATA
+        "wms_title" "CZ 14 Cordoba"
+        "wms_enable_request" "*"
+    END
+    CLASS
+        NAME "Cordoba"
+        STYLE
+            COLOR 235 151 78
+            OUTLINECOLOR 60 60 60
+            WIDTH 0.8
+        END
+    END
+END
+
+# 15. ZONGOLICA (Azul)
+LAYER
+    NAME "cz_15_zongolica"
+    STATUS ON
+    TYPE POLYGON
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+    DATA "the_geom FROM coordinaciones.cz_15_zongolica USING UNIQUE gid USING SRID=900913"
+    METADATA
+        "wms_title" "CZ 15 Zongolica"
+        "wms_enable_request" "*"
+    END
+    CLASS
+        NAME "Zongolica"
+        STYLE
+            COLOR 93 188 210
+            OUTLINECOLOR 60 60 60
+            WIDTH 0.8
+        END
+    END
+END
+
+# 16. VERACRUZ (Morado)
+LAYER
+    NAME "cz_16_veracruz"
+    STATUS ON
+    TYPE POLYGON
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+    DATA "the_geom FROM coordinaciones.cz_16_veracruz USING UNIQUE gid USING SRID=900913"
+    METADATA
+        "wms_title" "CZ 16 Veracruz"
+        "wms_enable_request" "*"
+    END
+    CLASS
+        NAME "Veracruz"
+        STYLE
+            COLOR 158 53 147
+            OUTLINECOLOR 60 60 60
+            WIDTH 0.8
+        END
+    END
+END
+
+# 17. BOCA DEL RÍO (Fucsia/Rosa)
+LAYER
+    NAME "cz_17_bocadelrio"
+    STATUS ON
+    TYPE POLYGON
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+    DATA "the_geom FROM coordinaciones.cz_17_bocadelrio USING UNIQUE gid USING SRID=900913"
+    METADATA
+        "wms_title" "CZ 17 Boca del Rio"
+        "wms_enable_request" "*"
+    END
+    CLASS
+        NAME "Boca del Rio"
+        STYLE
+            COLOR 196 46 96
+            OUTLINECOLOR 60 60 60
+            WIDTH 0.8
+        END
+    END
+END
+
+# 18. TIERRA BLANCA (Verde)
+LAYER
+    NAME "cz_18_tierrablanca"
+    STATUS ON
+    TYPE POLYGON
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+    DATA "the_geom FROM coordinaciones.cz_18_tierrablanca USING UNIQUE gid USING SRID=900913"
+    METADATA
+        "wms_title" "CZ 18 Tierra Blanca"
+        "wms_enable_request" "*"
+    END
+    CLASS
+        NAME "Tierra Blanca"
+        STYLE
+            COLOR 74 163 113
+            OUTLINECOLOR 60 60 60
+            WIDTH 0.8
+        END
+    END
+END
+
+# 19. COSAMALOAPAN (Amarillo)
+LAYER
+    NAME "cz_19_cosamaloapan"
+    STATUS ON
+    TYPE POLYGON
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+    DATA "the_geom FROM coordinaciones.cz_19_cosamaloapan USING UNIQUE gid USING SRID=900913"
+    METADATA
+        "wms_title" "CZ 19 Cosamaloapan"
+        "wms_enable_request" "*"
+    END
+    CLASS
+        NAME "Cosamaloapan"
+        STYLE
+            COLOR 249 220 101
+            OUTLINECOLOR 60 60 60
+            WIDTH 0.8
+        END
+    END
+END
+
+# 20. SAN ANDRÉS TUXTLA (Naranja)
+LAYER
+    NAME "cz_20_sat"
+    STATUS ON
+    TYPE POLYGON
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+    DATA "the_geom FROM coordinaciones.cz_20_sat USING UNIQUE gid USING SRID=900913"
+    METADATA
+        "wms_title" "CZ 20 San Andres Tuxtla"
+        "wms_enable_request" "*"
+    END
+    CLASS
+        NAME "San Andres"
+        STYLE
+            COLOR 235 151 78
+            OUTLINECOLOR 60 60 60
+            WIDTH 0.8
+        END
+    END
+END
+
+# 21. ACAYUCAN (Azul)
+
+LAYER
+    NAME "cz_21_acayucan"
+    STATUS ON
+    TYPE POLYGON
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+    DATA "the_geom FROM coordinaciones.cz_21_acayucan USING UNIQUE gid USING SRID=900913"
+    METADATA
+        "wms_title" "CZ 21 Acayucan"
+        "wms_enable_request" "*"
+    END
+    CLASS
+        NAME "Acayucan"
+        STYLE
+            COLOR 93 188 210
+            OUTLINECOLOR 60 60 60
+            WIDTH 0.8
+        END
+    END
+END
+
+# 22. MINATITLÁN (Morado)
+
+LAYER
+    NAME "cz_22_minatitlan"
+    STATUS ON
+    TYPE POLYGON
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+    DATA "the_geom FROM coordinaciones.cz_22_minatitlan USING UNIQUE gid USING SRID=900913"
+    METADATA
+        "wms_title" "CZ 22 Minatitlan"
+        "wms_enable_request" "*"
+    END
+    CLASS
+        NAME "Minatitlan"
+        STYLE
+            COLOR 158 53 147
+            OUTLINECOLOR 60 60 60
+            WIDTH 0.8
+        END
+    END
+END
+
+# 23. COATZACOALCOS (Fucsia/Rosa)
+
+LAYER
+    NAME "cz_23_coatzacoalcos"
+    STATUS ON
+    TYPE POLYGON
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+    DATA "the_geom FROM coordinaciones.cz_23_coatzacoalcos USING UNIQUE gid USING SRID=900913"
+    METADATA
+        "wms_title" "CZ 23 Coatzacoalcos"
+        "wms_enable_request" "*"
+    END
+    CLASS
+        NAME "Coatzacoalcos"
+        STYLE
+            COLOR 196 46 96
+            OUTLINECOLOR 60 60 60
+            WIDTH 0.8
+        END
+    END
+END
+
+# 24. HUAYACOCOTLA (Verde - Extremo Norte Aislado)
+
+LAYER
+    NAME "cz_24_huayacocotla"
+    STATUS ON
+    TYPE POLYGON
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+    DATA "the_geom FROM coordinaciones.cz_24_huayacocotla USING UNIQUE gid USING SRID=900913"
+    METADATA
+        "wms_title" "CZ 24 Huayacocotla"
+        "wms_enable_request" "*"
+    END
+    CLASS
+        NAME "Huayacocotla"
+        STYLE
+            COLOR 74 163 113
+            OUTLINECOLOR 60 60 60
+            WIDTH 0.8
+        END
+    END
+END
+
+# 25. PÁNUCO (Amarillo - Extremo Norte Alto)
+
+LAYER
+    NAME "cz_25_panuco"
+    STATUS ON
+    TYPE POLYGON
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+    DATA "the_geom FROM coordinaciones.cz_25_panuco USING UNIQUE gid USING SRID=900913"
+    METADATA
+        "wms_title" "CZ 25 Panuco"
+        "wms_enable_request" "*"
+    END
+    CLASS
+        NAME "Panuco"
+        STYLE
+            COLOR 249 220 101
+            OUTLINECOLOR 60 60 60
+            WIDTH 0.8
+        END
+    END
+END
+
+# 26. JÁLTIPAN (Naranja - Región Sur)
+
+LAYER
+    NAME "cz_26_jaltipan"
+    STATUS ON
+    TYPE POLYGON
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+    DATA "the_geom FROM coordinaciones.cz_26_jaltipan USING UNIQUE gid USING SRID=900913"
+    METADATA
+        "wms_title" "CZ 26 Jaltipan"
+        "wms_enable_request" "*"
+    END
+    CLASS
+        NAME "Jaltipan"
+        STYLE
+            COLOR 235 151 78
+            OUTLINECOLOR 60 60 60
+            WIDTH 0.8
+        END
+    END
+END
