@@ -4,43 +4,161 @@ Archivo personalizado para IVEA, sustituye al archivo original de MXSIG
 
 // Definición de las coordinaciones de zona IVEA
 const coordinaciones = [
-    {id: "cz3001",	label: "Tantoyuca"},
-    {id: "cz3003",	label: "Chicontepec"},
-    {id: "cz3004",	label: "Tuxpan"},
-    {id: "cz3005",	label: "Poza Rica"},
-    {id: "cz3006",	label: "Papantla"},
-    {id: "cz3007",	label: "Espinal"},
-    {id: "cz3008",	label: "Martinez"},
-    {id: "cz3009",	label: "Perote"},
-    {id: "cz3010",	label: "Xalapa"},
-    {id: "cz3011",	label: "Coatepec"},
-    {id: "cz3012",	label: "Huatusco"},
-    {id: "cz3013",	label: "Orizaba"},
-    {id: "cz3014",	label: "Cordoba"},
-    {id: "cz3015",	label: "Zongolica"},
-    {id: "cz3016",	label: "Veracruz"},
-    {id: "cz3017",	label: "Boca del Rio"},
-    {id: "cz3018",	label: "Tierra Blanca"},
-    {id: "cz3019",	label: "Cosamaloapan"},
-    {id: "cz3020",	label: "San Andres"},
-    {id: "cz3021",	label: "Acayucan"},
-    {id: "cz3022",	label: "Minatitlan"},
-    {id: "cz3023",	label: "Coatzacoalcos"},
-    {id: "cz3024",	label: "Huayacocotla"},
-    {id: "cz3025",	label: "Panuco"},
-    {id: "cz3029",	label: "Jaltipan"}
+  {
+    "id": "cz3001",
+    "label": "Tantoyuca",
+    "regional": "Norte"
+  },
+  {
+    "id": "cz3003",
+    "label": "Chicontepec",
+    "regional": "Norte"
+  },
+  {
+    "id": "cz3004",
+    "label": "Tuxpan",
+    "regional": "Norte"
+  },
+  {
+    "id": "cz3005",
+    "label": "Poza Rica",
+    "regional": "Norte"
+  },
+  {
+    "id": "cz3006",
+    "label": "Papantla",
+    "regional": "Norte"
+  },
+  {
+    "id": "cz3007",
+    "label": "Espinal",
+    "regional": "Norte"
+  },
+  {
+    "id": "cz3008",
+    "label": "Martinez",
+    "regional": "Norte"
+  },
+  {
+    "id": "cz3009",
+    "label": "Perote",
+    "regional": "Centro"
+  },
+  {
+    "id": "cz3010",
+    "label": "Xalapa",
+    "regional": "Centro"
+  },
+  {
+    "id": "cz3011",
+    "label": "Coatepec",
+    "regional": "Centro"
+  },
+  {
+    "id": "cz3012",
+    "label": "Huatusco",
+    "regional": "Centro"
+  },
+  {
+    "id": "cz3013",
+    "label": "Orizaba",
+    "regional": "Centro"
+  },
+  {
+    "id": "cz3014",
+    "label": "Cordoba",
+    "regional": "Centro"
+  },
+  {
+    "id": "cz3015",
+    "label": "Zongolica",
+    "regional": "Centro"
+  },
+  {
+    "id": "cz3016",
+    "label": "Veracruz",
+    "regional": "Centro"
+  },
+  {
+    "id": "cz3017",
+    "label": "Boca del Rio",
+    "regional": "Sur"
+  },
+  {
+    "id": "cz3018",
+    "label": "Tierra Blanca",
+    "regional": "Sur"
+  },
+  {
+    "id": "cz3019",
+    "label": "Cosamaloapan",
+    "regional": "Sur"
+  },
+  {
+    "id": "cz3020",
+    "label": "San Andres",
+    "regional": "Sur"
+  },
+  {
+    "id": "cz3021",
+    "label": "Acayucan",
+    "regional": "Sur"
+  },
+  {
+    "id": "cz3022",
+    "label": "Minatitlan",
+    "regional": "Sur"
+  },
+  {
+    "id": "cz3023",
+    "label": "Coatzacoalcos",
+    "regional": "Sur"
+  },
+  {
+    "id": "cz3024",
+    "label": "Huayacocotla",
+    "regional": "Norte"
+  },
+  {
+    "id": "cz3025",
+    "label": "Panuco",
+    "regional": "Norte"
+  },
+  {
+    "id": "cz3029",
+    "label": "Jaltipan",
+    "regional": "Sur"
+  }
 ];
 
 // objeto para el grupo de capas de coordinaciones de zona IVEA
-const layers_coordinaciones = {};
+const layers_norte = {};
+const layers_centro = {};
+const layers_sur = {};
 let posCZ=70
 coordinaciones.forEach((cz) => {
-    layers_coordinaciones[cz.id] = {
-        label: cz.label,
-        scale: 1,
-        position: posCZ++,
-        active: false
-    };
+    if(cz.regional === 'Norte') {
+        layers_norte[cz.id] = {
+            label: cz.id + ' - ' + cz.label,
+            scale: 1,
+            position: posCZ++,
+            active: false
+        };
+    } else if(cz.regional === 'Centro') {
+        layers_centro[cz.id] = {
+            label: cz.id + ' - ' + cz.label,
+            scale: 1,
+            position: posCZ++,
+            active: false
+        };
+    } else if(cz.regional === 'Sur') {
+        layers_sur[cz.id] = {
+            label: cz.id + ' - ' + cz.label,
+            scale: 1,
+            position: posCZ++,
+            active: false
+        };
+    }
 });
 
 
@@ -49,7 +167,7 @@ define(function() {
         themes:{
 			T1:{
 				label:'Coordinaciones de Zona IVEA',
-                    layers:Object.keys(layers_coordinaciones),
+                    layers:coordinaciones.map(cz => cz.id),
                     desc:'Coordinaciones de Zona IVEA',
                     img:'mexico.jpg'
                 },
@@ -175,10 +293,18 @@ define(function() {
                     }
                 },
 			G2:{
-                    label:'Coordinaciones de Zona IVEA',
-                    layers:layers_coordinaciones,
+                    label:'Coordinaciones Reginal Norte',
+                    layers:layers_norte,
                 },
-            }            
+            G3:{
+                    label:'Coordinaciones Regional Centro',
+                    layers:layers_centro,
+                },
+            G4:{
+                    label:'Coordinaciones Regional Sur',
+                    layers:layers_sur,
+                }
+            },
         }
     };
 	if(typeof(treeConfig)!='undefined'){
