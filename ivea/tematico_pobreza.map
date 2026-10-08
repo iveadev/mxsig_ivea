@@ -1,0 +1,143 @@
+# =================================================================
+# ARCHIVO GENERADO AUTOMÁTICAMENTE: Indice de pobreza 
+# Mapa tematico del indice de pobreza segun CONEVAL 
+# =================================================================
+
+
+# Capa: c_pobreza_0
+LAYER
+    NAME "c_pobreza_0"
+    STATUS ON
+    TYPE POLYGON
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+    DATA "the_geom FROM (SELECT gid, the_geom, pobreza FROM coneval.indice_pobreza WHERE  pobreza<50) AS t1 USING UNIQUE gid USING SRID=900913"
+    METADATA
+        "wms_title" "c_pobreza_0"
+        "wms_enable_request" "*"
+    END
+    CLASS
+        NAME "c_pobreza_0"
+        STYLE
+            COLOR 255 255 255
+            OUTLINECOLOR 60 60 60
+            OPACITY 60
+            WIDTH 0.8
+        END
+    END
+END
+
+# Capa: c_pobreza_50
+LAYER
+    NAME "c_pobreza_50"
+    STATUS ON
+    TYPE POLYGON
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+    DATA "the_geom FROM (SELECT gid, the_geom, pobreza FROM coneval.indice_pobreza WHERE pobreza>=50 and pobreza<60) AS t1 USING UNIQUE gid USING SRID=900913"
+    METADATA
+        "wms_title" "c_pobreza_50"
+        "wms_enable_request" "*"
+    END
+    CLASS
+        NAME "c_pobreza_50"
+        STYLE
+            COLOR 240 219 201
+            OUTLINECOLOR 60 60 60
+            OPACITY 60
+            WIDTH 0.8
+        END
+    END
+END
+
+# Capa: c_pobreza_60
+LAYER
+    NAME "c_pobreza_60"
+    STATUS ON
+    TYPE POLYGON
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+    DATA "the_geom FROM (SELECT gid, the_geom, pobreza FROM coneval.indice_pobreza WHERE pobreza>=60 and pobreza<70) AS t1 USING UNIQUE gid USING SRID=900913"
+    METADATA
+        "wms_title" "c_pobreza_60"
+        "wms_enable_request" "*"
+    END
+    CLASS
+        NAME "c_pobreza_60"
+        STYLE
+            COLOR 204 169 137
+            OUTLINECOLOR 60 60 60
+            OPACITY 60
+            WIDTH 0.8
+        END
+    END
+END
+
+# Capa: c_pobreza_70
+LAYER
+    NAME "c_pobreza_70"
+    STATUS ON
+    TYPE POLYGON
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+    DATA "the_geom FROM (SELECT gid, the_geom, pobreza FROM coneval.indice_pobreza WHERE pobreza>=70 and pobreza<80) AS t1 USING UNIQUE gid USING SRID=900913"
+    METADATA
+        "wms_title" "c_pobreza_70"
+        "wms_enable_request" "*"
+    END
+    CLASS
+        NAME "c_pobreza_70"
+        STYLE
+            COLOR 186 126 69
+            OUTLINECOLOR 60 60 60
+            OPACITY 60
+            WIDTH 0.8
+        END
+    END
+END
+
+# Capa: c_pobreza_80
+LAYER
+    NAME "c_pobreza_80"
+    STATUS ON
+    TYPE POLYGON
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+    DATA "the_geom FROM (SELECT gid, the_geom, pobreza FROM coneval.indice_pobreza WHERE pobreza>=80 and pobreza<90) AS t1 USING UNIQUE gid USING SRID=900913"
+    METADATA
+        "wms_title" "c_pobreza_80"
+        "wms_enable_request" "*"
+    END
+    CLASS
+        NAME "c_pobreza_80"
+        STYLE
+            COLOR 143 98 20
+            OUTLINECOLOR 60 60 60
+            OPACITY 60
+            WIDTH 0.8
+        END
+    END
+END
+
+# Capa: c_pobreza_90
+LAYER
+    NAME "c_pobreza_90"
+    STATUS ON
+    TYPE POLYGON
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+    DATA "the_geom FROM (SELECT gid, the_geom, pobreza FROM coneval.indice_pobreza WHERE pobreza>=90) AS t1 USING UNIQUE gid USING SRID=900913"
+    METADATA
+        "wms_title" "c_pobreza_90"
+        "wms_enable_request" "*"
+    END
+    CLASS
+        NAME "c_pobreza_90"
+        STYLE
+            COLOR 66 52 28
+            OUTLINECOLOR 60 60 60
+            OPACITY 60
+            WIDTH 0.8
+        END
+    END
+END
