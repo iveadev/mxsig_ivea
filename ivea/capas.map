@@ -24,10 +24,10 @@ LAYER
     CLASS
         NAME "poligono"
         STYLE
-            COLOR 50 150 250         # Relleno del polígono (RGB: Azul)
-            OPACITY 60               # Transparencia (Porcentaje en MapServer 7)
-            OUTLINECOLOR 0 50 150    # Color del borde (RGB: Azul Oscuro)
-            WIDTH 1.5                # Grosor del contorno
+            #COLOR 50 150 250           # Relleno del polígono (RGB: Azul)
+            #OPACITY 60                 # Transparencia (Porcentaje en MapServer 7)
+            OUTLINECOLOR 0 0 0          # Color del borde (RGB: Azul Oscuro)
+            WIDTH 1.5                   # Grosor del contorno
         END
     END
 END # Fin del LAYER
