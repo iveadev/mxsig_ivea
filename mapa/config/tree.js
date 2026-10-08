@@ -33,11 +33,12 @@ const coordinaciones = [
 
 // objeto para el grupo de capas de coordinaciones de zona IVEA
 const layers_coordinaciones = {};
+let posCZ=70
 coordinaciones.forEach((cz) => {
     layers_coordinaciones[cz.id] = {
         label: cz.label,
         scale: 1,
-        position: 71,
+        position: posCZ++,
         active: false
     };
 });
