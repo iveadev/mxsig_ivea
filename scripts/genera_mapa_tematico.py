@@ -4,32 +4,32 @@ import os
 rangos = [
   {
     "nombre": "c_pobreza_0",
-    "condicional": " pobreza<50",
+    "condicional": " porcentaje<50",
     "color": "255 255 255"
   },
   {
     "nombre": "c_pobreza_50",
-    "condicional": "pobreza>=50 and pobreza<60",
+    "condicional": "porcentaje>=50 and porcentaje<60",
     "color": "240 219 201"
   },
   {
     "nombre": "c_pobreza_60",
-    "condicional": "pobreza>=60 and pobreza<70",
+    "condicional": "porcentaje>=60 and porcentaje<70",
     "color": "204 169 137"
   },
   {
     "nombre": "c_pobreza_70",
-    "condicional": "pobreza>=70 and pobreza<80",
+    "condicional": "porcentaje>=70 and porcentaje<80",
     "color": "186 126 69"
   },
   {
     "nombre": "c_pobreza_80",
-    "condicional": "pobreza>=80 and pobreza<90",
+    "condicional": "porcentaje>=80 and porcentaje<90",
     "color": "143 98 20"
   },
   {
     "nombre": "c_pobreza_90",
-    "condicional": "pobreza>=90",
+    "condicional": "porcentaje>=90",
     "color": "66 52 28"
   }
 ]
@@ -46,7 +46,7 @@ LAYER
     TYPE POLYGON
     CONNECTIONTYPE POSTGIS
     CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
-    DATA "the_geom FROM (SELECT gid, the_geom, pobreza FROM coneval.indice_pobreza WHERE {condicional}) AS t1 USING UNIQUE gid USING SRID=900913"
+    DATA "the_geom FROM (SELECT gid, the_geom, porcentaje FROM coneval.indice_pobreza WHERE {condicional}) AS t1 USING UNIQUE gid USING SRID=900913"
     METADATA
         "wms_title" "{nombre}"
         "wms_enable_request" "*"

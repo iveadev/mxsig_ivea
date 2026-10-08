@@ -11,7 +11,7 @@ LAYER
     TYPE POLYGON
     CONNECTIONTYPE POSTGIS
     CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
-    DATA "the_geom FROM (SELECT gid, the_geom, pobreza FROM coneval.indice_pobreza WHERE  pobreza<50) AS t1 USING UNIQUE gid USING SRID=900913"
+    DATA "the_geom FROM (SELECT gid, the_geom, porcentaje FROM coneval.indice_pobreza WHERE  porcentaje<50) AS t1 USING UNIQUE gid USING SRID=900913"
     METADATA
         "wms_title" "c_pobreza_0"
         "wms_enable_request" "*"
@@ -34,7 +34,7 @@ LAYER
     TYPE POLYGON
     CONNECTIONTYPE POSTGIS
     CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
-    DATA "the_geom FROM (SELECT gid, the_geom, pobreza FROM coneval.indice_pobreza WHERE pobreza>=50 and pobreza<60) AS t1 USING UNIQUE gid USING SRID=900913"
+    DATA "the_geom FROM (SELECT gid, the_geom, porcentaje FROM coneval.indice_pobreza WHERE porcentaje>=50 and porcentaje<60) AS t1 USING UNIQUE gid USING SRID=900913"
     METADATA
         "wms_title" "c_pobreza_50"
         "wms_enable_request" "*"
@@ -57,7 +57,7 @@ LAYER
     TYPE POLYGON
     CONNECTIONTYPE POSTGIS
     CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
-    DATA "the_geom FROM (SELECT gid, the_geom, pobreza FROM coneval.indice_pobreza WHERE pobreza>=60 and pobreza<70) AS t1 USING UNIQUE gid USING SRID=900913"
+    DATA "the_geom FROM (SELECT gid, the_geom, porcentaje FROM coneval.indice_pobreza WHERE porcentaje>=60 and porcentaje<70) AS t1 USING UNIQUE gid USING SRID=900913"
     METADATA
         "wms_title" "c_pobreza_60"
         "wms_enable_request" "*"
@@ -80,7 +80,7 @@ LAYER
     TYPE POLYGON
     CONNECTIONTYPE POSTGIS
     CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
-    DATA "the_geom FROM (SELECT gid, the_geom, pobreza FROM coneval.indice_pobreza WHERE pobreza>=70 and pobreza<80) AS t1 USING UNIQUE gid USING SRID=900913"
+    DATA "the_geom FROM (SELECT gid, the_geom, porcentaje FROM coneval.indice_pobreza WHERE porcentaje>=70 and porcentaje<80) AS t1 USING UNIQUE gid USING SRID=900913"
     METADATA
         "wms_title" "c_pobreza_70"
         "wms_enable_request" "*"
@@ -103,7 +103,7 @@ LAYER
     TYPE POLYGON
     CONNECTIONTYPE POSTGIS
     CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
-    DATA "the_geom FROM (SELECT gid, the_geom, pobreza FROM coneval.indice_pobreza WHERE pobreza>=80 and pobreza<90) AS t1 USING UNIQUE gid USING SRID=900913"
+    DATA "the_geom FROM (SELECT gid, the_geom, porcentaje FROM coneval.indice_pobreza WHERE porcentaje>=80 and porcentaje<90) AS t1 USING UNIQUE gid USING SRID=900913"
     METADATA
         "wms_title" "c_pobreza_80"
         "wms_enable_request" "*"
@@ -126,7 +126,7 @@ LAYER
     TYPE POLYGON
     CONNECTIONTYPE POSTGIS
     CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
-    DATA "the_geom FROM (SELECT gid, the_geom, pobreza FROM coneval.indice_pobreza WHERE pobreza>=90) AS t1 USING UNIQUE gid USING SRID=900913"
+    DATA "the_geom FROM (SELECT gid, the_geom, porcentaje FROM coneval.indice_pobreza WHERE porcentaje>=90) AS t1 USING UNIQUE gid USING SRID=900913"
     METADATA
         "wms_title" "c_pobreza_90"
         "wms_enable_request" "*"
