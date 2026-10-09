@@ -205,7 +205,44 @@ poblacion.forEach((p)=> {
     };
 })
 
-console.log(layers_poblacion);
+const layers_pobreza = {};
+const pobreza = [
+  {"id_capa": "c_pobreza_0",
+        "label": "Menor al 50%",
+    },
+    {
+        "id_capa": "c_pobreza_50",
+        "label": "50% a 59%",
+    },
+    {
+        "id_capa": "c_pobreza_60",
+        "label": "60% a 69%",
+    },
+    {
+        "id_capa": "c_pobreza_70",
+        "label": "70% a 79%",
+    },
+    {
+        "id_capa": "c_pobreza_80",
+        "label": "80% a 89%",
+    },
+    {
+        "id_capa": "c_pobreza_90",
+        "label": "90% o más",
+    }
+];
+
+pobreza.forEach((p)=> {
+  layers_pobreza[p.id_capa] = 
+     {
+        label: p.label,
+        scale: 1,
+        position: posicion_capa++,
+        active: false
+    };
+})
+
+
 
 
 
@@ -339,26 +376,32 @@ define(function() {
                         },
                     }
                 },
-			G2:{
-          label:'Coordinaciones Reginal Norte',
-          layers:layers_norte,
-      },
-        G3:{
-                label:'Coordinaciones Regional Centro',
-                layers:layers_centro,
-            },
-        G4:{
-                label:'Coordinaciones Regional Sur',
-                layers:layers_sur,
-            },
-        G5:{
+      G2:{
               label:'Rango de población',
               layers:layers_poblacion,
           },
+      G3:{
+              label:'Porcentaje de pobreza CONEVAL',
+              layers:layers_pobreza,
+          },
+
+			G4:{
+          label:'Coordinaciones Reginal Norte',
+          layers:layers_norte,
+      },
+        G4:{
+                label:'Coordinaciones Regional Centro',
+                layers:layers_centro,
+            },
+        G6:{
+                label:'Coordinaciones Regional Sur',
+                layers:layers_sur,
+            },
+        
 
 
 
-          
+
         },
       }
     };
