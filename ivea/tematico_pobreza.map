@@ -5,7 +5,8 @@
 
 
 # Capa: Menor al 50%
-NAME "c_pobreza_0"
+LAYER
+  NAME "c_pobreza_0"
   STATUS ON
   TYPE POLYGON
   CONNECTIONTYPE POSTGIS
@@ -29,7 +30,8 @@ NAME "c_pobreza_0"
 END
   
 # Capa: 50% a 59%
-NAME "c_pobreza_50"
+LAYER
+  NAME "c_pobreza_50"
   STATUS ON
   TYPE POLYGON
   CONNECTIONTYPE POSTGIS
@@ -53,7 +55,8 @@ NAME "c_pobreza_50"
 END
   
 # Capa: 60% a 69%
-NAME "c_pobreza_60"
+LAYER
+  NAME "c_pobreza_60"
   STATUS ON
   TYPE POLYGON
   CONNECTIONTYPE POSTGIS
@@ -77,7 +80,8 @@ NAME "c_pobreza_60"
 END
   
 # Capa: 70% a 79%
-NAME "c_pobreza_70"
+LAYER
+  NAME "c_pobreza_70"
   STATUS ON
   TYPE POLYGON
   CONNECTIONTYPE POSTGIS
@@ -101,7 +105,8 @@ NAME "c_pobreza_70"
 END
   
 # Capa: 80% a 89%
-NAME "c_pobreza_80"
+LAYER
+  NAME "c_pobreza_80"
   STATUS ON
   TYPE POLYGON
   CONNECTIONTYPE POSTGIS
@@ -125,7 +130,8 @@ NAME "c_pobreza_80"
 END
   
 # Capa: 90% o más
-NAME "c_pobreza_90"
+LAYER
+  NAME "c_pobreza_90"
   STATUS ON
   TYPE POLYGON
   CONNECTIONTYPE POSTGIS

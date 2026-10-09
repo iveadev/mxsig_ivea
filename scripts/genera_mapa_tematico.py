@@ -28,7 +28,8 @@ try:
   # Plantilla base para cada una de las capas con la sintaxis de subconsulta SQL en la sección DATA
   plantilla_layer = """
 # Capa: {nombre}
-NAME "{id_capa}"
+LAYER
+  NAME "{id_capa}"
   STATUS ON
   TYPE POLYGON
   CONNECTIONTYPE POSTGIS
