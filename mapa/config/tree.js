@@ -135,7 +135,7 @@ const coordinaciones = [
 const layers_norte = {};
 const layers_centro = {};
 const layers_sur = {};
-let posicion_capa=70
+let posicion_capa=2
 coordinaciones.forEach((cz) => {
     if(cz.regional === 'Norte') {
         layers_norte[cz.id] = {
@@ -330,7 +330,7 @@ define(function() {
                             label:'Estatal',
                             synonymous:['estado','estatales'],
                             scale:1,
-                            position:52,
+                            position:1,
                             active:false,
                             texts:{
                                 scale:1,
@@ -350,12 +350,16 @@ define(function() {
         G4:{
                 label:'Coordinaciones Regional Sur',
                 layers:layers_sur,
-            }
-        },
+            },
         G5:{
               label:'Rango de población',
               layers:layers_poblacion,
-          }
+          },
+
+
+
+          
+        },
       }
     };
 	if(typeof(treeConfig)!='undefined'){
