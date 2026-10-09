@@ -135,31 +135,76 @@ const coordinaciones = [
 const layers_norte = {};
 const layers_centro = {};
 const layers_sur = {};
-let posCZ=70
+let posicion_capa=70
 coordinaciones.forEach((cz) => {
     if(cz.regional === 'Norte') {
         layers_norte[cz.id] = {
             label: cz.id.toUpperCase() + ' - ' + cz.label,
             scale: 1,
-            position: posCZ++,
+            position: posicion_capa++,
             active: false
         };
     } else if(cz.regional === 'Centro') {
         layers_centro[cz.id] = {
             label: cz.id.toUpperCase() + ' - ' + cz.label,
             scale: 1,
-            position: posCZ++,
+            position: posicion_capa++,
             active: false
         };
     } else if(cz.regional === 'Sur') {
         layers_sur[cz.id] = {
             label: cz.id.toUpperCase() + ' - ' + cz.label,
             scale: 1,
-            position: posCZ++,
+            position: posicion_capa++,
             active: false
         };
     }
 });
+
+const layers_poblacion = {};
+const poblacion = [
+  {
+    "id_capa": "c_poblacion_1",
+    "label": "Rango de población 1 ",
+    "": ""
+  },
+  {
+    "id_capa": "c_poblacion_2",
+    "label": "Rango de población 2 ",
+    "": ""
+  },
+  {
+    "id_capa": "c_poblacion_3",
+    "label": "Rango de población 3 ",
+    "": ""
+  },
+  {
+    "id_capa": "c_poblacion_4",
+    "label": "Rango de población 4 ",
+    "": ""
+  },
+  {
+    "id_capa": "c_poblacion_5",
+    "label": "Rango de población 5 ",
+    "": ""
+  },
+  {
+    "id_capa": "c_poblacion_6",
+    "label": "Rango de población 6 ",
+    "": ""
+  }
+];
+
+poblacion.forEach((p)=> {
+  layers_poblacion[p.id_capa] = 
+     {
+        label: p.label,
+        scale: 1,
+        position: posicion_capa++,
+        active: false
+    };
+})
+
 
 
 define(function() {
@@ -293,19 +338,23 @@ define(function() {
                     }
                 },
 			G2:{
-                    label:'Coordinaciones Reginal Norte',
-                    layers:layers_norte,
-                },
-            G3:{
-                    label:'Coordinaciones Regional Centro',
-                    layers:layers_centro,
-                },
-            G4:{
-                    label:'Coordinaciones Regional Sur',
-                    layers:layers_sur,
-                }
+          label:'Coordinaciones Reginal Norte',
+          layers:layers_norte,
+      },
+        G3:{
+                label:'Coordinaciones Regional Centro',
+                layers:layers_centro,
             },
-        }
+        G4:{
+                label:'Coordinaciones Regional Sur',
+                layers:layers_sur,
+            }
+        },
+        G5:{
+              label:'Rango de población',
+              layers:layers_poblacion,
+          }
+      }
     };
 	if(typeof(treeConfig)!='undefined'){
         data = $.extend(data, treeConfig);
