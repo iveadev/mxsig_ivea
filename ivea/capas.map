@@ -38,4 +38,5 @@ END # Fin del LAYER
 # 02.- OTRAS CAPAS DE INFORMACIÓN
 # -----------------------------------------------------------------
 
-INCLUDE "/opt/map/mdm60/ivea/coordinaciones.map"   #Coordinaciones de zona
+INCLUDE "/opt/map/mdm60/ivea/coordinaciones.map"        #Coordinaciones de zona
+INCLUDE "/opt/map/mdm60/ivea/tematico_pobreza.map"      #Pobreza segun coneval
