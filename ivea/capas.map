@@ -40,3 +40,4 @@ END # Fin del LAYER
 
 INCLUDE "/opt/map/mdm60/ivea/coordinaciones.map"        #Coordinaciones de zona
 INCLUDE "/opt/map/mdm60/ivea/tematico_pobreza.map"      #Pobreza segun coneval
+INCLUDE "/opt/map/mdm60/ivea/poblacion_veracruz.map"    #Poblacion total de Veracruz

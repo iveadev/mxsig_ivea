@@ -1,0 +1,206 @@
+# =================================================================
+# ARCHIVO GENERADO AUTOMÁTICAMENTE A PARTIR DE LA DEFINICIÓN: layers.03_poblacion 
+# Población total del estado de Veracruz 
+# =================================================================
+
+
+# Capa: Rango de población 1
+LAYER
+  NAME "c_poblacion_1"
+  STATUS ON
+  TYPE POLYGON
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom, poblacion FROM marco_geoestadistico.poblacion WHERE poblacion>=1543 and poblacion<8925) AS t1 USING UNIQUE gid USING SRID=900913"
+
+  METADATA
+    "wms_title" "Rango de población 1"
+    "wms_enable_request" "*"
+  END
+
+  CLASS
+    NAME "Rango de población 1"
+    STYLE
+      COLOR 245 255 204
+      OPACITY 60
+      OUTLINECOLOR 60 60 60
+      WIDTH 0.8
+    END
+  END
+END
+  
+# Capa: Rango de población 2
+LAYER
+  NAME "c_poblacion_2"
+  STATUS ON
+  TYPE POLYGON
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom, poblacion FROM marco_geoestadistico.poblacion WHERE poblacion>=8925 and poblacion<16585) AS t1 USING UNIQUE gid USING SRID=900913"
+
+  METADATA
+    "wms_title" "Rango de población 2"
+    "wms_enable_request" "*"
+  END
+
+  CLASS
+    NAME "Rango de población 2"
+    STYLE
+      COLOR 222 252 174
+      OPACITY 60
+      OUTLINECOLOR 60 60 60
+      WIDTH 0.8
+    END
+  END
+END
+  
+# Capa: Rango de población 3
+LAYER
+  NAME "c_poblacion_3"
+  STATUS ON
+  TYPE POLYGON
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom, poblacion FROM marco_geoestadistico.poblacion WHERE poblacion>=16585 and poblacion<24127) AS t1 USING UNIQUE gid USING SRID=900913"
+
+  METADATA
+    "wms_title" "Rango de población 3"
+    "wms_enable_request" "*"
+  END
+
+  CLASS
+    NAME "Rango de población 3"
+    STYLE
+      COLOR 194 247 143
+      OPACITY 60
+      OUTLINECOLOR 60 60 60
+      WIDTH 0.8
+    END
+  END
+END
+  
+# Capa: Rango de población 4
+LAYER
+  NAME "c_poblacion_4"
+  STATUS ON
+  TYPE POLYGON
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom, poblacion FROM marco_geoestadistico.poblacion WHERE poblacion>=24127 and poblacion<39327) AS t1 USING UNIQUE gid USING SRID=900913"
+
+  METADATA
+    "wms_title" "Rango de población 4"
+    "wms_enable_request" "*"
+  END
+
+  CLASS
+    NAME "Rango de población 4"
+    STYLE
+      COLOR 142 219 70
+      OPACITY 60
+      OUTLINECOLOR 60 60 60
+      WIDTH 0.8
+    END
+  END
+END
+  
+# Capa: Rango de población 5
+LAYER
+  NAME "c_poblacion_5"
+  STATUS ON
+  TYPE POLYGON
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom, poblacion FROM marco_geoestadistico.poblacion WHERE poblacion>=39327 and poblacion<61377) AS t1 USING UNIQUE gid USING SRID=900913"
+
+  METADATA
+    "wms_title" "Rango de población 5"
+    "wms_enable_request" "*"
+  END
+
+  CLASS
+    NAME "Rango de población 5"
+    STYLE
+      COLOR 101 179 36
+      OPACITY 60
+      OUTLINECOLOR 60 60 60
+      WIDTH 0.8
+    END
+  END
+END
+  
+# Capa: Rango de población 6
+LAYER
+  NAME "c_poblacion_6"
+  STATUS ON
+  TYPE POLYGON
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom, poblacion FROM marco_geoestadistico.poblacion WHERE poblacion>=61377 and poblacion<85489) AS t1 USING UNIQUE gid USING SRID=900913"
+
+  METADATA
+    "wms_title" "Rango de población 6"
+    "wms_enable_request" "*"
+  END
+
+  CLASS
+    NAME "Rango de población 6"
+    STYLE
+      COLOR 65 138 18
+      OPACITY 60
+      OUTLINECOLOR 60 60 60
+      WIDTH 0.8
+    END
+  END
+END
+  
+# Capa: Rango de población 7
+LAYER
+  NAME "c_poblacion_7"
+  STATUS ON
+  TYPE POLYGON
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom, poblacion FROM marco_geoestadistico.poblacion WHERE poblacion>=85489 and poblacion<144776) AS t1 USING UNIQUE gid USING SRID=900913"
+
+  METADATA
+    "wms_title" "Rango de población 7"
+    "wms_enable_request" "*"
+  END
+
+  CLASS
+    NAME "Rango de población 7"
+    STYLE
+      COLOR 46 102 18
+      OPACITY 60
+      OUTLINECOLOR 60 60 60
+      WIDTH 0.8
+    END
+  END
+END
+  
+# Capa: Rango de población 8
+LAYER
+  NAME "c_poblacion_8"
+  STATUS ON
+  TYPE POLYGON
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom, poblacion FROM marco_geoestadistico.poblacion WHERE poblacion>=144776 and poblacion<607209) AS t1 USING UNIQUE gid USING SRID=900913"
+
+  METADATA
+    "wms_title" "Rango de población 8"
+    "wms_enable_request" "*"
+  END
+
+  CLASS
+    NAME "Rango de población 8"
+    STYLE
+      COLOR 31 66 17
+      OPACITY 60
+      OUTLINECOLOR 60 60 60
+      WIDTH 0.8
+    END
+  END
+END
+  
