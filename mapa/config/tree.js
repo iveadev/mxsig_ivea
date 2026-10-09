@@ -389,7 +389,7 @@ define(function() {
           label:'Coordinaciones Reginal Norte',
           layers:layers_norte,
       },
-        G4:{
+        G5:{
                 label:'Coordinaciones Regional Centro',
                 layers:layers_centro,
             },
