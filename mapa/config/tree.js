@@ -166,32 +166,42 @@ const poblacion = [
   {
     "id_capa": "c_poblacion_1",
     "label": "Rango de población 1 ",
-    "": ""
+    
   },
   {
     "id_capa": "c_poblacion_2",
     "label": "Rango de población 2 ",
-    "": ""
+    
   },
   {
     "id_capa": "c_poblacion_3",
     "label": "Rango de población 3 ",
-    "": ""
+    
   },
   {
     "id_capa": "c_poblacion_4",
     "label": "Rango de población 4 ",
-    "": ""
+    
   },
   {
     "id_capa": "c_poblacion_5",
     "label": "Rango de población 5 ",
-    "": ""
+    
   },
   {
     "id_capa": "c_poblacion_6",
     "label": "Rango de población 6 ",
-    "": ""
+    
+  },
+  {
+    "id_capa": "c_poblacion_7",
+    "label": "Rango de población 7",
+    
+  },
+  {
+    "id_capa": "c_poblacion_8",
+    "label": "Rango de población 8",
+    
   }
 ];
 
