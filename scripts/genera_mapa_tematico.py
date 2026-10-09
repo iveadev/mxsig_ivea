@@ -13,10 +13,14 @@ if nombre_modulo.endswith(".py"):
   nombre_modulo = nombre_modulo[:-3]
 if nombre_modulo.startswith("./"):
   nombre_modulo = nombre_modulo[2:]
-if nombre_modulo.startswith("scripts/"):
-  nombre_modulo = nombre_modulo[len("scripts/"):]
+if nombre_modulo.startswith(".\\"):
+  nombre_modulo = nombre_modulo[2:]
 #Reemplazar las barras "/" por puntos "."
 nombre_modulo = nombre_modulo.replace("/", ".")
+#Reemplazar las barras "/" por puntos "."
+nombre_modulo = nombre_modulo.replace("\\", ".")
+if nombre_modulo.startswith("scripts."):
+  nombre_modulo = nombre_modulo[len("scripts."):]
 
 try:
   # Importar el módulo dinámicamente
