@@ -205,6 +205,8 @@ poblacion.forEach((p)=> {
     };
 })
 
+console.log(layers_poblacion);
+
 
 
 define(function() {
