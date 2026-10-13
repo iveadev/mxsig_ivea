@@ -21,7 +21,7 @@ LAYER
     NAME "Tantoyuca"
     STYLE
       COLOR 235 151 78
-      SYMBOL 'circle'
+      SYMBOL 'circulor'
       SIZE 9
       OUTLINECOLOR 0 0 0
     END
@@ -44,7 +44,7 @@ LAYER
     NAME "Chicontepec"
     STYLE
       COLOR 93 188 210
-      SYMBOL 'circle'
+      SYMBOL 'circulor'
       SIZE 9
       OUTLINECOLOR 0 0 0
     END
@@ -67,7 +67,7 @@ LAYER
     NAME "Tuxpan"
     STYLE
       COLOR 158 53 147
-      SYMBOL 'circle'
+      SYMBOL 'circulor'
       SIZE 9
       OUTLINECOLOR 0 0 0
     END
@@ -90,7 +90,7 @@ LAYER
     NAME "Córdoba"
     STYLE
       COLOR 188 53 53
-      SYMBOL 'circle'
+      SYMBOL 'circulor'
       SIZE 9
       OUTLINECOLOR 0 0 0
     END

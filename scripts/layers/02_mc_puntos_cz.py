@@ -9,7 +9,7 @@ tipo_capa = "POINT"
 encoding_global = "ISO-8859-1" 
 
 # CONFIGURACIONES GLOBALES PARA PUNTOS
-symbol_global = "circle"
+symbol_global = "circulor"
 size_global = 9
 outlinecolor_global = "0 0 0"
 
