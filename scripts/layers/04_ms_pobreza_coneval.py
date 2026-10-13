@@ -1,5 +1,5 @@
 #---------------------------------------------------------------------
-# Capa con multiples clases (multiclass) para MapServer
+# Capa con multiples clases (multiclass)
 #---------------------------------------------------------------------
 
 descripcion =  "Indice de Pobreza del CONEVAL en munucipios de Veracruz"

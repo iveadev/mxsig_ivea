@@ -1,22 +1,30 @@
-# Archivo de deficion para las capas de Coordinaciones de Zona del IVEA
-descripcion =  "Coordinaciones de Zona del IVEA"
-# Nombre del archivo de salida
-output =  "ivea/coordinaciones.map"
+#---------------------------------------------------------------------
+# Multiples Capas (a partir de una condicional)
+#---------------------------------------------------------------------
 
-# nombre de la tabla en la base de datos, comenzando con el esquema, por ejemplo: "esquema.tabla"
-tabla =  "marco_geoestadistico.mun_coordinaciones"
-#Campos adicionales a seleccionar en la subconsulta SQL
-campos_adicionales = ["clv_zona"]
+descripcion = "Coordinaciones de Zona del IVEA"
+output = "coordinaciones"
+tabla = "marco_geoestadistico.mun_coordinaciones"
+campos_adicionales = ["clv_zona", "coord_zon"]
+tipo_capa = "POLYGON"
 
-#Valores globales para las capas, si se definen aquí se aplicarán a todas las capas, si se definen en la capa se sobreescriben
-opacity =  "60"
-outlinecolor =  "60 60 60"
-linewidth =  "0.8"
+# VARIABLES GLOBALES DE DISEÑO (Actúan como respaldo / fallback)
+opacity_global = 60
+outlinecolor_global = "60 60 60"
+width_global = 0.8
+
+# --- VARIABLE SELECTORA DEL CASO DE USO ---
+# Opciones soportadas: 
+# 1. "MULTIPLES_CAPAS"  -> Genera un LAYER individual por cada fila (Tu enfoque actual de MxSIG)
+# 2. "MULTIPLES_ESTILOS" -> Genera UN SOLO LAYER en MxSIG con múltiples bloques CLASS dentro
+modo_generacion = "MULTIPLES_CAPAS" 
 
 #Definición de las propiedades de las capas:
 #   id_capa: Nombre de la capa generada en mapserver
 #   condicional: Condición SQL para filtrar la capa
 #   nombre: Nombre de la capa que se mostrará en el mapa
+
+#   Valores a sobrescribir de acuerdo al tipo de capa:
 #   color: Color de la capa
 #   opacity: Opacidad de la capa, si no está definido se omitirá en la capa
 #   outlinecolor: Color del contorno de la capa, si no está definido se omitirá en la capa

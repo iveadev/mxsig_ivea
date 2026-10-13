@@ -1,6 +1,7 @@
+#---------------------------------------------------------------------
+# Capa con multiples clases (multiclass)
+#---------------------------------------------------------------------
 
-
-# Archivo de deficion para las capas
 descripcion =  "Población total del estado de Veracruz"
 
 # Se toma la descripción, se puede editar en caso de ser ncesario

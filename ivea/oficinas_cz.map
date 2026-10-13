@@ -1,0 +1,98 @@
+# oficinas_cz.map
+#======================================================================
+# GENERADO AUTOMÁTICAMENTE A PARTIR DE: scripts/layers/02_mc_puntos_cz.py
+# Descripción: Puntos de las Oficinas de Coordinacion IVEA
+# Modo de Operación: MULTIPLES_CAPAS
+#======================================================================
+
+LAYER
+  NAME "cz3001_p"
+  STATUS ON
+  TYPE POINT
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom, clv_cz, nom_cz FROM ivea.oficinas_cz WHERE clv_cz = 1) AS t1 USING UNIQUE gid USING SRID=900913"
+  ENCODING "ISO-8859-1"
+  METADATA
+    "wms_title" "Tantoyuca"
+    "wms_enable_request" "*"
+  END
+  CLASS
+    NAME "Tantoyuca"
+    STYLE
+      COLOR 235 151 78
+      SYMBOL 'circle'
+      SIZE 9
+      OUTLINECOLOR 0 0 0
+    END
+  END
+END
+
+LAYER
+  NAME "cz3003_p"
+  STATUS ON
+  TYPE POINT
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom, clv_cz, nom_cz FROM ivea.oficinas_cz WHERE clv_cz = 3) AS t1 USING UNIQUE gid USING SRID=900913"
+  ENCODING "ISO-8859-1"
+  METADATA
+    "wms_title" "Chicontepec"
+    "wms_enable_request" "*"
+  END
+  CLASS
+    NAME "Chicontepec"
+    STYLE
+      COLOR 93 188 210
+      SYMBOL 'circle'
+      SIZE 9
+      OUTLINECOLOR 0 0 0
+    END
+  END
+END
+
+LAYER
+  NAME "cz3004_p"
+  STATUS ON
+  TYPE POINT
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom, clv_cz, nom_cz FROM ivea.oficinas_cz WHERE clv_cz = 4) AS t1 USING UNIQUE gid USING SRID=900913"
+  ENCODING "ISO-8859-1"
+  METADATA
+    "wms_title" "Tuxpan"
+    "wms_enable_request" "*"
+  END
+  CLASS
+    NAME "Tuxpan"
+    STYLE
+      COLOR 158 53 147
+      SYMBOL 'circle'
+      SIZE 9
+      OUTLINECOLOR 0 0 0
+    END
+  END
+END
+
+LAYER
+  NAME "cz3014_p"
+  STATUS ON
+  TYPE POINT
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom, clv_cz, nom_cz FROM ivea.oficinas_cz WHERE clv_cz = 14) AS t1 USING UNIQUE gid USING SRID=900913"
+  ENCODING "ISO-8859-1"
+  METADATA
+    "wms_title" "Córdoba"
+    "wms_enable_request" "*"
+  END
+  CLASS
+    NAME "Córdoba"
+    STYLE
+      COLOR 188 53 53
+      SYMBOL 'circle'
+      SIZE 9
+      OUTLINECOLOR 0 0 0
+    END
+  END
+END
