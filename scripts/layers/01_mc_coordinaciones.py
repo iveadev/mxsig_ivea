@@ -5,7 +5,7 @@
 descripcion = "Coordinaciones de Zona del IVEA"
 output = "coordinaciones"
 tabla = "marco_geoestadistico.mun_coordinaciones"
-campos_adicionales = ["clv_zona", "coord_zon"]
+campos_adicionales = ["clv_zona"]
 tipo_capa = "POLYGON"
 
 # VARIABLES GLOBALES DE DISEÑO (Actúan como respaldo / fallback)
