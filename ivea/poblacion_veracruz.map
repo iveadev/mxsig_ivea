@@ -19,7 +19,7 @@ LAYER
 
   CLASS
     NAME "Rango de población 1"
-    EXPRESSION ([poblacion]>=1543 and poblacion<8925)
+    EXPRESSION ([poblacion]>=1543 and [poblacion]<8925)
     STYLE
       COLOR 245 255 204
       OPACITY 60
@@ -31,7 +31,7 @@ LAYER
 
   CLASS
     NAME "Rango de población 2"
-    EXPRESSION ([poblacion]>=8925 and poblacion<16585)
+    EXPRESSION ([poblacion]>=8925 and [poblacion]<16585)
     STYLE
       COLOR 222 252 174
       OPACITY 60
@@ -43,7 +43,7 @@ LAYER
 
   CLASS
     NAME "Rango de población 3"
-    EXPRESSION ([poblacion]>=16585 and poblacion<24127)
+    EXPRESSION ([poblacion]>=16585 and [poblacion]<24127)
     STYLE
       COLOR 194 247 143
       OPACITY 60
@@ -55,7 +55,7 @@ LAYER
 
   CLASS
     NAME "Rango de población 4"
-    EXPRESSION ([poblacion]>=24127 and poblacion<39327)
+    EXPRESSION ([poblacion]>=24127 and [poblacion]<39327)
     STYLE
       COLOR 142 219 70
       OPACITY 60
@@ -67,7 +67,7 @@ LAYER
 
   CLASS
     NAME "Rango de población 5"
-    EXPRESSION ([poblacion]>=39327 and poblacion<61377)
+    EXPRESSION ([poblacion]>=39327 and [poblacion]<61377)
     STYLE
       COLOR 101 179 36
       OPACITY 60
@@ -79,7 +79,7 @@ LAYER
 
   CLASS
     NAME "Rango de población 6"
-    EXPRESSION ([poblacion]>=61377 and poblacion<85489)
+    EXPRESSION ([poblacion]>=61377 and [poblacion]<85489)
     STYLE
       COLOR 65 138 18
       OPACITY 60
@@ -91,7 +91,7 @@ LAYER
 
   CLASS
     NAME "Rango de población 7"
-    EXPRESSION ([poblacion]>=85489 and poblacion<144776)
+    EXPRESSION ([poblacion]>=85489 and [poblacion]<144776)
     STYLE
       COLOR 46 102 18
       OPACITY 60
@@ -103,7 +103,7 @@ LAYER
 
   CLASS
     NAME "Rango de población 8"
-    EXPRESSION ([poblacion]>=144776 and poblacion<607209)
+    EXPRESSION ([poblacion]>=144776 and [poblacion]<607209)
     STYLE
       COLOR 31 66 17
       OPACITY 60

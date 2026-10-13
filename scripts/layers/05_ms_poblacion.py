@@ -32,42 +32,42 @@ linewidth =  "0.8"
 
 clases = [
   {
-    "condicional": "[poblacion]>=1543 and poblacion<8925",
+    "condicional": "[poblacion]>=1543 and [poblacion]<8925",
     "color": "245 255 204",
     "nombre": "Rango de población 1"
   },
   { 
-    "condicional": "[poblacion]>=8925 and poblacion<16585",
+    "condicional": "[poblacion]>=8925 and [poblacion]<16585",
     "color": "222 252 174",
     "nombre": "Rango de población 2"
   },
   { 
-    "condicional": "[poblacion]>=16585 and poblacion<24127",
+    "condicional": "[poblacion]>=16585 and [poblacion]<24127",
     "color": "194 247 143",
     "nombre": "Rango de población 3"
   },
   { 
-    "condicional": "[poblacion]>=24127 and poblacion<39327",
+    "condicional": "[poblacion]>=24127 and [poblacion]<39327",
     "color": "142 219 70",
     "nombre": "Rango de población 4"
   },
   { 
-    "condicional": "[poblacion]>=39327 and poblacion<61377",
+    "condicional": "[poblacion]>=39327 and [poblacion]<61377",
     "color": "101 179 36",
     "nombre": "Rango de población 5"
   },
   { 
-    "condicional": "[poblacion]>=61377 and poblacion<85489",
+    "condicional": "[poblacion]>=61377 and [poblacion]<85489",
     "color": "65 138 18",
     "nombre": "Rango de población 6"
   },
   { 
-    "condicional": "[poblacion]>=85489 and poblacion<144776",
+    "condicional": "[poblacion]>=85489 and [poblacion]<144776",
     "color": "46 102 18",
     "nombre": "Rango de población 7"
   },
   { 
-    "condicional": "[poblacion]>=144776 and poblacion<607209",
+    "condicional": "[poblacion]>=144776 and [poblacion]<607209",
     "color": "31 66 17",
     "nombre": "Rango de población 8"
   }
