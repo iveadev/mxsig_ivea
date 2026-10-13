@@ -3,7 +3,7 @@ import importlib
 import sys
 
 if len(sys.argv) < 2:
-    print("Uso: python genera_mapa_tematico.py archivo_configuracion.py")
+    print("Uso: python genera_multiples_capas.py archivo_configuracion.py")
     sys.exit(1)
 
 nombre_modulo = sys.argv[1]
@@ -89,7 +89,7 @@ END
 
   print("¡Archivo generado con éxito!")
   # Quitamos la última coma y espacio; reemplazamos las comas por %2C para que se pueda usar en la URL de MapServer
-  print(f"Capas generadas:\nhttp://mdm.ivea.local/cgi-bin/mapserv?map=/opt/map/mdm60/mdm61vectormxsig.map&LAYERS={capas_generadas[:-2].replace(', ', '%2C')}&FORMAT=image%2Fpng&MAXRESOLUTION=4891.969809375&MINZOOMLEVEL=5&ZOOMOFFSET=5&TATO=0&LAYERNAME=&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&STYLES=&FIRM=469&SRS=EPSG%3A900913&BBOX=-11586010.97117,1662671.8323836,-9926410.2133399,2754804.0923266&WIDTH=1357&HEIGHT=893\n")
+  print(f"\nURL para probar en el navegador:\nhttp://mdm.ivea.local/cgi-bin/mapserv?map=/opt/map/mdm60/mdm61vectormxsig.map&LAYERS={capas_generadas[:-2].replace(', ', '%2C')}&FORMAT=image%2Fpng&MAXRESOLUTION=4891.969809375&MINZOOMLEVEL=5&ZOOMOFFSET=5&TATO=0&LAYERNAME=&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&STYLES=&FIRM=469&SRS=EPSG%3A900913&BBOX=-11586010.97117,1662671.8323836,-9926410.2133399,2754804.0923266&WIDTH=1357&HEIGHT=893\n")
 
 except ModuleNotFoundError:
   print(f"Error: No se encontró el módulo '{nombre_modulo}'.")
