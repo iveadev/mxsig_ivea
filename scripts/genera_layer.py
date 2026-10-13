@@ -45,7 +45,7 @@ def crear_bloque_style(datos_fila, config):
         
     # --- Configuración específica para PUNTOS ---
     elif tipo == "POINT":
-        symbol = datos_fila.get("symbol", getattr(config, "symbol_global", "circle"))
+        symbol = datos_fila.get("symbol", getattr(config, "symbol_global", "circulor"))
         size = datos_fila.get("size", getattr(config, "size_global", 8))
         outlinecolor = datos_fila.get("outlinecolor", getattr(config, "outlinecolor_global", None))
         
