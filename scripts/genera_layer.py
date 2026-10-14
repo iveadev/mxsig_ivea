@@ -118,7 +118,7 @@ def main():
     
     # NUEVA ESTRUCTURA REQUERIDA POR MXSIG (Espejo Vector vs Leyendas)
     ruta_vector = os.path.join(carpeta_base, subfolder_geometria)
-    ruta_leyendas = os.path.join(carpeta_base, "texto")
+    ruta_leyendas = os.path.join(carpeta_base, "leyendas")
     
     # Crear carpetas si no existen
     os.makedirs(ruta_vector, exist_ok=True)
