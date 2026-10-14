@@ -4,12 +4,12 @@
 #======================================================================
 
 LAYER
-  NAME "oficinas_cz"
+  NAME "capa_oficinas_cz"
   STATUS ON
   TYPE POINT
   CONNECTIONTYPE POSTGIS
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
-  DATA "the_geom FROM (SELECT gid, clv_cz, the_geom, nom_cz FROM ivea.oficinas_cz) AS t1 USING UNIQUE gid USING SRID=900913"
+  DATA "the_geom FROM (SELECT gid, nom_cz, the_geom, clv_cz FROM ivea.oficinas_cz) AS t1 USING UNIQUE gid USING SRID=900913"
   ENCODING "ISO-8859-1"
   METADATA
     "wms_title" "Etiquetas - Puntos de las Oficinas de Coordinacion IVEA"

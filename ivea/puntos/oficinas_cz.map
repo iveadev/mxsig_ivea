@@ -6,7 +6,7 @@
 #======================================================================
 
 LAYER
-  NAME "oficinas_cz"
+  NAME "capa_oficinas_cz"
   STATUS ON
   TYPE POINT
   CONNECTIONTYPE POSTGIS
