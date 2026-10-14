@@ -160,7 +160,8 @@ def main():
 
     if cfg.modo_generacion == "MULTIPLES_CAPAS":
         for c in cfg.capas:
-            sql = f"the_geom FROM (SELECT {campos_select} FROM {cfg.tabla} WHERE {c['condicional']}) AS t1 USING UNIQUE gid USING SRID=900913"
+            where = f"WHERE {c['condicional']}" if 'condicional' in c else ""
+            sql = f"the_geom FROM (SELECT {campos_select} FROM {cfg.tabla} {where}) AS t1 USING UNIQUE gid USING SRID=900913"
             lineas_geo.extend(construir_layer_base(c["id_capa"], cfg.tipo_capa, sql, encoding_actual))
             lineas_geo.extend(crear_bloque_metadata(c["nombre"]))
             lineas_geo.extend(crear_bloque_class(c, cfg, usar_expresion=False))
