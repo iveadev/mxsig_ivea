@@ -1,17 +1,18 @@
-# tematico_coordinaciones.map - CAPAS DE LEYENDAS / TEXTOS (mxsigleyendas)
+# oficinas_cz.map - CAPAS DE LEYENDAS / TEXTOS (mxsigleyendas)
 #======================================================================
 # GENERADO AUTOMÁTICAMENTE PARA MXSIG
 #======================================================================
 
 LAYER
-  NAME "c_tematico_cz"
+  NAME "oficinas_cz"
   STATUS ON
-  TYPE POLYGON
+  TYPE POINT
   CONNECTIONTYPE POSTGIS
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
-  DATA "the_geom FROM (SELECT coord_zon, gid, the_geom, clv_zona FROM marco_geoestadistico.mun_coordinaciones) AS t1 USING UNIQUE gid USING SRID=900913"
+  DATA "the_geom FROM (SELECT nom_cz, clv_cz, coord_zon, the_geom, gid FROM ivea.oficinas_cz) AS t1 USING UNIQUE gid USING SRID=900913"
+  ENCODING "ISO-8859-1"
   METADATA
-    "wms_title" "Etiquetas - Coordinaciones de Zona del IVEA"
+    "wms_title" "Etiquetas - Puntos de las Oficinas de Coordinacion IVEA"
     "wms_enable_request" "*"
   END
   LABELITEM "coord_zon"
