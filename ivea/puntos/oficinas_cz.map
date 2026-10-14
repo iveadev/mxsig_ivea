@@ -11,7 +11,7 @@ LAYER
   TYPE POINT
   CONNECTIONTYPE POSTGIS
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
-  DATA "the_geom FROM (SELECT gid, the_geom, clv_cz, nom_cz FROM ivea.oficinas_cz) AS t1 USING UNIQUE gid USING SRID=900913"
+  DATA "the_geom FROM (SELECT gid, the_geom, clv_cz FROM ivea.oficinas_cz) AS t1 USING UNIQUE gid USING SRID=900913"
   ENCODING "ISO-8859-1"
   METADATA
     "wms_title" "Puntos de las Oficinas de Coordinacion IVEA"
@@ -19,7 +19,7 @@ LAYER
   END
   CLASS
     NAME "Tantoyuca"
-    EXPRESSION ([clv_zona] = 1)
+    EXPRESSION ([clv_cz] = 1)
     STYLE
       COLOR 235 151 78
       SYMBOL 'circulor'
@@ -29,7 +29,7 @@ LAYER
   END
   CLASS
     NAME "Chicontepec"
-    EXPRESSION ([clv_zona] = 3)
+    EXPRESSION ([clv_cz] = 3)
     STYLE
       COLOR 93 188 210
       SYMBOL 'circulor'
@@ -39,7 +39,7 @@ LAYER
   END
   CLASS
     NAME "Tuxpan"
-    EXPRESSION ([clv_zona] = 4)
+    EXPRESSION ([clv_cz] = 4)
     STYLE
       COLOR 158 53 147
       SYMBOL 'circulor'
@@ -49,7 +49,7 @@ LAYER
   END
   CLASS
     NAME "Poza Rica"
-    EXPRESSION ([clv_zona] = 5)
+    EXPRESSION ([clv_cz] = 5)
     STYLE
       COLOR 196 46 96
       SYMBOL 'circulor'
@@ -59,7 +59,7 @@ LAYER
   END
   CLASS
     NAME "Papantla"
-    EXPRESSION ([clv_zona] = 6)
+    EXPRESSION ([clv_cz] = 6)
     STYLE
       COLOR 74 163 113
       SYMBOL 'circulor'
@@ -69,7 +69,7 @@ LAYER
   END
   CLASS
     NAME "Espinal"
-    EXPRESSION ([clv_zona] = 7)
+    EXPRESSION ([clv_cz] = 7)
     STYLE
       COLOR 249 220 101
       SYMBOL 'circulor'
@@ -79,7 +79,7 @@ LAYER
   END
   CLASS
     NAME "Martinez"
-    EXPRESSION ([clv_zona] = 8)
+    EXPRESSION ([clv_cz] = 8)
     STYLE
       COLOR 235 151 78
       SYMBOL 'circulor'
@@ -89,7 +89,7 @@ LAYER
   END
   CLASS
     NAME "Perote"
-    EXPRESSION ([clv_zona] = 9)
+    EXPRESSION ([clv_cz] = 9)
     STYLE
       COLOR 93 188 210
       SYMBOL 'circulor'
@@ -99,7 +99,7 @@ LAYER
   END
   CLASS
     NAME "Xalapa"
-    EXPRESSION ([clv_zona] = 10)
+    EXPRESSION ([clv_cz] = 10)
     STYLE
       COLOR 158 53 147
       SYMBOL 'circulor'
@@ -109,7 +109,7 @@ LAYER
   END
   CLASS
     NAME "Coatepec"
-    EXPRESSION ([clv_zona] = 11)
+    EXPRESSION ([clv_cz] = 11)
     STYLE
       COLOR 196 46 96
       SYMBOL 'circulor'
@@ -119,7 +119,7 @@ LAYER
   END
   CLASS
     NAME "Huatusco"
-    EXPRESSION ([clv_zona] = 12)
+    EXPRESSION ([clv_cz] = 12)
     STYLE
       COLOR 74 163 113
       SYMBOL 'circulor'
@@ -129,7 +129,7 @@ LAYER
   END
   CLASS
     NAME "Orizaba"
-    EXPRESSION ([clv_zona] = 13)
+    EXPRESSION ([clv_cz] = 13)
     STYLE
       COLOR 249 220 101
       SYMBOL 'circulor'
@@ -139,7 +139,7 @@ LAYER
   END
   CLASS
     NAME "Cordoba"
-    EXPRESSION ([clv_zona] = 14)
+    EXPRESSION ([clv_cz] = 14)
     STYLE
       COLOR 235 151 78
       SYMBOL 'circulor'
@@ -149,7 +149,7 @@ LAYER
   END
   CLASS
     NAME "Zongolica"
-    EXPRESSION ([clv_zona] = 15)
+    EXPRESSION ([clv_cz] = 15)
     STYLE
       COLOR 93 188 210
       SYMBOL 'circulor'
@@ -159,7 +159,7 @@ LAYER
   END
   CLASS
     NAME "Veracruz"
-    EXPRESSION ([clv_zona] = 16)
+    EXPRESSION ([clv_cz] = 16)
     STYLE
       COLOR 158 53 147
       SYMBOL 'circulor'
@@ -169,7 +169,7 @@ LAYER
   END
   CLASS
     NAME "Boca del Rio"
-    EXPRESSION ([clv_zona] = 17)
+    EXPRESSION ([clv_cz] = 17)
     STYLE
       COLOR 196 46 96
       SYMBOL 'circulor'
@@ -179,7 +179,7 @@ LAYER
   END
   CLASS
     NAME "Tierra Blanca"
-    EXPRESSION ([clv_zona] = 18)
+    EXPRESSION ([clv_cz] = 18)
     STYLE
       COLOR 74 163 113
       SYMBOL 'circulor'
@@ -189,7 +189,7 @@ LAYER
   END
   CLASS
     NAME "Cosamaloapan"
-    EXPRESSION ([clv_zona] = 19)
+    EXPRESSION ([clv_cz] = 19)
     STYLE
       COLOR 249 220 101
       SYMBOL 'circulor'
@@ -199,7 +199,7 @@ LAYER
   END
   CLASS
     NAME "San Andres"
-    EXPRESSION ([clv_zona] = 20)
+    EXPRESSION ([clv_cz] = 20)
     STYLE
       COLOR 235 151 78
       SYMBOL 'circulor'
@@ -209,7 +209,7 @@ LAYER
   END
   CLASS
     NAME "Acayucan"
-    EXPRESSION ([clv_zona] = 21)
+    EXPRESSION ([clv_cz] = 21)
     STYLE
       COLOR 93 188 210
       SYMBOL 'circulor'
@@ -219,7 +219,7 @@ LAYER
   END
   CLASS
     NAME "Minatitlan"
-    EXPRESSION ([clv_zona] = 22)
+    EXPRESSION ([clv_cz] = 22)
     STYLE
       COLOR 158 53 147
       SYMBOL 'circulor'
@@ -229,7 +229,7 @@ LAYER
   END
   CLASS
     NAME "Coatzacoalcos"
-    EXPRESSION ([clv_zona] = 23)
+    EXPRESSION ([clv_cz] = 23)
     STYLE
       COLOR 196 46 96
       SYMBOL 'circulor'
@@ -239,7 +239,7 @@ LAYER
   END
   CLASS
     NAME "Huayacocotla"
-    EXPRESSION ([clv_zona] = 24)
+    EXPRESSION ([clv_cz] = 24)
     STYLE
       COLOR 74 163 113
       SYMBOL 'circulor'
@@ -249,7 +249,7 @@ LAYER
   END
   CLASS
     NAME "Panuco"
-    EXPRESSION ([clv_zona] = 25)
+    EXPRESSION ([clv_cz] = 25)
     STYLE
       COLOR 249 220 101
       SYMBOL 'circulor'
@@ -259,7 +259,7 @@ LAYER
   END
   CLASS
     NAME "Jaltipan"
-    EXPRESSION ([clv_zona] = 29)
+    EXPRESSION ([clv_cz] = 29)
     STYLE
       COLOR 235 151 78
       SYMBOL 'circulor'

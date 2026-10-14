@@ -9,7 +9,7 @@ LAYER
   TYPE POINT
   CONNECTIONTYPE POSTGIS
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
-  DATA "the_geom FROM (SELECT gid, clv_cz, nom_cz, the_geom FROM ivea.oficinas_cz) AS t1 USING UNIQUE gid USING SRID=900913"
+  DATA "the_geom FROM (SELECT gid, clv_cz, the_geom, nom_cz FROM ivea.oficinas_cz) AS t1 USING UNIQUE gid USING SRID=900913"
   ENCODING "ISO-8859-1"
   METADATA
     "wms_title" "Etiquetas - Puntos de las Oficinas de Coordinacion IVEA"
@@ -18,7 +18,7 @@ LAYER
   LABELITEM "nom_cz"
   CLASS
     NAME "Texto Tantoyuca"
-    EXPRESSION ([clv_zona] = 1)
+    EXPRESSION ([clv_cz] = 1)
     LABEL
       FONT 'arial'
       SIZE 8
@@ -30,7 +30,7 @@ LAYER
   END
   CLASS
     NAME "Texto Chicontepec"
-    EXPRESSION ([clv_zona] = 3)
+    EXPRESSION ([clv_cz] = 3)
     LABEL
       FONT 'arial'
       SIZE 8
@@ -42,7 +42,7 @@ LAYER
   END
   CLASS
     NAME "Texto Tuxpan"
-    EXPRESSION ([clv_zona] = 4)
+    EXPRESSION ([clv_cz] = 4)
     LABEL
       FONT 'arial'
       SIZE 8
@@ -54,7 +54,7 @@ LAYER
   END
   CLASS
     NAME "Texto Poza Rica"
-    EXPRESSION ([clv_zona] = 5)
+    EXPRESSION ([clv_cz] = 5)
     LABEL
       FONT 'arial'
       SIZE 8
@@ -66,7 +66,7 @@ LAYER
   END
   CLASS
     NAME "Texto Papantla"
-    EXPRESSION ([clv_zona] = 6)
+    EXPRESSION ([clv_cz] = 6)
     LABEL
       FONT 'arial'
       SIZE 8
@@ -78,7 +78,7 @@ LAYER
   END
   CLASS
     NAME "Texto Espinal"
-    EXPRESSION ([clv_zona] = 7)
+    EXPRESSION ([clv_cz] = 7)
     LABEL
       FONT 'arial'
       SIZE 8
@@ -90,7 +90,7 @@ LAYER
   END
   CLASS
     NAME "Texto Martinez"
-    EXPRESSION ([clv_zona] = 8)
+    EXPRESSION ([clv_cz] = 8)
     LABEL
       FONT 'arial'
       SIZE 8
@@ -102,7 +102,7 @@ LAYER
   END
   CLASS
     NAME "Texto Perote"
-    EXPRESSION ([clv_zona] = 9)
+    EXPRESSION ([clv_cz] = 9)
     LABEL
       FONT 'arial'
       SIZE 8
@@ -114,7 +114,7 @@ LAYER
   END
   CLASS
     NAME "Texto Xalapa"
-    EXPRESSION ([clv_zona] = 10)
+    EXPRESSION ([clv_cz] = 10)
     LABEL
       FONT 'arial'
       SIZE 8
@@ -126,7 +126,7 @@ LAYER
   END
   CLASS
     NAME "Texto Coatepec"
-    EXPRESSION ([clv_zona] = 11)
+    EXPRESSION ([clv_cz] = 11)
     LABEL
       FONT 'arial'
       SIZE 8
@@ -138,7 +138,7 @@ LAYER
   END
   CLASS
     NAME "Texto Huatusco"
-    EXPRESSION ([clv_zona] = 12)
+    EXPRESSION ([clv_cz] = 12)
     LABEL
       FONT 'arial'
       SIZE 8
@@ -150,7 +150,7 @@ LAYER
   END
   CLASS
     NAME "Texto Orizaba"
-    EXPRESSION ([clv_zona] = 13)
+    EXPRESSION ([clv_cz] = 13)
     LABEL
       FONT 'arial'
       SIZE 8
@@ -162,7 +162,7 @@ LAYER
   END
   CLASS
     NAME "Texto Cordoba"
-    EXPRESSION ([clv_zona] = 14)
+    EXPRESSION ([clv_cz] = 14)
     LABEL
       FONT 'arial'
       SIZE 8
@@ -174,7 +174,7 @@ LAYER
   END
   CLASS
     NAME "Texto Zongolica"
-    EXPRESSION ([clv_zona] = 15)
+    EXPRESSION ([clv_cz] = 15)
     LABEL
       FONT 'arial'
       SIZE 8
@@ -186,7 +186,7 @@ LAYER
   END
   CLASS
     NAME "Texto Veracruz"
-    EXPRESSION ([clv_zona] = 16)
+    EXPRESSION ([clv_cz] = 16)
     LABEL
       FONT 'arial'
       SIZE 8
@@ -198,7 +198,7 @@ LAYER
   END
   CLASS
     NAME "Texto Boca del Rio"
-    EXPRESSION ([clv_zona] = 17)
+    EXPRESSION ([clv_cz] = 17)
     LABEL
       FONT 'arial'
       SIZE 8
@@ -210,7 +210,7 @@ LAYER
   END
   CLASS
     NAME "Texto Tierra Blanca"
-    EXPRESSION ([clv_zona] = 18)
+    EXPRESSION ([clv_cz] = 18)
     LABEL
       FONT 'arial'
       SIZE 8
@@ -222,7 +222,7 @@ LAYER
   END
   CLASS
     NAME "Texto Cosamaloapan"
-    EXPRESSION ([clv_zona] = 19)
+    EXPRESSION ([clv_cz] = 19)
     LABEL
       FONT 'arial'
       SIZE 8
@@ -234,7 +234,7 @@ LAYER
   END
   CLASS
     NAME "Texto San Andres"
-    EXPRESSION ([clv_zona] = 20)
+    EXPRESSION ([clv_cz] = 20)
     LABEL
       FONT 'arial'
       SIZE 8
@@ -246,7 +246,7 @@ LAYER
   END
   CLASS
     NAME "Texto Acayucan"
-    EXPRESSION ([clv_zona] = 21)
+    EXPRESSION ([clv_cz] = 21)
     LABEL
       FONT 'arial'
       SIZE 8
@@ -258,7 +258,7 @@ LAYER
   END
   CLASS
     NAME "Texto Minatitlan"
-    EXPRESSION ([clv_zona] = 22)
+    EXPRESSION ([clv_cz] = 22)
     LABEL
       FONT 'arial'
       SIZE 8
@@ -270,7 +270,7 @@ LAYER
   END
   CLASS
     NAME "Texto Coatzacoalcos"
-    EXPRESSION ([clv_zona] = 23)
+    EXPRESSION ([clv_cz] = 23)
     LABEL
       FONT 'arial'
       SIZE 8
@@ -282,7 +282,7 @@ LAYER
   END
   CLASS
     NAME "Texto Huayacocotla"
-    EXPRESSION ([clv_zona] = 24)
+    EXPRESSION ([clv_cz] = 24)
     LABEL
       FONT 'arial'
       SIZE 8
@@ -294,7 +294,7 @@ LAYER
   END
   CLASS
     NAME "Texto Panuco"
-    EXPRESSION ([clv_zona] = 25)
+    EXPRESSION ([clv_cz] = 25)
     LABEL
       FONT 'arial'
       SIZE 8
@@ -306,7 +306,7 @@ LAYER
   END
   CLASS
     NAME "Texto Jaltipan"
-    EXPRESSION ([clv_zona] = 29)
+    EXPRESSION ([clv_cz] = 29)
     LABEL
       FONT 'arial'
       SIZE 8
