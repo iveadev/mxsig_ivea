@@ -261,7 +261,7 @@ define(function() {
         themes:{
 			T1:{
 				label:'Coordinaciones de Zona IVEA',
-                    layers:coordinaciones.map(cz => cz.id),
+                    layers:coordinaciones.map(cz => cz.id).concat(['oficinas_cz']),
                     desc:'Coordinaciones de Zona IVEA',
                     img:'mexico.jpg'
                 },
@@ -371,7 +371,7 @@ define(function() {
 		layers:{
             groups:{			
 			G1:{
-                    label:'L&iacute;mites del Marco Geoestad&iacute;stico de Veracruz',
+                    label:'L&iacute;mites del Marco Geoestad&iacute;stico de Veracruz 2025',
                     layers:{
                         c30_ver:{
                             label:'Estatal',
@@ -387,31 +387,47 @@ define(function() {
                     }
                 },
       G2:{
-              label:'Rango de población',
-              layers:layers_poblacion,
+              label:'Infraestructura IVEA',
+              layers: {
+                oficinas_cz:{
+                  label: 'Ubicación de las Coordinaciones de Zona (puntos)',
+                  scale:1,
+                  position:1,
+                  active:false,
+                  texts:{
+                      scale:1,
+                      active:false
+                  }
+                },
+              },
+       G3:{
+              label:'Marco Geoestadístico IVEA',
+                c_tematico_cz:{
+                  label: 'Coordinaciones de Zona (tematico)',
+                  scale:1,
+                  position:1,
+                  active:false,
+                }
+              },
           },
-      G3:{
+      G4:{
               label:'Porcentaje de pobreza CONEVAL',
               layers:layers_pobreza,
           },
 
-			G4:{
+			G5:{
           label:'Coordinaciones Reginal Norte',
           layers:layers_norte,
       },
-        G5:{
+        G6:{
                 label:'Coordinaciones Regional Centro',
                 layers:layers_centro,
             },
-        G6:{
+        G7:{
                 label:'Coordinaciones Regional Sur',
                 layers:layers_sur,
             },
-        
-
-
-
-
+            
         },
       }
     };
