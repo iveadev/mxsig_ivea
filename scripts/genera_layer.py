@@ -67,7 +67,7 @@ def crear_bloque_class(datos_fila, config, usar_expresion=False):
     return bloque
 
 def crear_bloque_label(config_labels):
-    """Genera la sección LABEL interna para las capas de texto."""
+    """Genera la sección LABEL conteniendo un sub-bloque STYLE interno (Label-Style) para MapServer 7.6.4."""
     font = config_labels.get("font", "sans")
     size = config_labels.get("size", 8)
     color = config_labels.get("color", "0 0 0")
@@ -82,8 +82,25 @@ def crear_bloque_label(config_labels):
         f"      OUTLINECOLOR {outlinecolor}",
         f"      POSITION {position}",
         "      TYPE truetype",
+        "      STYLE",
+        "      END",
         "    END"
     ]
+
+def crear_bloque_class_etiqueta(datos_fila, config_labels, usar_expresion=False):
+    """Construye la clase para LEYENDAS (Cumple con: no class->styles)."""
+    nombre_clase = datos_fila.get("nombre", "Sin Nombre")
+    bloque = ["  CLASS", f'    NAME "Texto {nombre_clase}"']
+    
+    if usar_expresion and "condicional" in datos_fila:
+        bloque.append(f"    EXPRESSION ({datos_fila['condicional']})")
+        
+    # Agrega el bloque LABEL (que ahora tiene su STYLE interno reglamentario)
+    bloque.extend(crear_bloque_label(config_labels))
+    bloque.append("  END")
+    return bloque
+
+
 
 def construir_layer_base(id_capa, tipo_capa, select_sql, encoding_capa=None):
     """Construye las cabeceras genéricas del LAYER de MapServer."""
@@ -188,31 +205,22 @@ def main():
                 # Usamos campos_select_labels en lugar de campos_select tradicional
                 sql = f"the_geom FROM (SELECT {campos_select_labels} FROM {cfg.tabla} WHERE {c['condicional']}) AS t1 USING UNIQUE gid USING SRID=900913"
                 
-                lineas_labels.extend(construir_layer_base(c["id_capa"], "ANNOTATION", sql, encoding_actual))
+                lineas_labels.extend(construir_layer_base(c["id_capa"], cfg.tipo_capa, sql, encoding_actual))
                 lineas_labels.extend(crear_bloque_metadata(f"Texto {c['nombre']}"))
                 lineas_labels.append(f'  LABELITEM "{label_item}"')
-                lineas_labels.append("  CLASS")
-                lineas_labels.append(f'    NAME "Texto {c["nombre"]}"')
-                lineas_labels.extend(crear_bloque_label(config_labels))
-                lineas_labels.append("  END")
-                lineas_labels.append("END\n")
+                lineas_labels.extend(crear_bloque_class_etiqueta(c, config_labels, usar_expresion=False))
+
 
         elif cfg.modo_generacion == "MULTIPLES_ESTILOS":
             id_global = getattr(cfg, "id_capa_global", cfg.output)
             # Usamos campos_select_labels aquí también
             sql = f"the_geom FROM (SELECT {campos_select_labels} FROM {cfg.tabla}) AS t1 USING UNIQUE gid USING SRID=900913"
             
-            lineas_labels.extend(construir_layer_base(id_global, "ANNOTATION", sql, encoding_actual))
+            lineas_labels.extend(construir_layer_base(id_global, cfg.tipo_capa, sql, encoding_actual))
             lineas_labels.extend(crear_bloque_metadata(f"Etiquetas - {cfg.descripcion}"))
             lineas_labels.append(f'  LABELITEM "{label_item}"')
-            
             for c in cfg.capas:
-                lineas_labels.append("  CLASS")
-                lineas_labels.append(f'    NAME "Texto {c["nombre"]}"')
-                lineas_labels.append(f"    EXPRESSION ({c['condicional']})")
-                lineas_labels.extend(crear_bloque_label(config_labels))
-                lineas_labels.append("  END")
-            lineas_labels.append("END\n")
+                lineas_labels.extend(crear_bloque_class_etiqueta(c, config_labels, usar_expresion=True))
 
 
         with open(nombre_salida_leyendas, "w", encoding="utf-8") as f:

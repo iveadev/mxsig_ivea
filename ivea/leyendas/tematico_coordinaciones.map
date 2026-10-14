@@ -6,10 +6,10 @@
 LAYER
   NAME "c_tematico_cz"
   STATUS ON
-  TYPE ANNOTATION
+  TYPE POLYGON
   CONNECTIONTYPE POSTGIS
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
-  DATA "the_geom FROM (SELECT clv_zona, coord_zon, gid, the_geom FROM marco_geoestadistico.mun_coordinaciones) AS t1 USING UNIQUE gid USING SRID=900913"
+  DATA "the_geom FROM (SELECT gid, clv_zona, coord_zon, the_geom FROM marco_geoestadistico.mun_coordinaciones) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
     "wms_title" "Etiquetas - Coordinaciones de Zona del IVEA"
     "wms_enable_request" "*"
@@ -25,6 +25,8 @@ LAYER
       OUTLINECOLOR 255 255 255
       POSITION auto
       TYPE truetype
+      STYLE
+      END
     END
   END
   CLASS
@@ -37,6 +39,8 @@ LAYER
       OUTLINECOLOR 255 255 255
       POSITION auto
       TYPE truetype
+      STYLE
+      END
     END
   END
   CLASS
@@ -49,6 +53,8 @@ LAYER
       OUTLINECOLOR 255 255 255
       POSITION auto
       TYPE truetype
+      STYLE
+      END
     END
   END
   CLASS
@@ -61,6 +67,8 @@ LAYER
       OUTLINECOLOR 255 255 255
       POSITION auto
       TYPE truetype
+      STYLE
+      END
     END
   END
   CLASS
@@ -73,6 +81,8 @@ LAYER
       OUTLINECOLOR 255 255 255
       POSITION auto
       TYPE truetype
+      STYLE
+      END
     END
   END
   CLASS
@@ -85,6 +95,8 @@ LAYER
       OUTLINECOLOR 255 255 255
       POSITION auto
       TYPE truetype
+      STYLE
+      END
     END
   END
   CLASS
@@ -97,6 +109,8 @@ LAYER
       OUTLINECOLOR 255 255 255
       POSITION auto
       TYPE truetype
+      STYLE
+      END
     END
   END
   CLASS
@@ -109,6 +123,8 @@ LAYER
       OUTLINECOLOR 255 255 255
       POSITION auto
       TYPE truetype
+      STYLE
+      END
     END
   END
   CLASS
@@ -121,6 +137,8 @@ LAYER
       OUTLINECOLOR 255 255 255
       POSITION auto
       TYPE truetype
+      STYLE
+      END
     END
   END
   CLASS
@@ -133,6 +151,8 @@ LAYER
       OUTLINECOLOR 255 255 255
       POSITION auto
       TYPE truetype
+      STYLE
+      END
     END
   END
   CLASS
@@ -145,6 +165,8 @@ LAYER
       OUTLINECOLOR 255 255 255
       POSITION auto
       TYPE truetype
+      STYLE
+      END
     END
   END
   CLASS
@@ -157,6 +179,8 @@ LAYER
       OUTLINECOLOR 255 255 255
       POSITION auto
       TYPE truetype
+      STYLE
+      END
     END
   END
   CLASS
@@ -169,6 +193,8 @@ LAYER
       OUTLINECOLOR 255 255 255
       POSITION auto
       TYPE truetype
+      STYLE
+      END
     END
   END
   CLASS
@@ -181,6 +207,8 @@ LAYER
       OUTLINECOLOR 255 255 255
       POSITION auto
       TYPE truetype
+      STYLE
+      END
     END
   END
   CLASS
@@ -193,6 +221,8 @@ LAYER
       OUTLINECOLOR 255 255 255
       POSITION auto
       TYPE truetype
+      STYLE
+      END
     END
   END
   CLASS
@@ -205,6 +235,8 @@ LAYER
       OUTLINECOLOR 255 255 255
       POSITION auto
       TYPE truetype
+      STYLE
+      END
     END
   END
   CLASS
@@ -217,6 +249,8 @@ LAYER
       OUTLINECOLOR 255 255 255
       POSITION auto
       TYPE truetype
+      STYLE
+      END
     END
   END
   CLASS
@@ -229,6 +263,8 @@ LAYER
       OUTLINECOLOR 255 255 255
       POSITION auto
       TYPE truetype
+      STYLE
+      END
     END
   END
   CLASS
@@ -241,6 +277,8 @@ LAYER
       OUTLINECOLOR 255 255 255
       POSITION auto
       TYPE truetype
+      STYLE
+      END
     END
   END
   CLASS
@@ -253,6 +291,8 @@ LAYER
       OUTLINECOLOR 255 255 255
       POSITION auto
       TYPE truetype
+      STYLE
+      END
     END
   END
   CLASS
@@ -265,6 +305,8 @@ LAYER
       OUTLINECOLOR 255 255 255
       POSITION auto
       TYPE truetype
+      STYLE
+      END
     END
   END
   CLASS
@@ -277,6 +319,8 @@ LAYER
       OUTLINECOLOR 255 255 255
       POSITION auto
       TYPE truetype
+      STYLE
+      END
     END
   END
   CLASS
@@ -289,6 +333,8 @@ LAYER
       OUTLINECOLOR 255 255 255
       POSITION auto
       TYPE truetype
+      STYLE
+      END
     END
   END
   CLASS
@@ -301,6 +347,8 @@ LAYER
       OUTLINECOLOR 255 255 255
       POSITION auto
       TYPE truetype
+      STYLE
+      END
     END
   END
   CLASS
@@ -313,6 +361,7 @@ LAYER
       OUTLINECOLOR 255 255 255
       POSITION auto
       TYPE truetype
+      STYLE
+      END
     END
   END
-END
