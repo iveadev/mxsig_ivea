@@ -389,15 +389,15 @@ define(function() {
       G2:{
               label:'Infraestructura IVEA',
               layers: {
-                capa_oficinas_cz:{
+                oficinas_cz:{
                   label: 'Ubicación de las Coordinaciones de Zona (puntos)',
                   scale:1,
                   position:2,
                   active:false,
-                  // texts:{
-                  //     scale:1,
-                  //     active:false
-                  // }
+                  texts:{
+                      scale:1,
+                      active:false
+                  }
                 },
               },
             },
