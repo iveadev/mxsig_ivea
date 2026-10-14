@@ -9,7 +9,7 @@ LAYER
   TYPE POLYGON
   CONNECTIONTYPE POSTGIS
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
-  DATA "the_geom FROM (SELECT coord_zon, the_geom, gid, clv_zona FROM marco_geoestadistico.mun_coordinaciones) AS t1 USING UNIQUE gid USING SRID=900913"
+  DATA "the_geom FROM (SELECT coord_zon, gid, the_geom, clv_zona FROM marco_geoestadistico.mun_coordinaciones) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
     "wms_title" "Etiquetas - Coordinaciones de Zona del IVEA"
     "wms_enable_request" "*"
@@ -19,7 +19,7 @@ LAYER
     NAME "Texto Tantoyuca"
     EXPRESSION ([clv_zona] = 1)
     LABEL
-      FONT 'sans'
+      FONT 'arial'
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
@@ -31,7 +31,7 @@ LAYER
     NAME "Texto Chicontepec"
     EXPRESSION ([clv_zona] = 3)
     LABEL
-      FONT 'sans'
+      FONT 'arial'
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
@@ -43,7 +43,7 @@ LAYER
     NAME "Texto Tuxpan"
     EXPRESSION ([clv_zona] = 4)
     LABEL
-      FONT 'sans'
+      FONT 'arial'
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
@@ -55,7 +55,7 @@ LAYER
     NAME "Texto Poza Rica"
     EXPRESSION ([clv_zona] = 5)
     LABEL
-      FONT 'sans'
+      FONT 'arial'
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
@@ -67,7 +67,7 @@ LAYER
     NAME "Texto Papantla"
     EXPRESSION ([clv_zona] = 6)
     LABEL
-      FONT 'sans'
+      FONT 'arial'
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
@@ -79,7 +79,7 @@ LAYER
     NAME "Texto Espinal"
     EXPRESSION ([clv_zona] = 7)
     LABEL
-      FONT 'sans'
+      FONT 'arial'
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
@@ -91,7 +91,7 @@ LAYER
     NAME "Texto Martinez"
     EXPRESSION ([clv_zona] = 8)
     LABEL
-      FONT 'sans'
+      FONT 'arial'
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
@@ -103,7 +103,7 @@ LAYER
     NAME "Texto Perote"
     EXPRESSION ([clv_zona] = 9)
     LABEL
-      FONT 'sans'
+      FONT 'arial'
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
@@ -115,7 +115,7 @@ LAYER
     NAME "Texto Xalapa"
     EXPRESSION ([clv_zona] = 10)
     LABEL
-      FONT 'sans'
+      FONT 'arial'
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
@@ -127,7 +127,7 @@ LAYER
     NAME "Texto Coatepec"
     EXPRESSION ([clv_zona] = 11)
     LABEL
-      FONT 'sans'
+      FONT 'arial'
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
@@ -139,7 +139,7 @@ LAYER
     NAME "Texto Huatusco"
     EXPRESSION ([clv_zona] = 12)
     LABEL
-      FONT 'sans'
+      FONT 'arial'
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
@@ -151,7 +151,7 @@ LAYER
     NAME "Texto Orizaba"
     EXPRESSION ([clv_zona] = 13)
     LABEL
-      FONT 'sans'
+      FONT 'arial'
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
@@ -163,7 +163,7 @@ LAYER
     NAME "Texto Cordoba"
     EXPRESSION ([clv_zona] = 14)
     LABEL
-      FONT 'sans'
+      FONT 'arial'
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
@@ -175,7 +175,7 @@ LAYER
     NAME "Texto Zongolica"
     EXPRESSION ([clv_zona] = 15)
     LABEL
-      FONT 'sans'
+      FONT 'arial'
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
@@ -187,7 +187,7 @@ LAYER
     NAME "Texto Veracruz"
     EXPRESSION ([clv_zona] = 16)
     LABEL
-      FONT 'sans'
+      FONT 'arial'
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
@@ -199,7 +199,7 @@ LAYER
     NAME "Texto Boca del Rio"
     EXPRESSION ([clv_zona] = 17)
     LABEL
-      FONT 'sans'
+      FONT 'arial'
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
@@ -211,7 +211,7 @@ LAYER
     NAME "Texto Tierra Blanca"
     EXPRESSION ([clv_zona] = 18)
     LABEL
-      FONT 'sans'
+      FONT 'arial'
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
@@ -223,7 +223,7 @@ LAYER
     NAME "Texto Cosamaloapan"
     EXPRESSION ([clv_zona] = 19)
     LABEL
-      FONT 'sans'
+      FONT 'arial'
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
@@ -235,7 +235,7 @@ LAYER
     NAME "Texto San Andres"
     EXPRESSION ([clv_zona] = 20)
     LABEL
-      FONT 'sans'
+      FONT 'arial'
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
@@ -247,7 +247,7 @@ LAYER
     NAME "Texto Acayucan"
     EXPRESSION ([clv_zona] = 21)
     LABEL
-      FONT 'sans'
+      FONT 'arial'
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
@@ -259,7 +259,7 @@ LAYER
     NAME "Texto Minatitlan"
     EXPRESSION ([clv_zona] = 22)
     LABEL
-      FONT 'sans'
+      FONT 'arial'
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
@@ -271,7 +271,7 @@ LAYER
     NAME "Texto Coatzacoalcos"
     EXPRESSION ([clv_zona] = 23)
     LABEL
-      FONT 'sans'
+      FONT 'arial'
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
@@ -283,7 +283,7 @@ LAYER
     NAME "Texto Huayacocotla"
     EXPRESSION ([clv_zona] = 24)
     LABEL
-      FONT 'sans'
+      FONT 'arial'
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
@@ -295,7 +295,7 @@ LAYER
     NAME "Texto Panuco"
     EXPRESSION ([clv_zona] = 25)
     LABEL
-      FONT 'sans'
+      FONT 'arial'
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
@@ -307,7 +307,7 @@ LAYER
     NAME "Texto Jaltipan"
     EXPRESSION ([clv_zona] = 29)
     LABEL
-      FONT 'sans'
+      FONT 'arial'
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255

@@ -68,7 +68,7 @@ def crear_bloque_class(datos_fila, config, usar_expresion=False):
 
 def crear_bloque_label(config_labels):
     """Genera la sección LABEL conteniendo un sub-bloque STYLE interno (Label-Style) para MapServer 7.6.4."""
-    font = config_labels.get("font", "sans")
+    font = config_labels.get("font", "arial")
     size = config_labels.get("size", 8)
     color = config_labels.get("color", "0 0 0")
     outlinecolor = config_labels.get("outlinecolor", "255 255 255")
@@ -209,6 +209,7 @@ def main():
                 lineas_labels.extend(crear_bloque_metadata(f"Texto {c['nombre']}"))
                 lineas_labels.append(f'  LABELITEM "{label_item}"')
                 lineas_labels.extend(crear_bloque_class_etiqueta(c, config_labels, usar_expresion=False))
+                lineas_geo.append("END\n")
 
 
         elif cfg.modo_generacion == "MULTIPLES_ESTILOS":
@@ -221,6 +222,8 @@ def main():
             lineas_labels.append(f'  LABELITEM "{label_item}"')
             for c in cfg.capas:
                 lineas_labels.extend(crear_bloque_class_etiqueta(c, config_labels, usar_expresion=True))
+            lineas_labels.append("END\n")
+            
 
 
         with open(nombre_salida_leyendas, "w", encoding="utf-8") as f:
