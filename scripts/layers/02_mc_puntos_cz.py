@@ -5,6 +5,8 @@ tabla = "ivea.oficinas_cz"
 campos_adicionales = ["clv_cz"]
 tipo_capa = "POINT"
 
+encoding_global = "ISO-8859-1" 
+
 # RESPATE DE CARACTERES: Corrige los acentos rotos de la BD (como 'CRDOBA') al vuelo
 encoding_global = "ISO-8859-1" 
 
