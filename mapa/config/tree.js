@@ -400,6 +400,7 @@ define(function() {
                   }
                 },
               },
+            },
        G3:{
               label:'Marco Geoestadístico IVEA',
                 c_tematico_cz:{
@@ -408,7 +409,6 @@ define(function() {
                   position:1,
                   active:false,
                 }
-              },
           },
       G4:{
               label:'Porcentaje de pobreza CONEVAL',
