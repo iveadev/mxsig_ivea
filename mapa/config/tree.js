@@ -135,7 +135,7 @@ const coordinaciones = [
 const layers_norte = {};
 const layers_centro = {};
 const layers_sur = {};
-let posicion_capa=2
+let posicion_capa=10
 coordinaciones.forEach((cz) => {
     if(cz.regional === 'Norte') {
         layers_norte[cz.id] = {
@@ -392,7 +392,7 @@ define(function() {
                 oficinas_cz:{
                   label: 'Ubicación de las Coordinaciones de Zona (puntos)',
                   scale:1,
-                  position:1,
+                  position:2,
                   active:false,
                   texts:{
                       scale:1,
@@ -407,7 +407,7 @@ define(function() {
                 c_tematico_cz:{
                   label: 'Coordinaciones de Zona (tematico)',
                   scale:1,
-                  position:1,
+                  position:3,
                   active:false,
                 }
               }
