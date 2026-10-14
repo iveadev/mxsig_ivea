@@ -82,8 +82,8 @@ def crear_bloque_label(config_labels):
         f"      OUTLINECOLOR {outlinecolor}",
         f"      POSITION {position}",
         "      TYPE truetype",
-        "      STYLE",
-        "      END",
+        #"      STYLE",
+        #"      END",
         "    END"
     ]
 

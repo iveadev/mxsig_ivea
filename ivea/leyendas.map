@@ -2,4 +2,4 @@
 # CAPAS DE TEXTO PARA ELEMETOS DE IVEA
 # -----------------------------------------------------------------
 
-INCLUDE "/opt/map/mdm60/ivea/leyendas/tematico_coordinaciones.map"     #Coordinaciones de zona
+INCLUDE "/opt/map/mdm60/ivea/leyendas/tematico_coordinaciones.map"      #Coordinaciones de zona
