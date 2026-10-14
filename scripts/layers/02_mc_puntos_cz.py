@@ -45,5 +45,5 @@ capas =  [
 
 # leyendas
 config_etiquetas = {
-    'label_item': 'coord_zon',
+    'label_item': 'nombre_cz',
 }
