@@ -394,10 +394,10 @@ define(function() {
                   scale:1,
                   position:2,
                   active:false,
-                  texts:{
-                      scale:1,
-                      active:false
-                  }
+                  // texts:{
+                  //     scale:1,
+                  //     active:false
+                  // }
                 },
               },
             },
