@@ -403,12 +403,14 @@ define(function() {
             },
        G3:{
               label:'Marco Geoestadístico IVEA',
+              layers: {
                 c_tematico_cz:{
                   label: 'Coordinaciones de Zona (tematico)',
                   scale:1,
                   position:1,
                   active:false,
                 }
+              }
           },
       G4:{
               label:'Porcentaje de pobreza CONEVAL',
