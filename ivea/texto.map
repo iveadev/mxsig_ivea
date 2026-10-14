@@ -1,0 +1,5 @@
+# -----------------------------------------------------------------
+# CAPAS DE TEXTO PARA ELEMETOS DE IVEA
+# -----------------------------------------------------------------
+
+INCLUDE "/opt/map/mdm60/ivea/texto/tematico_coordinaciones.map"     #Coordinaciones de zona

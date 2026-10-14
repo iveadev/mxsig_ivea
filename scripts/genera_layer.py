@@ -2,9 +2,6 @@ import sys
 import os
 import importlib.util
 
-# Carpeta que almacena todos los objetos resultantes
-carpeta_base =  'ivea/'
-
 def cargar_definicion_externa(ruta_archivo):
     """Carga dinámicamente el archivo de configuración externa del usuario."""
     if not os.path.exists(ruta_archivo):
@@ -36,7 +33,6 @@ def crear_bloque_style(datos_fila, config):
     color = datos_fila.get("color", "200 200 200")
     bloque = ["    STYLE", f"      COLOR {color}"]
     
-    # --- Configuración para POLÍGONOS o LÍNEAS ---
     if tipo in ["POLYGON", "LINE"]:
         opacity = datos_fila.get("opacity", getattr(config, "opacity_global", None))
         outlinecolor = datos_fila.get("outlinecolor", getattr(config, "outlinecolor_global", None))
@@ -46,9 +42,8 @@ def crear_bloque_style(datos_fila, config):
         if outlinecolor is not None: bloque.append(f"      OUTLINECOLOR {outlinecolor}")
         if width is not None: bloque.append(f"      WIDTH {width}")
         
-    # --- Configuración específica para PUNTOS ---
     elif tipo == "POINT":
-        symbol = datos_fila.get("symbol", getattr(config, "symbol_global", "circulor"))
+        symbol = datos_fila.get("symbol", getattr(config, "symbol_global", "circlor"))
         size = datos_fila.get("size", getattr(config, "size_global", 8))
         outlinecolor = datos_fila.get("outlinecolor", getattr(config, "outlinecolor_global", None))
         
@@ -60,7 +55,7 @@ def crear_bloque_style(datos_fila, config):
     return bloque
 
 def crear_bloque_class(datos_fila, config, usar_expresion=False):
-    """Construye la clase y decide si inyecta EXPRESSION (Modo Estilos)."""
+    """Construye la clase geométrica base."""
     nombre_clase = datos_fila.get("nombre", "Sin Nombre")
     bloque = ["  CLASS", f'    NAME "{nombre_clase}"']
     
@@ -71,10 +66,28 @@ def crear_bloque_class(datos_fila, config, usar_expresion=False):
     bloque.append("  END")
     return bloque
 
-def construir_layer_base(id_capa, tipo_capa, select_sql, encoding_capa=None):
-    """Construye las cabeceras genéricas del LAYER e inyecta el ENCODING si existe."""
-    conexion_base = "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+def crear_bloque_label(config_labels):
+    """Genera la sección LABEL interna para las capas de texto."""
+    font = config_labels.get("font", "sans")
+    size = config_labels.get("size", 8)
+    color = config_labels.get("color", "0 0 0")
+    outlinecolor = config_labels.get("outlinecolor", "255 255 255")
+    position = config_labels.get("position", "auto")
     
+    return [
+        "    LABEL",
+        f"      FONT '{font}'",
+        f"      SIZE {size}",
+        f"      COLOR {color}",
+        f"      OUTLINECOLOR {outlinecolor}",
+        f"      POSITION {position}",
+        "      TYPE truetype",
+        "    END"
+    ]
+
+def construir_layer_base(id_capa, tipo_capa, select_sql, encoding_capa=None):
+    """Construye las cabeceras genéricas del LAYER de MapServer."""
+    conexion_base = "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
     bloque = [
         "LAYER",
         f'  NAME "{id_capa}"',
@@ -84,13 +97,9 @@ def construir_layer_base(id_capa, tipo_capa, select_sql, encoding_capa=None):
         f'  CONNECTION "{conexion_base}"',
         f'  DATA "{select_sql}"'
     ]
-    
-    # Aquí solucionamos el problema de caracteres rotos si el usuario lo activa
     if encoding_capa:
         bloque.append(f'  ENCODING "{encoding_capa}"')
-        
     return bloque
-
 
 # =====================================================================
 # ORQUESTADOR PRINCIPAL
@@ -104,44 +113,111 @@ def main():
     archivo_config = sys.argv[1]
     cfg = cargar_definicion_externa(archivo_config)
 
-    lineas_resultado = [
-        f"# {cfg.output}.map",
+    carpeta_base = getattr(cfg, "carpeta_base", "ivea/")
+    subfolder_geometria = 'poligonos/' if cfg.tipo_capa == 'POLYGON' else 'puntos/'
+    
+    # NUEVA ESTRUCTURA REQUERIDA POR MXSIG (Espejo Vector vs Leyendas)
+    ruta_vector = os.path.join(carpeta_base, subfolder_geometria)
+    ruta_leyendas = os.path.join(carpeta_base, "texto")
+    
+    # Crear carpetas si no existen
+    os.makedirs(ruta_vector, exist_ok=True)
+    
+    nombre_salida_vector = os.path.join(ruta_vector, f"{cfg.output}.map")
+    nombre_salida_leyendas = os.path.join(ruta_leyendas, f"{cfg.output}.map")
+
+    campos_select = ", ".join(["gid", "the_geom"] + cfg.campos_adicionales)
+    encoding_actual = getattr(cfg, "encoding_global", None)
+
+    # -----------------------------------------------------------------
+    # PROCESAMIENTO A: ARQUITECTURA VECTORIAL (mxsigvector)
+    # -----------------------------------------------------------------
+    lineas_geo = [
+        f"# {cfg.output}.map - CAPAS GEOMETRICAS BASE (mxsigvector)",
         "#" + "="*70,
         f"# GENERADO AUTOMÁTICAMENTE A PARTIR DE: {archivo_config}",
         f"# Descripción: {cfg.descripcion}",
         f"# Modo de Operación: {cfg.modo_generacion}",
         "#" + "="*70 + "\n"
     ]
-    
-    # Recorremos siempre usando 'the_geom' nativo de tus tablas de MxSIG
-    campos_select = ", ".join(["gid", "the_geom"] + cfg.campos_adicionales)
-    encoding_actual = getattr(cfg, "encoding_global", None)
 
-    # --- MODO 1: MÚLTIPLES CAPAS ---
     if cfg.modo_generacion == "MULTIPLES_CAPAS":
         for c in cfg.capas:
             sql = f"the_geom FROM (SELECT {campos_select} FROM {cfg.tabla} WHERE {c['condicional']}) AS t1 USING UNIQUE gid USING SRID=900913"
-            lineas_resultado.extend(construir_layer_base(c["id_capa"], cfg.tipo_capa, sql, encoding_actual))
-            lineas_resultado.extend(crear_bloque_metadata(c["nombre"]))
-            lineas_resultado.extend(crear_bloque_class(c, cfg, usar_expresion=False))
-            lineas_resultado.append("END\n")
+            lineas_geo.extend(construir_layer_base(c["id_capa"], cfg.tipo_capa, sql, encoding_actual))
+            lineas_geo.extend(crear_bloque_metadata(c["nombre"]))
+            lineas_geo.extend(crear_bloque_class(c, cfg, usar_expresion=False))
+            lineas_geo.append("END\n")
 
-    # --- MODO 2: MÚLTIPLES ESTILOS ---
     elif cfg.modo_generacion == "MULTIPLES_ESTILOS":
+        id_global = getattr(cfg, "id_capa_global", cfg.output)
         sql = f"the_geom FROM (SELECT {campos_select} FROM {cfg.tabla}) AS t1 USING UNIQUE gid USING SRID=900913"
-        lineas_resultado.extend(construir_layer_base(cfg.id_capa_global, cfg.tipo_capa, sql, encoding_actual))
-        lineas_resultado.extend(crear_bloque_metadata(cfg.descripcion))
+        lineas_geo.extend(construir_layer_base(id_global, cfg.tipo_capa, sql, encoding_actual))
+        lineas_geo.extend(crear_bloque_metadata(cfg.descripcion))
         for c in cfg.capas:
-            lineas_resultado.extend(crear_bloque_class(c, cfg, usar_expresion=True))
-        lineas_resultado.append("END\n")
+            lineas_geo.extend(crear_bloque_class(c, cfg, usar_expresion=True))
+        lineas_geo.append("END\n")
 
-    # Guardar archivo listo para el INCLUDE de MxSIG
-    folder =  'poligonos/' if cfg.tipo_capa == 'POLYGON' else 'puntos/'
-    nombre_salida = f"{carpeta_base}{folder}{cfg.output}.map"
-    with open(nombre_salida, "w", encoding="utf-8") as f:
-        f.write("\n".join(lineas_resultado))
-        
-    print(f"¡Éxito!\nArchivo '{nombre_salida}' generado en modo '{cfg.modo_generacion}'.")
+    with open(nombre_salida_vector, "w", encoding="utf-8") as f:
+        f.write("\n".join(lineas_geo))
+    print(f" Capa vectorial guardada en: {nombre_salida_vector}")
+
+
+
+    # -----------------------------------------------------------------
+    # PROCESAMIENTO B: ARQUITECTURA DE ETIQUETAS (mxsigleyendas)
+    # -----------------------------------------------------------------
+    config_labels = getattr(cfg, "config_etiquetas", None)
+    if config_labels:
+        os.makedirs(ruta_leyendas, exist_ok=True)
+        lineas_labels = [
+            f"# {cfg.output}.map - CAPAS DE LEYENDAS / TEXTOS (mxsigleyendas)",
+            "#" + "="*70,
+            f"# GENERADO AUTOMÁTICAMENTE PARA MXSIG",
+            "#" + "="*70 + "\n"
+        ]
+        label_item = config_labels["label_item"]
+
+        # CORRECCIÓN EN EL SELECT: Aseguramos que 'label_item' esté incluido en la consulta
+        # Convertimos a set para evitar duplicados si el usuario ya lo había puesto en campos_adicionales
+        campos_con_label = list(set(["gid", "the_geom"] + cfg.campos_adicionales + [label_item]))
+        campos_select_labels = ", ".join(campos_con_label)
+
+        if cfg.modo_generacion == "MULTIPLES_CAPAS":
+            for c in cfg.capas:
+                # Usamos campos_select_labels en lugar de campos_select tradicional
+                sql = f"the_geom FROM (SELECT {campos_select_labels} FROM {cfg.tabla} WHERE {c['condicional']}) AS t1 USING UNIQUE gid USING SRID=900913"
+                
+                lineas_labels.extend(construir_layer_base(c["id_capa"], "ANNOTATION", sql, encoding_actual))
+                lineas_labels.extend(crear_bloque_metadata(f"Texto {c['nombre']}"))
+                lineas_labels.append(f'  LABELITEM "{label_item}"')
+                lineas_labels.append("  CLASS")
+                lineas_labels.append(f'    NAME "Texto {c["nombre"]}"')
+                lineas_labels.extend(crear_bloque_label(config_labels))
+                lineas_labels.append("  END")
+                lineas_labels.append("END\n")
+
+        elif cfg.modo_generacion == "MULTIPLES_ESTILOS":
+            id_global = getattr(cfg, "id_capa_global", cfg.output)
+            # Usamos campos_select_labels aquí también
+            sql = f"the_geom FROM (SELECT {campos_select_labels} FROM {cfg.tabla}) AS t1 USING UNIQUE gid USING SRID=900913"
+            
+            lineas_labels.extend(construir_layer_base(id_global, "ANNOTATION", sql, encoding_actual))
+            lineas_labels.extend(crear_bloque_metadata(f"Etiquetas - {cfg.descripcion}"))
+            lineas_labels.append(f'  LABELITEM "{label_item}"')
+            
+            for c in cfg.capas:
+                lineas_labels.append("  CLASS")
+                lineas_labels.append(f'    NAME "Texto {c["nombre"]}"')
+                lineas_labels.append(f"    EXPRESSION ({c['condicional']})")
+                lineas_labels.extend(crear_bloque_label(config_labels))
+                lineas_labels.append("  END")
+            lineas_labels.append("END\n")
+
+
+        with open(nombre_salida_leyendas, "w", encoding="utf-8") as f:
+            f.write("\n".join(lineas_labels))
+        print(f" Capa de leyendas guardada en: {nombre_salida_leyendas}")
 
 if __name__ == "__main__":
     main()

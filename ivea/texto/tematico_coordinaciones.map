@@ -1,0 +1,318 @@
+# tematico_coordinaciones.map - CAPAS DE LEYENDAS / TEXTOS (mxsigleyendas)
+#======================================================================
+# GENERADO AUTOMÁTICAMENTE PARA MXSIG
+#======================================================================
+
+LAYER
+  NAME "c_tematico_cz"
+  STATUS ON
+  TYPE ANNOTATION
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT the_geom, gid, coord_zon, clv_zona FROM marco_geoestadistico.mun_coordinaciones) AS t1 USING UNIQUE gid USING SRID=900913"
+  METADATA
+    "wms_title" "Etiquetas - Coordinaciones de Zona del IVEA"
+    "wms_enable_request" "*"
+  END
+  LABELITEM "coord_zon"
+  CLASS
+    NAME "Texto Tantoyuca"
+    EXPRESSION ([clv_zona] = 1)
+    LABEL
+      FONT 'sans'
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      POSITION auto
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "Texto Chicontepec"
+    EXPRESSION ([clv_zona] = 3)
+    LABEL
+      FONT 'sans'
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      POSITION auto
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "Texto Tuxpan"
+    EXPRESSION ([clv_zona] = 4)
+    LABEL
+      FONT 'sans'
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      POSITION auto
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "Texto Poza Rica"
+    EXPRESSION ([clv_zona] = 5)
+    LABEL
+      FONT 'sans'
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      POSITION auto
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "Texto Papantla"
+    EXPRESSION ([clv_zona] = 6)
+    LABEL
+      FONT 'sans'
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      POSITION auto
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "Texto Espinal"
+    EXPRESSION ([clv_zona] = 7)
+    LABEL
+      FONT 'sans'
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      POSITION auto
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "Texto Martinez"
+    EXPRESSION ([clv_zona] = 8)
+    LABEL
+      FONT 'sans'
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      POSITION auto
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "Texto Perote"
+    EXPRESSION ([clv_zona] = 9)
+    LABEL
+      FONT 'sans'
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      POSITION auto
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "Texto Xalapa"
+    EXPRESSION ([clv_zona] = 10)
+    LABEL
+      FONT 'sans'
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      POSITION auto
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "Texto Coatepec"
+    EXPRESSION ([clv_zona] = 11)
+    LABEL
+      FONT 'sans'
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      POSITION auto
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "Texto Huatusco"
+    EXPRESSION ([clv_zona] = 12)
+    LABEL
+      FONT 'sans'
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      POSITION auto
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "Texto Orizaba"
+    EXPRESSION ([clv_zona] = 13)
+    LABEL
+      FONT 'sans'
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      POSITION auto
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "Texto Cordoba"
+    EXPRESSION ([clv_zona] = 14)
+    LABEL
+      FONT 'sans'
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      POSITION auto
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "Texto Zongolica"
+    EXPRESSION ([clv_zona] = 15)
+    LABEL
+      FONT 'sans'
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      POSITION auto
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "Texto Veracruz"
+    EXPRESSION ([clv_zona] = 16)
+    LABEL
+      FONT 'sans'
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      POSITION auto
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "Texto Boca del Rio"
+    EXPRESSION ([clv_zona] = 17)
+    LABEL
+      FONT 'sans'
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      POSITION auto
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "Texto Tierra Blanca"
+    EXPRESSION ([clv_zona] = 18)
+    LABEL
+      FONT 'sans'
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      POSITION auto
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "Texto Cosamaloapan"
+    EXPRESSION ([clv_zona] = 19)
+    LABEL
+      FONT 'sans'
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      POSITION auto
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "Texto San Andres"
+    EXPRESSION ([clv_zona] = 20)
+    LABEL
+      FONT 'sans'
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      POSITION auto
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "Texto Acayucan"
+    EXPRESSION ([clv_zona] = 21)
+    LABEL
+      FONT 'sans'
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      POSITION auto
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "Texto Minatitlan"
+    EXPRESSION ([clv_zona] = 22)
+    LABEL
+      FONT 'sans'
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      POSITION auto
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "Texto Coatzacoalcos"
+    EXPRESSION ([clv_zona] = 23)
+    LABEL
+      FONT 'sans'
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      POSITION auto
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "Texto Huayacocotla"
+    EXPRESSION ([clv_zona] = 24)
+    LABEL
+      FONT 'sans'
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      POSITION auto
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "Texto Panuco"
+    EXPRESSION ([clv_zona] = 25)
+    LABEL
+      FONT 'sans'
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      POSITION auto
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "Texto Jaltipan"
+    EXPRESSION ([clv_zona] = 29)
+    LABEL
+      FONT 'sans'
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      POSITION auto
+      TYPE truetype
+    END
+  END
+END

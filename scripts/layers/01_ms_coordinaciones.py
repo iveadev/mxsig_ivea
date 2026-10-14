@@ -57,3 +57,8 @@ capas =  [
     {"id_capa": "cz3025",   "condicional": "[clv_zona] = 25", "nombre": "Panuco",          "color": "249 220 101"},
     {"id_capa": "cz3029",   "condicional": "[clv_zona] = 29", "nombre": "Jaltipan",        "color": "235 151 78"},
 ]
+
+# leyendas
+config_etiquetas = {
+    'label_item': 'coord_zon',
+}
