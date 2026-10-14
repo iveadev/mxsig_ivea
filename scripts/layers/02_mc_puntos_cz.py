@@ -45,5 +45,5 @@ capas =  [
 
 # leyendas
 config_etiquetas = {
-    'label_item': 'nombre_cz',
+    'label_item': 'nom_cz',
 }

@@ -9,13 +9,13 @@ LAYER
   TYPE POINT
   CONNECTIONTYPE POSTGIS
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
-  DATA "the_geom FROM (SELECT the_geom, nombre_cz, clv_cz, gid, nom_cz FROM ivea.oficinas_cz) AS t1 USING UNIQUE gid USING SRID=900913"
+  DATA "the_geom FROM (SELECT gid, clv_cz, nom_cz, the_geom FROM ivea.oficinas_cz) AS t1 USING UNIQUE gid USING SRID=900913"
   ENCODING "ISO-8859-1"
   METADATA
     "wms_title" "Etiquetas - Puntos de las Oficinas de Coordinacion IVEA"
     "wms_enable_request" "*"
   END
-  LABELITEM "nombre_cz"
+  LABELITEM "nom_cz"
   CLASS
     NAME "Texto Tantoyuca"
     EXPRESSION ([clv_zona] = 1)
