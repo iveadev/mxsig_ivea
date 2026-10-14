@@ -3,7 +3,7 @@
 # Archivo de deficion para las capas
 descripcion =  "Población total del estado de Veracruz"
 # Nombre del archivo de salida
-output =  "ivea/poblacion_veracruz.map"
+output =  "poblacion_veracruz"
 
 # nombre de la tabla en la base de datos, comenzando con el esquema, por ejemplo: "esquema.tabla"
 tabla =  "marco_geoestadistico.poblacion"

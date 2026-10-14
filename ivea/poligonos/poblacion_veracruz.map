@@ -1,8 +1,9 @@
-# =================================================================
-# ARCHIVO GENERADO AUTOMÁTICAMENTE (MULTICLASE) A PARTIR DE: layers.05_ms_poblacion 
-# Población total del estado de Veracruz 
-# =================================================================
-
+# poblacion_veracruz.map
+#======================================================================
+# GENERADO AUTOMÁTICAMENTE A PARTIR DE: scripts/layers/05_ms_poblacion.py
+# Descripción: Población total del estado de Veracruz
+# Modo de Operación: MULTIPLES_ESTILOS
+#======================================================================
 
 LAYER
   NAME "capa_poblacion_veracruz"
@@ -11,12 +12,10 @@ LAYER
   CONNECTIONTYPE POSTGIS
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
   DATA "the_geom FROM (SELECT gid, the_geom, poblacion FROM marco_geoestadistico.poblacion) AS t1 USING UNIQUE gid USING SRID=900913"
-
   METADATA
     "wms_title" "Población total del estado de Veracruz"
     "wms_enable_request" "*"
   END
-
   CLASS
     NAME "Rango de población 1"
     EXPRESSION ([poblacion]>=1543 and [poblacion]<8925)
@@ -27,8 +26,6 @@ LAYER
       WIDTH 0.8
     END
   END
-  
-
   CLASS
     NAME "Rango de población 2"
     EXPRESSION ([poblacion]>=8925 and [poblacion]<16585)
@@ -39,8 +36,6 @@ LAYER
       WIDTH 0.8
     END
   END
-  
-
   CLASS
     NAME "Rango de población 3"
     EXPRESSION ([poblacion]>=16585 and [poblacion]<24127)
@@ -51,8 +46,6 @@ LAYER
       WIDTH 0.8
     END
   END
-  
-
   CLASS
     NAME "Rango de población 4"
     EXPRESSION ([poblacion]>=24127 and [poblacion]<39327)
@@ -63,8 +56,6 @@ LAYER
       WIDTH 0.8
     END
   END
-  
-
   CLASS
     NAME "Rango de población 5"
     EXPRESSION ([poblacion]>=39327 and [poblacion]<61377)
@@ -75,8 +66,6 @@ LAYER
       WIDTH 0.8
     END
   END
-  
-
   CLASS
     NAME "Rango de población 6"
     EXPRESSION ([poblacion]>=61377 and [poblacion]<85489)
@@ -87,8 +76,6 @@ LAYER
       WIDTH 0.8
     END
   END
-  
-
   CLASS
     NAME "Rango de población 7"
     EXPRESSION ([poblacion]>=85489 and [poblacion]<144776)
@@ -99,8 +86,6 @@ LAYER
       WIDTH 0.8
     END
   END
-  
-
   CLASS
     NAME "Rango de población 8"
     EXPRESSION ([poblacion]>=144776 and [poblacion]<607209)
@@ -111,6 +96,4 @@ LAYER
       WIDTH 0.8
     END
   END
-  
-
-END # Fin del LAYER
+END

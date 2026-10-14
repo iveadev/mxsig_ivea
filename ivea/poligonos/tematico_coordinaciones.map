@@ -1,0 +1,269 @@
+# tematico_coordinaciones.map
+#======================================================================
+# GENERADO AUTOMÁTICAMENTE A PARTIR DE: scripts/layers/01_ms_coordinaciones.py
+# Descripción: Coordinaciones de Zona del IVEA
+# Modo de Operación: MULTIPLES_ESTILOS
+#======================================================================
+
+LAYER
+  NAME "c_tematico_cz"
+  STATUS ON
+  TYPE POLYGON
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom, clv_zona FROM marco_geoestadistico.mun_coordinaciones) AS t1 USING UNIQUE gid USING SRID=900913"
+  METADATA
+    "wms_title" "Coordinaciones de Zona del IVEA"
+    "wms_enable_request" "*"
+  END
+  CLASS
+    NAME "Tantoyuca"
+    EXPRESSION (clv_zona = 1)
+    STYLE
+      COLOR 235 151 78
+      OPACITY 60
+      OUTLINECOLOR 60 60 60
+      WIDTH 0.8
+    END
+  END
+  CLASS
+    NAME "Chicontepec"
+    EXPRESSION (clv_zona = 3)
+    STYLE
+      COLOR 93 188 210
+      OPACITY 60
+      OUTLINECOLOR 60 60 60
+      WIDTH 0.8
+    END
+  END
+  CLASS
+    NAME "Tuxpan"
+    EXPRESSION (clv_zona = 4)
+    STYLE
+      COLOR 158 53 147
+      OPACITY 60
+      OUTLINECOLOR 60 60 60
+      WIDTH 0.8
+    END
+  END
+  CLASS
+    NAME "Poza Rica"
+    EXPRESSION (clv_zona = 5)
+    STYLE
+      COLOR 196 46 96
+      OPACITY 60
+      OUTLINECOLOR 60 60 60
+      WIDTH 0.8
+    END
+  END
+  CLASS
+    NAME "Papantla"
+    EXPRESSION (clv_zona = 6)
+    STYLE
+      COLOR 74 163 113
+      OPACITY 60
+      OUTLINECOLOR 60 60 60
+      WIDTH 0.8
+    END
+  END
+  CLASS
+    NAME "Espinal"
+    EXPRESSION (clv_zona = 7)
+    STYLE
+      COLOR 249 220 101
+      OPACITY 60
+      OUTLINECOLOR 60 60 60
+      WIDTH 0.8
+    END
+  END
+  CLASS
+    NAME "Martinez"
+    EXPRESSION (clv_zona = 8)
+    STYLE
+      COLOR 235 151 78
+      OPACITY 60
+      OUTLINECOLOR 60 60 60
+      WIDTH 0.8
+    END
+  END
+  CLASS
+    NAME "Perote"
+    EXPRESSION (clv_zona = 9)
+    STYLE
+      COLOR 93 188 210
+      OPACITY 60
+      OUTLINECOLOR 60 60 60
+      WIDTH 0.8
+    END
+  END
+  CLASS
+    NAME "Xalapa"
+    EXPRESSION (clv_zona = 10)
+    STYLE
+      COLOR 158 53 147
+      OPACITY 60
+      OUTLINECOLOR 60 60 60
+      WIDTH 0.8
+    END
+  END
+  CLASS
+    NAME "Coatepec"
+    EXPRESSION (clv_zona = 11)
+    STYLE
+      COLOR 196 46 96
+      OPACITY 60
+      OUTLINECOLOR 60 60 60
+      WIDTH 0.8
+    END
+  END
+  CLASS
+    NAME "Huatusco"
+    EXPRESSION (clv_zona = 12)
+    STYLE
+      COLOR 74 163 113
+      OPACITY 60
+      OUTLINECOLOR 60 60 60
+      WIDTH 0.8
+    END
+  END
+  CLASS
+    NAME "Orizaba"
+    EXPRESSION (clv_zona = 13)
+    STYLE
+      COLOR 249 220 101
+      OPACITY 60
+      OUTLINECOLOR 60 60 60
+      WIDTH 0.8
+    END
+  END
+  CLASS
+    NAME "Cordoba"
+    EXPRESSION (clv_zona = 14)
+    STYLE
+      COLOR 235 151 78
+      OPACITY 60
+      OUTLINECOLOR 60 60 60
+      WIDTH 0.8
+    END
+  END
+  CLASS
+    NAME "Zongolica"
+    EXPRESSION (clv_zona = 15)
+    STYLE
+      COLOR 93 188 210
+      OPACITY 60
+      OUTLINECOLOR 60 60 60
+      WIDTH 0.8
+    END
+  END
+  CLASS
+    NAME "Veracruz"
+    EXPRESSION (clv_zona = 16)
+    STYLE
+      COLOR 158 53 147
+      OPACITY 60
+      OUTLINECOLOR 60 60 60
+      WIDTH 0.8
+    END
+  END
+  CLASS
+    NAME "Boca del Rio"
+    EXPRESSION (clv_zona = 17)
+    STYLE
+      COLOR 196 46 96
+      OPACITY 60
+      OUTLINECOLOR 60 60 60
+      WIDTH 0.8
+    END
+  END
+  CLASS
+    NAME "Tierra Blanca"
+    EXPRESSION (clv_zona = 18)
+    STYLE
+      COLOR 74 163 113
+      OPACITY 60
+      OUTLINECOLOR 60 60 60
+      WIDTH 0.8
+    END
+  END
+  CLASS
+    NAME "Cosamaloapan"
+    EXPRESSION (clv_zona = 19)
+    STYLE
+      COLOR 249 220 101
+      OPACITY 60
+      OUTLINECOLOR 60 60 60
+      WIDTH 0.8
+    END
+  END
+  CLASS
+    NAME "San Andres"
+    EXPRESSION (clv_zona = 20)
+    STYLE
+      COLOR 235 151 78
+      OPACITY 60
+      OUTLINECOLOR 60 60 60
+      WIDTH 0.8
+    END
+  END
+  CLASS
+    NAME "Acayucan"
+    EXPRESSION (clv_zona = 21)
+    STYLE
+      COLOR 93 188 210
+      OPACITY 60
+      OUTLINECOLOR 60 60 60
+      WIDTH 0.8
+    END
+  END
+  CLASS
+    NAME "Minatitlan"
+    EXPRESSION (clv_zona = 22)
+    STYLE
+      COLOR 158 53 147
+      OPACITY 60
+      OUTLINECOLOR 60 60 60
+      WIDTH 0.8
+    END
+  END
+  CLASS
+    NAME "Coatzacoalcos"
+    EXPRESSION (clv_zona = 23)
+    STYLE
+      COLOR 196 46 96
+      OPACITY 60
+      OUTLINECOLOR 60 60 60
+      WIDTH 0.8
+    END
+  END
+  CLASS
+    NAME "Huayacocotla"
+    EXPRESSION (clv_zona = 24)
+    STYLE
+      COLOR 74 163 113
+      OPACITY 60
+      OUTLINECOLOR 60 60 60
+      WIDTH 0.8
+    END
+  END
+  CLASS
+    NAME "Panuco"
+    EXPRESSION (clv_zona = 25)
+    STYLE
+      COLOR 249 220 101
+      OPACITY 60
+      OUTLINECOLOR 60 60 60
+      WIDTH 0.8
+    END
+  END
+  CLASS
+    NAME "Jaltipan"
+    EXPRESSION (clv_zona = 29)
+    STYLE
+      COLOR 235 151 78
+      OPACITY 60
+      OUTLINECOLOR 60 60 60
+      WIDTH 0.8
+    END
+  END
+END

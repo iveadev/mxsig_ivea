@@ -8,21 +8,24 @@ descripcion =  "Población total del estado de Veracruz"
 wms_title_global = descripcion
 
 # Nombre del archivo de salida
-output =  "ivea/poblacion_veracruz.map"
+output =  "poblacion_veracruz"
 
 # Nombre de la capa global
-id_capa = "capa_poblacion_veracruz"
+id_capa_global= "capa_poblacion_veracruz"
 
 # nombre de la tabla en la base de datos, comenzando con el esquema, por ejemplo: "esquema.tabla"
 tabla =  "marco_geoestadistico.poblacion"
+tipo_capa = "POLYGON"
 
 #Campos adicionales a seleccionar en la subconsulta SQL
 campos_adicionales = ["poblacion"]
 
 #Valores globales para las capas, si se definen aquí se aplicarán a todas las capas, si se definen en la capa se sobreescriben
-opacity =  "60"
-outlinecolor =  "60 60 60"
-linewidth =  "0.8"
+opacity_global = 60
+outlinecolor_global = "60 60 60"
+width_global = 0.8
+
+modo_generacion = "MULTIPLES_ESTILOS" 
 
 #Definición de las propiedades de las capas:
 #   condicional: Condición para aplicar las clases, el campo debe estar entre corchetes, por ejemplo: [porcentaje]<50
@@ -31,7 +34,7 @@ linewidth =  "0.8"
 #   opacity: Opacidad de la capa, si no está definido se omitirá en la capa
 #   outlinecolor: Color del contorno de la capa, si no está definido se omitirá en la capa
 
-clases = [
+capas = [
   {
     "condicional": "[poblacion]>=1543 and [poblacion]<8925",
     "color": "245 255 204",

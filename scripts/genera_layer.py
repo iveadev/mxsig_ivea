@@ -2,6 +2,9 @@ import sys
 import os
 import importlib.util
 
+# Carpeta que almacena todos los objetos resultantes
+carpeta_base =  'ivea/'
+
 def cargar_definicion_externa(ruta_archivo):
     """Carga dinámicamente el archivo de configuración externa del usuario."""
     if not os.path.exists(ruta_archivo):
@@ -88,6 +91,7 @@ def construir_layer_base(id_capa, tipo_capa, select_sql, encoding_capa=None):
         
     return bloque
 
+
 # =====================================================================
 # ORQUESTADOR PRINCIPAL
 # =====================================================================
@@ -125,18 +129,19 @@ def main():
     # --- MODO 2: MÚLTIPLES ESTILOS ---
     elif cfg.modo_generacion == "MULTIPLES_ESTILOS":
         sql = f"the_geom FROM (SELECT {campos_select} FROM {cfg.tabla}) AS t1 USING UNIQUE gid USING SRID=900913"
-        lineas_resultado.extend(construir_layer_base(cfg.output, cfg.tipo_capa, sql, encoding_actual))
+        lineas_resultado.extend(construir_layer_base(cfg.id_capa_global, cfg.tipo_capa, sql, encoding_actual))
         lineas_resultado.extend(crear_bloque_metadata(cfg.descripcion))
         for c in cfg.capas:
             lineas_resultado.extend(crear_bloque_class(c, cfg, usar_expresion=True))
         lineas_resultado.append("END\n")
 
     # Guardar archivo listo para el INCLUDE de MxSIG
-    nombre_salida = f"{cfg.output}.map"
+    folder =  'poligonos/' if cfg.tipo_capa == 'POLYGON' else 'puntos/'
+    nombre_salida = f"{carpeta_base}{folder}{cfg.output}.map"
     with open(nombre_salida, "w", encoding="utf-8") as f:
         f.write("\n".join(lineas_resultado))
         
-    print(f"¡Éxito! Archivo '{nombre_salida}' generado en modo '{cfg.modo_generacion}'.")
+    print(f"¡Éxito!\nArchivo '{nombre_salida}' generado en modo '{cfg.modo_generacion}'.")
 
 if __name__ == "__main__":
     main()

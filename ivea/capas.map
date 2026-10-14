@@ -37,8 +37,8 @@ END # Fin del LAYER
 # -----------------------------------------------------------------
 # 02.- OTRAS CAPAS DE INFORMACIÓN
 # -----------------------------------------------------------------
-
-INCLUDE "/opt/map/mdm60/ivea/coordinaciones.map"        #Coordinaciones de zona
-INCLUDE "/opt/map/mdm60/ivea/tematico_pobreza.map"      #Pobreza segun coneval
-INCLUDE "/opt/map/mdm60/ivea/poblacion_veracruz.map"    #Poblacion total de Veracruz
-INCLUDE "/opt/map/mdm60/ivea/oficinas_cz.map"    #Poblacion total de Veracruz
+INCLUDE "/opt/map/mdm60/ivea/poligonos/coordinaciones.map"              #Coordinaciones de zona
+INCLUDE "/opt/map/mdm60/ivea/poligonos/tematico_coordinaciones.map"     #Coordinaciones de zona
+INCLUDE "/opt/map/mdm60/ivea/poligonos/tematico_pobreza.map"            #Pobreza segun coneval
+INCLUDE "/opt/map/mdm60/ivea/poligonos/poblacion_veracruz.map"          #Poblacion total de Veracruz
+INCLUDE "/opt/map/mdm60/ivea/puntos/oficinas_cz.map"                    #Prueba caps de puntos cz
