@@ -26,6 +26,8 @@ LAYER
       TYPE truetype
     END
   END
+END
+
 LAYER
   NAME "t_denue_escuelas_secundarias"
   STATUS ON
@@ -49,6 +51,8 @@ LAYER
       TYPE truetype
     END
   END
+END
+
 LAYER
   NAME "t_denue_escuelas_media_superior"
   STATUS ON
@@ -72,3 +76,4 @@ LAYER
       TYPE truetype
     END
   END
+END

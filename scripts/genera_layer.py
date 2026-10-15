@@ -215,7 +215,7 @@ def main():
                 lineas_labels.extend(crear_bloque_metadata(f"Texto {c['nombre']}"))
                 lineas_labels.append(f'  LABELITEM "{label_item}"')
                 lineas_labels.extend(crear_bloque_class_etiqueta(c, config_labels, usar_expresion=False))
-                lineas_geo.append("END\n")
+                lineas_labels.append("END\n")
 
 
         elif cfg.modo_generacion == "MULTIPLES_ESTILOS":
