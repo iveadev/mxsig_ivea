@@ -143,7 +143,6 @@ def main():
     nombre_salida_vector = os.path.join(ruta_vector, f"{cfg.output}.map")
     nombre_salida_leyendas = os.path.join(ruta_leyendas, f"{cfg.output}.map")
 
-    campos_select = ", ".join(["gid", "the_geom"] + cfg.campos_adicionales)
     encoding_actual = getattr(cfg, "encoding_global", None)
 
     # -----------------------------------------------------------------
@@ -160,17 +159,22 @@ def main():
 
     if cfg.modo_generacion == "MULTIPLES_CAPAS":
         for c in cfg.capas:
-            where = f"WHERE {c['condicional']}" if 'condicional' in c else ""
-            sql = f"the_geom FROM (SELECT {campos_select} FROM {cfg.tabla} {where}) AS t1 USING UNIQUE gid USING SRID=900913"
-            lineas_geo.extend(construir_layer_base(c["id_capa"], cfg.tipo_capa, sql, encoding_actual))
+            campos_adicionales = c['campos_adicionales'] if 'campos_adicionales' in c else getattr(cfg, 'campos_adicionales', [])
+            campos_select = ", ".join(["gid", "the_geom"] + campos_adicionales)
+            tabla = f"{c['tabla']}" if 'tabla' in c else cfg.tabla_global
+            where = f" WHERE {c['condicional']}" if 'condicional' in c else ""
+            sql = f"the_geom FROM (SELECT {campos_select} FROM {tabla}{where}) AS t1 USING UNIQUE gid USING SRID=900913"
+            lineas_geo.extend(construir_layer_base('c_' + c["id_capa"], cfg.tipo_capa, sql, encoding_actual))
             lineas_geo.extend(crear_bloque_metadata(c["nombre"]))
             lineas_geo.extend(crear_bloque_class(c, cfg, usar_expresion=False))
             lineas_geo.append("END\n")
 
     elif cfg.modo_generacion == "MULTIPLES_ESTILOS":
         id_global = getattr(cfg, "id_capa_global", cfg.output)
+        campos_adicionales = c['campos_adicionales'] if 'campos_adicionales' in c else getattr(cfg, 'campos_adicionales', [])
+        campos_select = ", ".join(["gid", "the_geom"] + campos_adicionales)
         sql = f"the_geom FROM (SELECT {campos_select} FROM {cfg.tabla}) AS t1 USING UNIQUE gid USING SRID=900913"
-        lineas_geo.extend(construir_layer_base(id_global, cfg.tipo_capa, sql, encoding_actual))
+        lineas_geo.extend(construir_layer_base('c_' + id_global, cfg.tipo_capa, sql, encoding_actual))
         lineas_geo.extend(crear_bloque_metadata(cfg.descripcion))
         for c in cfg.capas:
             lineas_geo.extend(crear_bloque_class(c, cfg, usar_expresion=True))
@@ -196,17 +200,18 @@ def main():
         ]
         label_item = config_labels["label_item"]
 
-        # CORRECCIÓN EN EL SELECT: Aseguramos que 'label_item' esté incluido en la consulta
-        # Convertimos a set para evitar duplicados si el usuario ya lo había puesto en campos_adicionales
-        campos_con_label = list(set(["gid", "the_geom"] + cfg.campos_adicionales + [label_item]))
-        campos_select_labels = ", ".join(campos_con_label)
-
+    
         if cfg.modo_generacion == "MULTIPLES_CAPAS":
             for c in cfg.capas:
+                campos_adicionales = c['campos_adicionales'] if 'campos_adicionales' in c else getattr(cfg, 'campos_adicionales', [])
+                campos_con_label = ["gid", "the_geom"] + campos_adicionales + [label_item]
+                campos_select_labels = ", ".join(campos_con_label)
+                tabla = f"{c['tabla']}" if 'tabla' in c else cfg.tabla_global
+                where = f" WHERE {c['condicional']}" if 'condicional' in c else ""
                 # Usamos campos_select_labels en lugar de campos_select tradicional
-                sql = f"the_geom FROM (SELECT {campos_select_labels} FROM {cfg.tabla} WHERE {c['condicional']}) AS t1 USING UNIQUE gid USING SRID=900913"
+                sql = f"the_geom FROM (SELECT {campos_select_labels} FROM {tabla}{where}) AS t1 USING UNIQUE gid USING SRID=900913"
                 
-                lineas_labels.extend(construir_layer_base(c["id_capa"], cfg.tipo_capa, sql, encoding_actual))
+                lineas_labels.extend(construir_layer_base('t_' + c["id_capa"], cfg.tipo_capa, sql, encoding_actual))
                 lineas_labels.extend(crear_bloque_metadata(f"Texto {c['nombre']}"))
                 lineas_labels.append(f'  LABELITEM "{label_item}"')
                 lineas_labels.extend(crear_bloque_class_etiqueta(c, config_labels, usar_expresion=False))

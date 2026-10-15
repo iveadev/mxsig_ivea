@@ -3,9 +3,8 @@
 #---------------------------------------------------------------------
 
 descripcion = "Escuelas primarias en el estado de Veracruz"
-output = "denue_escuelas_primarias"
-tabla = "denue.escuelas_primarias"
-campos_adicionales = [""]
+output = "denue_escuelas"
+#campos_adicionales = ['']
 tipo_capa = "POINT"
 
 # CONFIGURACIONES GLOBALES PARA PUNTOS
@@ -31,5 +30,12 @@ modo_generacion = "MULTIPLES_CAPAS"
 #   outlinecolor: Color del contorno de la capa, si no está definido se omitirá en la capa
 
 capas =  [
-    {'id_capa': 'c_denue_escuelas_primarias', "nombre": "primarias", 'color': '23 23 23'},
+    {'id_capa': 'denue_escuelas_primarias','tabla':'denue.escuelas_primarias', "nombre": "Escuelas primarias", 'color': '11 123 234'},
+    {'id_capa': 'denue_escuelas_secundarias','tabla':'denue.escuelas_secundarias', "nombre": "Escuelas secundarias", 'color': '122 234 10'},
+    {'id_capa': 'denue_escuelas_media_superior','tabla':'denue.escuelas_media_superior', "nombre": "Escuelas media superior", 'color': '234 10 122'},
 ]
+
+# leyendas
+config_etiquetas = {
+    'label_item': 'nombre_ue',
+}

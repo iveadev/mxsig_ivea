@@ -43,4 +43,4 @@ INCLUDE "/opt/map/mdm60/ivea/poligonos/tematico_pobreza.map"            #Pobreza
 INCLUDE "/opt/map/mdm60/ivea/poligonos/poblacion_veracruz.map"          #Poblacion total de Veracruz
 INCLUDE "/opt/map/mdm60/ivea/puntos/oficinas_cz.map"                    #Prueba caps de puntos cz
 # DENUE
-INCLUDE "/opt/map/mdm60/ivea/puntos/denue_escuelas_primarias.map"       #Primarias
+INCLUDE "/opt/map/mdm60/ivea/puntos/denue_escuelas.map"                 #Escuelas primarias, secundarias y media superior
