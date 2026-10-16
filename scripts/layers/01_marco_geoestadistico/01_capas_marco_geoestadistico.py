@@ -6,9 +6,11 @@ layer = {
     'type': 'POLYGON',
     'class': [
         {
-            'outlinecolor' : '0,0,0',
-            'width':'1',
-            'color':'0,0,0',
+            'style': {
+                'outlinecolor' : '0,0,0',
+                'width':'1',
+                'color':'0,0,0',
+            }
         }
     ]
 }
@@ -38,7 +40,7 @@ layers =  [
         'class': [
             {
                 'style': {
-                    'outline': '122,234,10',
+                    'outlinecolor': '122,234,10',
                 },
             }
         ]

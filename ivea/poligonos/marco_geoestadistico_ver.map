@@ -15,9 +15,11 @@ LAYER
     "wms_title" "Contorno del Estado de Veracruz"
   END
   CLASS
-    OUTLINECOLOR 0 0 0
-    WIDTH 1
-    COLOR 0 0 0
+    STYLE
+      OUTLINECOLOR 0 0 0
+      WIDTH 1
+      COLOR 0 0 0
+    END
   END
   NAME "c_edo_ver"
 END
@@ -34,7 +36,7 @@ LAYER
   END
   CLASS
     STYLE
-      OUTLINE 122,234,10
+      OUTLINECOLOR 122 234 10
     END
   END
   NAME "c_mun_ver"
