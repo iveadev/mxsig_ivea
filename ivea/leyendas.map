@@ -2,5 +2,6 @@
 # CAPAS DE TEXTO PARA ELEMETOS DE IVEA
 # -----------------------------------------------------------------
 
-INCLUDE "/opt/map/mdm60/ivea/leyendas/oficinas_cz.map"          #Nombre las CZ
-INCLUDE "/opt/map/mdm60/ivea/leyendas/denue_escuelas.map"       #Nombre de las escuelas promarias, secundarias y media sup. DENUE
+INCLUDE "/opt/map/mdm60/ivea/leyendas/marco_geoestadistico_ver.map"     #marco_geoestadistico
+INCLUDE "/opt/map/mdm60/ivea/leyendas/oficinas_cz.map"                  #Nombre las CZ
+INCLUDE "/opt/map/mdm60/ivea/leyendas/denue_escuelas.map"               #Nombre de las escuelas promarias, secundarias y media sup. DENUE
