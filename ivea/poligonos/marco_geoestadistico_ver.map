@@ -19,7 +19,7 @@ LAYER
     WIDTH 1
     COLOR 0 0 0
   END
-  NAME "edo_ver"
+  NAME "c_edo_ver"
 END
 
 LAYER
@@ -37,5 +37,5 @@ LAYER
       OUTLINE 122,234,10
     END
   END
-  NAME "mun_ver"
+  NAME "c_mun_ver"
 END

@@ -140,6 +140,7 @@ try:
 
         # 1. PASADA MAPA BASE: Forzamos prefijo "c_" y podamos bloques LABEL
         capa_base = capa_completa.copy()
+        capa_base["name"] = f"c_{nombre_original}"
         capa_base = podar_diccionario(capa_base, modo="BASE")
         contenido_base.extend(renderizar_diccionario({"LAYER": capa_base}))
         contenido_base.append("")
