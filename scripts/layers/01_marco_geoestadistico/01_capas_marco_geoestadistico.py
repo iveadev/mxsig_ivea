@@ -9,7 +9,6 @@ layer = {
             'style': {
                 'outlinecolor' : '0,0,0',
                 'width':'1',
-                'color':'0,0,0',
             }
         }
     ]

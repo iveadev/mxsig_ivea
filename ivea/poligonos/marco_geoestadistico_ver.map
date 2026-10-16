@@ -18,7 +18,6 @@ LAYER
     STYLE
       OUTLINECOLOR 0 0 0
       WIDTH 1
-      COLOR 0 0 0
     END
   END
   NAME "c_edo_ver"
