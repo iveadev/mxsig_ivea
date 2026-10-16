@@ -37,6 +37,7 @@ END # Fin del LAYER
 # -----------------------------------------------------------------
 # 02.- OTRAS CAPAS DE INFORMACIÓN
 # -----------------------------------------------------------------
+INCLUDE "/opt/map/mdm60/ivea/poligonos/marco_geoestadistico_ver.map"    #marco_geoestadistico
 INCLUDE "/opt/map/mdm60/ivea/poligonos/coordinaciones.map"              #Coordinaciones de zona
 INCLUDE "/opt/map/mdm60/ivea/poligonos/tematico_coordinaciones.map"     #Coordinaciones de zona
 INCLUDE "/opt/map/mdm60/ivea/poligonos/tematico_pobreza.map"            #Pobreza segun coneval
