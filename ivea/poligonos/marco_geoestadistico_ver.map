@@ -36,6 +36,7 @@ LAYER
   CLASS
     STYLE
       OUTLINECOLOR 122 234 10
+      WIDTH 1
     END
   END
   NAME "c_mun_ver"

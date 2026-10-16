@@ -4,14 +4,13 @@ output = "marco_geoestadistico_ver"
 # CONFIGURACIONES GLOBALES
 layer = {
     'type': 'POLYGON',
-    'class': [
-        {
-            'style': {
-                'outlinecolor' : '0,0,0',
-                'width':'1',
-            }
+    'class':{
+        'style': {
+            'outlinecolor' : '0,0,0',
+            'width':'1',
         }
-    ]
+    }
+    
 }
 
 # capas
@@ -36,12 +35,10 @@ layers =  [
             #'where': 'nomb_ent = "Veracruz de Ignacio de la Llave"'
         },
         'labelitem': 'nomgeo',
-        'class': [
-            {
-                'style': {
-                    'outlinecolor': '122,234,10',
-                },
-            }
-        ]
+        'class': {
+            'style': {
+                'outlinecolor': '122,234,10',
+            },
+        }
     },
 ]

@@ -21,14 +21,17 @@ estructura_base = {
         "wms_enable_request" : "*"
     },
     "labelitem": "", # Inicializado vacío; si el usuario lo define, detona el modo dual
-    "label": {
-        "font": "arial",
-        "size": "8",
-        "color": "0 0 0",
-        "outlinecolor": "255 255 255",
-        "position": "auto",
-        "type": "truetype"
+    "class" : {
+        "label": {
+            "font": "arial",
+            "size": "8",
+            "color": "0 0 0",
+            "outlinecolor": "255 255 255",
+            "position": "auto",
+            "type": "truetype"
+        }
     }
+    
 }
 
 requiere_doble_comillas = ["NAME", "WMS_TITLE", "WMS_ENABLE_REQUEST", "LABELITEM", "CONNECTION", "FONT"]
@@ -100,7 +103,7 @@ def podar_diccionario(dicc, modo="BASE"):
         clave_upper = k.strip().upper()
         
         if modo == "BASE" and clave_upper in ["LABELITEM", "LABEL"]: continue
-        if modo == "TEXTO" and clave_upper == "CLASS": continue
+        if modo == "TEXTO" and clave_upper == "STYLE": continue
         
         if isinstance(v, dict):
             dicc_limpio[k] = podar_diccionario(v, modo)
@@ -155,10 +158,10 @@ try:
             capa_texto["data"]["select"] = capa_texto["data"].get("select", [])
             if capa_texto["labelitem"] not in capa_texto["data"]["select"]:
                 capa_texto["data"]["select"].append(capa_texto["labelitem"])
-            # Modificamos el Name dentro del bloque CLASS interno para que diga "Texto..."
-            if "class" in capa_texto:
-                for cl in capa_texto["class"]:
-                    cl["name"] = f"Texto {cl.get('name', titulo_original)}"
+            # # Modificamos el Name dentro del bloque CLASS interno para que diga "Texto..."
+            # if "class" in capa_texto:
+            #     for cl in capa_texto["class"]:
+            #         cl["name"] = f"Texto {cl.get('name', titulo_original)}"
             
             capa_texto = podar_diccionario(capa_texto, modo="TEXTO")
             contenido_labels.extend(renderizar_diccionario({"LAYER": capa_texto}))

@@ -15,13 +15,15 @@ LAYER
     "wms_title" "Texto Municipios del Estado de Veracruz"
   END
   LABELITEM "nomgeo"
-  LABEL
-    FONT "arial"
-    SIZE 8
-    COLOR 0 0 0
-    OUTLINECOLOR 255 255 255
-    POSITION auto
-    TYPE truetype
+  CLASS
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      POSITION auto
+      TYPE truetype
+    END
   END
   NAME "t_mun_ver"
 END
