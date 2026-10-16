@@ -1,41 +1,40 @@
-#---------------------------------------------------------------------
-# Multiples Capas (a partir de una condicional)
-#---------------------------------------------------------------------
-
 descripcion = "Escuelas primarias en el estado de Veracruz"
 output = "denue_escuelas"
-#campos_adicionales = ['']
+
 tipo_capa = "POINT"
 
-# CONFIGURACIONES GLOBALES PARA PUNTOS
-symbol_global = "circulor"
-size_global = 9
-outlinecolor_global = "0 0 0"
-color_global = '0 0 0'
+# CONFIGURACIONES GLOBALES
+layer = {
+    'type' : 'POINT',
+    'labelitem': 'nombre_ue',
+    'class' : {
+        'style': {
+            'symbol': 'circulor',
+            'size': 9,
+            'outlinecolor': '0,0,0'
+        }
+    }
+}
 
-# --- VARIABLE SELECTORA DEL CASO DE USO ---
-# Opciones soportadas: 
-# 1. "MULTIPLES_CAPAS"  -> Genera un LAYER individual por cada fila (Tu enfoque actual de MxSIG)
-# 2. "MULTIPLES_ESTILOS" -> Genera UN SOLO LAYER en MxSIG con múltiples bloques CLASS dentro
-modo_generacion = "MULTIPLES_CAPAS" 
-
-#Definición de las propiedades de las capas:
-#   id_capa: Nombre de la capa generada en mapserver
-#   condicional: Condición SQL para filtrar la capa
-#   nombre: Nombre de la capa que se mostrará en el mapa
-
-#   Valores a sobrescribir de acuerdo al tipo de capa:
-#   color: Color de la capa
-#   opacity: Opacidad de la capa, si no está definido se omitirá en la capa
-#   outlinecolor: Color del contorno de la capa, si no está definido se omitirá en la capa
-
-capas =  [
+capas_denue =  [
     {'id_capa': 'denue_escuelas_primarias','tabla':'denue.escuelas_primarias', "nombre": "Escuelas primarias", 'color': '11 123 234'},
     {'id_capa': 'denue_escuelas_secundarias','tabla':'denue.escuelas_secundarias', "nombre": "Escuelas secundarias", 'color': '122 234 10'},
     {'id_capa': 'denue_escuelas_media_superior','tabla':'denue.escuelas_media_superior', "nombre": "Escuelas media superior", 'color': '234 10 122'},
 ]
 
-# leyendas
-config_etiquetas = {
-    'label_item': 'nombre_ue',
-}
+layers = []
+for c in capas_denue:
+    layers.append({
+        'name':f"{c['id_capa']}",
+        "metadata": {
+            "wms_title": f"{c['nombre']} (DENUE 2026)",
+        },
+        'data': {
+            'table': f"{c['tabla']}"
+        },
+        "class" : {
+            "style": {
+                "color": f"{c['color']}",
+            }
+        }
+    })

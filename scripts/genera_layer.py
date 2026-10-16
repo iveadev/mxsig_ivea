@@ -37,7 +37,7 @@ estructura_base = {
     
 }
 
-requiere_doble_comillas = ["NAME", "WMS_TITLE", "WMS_ENABLE_REQUEST", "LABELITEM", "CONNECTION", "FONT"]
+requiere_doble_comillas = ["NAME", "WMS_TITLE", "WMS_ENABLE_REQUEST", "LABELITEM", "CONNECTION", "FONT", "SYMBOL"]
 
 def deep_update(dicc_base, dicc_usuario):
     resultado = dicc_base.copy()

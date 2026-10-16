@@ -1,7 +1,8 @@
-# denue_escuelas.map - CAPAS DE LEYENDAS / TEXTOS (mxsigleyendas)
-#======================================================================
-# GENERADO AUTOMÁTICAMENTE PARA MXSIG
-#======================================================================
+# =================================================================
+# MAPA EXCLUSIVO DE TEXTOS (leyendas)
+# ARCHIVO GENERADO AUTOMÁTICAMENTE A PARTIR DE LA DEFINICIÓN: layers.04_denue.01_capas_escuelas 
+# DESCRIPCIÓN: Escuelas primarias en el estado de Veracruz 
+# =================================================================
 
 LAYER
   NAME "t_denue_escuelas_primarias"
@@ -11,14 +12,13 @@ LAYER
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
   DATA "the_geom FROM (SELECT gid, the_geom, nombre_ue FROM denue.escuelas_primarias) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Texto Escuelas primarias"
+    "wms_title" "Texto Escuelas primarias (DENUE 2026)"
     "wms_enable_request" "*"
   END
   LABELITEM "nombre_ue"
   CLASS
-    NAME "Texto Escuelas primarias"
     LABEL
-      FONT 'arial'
+      FONT "arial"
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
@@ -36,14 +36,13 @@ LAYER
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
   DATA "the_geom FROM (SELECT gid, the_geom, nombre_ue FROM denue.escuelas_secundarias) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Texto Escuelas secundarias"
+    "wms_title" "Texto Escuelas secundarias (DENUE 2026)"
     "wms_enable_request" "*"
   END
   LABELITEM "nombre_ue"
   CLASS
-    NAME "Texto Escuelas secundarias"
     LABEL
-      FONT 'arial'
+      FONT "arial"
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
@@ -61,14 +60,13 @@ LAYER
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
   DATA "the_geom FROM (SELECT gid, the_geom, nombre_ue FROM denue.escuelas_media_superior) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Texto Escuelas media superior"
+    "wms_title" "Texto Escuelas media superior (DENUE 2026)"
     "wms_enable_request" "*"
   END
   LABELITEM "nombre_ue"
   CLASS
-    NAME "Texto Escuelas media superior"
     LABEL
-      FONT 'arial'
+      FONT "arial"
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255

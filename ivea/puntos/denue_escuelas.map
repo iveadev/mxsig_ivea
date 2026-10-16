@@ -1,9 +1,8 @@
-# denue_escuelas.map - CAPAS GEOMETRICAS BASE (mxsigvector)
-#======================================================================
-# GENERADO AUTOMÁTICAMENTE A PARTIR DE: scripts/layers/denue/01_escuelas.py
-# Descripción: Escuelas primarias en el estado de Veracruz
-# Modo de Operación: MULTIPLES_CAPAS
-#======================================================================
+# =================================================================
+# MAPA BASE DE GEOMETRÍAS
+# ARCHIVO GENERADO AUTOMÁTICAMENTE A PARTIR DE LA DEFINICIÓN: layers.04_denue.01_capas_escuelas 
+# DESCRIPCIÓN: Escuelas primarias en el estado de Veracruz 
+# =================================================================
 
 LAYER
   NAME "c_denue_escuelas_primarias"
@@ -13,16 +12,15 @@ LAYER
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
   DATA "the_geom FROM (SELECT gid, the_geom FROM denue.escuelas_primarias) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Escuelas primarias"
+    "wms_title" "Escuelas primarias (DENUE 2026)"
     "wms_enable_request" "*"
   END
   CLASS
-    NAME "Escuelas primarias"
     STYLE
-      COLOR 11 123 234
-      SYMBOL 'circulor'
+      SYMBOL "circulor"
       SIZE 9
       OUTLINECOLOR 0 0 0
+      COLOR 11 123 234
     END
   END
 END
@@ -35,16 +33,15 @@ LAYER
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
   DATA "the_geom FROM (SELECT gid, the_geom FROM denue.escuelas_secundarias) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Escuelas secundarias"
+    "wms_title" "Escuelas secundarias (DENUE 2026)"
     "wms_enable_request" "*"
   END
   CLASS
-    NAME "Escuelas secundarias"
     STYLE
-      COLOR 122 234 10
-      SYMBOL 'circulor'
+      SYMBOL "circulor"
       SIZE 9
       OUTLINECOLOR 0 0 0
+      COLOR 122 234 10
     END
   END
 END
@@ -57,16 +54,15 @@ LAYER
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
   DATA "the_geom FROM (SELECT gid, the_geom FROM denue.escuelas_media_superior) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Escuelas media superior"
+    "wms_title" "Escuelas media superior (DENUE 2026)"
     "wms_enable_request" "*"
   END
   CLASS
-    NAME "Escuelas media superior"
     STYLE
-      COLOR 234 10 122
-      SYMBOL 'circulor'
+      SYMBOL "circulor"
       SIZE 9
       OUTLINECOLOR 0 0 0
+      COLOR 234 10 122
     END
   END
 END
