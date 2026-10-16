@@ -9,7 +9,7 @@ LAYER
   CONNECTIONTYPE POSTGIS
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
   DATA "the_geom FROM (SELECT gid, the_geom, nomgeo FROM marco_geoestadistico.mun_ver) AS t1 USING UNIQUE gid USING SRID=900913"
-  TYPE "POLYGON"
+  TYPE POLYGON
   METADATA
     "wms_enable_request" "*"
     "wms_title" "Texto Municipios del Estado de Veracruz"
@@ -21,7 +21,7 @@ LAYER
     COLOR 0 0 0
     OUTLINECOLOR 255 255 255
     POSITION auto
-    TYPE "truetype"
+    TYPE truetype
   END
   NAME "t_mun_ver"
 END
