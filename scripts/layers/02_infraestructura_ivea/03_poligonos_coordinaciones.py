@@ -49,6 +49,7 @@ for cz in coordinaciones:
                 "style":
                 {
                     "color": f"{cz['color']}",
+                    "outlinecolor": f"{cz['color']}",
                 }
             }
         }
