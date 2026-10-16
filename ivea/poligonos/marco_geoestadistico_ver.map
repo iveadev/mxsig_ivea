@@ -7,13 +7,13 @@
 LAYER
   NAME "c_edo_ver"
   STATUS ON
+  TYPE POLYGON
   CONNECTIONTYPE POSTGIS
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
   DATA "the_geom FROM (SELECT gid, the_geom FROM marco_geoestadistico.entidad_ver) AS t1 USING UNIQUE gid USING SRID=900913"
-  TYPE POLYGON
   METADATA
-    "wms_enable_request" "*"
     "wms_title" "Contorno del Estado de Veracruz"
+    "wms_enable_request" "*"
   END
   CLASS
     STYLE
@@ -26,13 +26,13 @@ END
 LAYER
   NAME "c_mun_ver"
   STATUS ON
+  TYPE POLYGON
   CONNECTIONTYPE POSTGIS
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
   DATA "the_geom FROM (SELECT gid, the_geom FROM marco_geoestadistico.mun_ver) AS t1 USING UNIQUE gid USING SRID=900913"
-  TYPE POLYGON
   METADATA
-    "wms_enable_request" "*"
     "wms_title" "Municipios del Estado de Veracruz"
+    "wms_enable_request" "*"
   END
   CLASS
     STYLE

@@ -36,8 +36,8 @@ classes = []
 for cz in coordinaciones:
     classes.append(
         {
-            "expression": f"[clv_cz] = {cz['id_cz']}",
             "name": f"{cz['nombre']}",
+            "expression": f"[clv_cz] = {cz['id_cz']}",
             "style":
             style_base | # herencia de diccionarios
             {

@@ -14,11 +14,12 @@ CARPETA_RAIZ = "ivea"
 estructura_base = {
     "name": "Capa base",
     "status": "ON",
+    "type": "POLYGON",
     "connectiontype": "POSTGIS",
     "connection": "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s",
     "data": {},
-    "type": "POLYGON",
     "metadata": {
+        "wms_title": "capa base",
         "wms_enable_request" : "*"
     },
     "labelitem": "", # Inicializado vacío; si el usuario lo define, detona el modo dual
