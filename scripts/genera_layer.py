@@ -116,79 +116,78 @@ def podar_diccionario(dicc, modo="BASE"):
             dicc_limpio[k] = v
     return dicc_limpio
 
-try:
-    mapa = importlib.import_module(nombre_modulo)
-    config_global_final = deep_update(estructura_base, getattr(mapa, "layer", {}))
+
+mapa = importlib.import_module(nombre_modulo)
+config_global_final = deep_update(estructura_base, getattr(mapa, "layer", {}))
+
+# Determinamos el tipo de geometría para saber en qué subcarpeta guardar
+tipo_geom = config_global_final.get("type", "POLYGON").upper()
+subcarpeta = "poligonos" if "POLYGON" in tipo_geom else "puntos" if "POINT" in tipo_geom else "lineas"
+ruta_destino = os.path.join(CARPETA_RAIZ, subcarpeta)
+ruta_destino_labels = os.path.join(CARPETA_RAIZ, 'leyendas')
+os.makedirs(ruta_destino, exist_ok=True) # Crea las carpetas automáticamente si no existen
+
+prefix_output = getattr(mapa, 'output', 'salida_mxsig')
+archivo_base = os.path.join(ruta_destino, f"{prefix_output}.map")
+archivo_labels = os.path.join(ruta_destino_labels, f"{prefix_output}.map")
+
+contenido_base = []
+contenido_labels = []
+procesa_dual = False
+
+for ly in getattr(mapa, "layers", [config_global_final]):
+    capa_completa = deep_update(config_global_final, ly)
+    nombre_original = capa_completa.get("name", "capa")
+    titulo_original = capa_completa.get("metadata", {}).get("wms_title", "Capa")
     
-    # Determinamos el tipo de geometría para saber en qué subcarpeta guardar
-    tipo_geom = config_global_final.get("type", "POLYGON").upper()
-    subcarpeta = "poligonos" if "POLYGON" in tipo_geom else "puntos" if "POINT" in tipo_geom else "lineas"
-    ruta_destino = os.path.join(CARPETA_RAIZ, subcarpeta)
-    ruta_destino_labels = os.path.join(CARPETA_RAIZ, 'leyendas')
-    os.makedirs(ruta_destino, exist_ok=True) # Crea las carpetas automáticamente si no existen
+    # Evaluamos si el usuario definió un labelitem real para procesar el modo dual
+    if capa_completa.get("labelitem", ""):
+        procesa_dual = True
+
+    # 1. PASADA MAPA BASE: Forzamos prefijo "c_" y podamos bloques LABEL
+    capa_base = capa_completa.copy()
+    capa_base["name"] = f"c_{nombre_original}"
+    capa_base = podar_diccionario(capa_base, modo="BASE")
+    contenido_base.extend(renderizar_diccionario({"LAYER": capa_base}))
+    contenido_base.append("")
     
-    prefix_output = getattr(mapa, 'output', 'salida_mxsig')
-    archivo_base = os.path.join(ruta_destino, f"{prefix_output}.map")
-    archivo_labels = os.path.join(ruta_destino_labels, f"{prefix_output}.map")
-    
-    contenido_base = []
-    contenido_labels = []
-    procesa_dual = False
-    
-    for ly in getattr(mapa, "layers", [config_global_final]):
-        capa_completa = deep_update(config_global_final, ly)
-        nombre_original = capa_completa.get("name", "capa")
-        titulo_original = capa_completa.get("metadata", {}).get("wms_title", "Capa")
+    # 2. PASADA TEXTOS: Forzamos prefijo "t_", "Texto..." en título y podamos STYLES
+    if procesa_dual:
+        capa_texto = deep_update(capa_completa, {
+            "name": f"t_{nombre_original}",
+            "metadata": {"wms_title": f"Texto {titulo_original}"}
+        })
+
+        capa_texto["data"]["select"] = capa_texto["data"].get("select", [])
+        if capa_texto["labelitem"] not in capa_texto["data"]["select"]:
+            capa_texto["data"]["select"].append(capa_texto["labelitem"])
+        # # Modificamos el Name dentro del bloque CLASS interno para que diga "Texto..."
+        # if "class" in capa_texto:
+        #     for cl in capa_texto["class"]:
+        #         cl["name"] = f"Texto {cl.get('name', titulo_original)}"
         
-        # Evaluamos si el usuario definió un labelitem real para procesar el modo dual
-        if capa_completa.get("labelitem", ""):
-            procesa_dual = True
+        capa_texto = podar_diccionario(capa_texto, modo="TEXTO")
+        contenido_labels.extend(renderizar_diccionario({"LAYER": capa_texto}))
+        contenido_labels.append("")
 
-        # 1. PASADA MAPA BASE: Forzamos prefijo "c_" y podamos bloques LABEL
-        capa_base = capa_completa.copy()
-        capa_base["name"] = f"c_{nombre_original}"
-        capa_base = podar_diccionario(capa_base, modo="BASE")
-        contenido_base.extend(renderizar_diccionario({"LAYER": capa_base}))
-        contenido_base.append("")
-        
-        # 2. PASADA TEXTOS: Forzamos prefijo "t_", "Texto..." en título y podamos STYLES
-        if procesa_dual:
-            capa_texto = deep_update(capa_completa, {
-                "name": f"t_{nombre_original}",
-                "metadata": {"wms_title": f"Texto {titulo_original}"}
-            })
+# Guardamos los archivos en sus respectivas rutas estructuradas
+with open(archivo_base, "w", encoding="utf-8") as f:
+    f.write("# =================================================================\n")
+    f.write("# MAPA BASE DE GEOMETRÍAS\n")
+    f.write(f"# ARCHIVO GENERADO AUTOMÁTICAMENTE A PARTIR DE LA DEFINICIÓN: {nombre_modulo} \n")
+    f.write(f"# DESCRIPCIÓN: {mapa.descripcion} \n")
+    f.write("# =================================================================\n\n")
+    f.write("\n".join(contenido_base))
+print(f"Mapfile BASE generado con éxito en: '{archivo_base}'")
 
-            capa_texto["data"]["select"] = capa_texto["data"].get("select", [])
-            if capa_texto["labelitem"] not in capa_texto["data"]["select"]:
-                capa_texto["data"]["select"].append(capa_texto["labelitem"])
-            # # Modificamos el Name dentro del bloque CLASS interno para que diga "Texto..."
-            # if "class" in capa_texto:
-            #     for cl in capa_texto["class"]:
-            #         cl["name"] = f"Texto {cl.get('name', titulo_original)}"
-            
-            capa_texto = podar_diccionario(capa_texto, modo="TEXTO")
-            contenido_labels.extend(renderizar_diccionario({"LAYER": capa_texto}))
-            contenido_labels.append("")
-
-    # Guardamos los archivos en sus respectivas rutas estructuradas
-    with open(archivo_base, "w", encoding="utf-8") as f:
+if procesa_dual:
+    with open(archivo_labels, "w", encoding="utf-8") as f:
         f.write("# =================================================================\n")
-        f.write("# MAPA BASE DE GEOMETRÍAS\n")
+        f.write("# MAPA EXCLUSIVO DE TEXTOS (leyendas)\n")
         f.write(f"# ARCHIVO GENERADO AUTOMÁTICAMENTE A PARTIR DE LA DEFINICIÓN: {nombre_modulo} \n")
         f.write(f"# DESCRIPCIÓN: {mapa.descripcion} \n")
         f.write("# =================================================================\n\n")
-        f.write("\n".join(contenido_base))
-    print(f"Mapfile BASE generado con éxito en: '{archivo_base}'")
+        f.write("\n".join(contenido_labels))
+    print(f"Mapfile LABELS generado con éxito en: '{archivo_labels}'")
 
-    if procesa_dual:
-        with open(archivo_labels, "w", encoding="utf-8") as f:
-            f.write("# =================================================================\n")
-            f.write("# MAPA EXCLUSIVO DE TEXTOS (leyendas)\n")
-            f.write(f"# ARCHIVO GENERADO AUTOMÁTICAMENTE A PARTIR DE LA DEFINICIÓN: {nombre_modulo} \n")
-            f.write(f"# DESCRIPCIÓN: {mapa.descripcion} \n")
-            f.write("# =================================================================\n\n")
-            f.write("\n".join(contenido_labels))
-        print(f"Mapfile LABELS generado con éxito en: '{archivo_labels}'")
 
-except Exception as e:
-    print(f"Error durante la compilación: {e}")
