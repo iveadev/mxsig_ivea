@@ -3,11 +3,11 @@
 # -----------------------------------------------------------------
 # 01.- CAPAS DE INFORMACIÓN
 # -----------------------------------------------------------------
-INCLUDE "/opt/map/mdm60/ivea/poligonos/marco_geoestadistico_ver.map"    #marco_geoestadistico
-INCLUDE "/opt/map/mdm60/ivea/poligonos/coordinaciones.map"              #Coordinaciones de zona
-INCLUDE "/opt/map/mdm60/ivea/puntos/oficinas_cz.map"                    #Puntos de ubicación de las CZ
+INCLUDE "/opt/map/mdm60/ivea/poligonos/marco_geoestadistico_ver.map"            #marco_geoestadistico
+INCLUDE "/opt/map/mdm60/ivea/poligonos/coordinaciones_zona.map"                 #Coordinaciones de zona
+INCLUDE "/opt/map/mdm60/ivea/puntos/oficinas_cz.map"                            #Puntos de ubicación de las CZ
 # DENUE
-INCLUDE "/opt/map/mdm60/ivea/puntos/denue_escuelas.map"                 #Escuelas primarias, secundarias y media superior
+INCLUDE "/opt/map/mdm60/ivea/puntos/denue_escuelas.map"                         #Escuelas primarias, secundarias y media superior
 
 # -----------------------------------------------------------------
 # 03.- CAPAS TEMATICAS (múltiples estilos)

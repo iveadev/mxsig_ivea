@@ -1,23 +1,21 @@
-# coordinaciones.map
-#======================================================================
-# GENERADO AUTOMÁTICAMENTE A PARTIR DE: scripts/layers/01_mc_coordinaciones.py
-# Descripción: Coordinaciones de Zona del IVEA
-# Modo de Operación: MULTIPLES_CAPAS
-#======================================================================
+# =================================================================
+# MAPA BASE DE GEOMETRÍAS
+# ARCHIVO GENERADO AUTOMÁTICAMENTE A PARTIR DE LA DEFINICIÓN: layers.02_infraestructura_ivea.03_poligonos_coordinaciones 
+# DESCRIPCIÓN: Poligonos de los municipios que abarcan las coordinaciones de zona del IVEA 
+# =================================================================
 
 LAYER
-  NAME "cz3001"
+  NAME "c_cz3001"
   STATUS ON
   TYPE POLYGON
   CONNECTIONTYPE POSTGIS
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
   DATA "the_geom FROM (SELECT gid, the_geom, clv_zona FROM marco_geoestadistico.mun_coordinaciones WHERE clv_zona = 1) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Tantoyuca"
+    "wms_title" "Coordinación de Zona Tantoyuca"
     "wms_enable_request" "*"
   END
   CLASS
-    NAME "Tantoyuca"
     STYLE
       COLOR 235 151 78
       OPACITY 60
@@ -28,18 +26,17 @@ LAYER
 END
 
 LAYER
-  NAME "cz3003"
+  NAME "c_cz3003"
   STATUS ON
   TYPE POLYGON
   CONNECTIONTYPE POSTGIS
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
   DATA "the_geom FROM (SELECT gid, the_geom, clv_zona FROM marco_geoestadistico.mun_coordinaciones WHERE clv_zona = 3) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Chicontepec"
+    "wms_title" "Coordinación de Zona Chicontepec"
     "wms_enable_request" "*"
   END
   CLASS
-    NAME "Chicontepec"
     STYLE
       COLOR 93 188 210
       OPACITY 60
@@ -50,18 +47,17 @@ LAYER
 END
 
 LAYER
-  NAME "cz3004"
+  NAME "c_cz3004"
   STATUS ON
   TYPE POLYGON
   CONNECTIONTYPE POSTGIS
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
   DATA "the_geom FROM (SELECT gid, the_geom, clv_zona FROM marco_geoestadistico.mun_coordinaciones WHERE clv_zona = 4) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Tuxpan"
+    "wms_title" "Coordinación de Zona Tuxpan"
     "wms_enable_request" "*"
   END
   CLASS
-    NAME "Tuxpan"
     STYLE
       COLOR 158 53 147
       OPACITY 60
@@ -72,18 +68,17 @@ LAYER
 END
 
 LAYER
-  NAME "cz3005"
+  NAME "c_cz3005"
   STATUS ON
   TYPE POLYGON
   CONNECTIONTYPE POSTGIS
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
   DATA "the_geom FROM (SELECT gid, the_geom, clv_zona FROM marco_geoestadistico.mun_coordinaciones WHERE clv_zona = 5) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Poza Rica"
+    "wms_title" "Coordinación de Zona Poza Rica"
     "wms_enable_request" "*"
   END
   CLASS
-    NAME "Poza Rica"
     STYLE
       COLOR 196 46 96
       OPACITY 60
@@ -94,18 +89,17 @@ LAYER
 END
 
 LAYER
-  NAME "cz3006"
+  NAME "c_cz3006"
   STATUS ON
   TYPE POLYGON
   CONNECTIONTYPE POSTGIS
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
   DATA "the_geom FROM (SELECT gid, the_geom, clv_zona FROM marco_geoestadistico.mun_coordinaciones WHERE clv_zona = 6) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Papantla"
+    "wms_title" "Coordinación de Zona Papantla"
     "wms_enable_request" "*"
   END
   CLASS
-    NAME "Papantla"
     STYLE
       COLOR 74 163 113
       OPACITY 60
@@ -116,18 +110,17 @@ LAYER
 END
 
 LAYER
-  NAME "cz3007"
+  NAME "c_cz3007"
   STATUS ON
   TYPE POLYGON
   CONNECTIONTYPE POSTGIS
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
   DATA "the_geom FROM (SELECT gid, the_geom, clv_zona FROM marco_geoestadistico.mun_coordinaciones WHERE clv_zona = 7) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Espinal"
+    "wms_title" "Coordinación de Zona Espinal"
     "wms_enable_request" "*"
   END
   CLASS
-    NAME "Espinal"
     STYLE
       COLOR 249 220 101
       OPACITY 60
@@ -138,18 +131,17 @@ LAYER
 END
 
 LAYER
-  NAME "cz3008"
+  NAME "c_cz3008"
   STATUS ON
   TYPE POLYGON
   CONNECTIONTYPE POSTGIS
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
   DATA "the_geom FROM (SELECT gid, the_geom, clv_zona FROM marco_geoestadistico.mun_coordinaciones WHERE clv_zona = 8) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Martinez"
+    "wms_title" "Coordinación de Zona Martinez"
     "wms_enable_request" "*"
   END
   CLASS
-    NAME "Martinez"
     STYLE
       COLOR 235 151 78
       OPACITY 60
@@ -160,18 +152,17 @@ LAYER
 END
 
 LAYER
-  NAME "cz3009"
+  NAME "c_cz3009"
   STATUS ON
   TYPE POLYGON
   CONNECTIONTYPE POSTGIS
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
   DATA "the_geom FROM (SELECT gid, the_geom, clv_zona FROM marco_geoestadistico.mun_coordinaciones WHERE clv_zona = 9) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Perote"
+    "wms_title" "Coordinación de Zona Perote"
     "wms_enable_request" "*"
   END
   CLASS
-    NAME "Perote"
     STYLE
       COLOR 93 188 210
       OPACITY 60
@@ -182,18 +173,17 @@ LAYER
 END
 
 LAYER
-  NAME "cz3010"
+  NAME "c_cz3010"
   STATUS ON
   TYPE POLYGON
   CONNECTIONTYPE POSTGIS
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
   DATA "the_geom FROM (SELECT gid, the_geom, clv_zona FROM marco_geoestadistico.mun_coordinaciones WHERE clv_zona = 10) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Xalapa"
+    "wms_title" "Coordinación de Zona Xalapa"
     "wms_enable_request" "*"
   END
   CLASS
-    NAME "Xalapa"
     STYLE
       COLOR 158 53 147
       OPACITY 60
@@ -204,18 +194,17 @@ LAYER
 END
 
 LAYER
-  NAME "cz3011"
+  NAME "c_cz3011"
   STATUS ON
   TYPE POLYGON
   CONNECTIONTYPE POSTGIS
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
   DATA "the_geom FROM (SELECT gid, the_geom, clv_zona FROM marco_geoestadistico.mun_coordinaciones WHERE clv_zona = 11) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Coatepec"
+    "wms_title" "Coordinación de Zona Coatepec"
     "wms_enable_request" "*"
   END
   CLASS
-    NAME "Coatepec"
     STYLE
       COLOR 196 46 96
       OPACITY 60
@@ -226,18 +215,17 @@ LAYER
 END
 
 LAYER
-  NAME "cz3012"
+  NAME "c_cz3012"
   STATUS ON
   TYPE POLYGON
   CONNECTIONTYPE POSTGIS
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
   DATA "the_geom FROM (SELECT gid, the_geom, clv_zona FROM marco_geoestadistico.mun_coordinaciones WHERE clv_zona = 12) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Huatusco"
+    "wms_title" "Coordinación de Zona Huatusco"
     "wms_enable_request" "*"
   END
   CLASS
-    NAME "Huatusco"
     STYLE
       COLOR 74 163 113
       OPACITY 60
@@ -248,18 +236,17 @@ LAYER
 END
 
 LAYER
-  NAME "cz3013"
+  NAME "c_cz3013"
   STATUS ON
   TYPE POLYGON
   CONNECTIONTYPE POSTGIS
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
   DATA "the_geom FROM (SELECT gid, the_geom, clv_zona FROM marco_geoestadistico.mun_coordinaciones WHERE clv_zona = 13) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Orizaba"
+    "wms_title" "Coordinación de Zona Orizaba"
     "wms_enable_request" "*"
   END
   CLASS
-    NAME "Orizaba"
     STYLE
       COLOR 249 220 101
       OPACITY 60
@@ -270,18 +257,17 @@ LAYER
 END
 
 LAYER
-  NAME "cz3014"
+  NAME "c_cz3014"
   STATUS ON
   TYPE POLYGON
   CONNECTIONTYPE POSTGIS
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
   DATA "the_geom FROM (SELECT gid, the_geom, clv_zona FROM marco_geoestadistico.mun_coordinaciones WHERE clv_zona = 14) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Cordoba"
+    "wms_title" "Coordinación de Zona Cordoba"
     "wms_enable_request" "*"
   END
   CLASS
-    NAME "Cordoba"
     STYLE
       COLOR 235 151 78
       OPACITY 60
@@ -292,18 +278,17 @@ LAYER
 END
 
 LAYER
-  NAME "cz3015"
+  NAME "c_cz3015"
   STATUS ON
   TYPE POLYGON
   CONNECTIONTYPE POSTGIS
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
   DATA "the_geom FROM (SELECT gid, the_geom, clv_zona FROM marco_geoestadistico.mun_coordinaciones WHERE clv_zona = 15) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Zongolica"
+    "wms_title" "Coordinación de Zona Zongolica"
     "wms_enable_request" "*"
   END
   CLASS
-    NAME "Zongolica"
     STYLE
       COLOR 93 188 210
       OPACITY 60
@@ -314,18 +299,17 @@ LAYER
 END
 
 LAYER
-  NAME "cz3016"
+  NAME "c_cz3016"
   STATUS ON
   TYPE POLYGON
   CONNECTIONTYPE POSTGIS
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
   DATA "the_geom FROM (SELECT gid, the_geom, clv_zona FROM marco_geoestadistico.mun_coordinaciones WHERE clv_zona = 16) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Veracruz"
+    "wms_title" "Coordinación de Zona Veracruz"
     "wms_enable_request" "*"
   END
   CLASS
-    NAME "Veracruz"
     STYLE
       COLOR 158 53 147
       OPACITY 60
@@ -336,18 +320,17 @@ LAYER
 END
 
 LAYER
-  NAME "cz3017"
+  NAME "c_cz3017"
   STATUS ON
   TYPE POLYGON
   CONNECTIONTYPE POSTGIS
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
   DATA "the_geom FROM (SELECT gid, the_geom, clv_zona FROM marco_geoestadistico.mun_coordinaciones WHERE clv_zona = 17) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Boca del Rio"
+    "wms_title" "Coordinación de Zona Boca del Rio"
     "wms_enable_request" "*"
   END
   CLASS
-    NAME "Boca del Rio"
     STYLE
       COLOR 196 46 96
       OPACITY 60
@@ -358,18 +341,17 @@ LAYER
 END
 
 LAYER
-  NAME "cz3018"
+  NAME "c_cz3018"
   STATUS ON
   TYPE POLYGON
   CONNECTIONTYPE POSTGIS
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
   DATA "the_geom FROM (SELECT gid, the_geom, clv_zona FROM marco_geoestadistico.mun_coordinaciones WHERE clv_zona = 18) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Tierra Blanca"
+    "wms_title" "Coordinación de Zona Tierra Blanca"
     "wms_enable_request" "*"
   END
   CLASS
-    NAME "Tierra Blanca"
     STYLE
       COLOR 74 163 113
       OPACITY 60
@@ -380,18 +362,17 @@ LAYER
 END
 
 LAYER
-  NAME "cz3019"
+  NAME "c_cz3019"
   STATUS ON
   TYPE POLYGON
   CONNECTIONTYPE POSTGIS
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
   DATA "the_geom FROM (SELECT gid, the_geom, clv_zona FROM marco_geoestadistico.mun_coordinaciones WHERE clv_zona = 19) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Cosamaloapan"
+    "wms_title" "Coordinación de Zona Cosamaloapan"
     "wms_enable_request" "*"
   END
   CLASS
-    NAME "Cosamaloapan"
     STYLE
       COLOR 249 220 101
       OPACITY 60
@@ -402,18 +383,17 @@ LAYER
 END
 
 LAYER
-  NAME "cz3020"
+  NAME "c_cz3020"
   STATUS ON
   TYPE POLYGON
   CONNECTIONTYPE POSTGIS
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
   DATA "the_geom FROM (SELECT gid, the_geom, clv_zona FROM marco_geoestadistico.mun_coordinaciones WHERE clv_zona = 20) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "San Andres"
+    "wms_title" "Coordinación de Zona San Andres"
     "wms_enable_request" "*"
   END
   CLASS
-    NAME "San Andres"
     STYLE
       COLOR 235 151 78
       OPACITY 60
@@ -424,18 +404,17 @@ LAYER
 END
 
 LAYER
-  NAME "cz3021"
+  NAME "c_cz3021"
   STATUS ON
   TYPE POLYGON
   CONNECTIONTYPE POSTGIS
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
   DATA "the_geom FROM (SELECT gid, the_geom, clv_zona FROM marco_geoestadistico.mun_coordinaciones WHERE clv_zona = 21) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Acayucan"
+    "wms_title" "Coordinación de Zona Acayucan"
     "wms_enable_request" "*"
   END
   CLASS
-    NAME "Acayucan"
     STYLE
       COLOR 93 188 210
       OPACITY 60
@@ -446,18 +425,17 @@ LAYER
 END
 
 LAYER
-  NAME "cz3022"
+  NAME "c_cz3022"
   STATUS ON
   TYPE POLYGON
   CONNECTIONTYPE POSTGIS
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
   DATA "the_geom FROM (SELECT gid, the_geom, clv_zona FROM marco_geoestadistico.mun_coordinaciones WHERE clv_zona = 22) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Minatitlan"
+    "wms_title" "Coordinación de Zona Minatitlan"
     "wms_enable_request" "*"
   END
   CLASS
-    NAME "Minatitlan"
     STYLE
       COLOR 158 53 147
       OPACITY 60
@@ -468,18 +446,17 @@ LAYER
 END
 
 LAYER
-  NAME "cz3023"
+  NAME "c_cz3023"
   STATUS ON
   TYPE POLYGON
   CONNECTIONTYPE POSTGIS
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
   DATA "the_geom FROM (SELECT gid, the_geom, clv_zona FROM marco_geoestadistico.mun_coordinaciones WHERE clv_zona = 23) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Coatzacoalcos"
+    "wms_title" "Coordinación de Zona Coatzacoalcos"
     "wms_enable_request" "*"
   END
   CLASS
-    NAME "Coatzacoalcos"
     STYLE
       COLOR 196 46 96
       OPACITY 60
@@ -490,18 +467,17 @@ LAYER
 END
 
 LAYER
-  NAME "cz3024"
+  NAME "c_cz3024"
   STATUS ON
   TYPE POLYGON
   CONNECTIONTYPE POSTGIS
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
   DATA "the_geom FROM (SELECT gid, the_geom, clv_zona FROM marco_geoestadistico.mun_coordinaciones WHERE clv_zona = 24) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Huayacocotla"
+    "wms_title" "Coordinación de Zona Huayacocotla"
     "wms_enable_request" "*"
   END
   CLASS
-    NAME "Huayacocotla"
     STYLE
       COLOR 74 163 113
       OPACITY 60
@@ -512,18 +488,17 @@ LAYER
 END
 
 LAYER
-  NAME "cz3025"
+  NAME "c_cz3025"
   STATUS ON
   TYPE POLYGON
   CONNECTIONTYPE POSTGIS
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
   DATA "the_geom FROM (SELECT gid, the_geom, clv_zona FROM marco_geoestadistico.mun_coordinaciones WHERE clv_zona = 25) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Panuco"
+    "wms_title" "Coordinación de Zona Panuco"
     "wms_enable_request" "*"
   END
   CLASS
-    NAME "Panuco"
     STYLE
       COLOR 249 220 101
       OPACITY 60
@@ -534,18 +509,17 @@ LAYER
 END
 
 LAYER
-  NAME "cz3029"
+  NAME "c_cz3029"
   STATUS ON
   TYPE POLYGON
   CONNECTIONTYPE POSTGIS
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
   DATA "the_geom FROM (SELECT gid, the_geom, clv_zona FROM marco_geoestadistico.mun_coordinaciones WHERE clv_zona = 29) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Jaltipan"
+    "wms_title" "Coordinación de Zona Jaltipan"
     "wms_enable_request" "*"
   END
   CLASS
-    NAME "Jaltipan"
     STYLE
       COLOR 235 151 78
       OPACITY 60

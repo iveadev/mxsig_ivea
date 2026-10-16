@@ -24,6 +24,7 @@ estructura_base = {
     },
     "labelitem": "", # Inicializado vacío; si el usuario lo define, detona el modo dual
     "class" : {
+        "style": {},
         "label": {
             "font": "arial",
             "size": "8",
