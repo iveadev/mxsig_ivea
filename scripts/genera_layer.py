@@ -12,6 +12,7 @@ CARPETA_RAIZ = "ivea"
 
 # Estructura e infraestructura base del contenedor de MxSIG
 estructura_base = {
+    "name": "Capa base",
     "status": "ON",
     "connectiontype": "POSTGIS",
     "connection": "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s",

@@ -31,8 +31,6 @@ layers =  [
         },
         'data': {
             'table': 'marco_geoestadistico.mun_ver',
-            #'select':['nomb_ent'],
-            #'where': 'nomb_ent = "Veracruz de Ignacio de la Llave"'
         },
         'labelitem': 'nomgeo',
         'class': {

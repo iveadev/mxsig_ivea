@@ -1,0 +1,28 @@
+# valores estatico para las coordinaciones de zona
+coordinaciones =  [
+    {"id_capa": "cz3001",   "id_cz": "1",  "nombre": "Tantoyuca",       "color": "235 151 78"},
+    {"id_capa": "cz3003",   "id_cz": "3",  "nombre": "Chicontepec",     "color": "93 188 210"},
+    {"id_capa": "cz3004",   "id_cz": "4",  "nombre": "Tuxpan",          "color": "158 53 147"},
+    {"id_capa": "cz3005",   "id_cz": "5",  "nombre": "Poza Rica",       "color": "196 46 96"},
+    {"id_capa": "cz3006",   "id_cz": "6",  "nombre": "Papantla",        "color": "74 163 113"},
+    {"id_capa": "cz3007",   "id_cz": "7",  "nombre": "Espinal",         "color": "249 220 101"},
+    {"id_capa": "cz3008",   "id_cz": "8",  "nombre": "Martinez",        "color": "235 151 78"},
+    {"id_capa": "cz3009",   "id_cz": "9",  "nombre": "Perote",          "color": "93 188 210"},
+    {"id_capa": "cz3010",   "id_cz": "10", "nombre": "Xalapa",          "color": "158 53 147"},
+    {"id_capa": "cz3011",   "id_cz": "11", "nombre": "Coatepec",        "color": "196 46 96"},
+    {"id_capa": "cz3012",   "id_cz": "12", "nombre": "Huatusco",        "color": "74 163 113"},
+    {"id_capa": "cz3013",   "id_cz": "13", "nombre": "Orizaba",         "color": "249 220 101"},
+    {"id_capa": "cz3014",   "id_cz": "14", "nombre": "Cordoba",         "color": "235 151 78"},
+    {"id_capa": "cz3015",   "id_cz": "15", "nombre": "Zongolica",       "color": "93 188 210"},
+    {"id_capa": "cz3016",   "id_cz": "16", "nombre": "Veracruz",        "color": "158 53 147"},
+    {"id_capa": "cz3017",   "id_cz": "17", "nombre": "Boca del Rio",    "color": "196 46 96"},
+    {"id_capa": "cz3018",   "id_cz": "18", "nombre": "Tierra Blanca",   "color": "74 163 113"},
+    {"id_capa": "cz3019",   "id_cz": "19", "nombre": "Cosamaloapan",    "color": "249 220 101"},
+    {"id_capa": "cz3020",   "id_cz": "20", "nombre": "San Andres",      "color": "235 151 78"},
+    {"id_capa": "cz3021",   "id_cz": "21", "nombre": "Acayucan",        "color": "93 188 210"},
+    {"id_capa": "cz3022",   "id_cz": "22", "nombre": "Minatitlan",       "color": "158 53 147"},
+    {"id_capa": "cz3023",   "id_cz": "23", "nombre": "Coatzacoalcos",   "color": "196 46 96"},
+    {"id_capa": "cz3024",   "id_cz": "24", "nombre": "Huayacocotla",    "color": "74 163 113"},
+    {"id_capa": "cz3025",   "id_cz": "25", "nombre": "Panuco",          "color": "249 220 101"},
+    {"id_capa": "cz3029",   "id_cz": "29", "nombre": "Jaltipan",        "color": "235 151 78"}
+]

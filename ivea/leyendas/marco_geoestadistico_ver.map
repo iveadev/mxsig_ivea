@@ -1,10 +1,11 @@
 # =================================================================
 # MAPA EXCLUSIVO DE TEXTOS (leyendas)
-# ARCHIVO GENERADO AUTOMÁTICAMENTE A PARTIR DE LA DEFINICIÓN: layers.01_marco_geoestadistico.01_capas_marco_geoestadistico 
+# ARCHIVO GENERADO AUTOMÁTICAMENTE A PARTIR DE LA DEFINICIÓN: layers.01_marco_geoestadistico.01_poligonos_marco_geoestadistico 
 # DESCRIPCIÓN: Marco Geoestadistico del Estado de Veracruz 
 # =================================================================
 
 LAYER
+  NAME "t_mun_ver"
   STATUS ON
   CONNECTIONTYPE POSTGIS
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
@@ -25,5 +26,4 @@ LAYER
       TYPE truetype
     END
   END
-  NAME "t_mun_ver"
 END

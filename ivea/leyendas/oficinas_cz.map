@@ -1,26 +1,26 @@
-# oficinas_cz.map - CAPAS DE LEYENDAS / TEXTOS (mxsigleyendas)
-#======================================================================
-# GENERADO AUTOMÁTICAMENTE PARA MXSIG
-#======================================================================
+# =================================================================
+# MAPA EXCLUSIVO DE TEXTOS (leyendas)
+# ARCHIVO GENERADO AUTOMÁTICAMENTE A PARTIR DE LA DEFINICIÓN: layers.02_infraestructura_ivea.01_puntos_coordinaciones 
+# DESCRIPCIÓN: Puntos de las Oficinas de Coordinacion IVEA 
+# =================================================================
 
 LAYER
-  NAME "capa_oficinas_cz"
+  NAME "t_oficinas_cz"
   STATUS ON
-  TYPE POINT
   CONNECTIONTYPE POSTGIS
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
-  DATA "the_geom FROM (SELECT gid, nom_cz, the_geom, clv_cz FROM ivea.oficinas_cz) AS t1 USING UNIQUE gid USING SRID=900913"
-  ENCODING "ISO-8859-1"
+  DATA "the_geom FROM (SELECT gid, the_geom, clv_cz, nom_cz FROM ivea.oficinas_cz) AS t1 USING UNIQUE gid USING SRID=900913"
+  TYPE POINT
   METADATA
-    "wms_title" "Etiquetas - Puntos de las Oficinas de Coordinacion IVEA"
     "wms_enable_request" "*"
+    "wms_title" "Texto Puntos en donde se ubican las coordinaciones de zona del IVEA"
   END
   LABELITEM "nom_cz"
   CLASS
-    NAME "Texto Tantoyuca"
     EXPRESSION ([clv_cz] = 1)
+    NAME "Tantoyuca"
     LABEL
-      FONT 'arial'
+      FONT "arial"
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
@@ -29,10 +29,10 @@ LAYER
     END
   END
   CLASS
-    NAME "Texto Chicontepec"
     EXPRESSION ([clv_cz] = 3)
+    NAME "Chicontepec"
     LABEL
-      FONT 'arial'
+      FONT "arial"
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
@@ -41,10 +41,10 @@ LAYER
     END
   END
   CLASS
-    NAME "Texto Tuxpan"
     EXPRESSION ([clv_cz] = 4)
+    NAME "Tuxpan"
     LABEL
-      FONT 'arial'
+      FONT "arial"
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
@@ -53,10 +53,10 @@ LAYER
     END
   END
   CLASS
-    NAME "Texto Poza Rica"
     EXPRESSION ([clv_cz] = 5)
+    NAME "Poza Rica"
     LABEL
-      FONT 'arial'
+      FONT "arial"
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
@@ -65,10 +65,10 @@ LAYER
     END
   END
   CLASS
-    NAME "Texto Papantla"
     EXPRESSION ([clv_cz] = 6)
+    NAME "Papantla"
     LABEL
-      FONT 'arial'
+      FONT "arial"
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
@@ -77,10 +77,10 @@ LAYER
     END
   END
   CLASS
-    NAME "Texto Espinal"
     EXPRESSION ([clv_cz] = 7)
+    NAME "Espinal"
     LABEL
-      FONT 'arial'
+      FONT "arial"
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
@@ -89,10 +89,10 @@ LAYER
     END
   END
   CLASS
-    NAME "Texto Martinez"
     EXPRESSION ([clv_cz] = 8)
+    NAME "Martinez"
     LABEL
-      FONT 'arial'
+      FONT "arial"
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
@@ -101,10 +101,10 @@ LAYER
     END
   END
   CLASS
-    NAME "Texto Perote"
     EXPRESSION ([clv_cz] = 9)
+    NAME "Perote"
     LABEL
-      FONT 'arial'
+      FONT "arial"
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
@@ -113,10 +113,10 @@ LAYER
     END
   END
   CLASS
-    NAME "Texto Xalapa"
     EXPRESSION ([clv_cz] = 10)
+    NAME "Xalapa"
     LABEL
-      FONT 'arial'
+      FONT "arial"
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
@@ -125,10 +125,10 @@ LAYER
     END
   END
   CLASS
-    NAME "Texto Coatepec"
     EXPRESSION ([clv_cz] = 11)
+    NAME "Coatepec"
     LABEL
-      FONT 'arial'
+      FONT "arial"
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
@@ -137,10 +137,10 @@ LAYER
     END
   END
   CLASS
-    NAME "Texto Huatusco"
     EXPRESSION ([clv_cz] = 12)
+    NAME "Huatusco"
     LABEL
-      FONT 'arial'
+      FONT "arial"
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
@@ -149,10 +149,10 @@ LAYER
     END
   END
   CLASS
-    NAME "Texto Orizaba"
     EXPRESSION ([clv_cz] = 13)
+    NAME "Orizaba"
     LABEL
-      FONT 'arial'
+      FONT "arial"
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
@@ -161,10 +161,10 @@ LAYER
     END
   END
   CLASS
-    NAME "Texto Cordoba"
     EXPRESSION ([clv_cz] = 14)
+    NAME "Cordoba"
     LABEL
-      FONT 'arial'
+      FONT "arial"
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
@@ -173,10 +173,10 @@ LAYER
     END
   END
   CLASS
-    NAME "Texto Zongolica"
     EXPRESSION ([clv_cz] = 15)
+    NAME "Zongolica"
     LABEL
-      FONT 'arial'
+      FONT "arial"
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
@@ -185,10 +185,10 @@ LAYER
     END
   END
   CLASS
-    NAME "Texto Veracruz"
     EXPRESSION ([clv_cz] = 16)
+    NAME "Veracruz"
     LABEL
-      FONT 'arial'
+      FONT "arial"
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
@@ -197,10 +197,10 @@ LAYER
     END
   END
   CLASS
-    NAME "Texto Boca del Rio"
     EXPRESSION ([clv_cz] = 17)
+    NAME "Boca del Rio"
     LABEL
-      FONT 'arial'
+      FONT "arial"
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
@@ -209,10 +209,10 @@ LAYER
     END
   END
   CLASS
-    NAME "Texto Tierra Blanca"
     EXPRESSION ([clv_cz] = 18)
+    NAME "Tierra Blanca"
     LABEL
-      FONT 'arial'
+      FONT "arial"
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
@@ -221,10 +221,10 @@ LAYER
     END
   END
   CLASS
-    NAME "Texto Cosamaloapan"
     EXPRESSION ([clv_cz] = 19)
+    NAME "Cosamaloapan"
     LABEL
-      FONT 'arial'
+      FONT "arial"
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
@@ -233,10 +233,10 @@ LAYER
     END
   END
   CLASS
-    NAME "Texto San Andres"
     EXPRESSION ([clv_cz] = 20)
+    NAME "San Andres"
     LABEL
-      FONT 'arial'
+      FONT "arial"
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
@@ -245,10 +245,10 @@ LAYER
     END
   END
   CLASS
-    NAME "Texto Acayucan"
     EXPRESSION ([clv_cz] = 21)
+    NAME "Acayucan"
     LABEL
-      FONT 'arial'
+      FONT "arial"
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
@@ -257,10 +257,10 @@ LAYER
     END
   END
   CLASS
-    NAME "Texto Minatitlan"
     EXPRESSION ([clv_cz] = 22)
+    NAME "Minatitlan"
     LABEL
-      FONT 'arial'
+      FONT "arial"
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
@@ -269,10 +269,10 @@ LAYER
     END
   END
   CLASS
-    NAME "Texto Coatzacoalcos"
     EXPRESSION ([clv_cz] = 23)
+    NAME "Coatzacoalcos"
     LABEL
-      FONT 'arial'
+      FONT "arial"
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
@@ -281,10 +281,10 @@ LAYER
     END
   END
   CLASS
-    NAME "Texto Huayacocotla"
     EXPRESSION ([clv_cz] = 24)
+    NAME "Huayacocotla"
     LABEL
-      FONT 'arial'
+      FONT "arial"
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
@@ -293,10 +293,10 @@ LAYER
     END
   END
   CLASS
-    NAME "Texto Panuco"
     EXPRESSION ([clv_cz] = 25)
+    NAME "Panuco"
     LABEL
-      FONT 'arial'
+      FONT "arial"
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
@@ -305,10 +305,10 @@ LAYER
     END
   END
   CLASS
-    NAME "Texto Jaltipan"
     EXPRESSION ([clv_cz] = 29)
+    NAME "Jaltipan"
     LABEL
-      FONT 'arial'
+      FONT "arial"
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
