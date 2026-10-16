@@ -1,0 +1,41 @@
+# =================================================================
+# MAPA BASE DE GEOMETRÍAS
+# ARCHIVO GENERADO AUTOMÁTICAMENTE A PARTIR DE LA DEFINICIÓN: layers.01_marco_geoestadistico.01_capas_marco_geoestadistico 
+# DESCRIPCIÓN: Marco Geoestadistico del Estado de Veracruz 
+# =================================================================
+
+LAYER
+  STATUS ON
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom FROM marco_geoestadistico.entidad_ver) AS t1 USING UNIQUE gid USING SRID=900913"
+  TYPE "POLYGON"
+  METADATA
+    "wms_enable_request" "*"
+    "wms_title" "Contorno del Estado de Veracruz"
+  END
+  CLASS
+    OUTLINECOLOR 0 0 0
+    WIDTH 1
+    COLOR 0 0 0
+  END
+  NAME "edo_ver"
+END
+
+LAYER
+  STATUS ON
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom FROM marco_geoestadistico.mun_ver) AS t1 USING UNIQUE gid USING SRID=900913"
+  TYPE "POLYGON"
+  METADATA
+    "wms_enable_request" "*"
+    "wms_title" "Municipios del Estado de Veracruz"
+  END
+  CLASS
+    STYLE
+      OUTLINE 122,234,10
+    END
+  END
+  NAME "mun_ver"
+END

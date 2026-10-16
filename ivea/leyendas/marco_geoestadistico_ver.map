@@ -1,0 +1,27 @@
+# =================================================================
+# MAPA EXCLUSIVO DE TEXTOS (leyendas)
+# ARCHIVO GENERADO AUTOMÁTICAMENTE A PARTIR DE LA DEFINICIÓN: layers.01_marco_geoestadistico.01_capas_marco_geoestadistico 
+# DESCRIPCIÓN: Marco Geoestadistico del Estado de Veracruz 
+# =================================================================
+
+LAYER
+  STATUS ON
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom, nomgeo FROM marco_geoestadistico.mun_ver) AS t1 USING UNIQUE gid USING SRID=900913"
+  TYPE "POLYGON"
+  METADATA
+    "wms_enable_request" "*"
+    "wms_title" "Texto Municipios del Estado de Veracruz"
+  END
+  LABELITEM "nomgeo"
+  LABEL
+    FONT "arial"
+    SIZE 8
+    COLOR 0 0 0
+    OUTLINECOLOR 255 255 255
+    POSITION auto
+    TYPE "truetype"
+  END
+  NAME "t_mun_ver"
+END

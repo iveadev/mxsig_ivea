@@ -1,240 +1,187 @@
-import sys
 import os
-import importlib.util
+import sys
+import importlib
 
-def cargar_definicion_externa(ruta_archivo):
-    """Carga dinámicamente el archivo de configuración externa del usuario."""
-    if not os.path.exists(ruta_archivo):
-        print(f"Error: El archivo de definición '{ruta_archivo}' no existe.")
-        sys.exit(1)
-        
-    nombre_modulo = os.path.splitext(os.path.basename(ruta_archivo))[0]
-    spec = importlib.util.spec_from_file_location(nombre_modulo, ruta_archivo)
-    modulo = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(modulo)
-    return modulo
+if len(sys.argv) < 2:
+    print("Uso: python genera_layers.py archivo_configuracion.py")
+    sys.exit(1)
 
-# =====================================================================
-# BLOQUES MODULARES DE LÓGICA (Funciones Atómicas)
-# =====================================================================
+nombre_modulo = sys.argv[1].replace(".py", "").replace("/", ".").replace("\\", ".").replace("scripts.", "")
 
-def crear_bloque_metadata(titulo_wms):
-    """Genera los metadatos obligatorios para el árbol de capas de MxSIG."""
-    return [
-        "  METADATA",
-        f'    "wms_title" "{titulo_wms}"',
-        '    "wms_enable_request" "*"',
-        "  END"
-    ]
+CARPETA_RAIZ = "ivea"
 
-def crear_bloque_style(datos_fila, config):
-    """Genera la simbología aplicando prioridad: Valor Local > Valor Global."""
-    tipo = getattr(config, "tipo_capa", "POLYGON").upper()
-    color = datos_fila.get("color", "200 200 200")
-    bloque = ["    STYLE", f"      COLOR {color}"]
+# Estructura e infraestructura base del contenedor de MxSIG
+estructura_base = {
+    "status": "ON",
+    "connectiontype": "POSTGIS",
+    "connection": "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s",
+    "data": {},
+    "type": "POLYGON",
+    "metadata": {
+        "wms_enable_request" : "*"
+    },
+    "labelitem": "", # Inicializado vacío; si el usuario lo define, detona el modo dual
+    "label": {
+        "font": "arial",
+        "size": "8",
+        "color": "0 0 0",
+        "outlinecolor": "255 255 255",
+        "position": "auto",
+        "type": "truetype"
+    }
+}
+
+requiere_doble_comillas = ["NAME", "WMS_TITLE", "WMS_ENABLE_REQUEST", "LABELITEM", "CONNECTION", "FONT", "TYPE"]
+
+def deep_update(dicc_base, dicc_usuario):
+    resultado = dicc_base.copy()
+    for k, v in dicc_usuario.items():
+        if k in resultado and isinstance(resultado[k], dict) and isinstance(v, dict):
+            resultado[k] = deep_update(resultado[k], v)
+        else:
+            resultado[k] = v
+    return resultado
+
+def procesar_valor(clave, valor):
+    clave = clave.upper()
+    if clave in requiere_doble_comillas:   
+        return f'"{valor}"'
+    else:
+        match clave:
+            case "COLOR" | "OUTLINECOLOR":
+                return str(valor).replace(",", " ").strip()
+            case "EXPRESSION":
+                return f"({valor})"
+            case _:
+                return str(valor)
+
+def renderizar_diccionario(dicc, nivel=0):
+    lineas = []
+    espacio = "  " * nivel
     
-    if tipo in ["POLYGON", "LINE"]:
-        opacity = datos_fila.get("opacity", getattr(config, "opacity_global", None))
-        outlinecolor = datos_fila.get("outlinecolor", getattr(config, "outlinecolor_global", None))
-        width = datos_fila.get("width", getattr(config, "width_global", None))
-        
-        if opacity is not None: bloque.append(f"      OPACITY {opacity}")
-        if outlinecolor is not None: bloque.append(f"      OUTLINECOLOR {outlinecolor}")
-        if width is not None: bloque.append(f"      WIDTH {width}")
-        
-    elif tipo == "POINT":
-        symbol = datos_fila.get("symbol", getattr(config, "symbol_global", "circlor"))
-        size = datos_fila.get("size", getattr(config, "size_global", 8))
-        outlinecolor = datos_fila.get("outlinecolor", getattr(config, "outlinecolor_global", None))
-        
-        bloque.append(f"      SYMBOL '{symbol}'")
-        bloque.append(f"      SIZE {size}")
-        if outlinecolor is not None: bloque.append(f"      OUTLINECOLOR {outlinecolor}")
+    for k, v in dicc.items():
+        clave_mapserver = k.strip().upper()
 
-    bloque.append("    END")
-    return bloque
-
-def crear_bloque_class(datos_fila, config, usar_expresion=False):
-    """Construye la clase geométrica base."""
-    nombre_clase = datos_fila.get("nombre", "Sin Nombre")
-    bloque = ["  CLASS", f'    NAME "{nombre_clase}"']
-    
-    if usar_expresion and "condicional" in datos_fila:
-        bloque.append(f"    EXPRESSION ({datos_fila['condicional']})")
-        
-    bloque.extend(crear_bloque_style(datos_fila, config))
-    bloque.append("  END")
-    return bloque
-
-def crear_bloque_label(config_labels):
-    """Genera la sección LABEL conteniendo un sub-bloque STYLE interno (Label-Style) para MapServer 7.6.4."""
-    font = config_labels.get("font", "arial")
-    size = config_labels.get("size", 8)
-    color = config_labels.get("color", "0 0 0")
-    outlinecolor = config_labels.get("outlinecolor", "255 255 255")
-    position = config_labels.get("position", "auto")
-    
-    return [
-        "    LABEL",
-        f"      FONT '{font}'",
-        f"      SIZE {size}",
-        f"      COLOR {color}",
-        f"      OUTLINECOLOR {outlinecolor}",
-        f"      POSITION {position}",
-        "      TYPE truetype",
-        #"      STYLE",
-        #"      END",
-        "    END"
-    ]
-
-def crear_bloque_class_etiqueta(datos_fila, config_labels, usar_expresion=False):
-    """Construye la clase para LEYENDAS (Cumple con: no class->styles)."""
-    nombre_clase = datos_fila.get("nombre", "Sin Nombre")
-    bloque = ["  CLASS", f'    NAME "Texto {nombre_clase}"']
-    
-    if usar_expresion and "condicional" in datos_fila:
-        bloque.append(f"    EXPRESSION ({datos_fila['condicional']})")
-        
-    # Agrega el bloque LABEL (que ahora tiene su STYLE interno reglamentario)
-    bloque.extend(crear_bloque_label(config_labels))
-    bloque.append("  END")
-    return bloque
-
-
-
-def construir_layer_base(id_capa, tipo_capa, select_sql, encoding_capa=None):
-    """Construye las cabeceras genéricas del LAYER de MapServer."""
-    conexion_base = "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
-    bloque = [
-        "LAYER",
-        f'  NAME "{id_capa}"',
-        "  STATUS ON",
-        f"  TYPE {tipo_capa}",
-        "  CONNECTIONTYPE POSTGIS",
-        f'  CONNECTION "{conexion_base}"',
-        f'  DATA "{select_sql}"'
-    ]
-    if encoding_capa:
-        bloque.append(f'  ENCODING "{encoding_capa}"')
-    return bloque
-
-# =====================================================================
-# ORQUESTADOR PRINCIPAL
-# =====================================================================
-
-def main():
-    if len(sys.argv) < 2:
-        print("Uso correcto: python genera_layers.py <archivo_definicion.py>")
-        sys.exit(1)
-        
-    archivo_config = sys.argv[1]
-    cfg = cargar_definicion_externa(archivo_config)
-
-    carpeta_base = getattr(cfg, "carpeta_base", "ivea/")
-    subfolder_geometria = 'poligonos/' if cfg.tipo_capa == 'POLYGON' else 'puntos/'
-    
-    # NUEVA ESTRUCTURA REQUERIDA POR MXSIG (Espejo Vector vs Leyendas)
-    ruta_vector = os.path.join(carpeta_base, subfolder_geometria)
-    ruta_leyendas = os.path.join(carpeta_base, "leyendas")
-    
-    # Crear carpetas si no existen
-    os.makedirs(ruta_vector, exist_ok=True)
-    
-    nombre_salida_vector = os.path.join(ruta_vector, f"{cfg.output}.map")
-    nombre_salida_leyendas = os.path.join(ruta_leyendas, f"{cfg.output}.map")
-
-    encoding_actual = getattr(cfg, "encoding_global", None)
-
-    # -----------------------------------------------------------------
-    # PROCESAMIENTO A: ARQUITECTURA VECTORIAL (mxsigvector)
-    # -----------------------------------------------------------------
-    lineas_geo = [
-        f"# {cfg.output}.map - CAPAS GEOMETRICAS BASE (mxsigvector)",
-        "#" + "="*70,
-        f"# GENERADO AUTOMÁTICAMENTE A PARTIR DE: {archivo_config}",
-        f"# Descripción: {cfg.descripcion}",
-        f"# Modo de Operación: {cfg.modo_generacion}",
-        "#" + "="*70 + "\n"
-    ]
-
-    if cfg.modo_generacion == "MULTIPLES_CAPAS":
-        for c in cfg.capas:
-            campos_adicionales = c['campos_adicionales'] if 'campos_adicionales' in c else getattr(cfg, 'campos_adicionales', [])
-            campos_select = ", ".join(["gid", "the_geom"] + campos_adicionales)
-            tabla = f"{c['tabla']}" if 'tabla' in c else cfg.tabla_global
-            where = f" WHERE {c['condicional']}" if 'condicional' in c else ""
-            sql = f"the_geom FROM (SELECT {campos_select} FROM {tabla}{where}) AS t1 USING UNIQUE gid USING SRID=900913"
-            lineas_geo.extend(construir_layer_base('c_' + c["id_capa"], cfg.tipo_capa, sql, encoding_actual))
-            lineas_geo.extend(crear_bloque_metadata(c["nombre"]))
-            lineas_geo.extend(crear_bloque_class(c, cfg, usar_expresion=False))
-            lineas_geo.append("END\n")
-
-    elif cfg.modo_generacion == "MULTIPLES_ESTILOS":
-        id_global = getattr(cfg, "id_capa_global", cfg.output)
-        campos_adicionales = c['campos_adicionales'] if 'campos_adicionales' in c else getattr(cfg, 'campos_adicionales', [])
-        campos_select = ", ".join(["gid", "the_geom"] + campos_adicionales)
-        sql = f"the_geom FROM (SELECT {campos_select} FROM {cfg.tabla}) AS t1 USING UNIQUE gid USING SRID=900913"
-        lineas_geo.extend(construir_layer_base('c_' + id_global, cfg.tipo_capa, sql, encoding_actual))
-        lineas_geo.extend(crear_bloque_metadata(cfg.descripcion))
-        for c in cfg.capas:
-            lineas_geo.extend(crear_bloque_class(c, cfg, usar_expresion=True))
-        lineas_geo.append("END\n")
-
-    with open(nombre_salida_vector, "w", encoding="utf-8") as f:
-        f.write("\n".join(lineas_geo))
-    print(f" Capa vectorial guardada en: {nombre_salida_vector}")
-
-
-
-    # -----------------------------------------------------------------
-    # PROCESAMIENTO B: ARQUITECTURA DE ETIQUETAS (mxsigleyendas)
-    # -----------------------------------------------------------------
-    config_labels = getattr(cfg, "config_etiquetas", None)
-    if config_labels:
-        os.makedirs(ruta_leyendas, exist_ok=True)
-        lineas_labels = [
-            f"# {cfg.output}.map - CAPAS DE LEYENDAS / TEXTOS (mxsigleyendas)",
-            "#" + "="*70,
-            f"# GENERADO AUTOMÁTICAMENTE PARA MXSIG",
-            "#" + "="*70 + "\n"
-        ]
-        label_item = config_labels["label_item"]
-
-    
-        if cfg.modo_generacion == "MULTIPLES_CAPAS":
-            for c in cfg.capas:
-                campos_adicionales = c['campos_adicionales'] if 'campos_adicionales' in c else getattr(cfg, 'campos_adicionales', [])
-                campos_con_label = ["gid", "the_geom"] + campos_adicionales + [label_item]
-                campos_select_labels = ", ".join(campos_con_label)
-                tabla = f"{c['tabla']}" if 'tabla' in c else cfg.tabla_global
-                where = f" WHERE {c['condicional']}" if 'condicional' in c else ""
-                # Usamos campos_select_labels en lugar de campos_select tradicional
-                sql = f"the_geom FROM (SELECT {campos_select_labels} FROM {tabla}{where}) AS t1 USING UNIQUE gid USING SRID=900913"
+        if isinstance(v, dict):
+            match clave_mapserver:
+                case "METADATA":
+                    lineas.append(f"{espacio}METADATA")
+                    for mk, mv in v.items():
+                        lineas.append(f'{espacio}  "{mk.strip().lower()}" "{mv}"')
+                    lineas.append(f"{espacio}END")
+                case "DATA":
+                    campos_adicionales = v.get('select', [])
+                    campos_select = ", ".join(["gid", "the_geom"] + campos_adicionales)
+                    tabla = v['table']
+                    where = f" WHERE {v['where']}" if 'where' in v else ""
+                    sql = f"the_geom FROM (SELECT {campos_select} FROM {tabla}{where}) AS t1 USING UNIQUE gid USING SRID=900913"
+                    lineas.append(f'{espacio}DATA "{sql}"')
+                case _:
+                    if not v: continue # Evita bloques vacíos
+                    lineas.append(f"{espacio}{clave_mapserver}")
+                    lineas.extend(renderizar_diccionario(v, nivel + 1))
+                    lineas.append(f"{espacio}END")
                 
-                lineas_labels.extend(construir_layer_base('t_' + c["id_capa"], cfg.tipo_capa, sql, encoding_actual))
-                lineas_labels.extend(crear_bloque_metadata(f"Texto {c['nombre']}"))
-                lineas_labels.append(f'  LABELITEM "{label_item}"')
-                lineas_labels.extend(crear_bloque_class_etiqueta(c, config_labels, usar_expresion=False))
-                lineas_labels.append("END\n")
-
-
-        elif cfg.modo_generacion == "MULTIPLES_ESTILOS":
-            id_global = getattr(cfg, "id_capa_global", cfg.output)
-            # Usamos campos_select_labels aquí también
-            sql = f"the_geom FROM (SELECT {campos_select_labels} FROM {cfg.tabla}) AS t1 USING UNIQUE gid USING SRID=900913"
+        elif isinstance(v, list):
+            for elemento in v:
+                lineas.extend(renderizar_diccionario({clave_mapserver: elemento}, nivel))
+        else:
+            if str(v).strip() == "": continue
+            valor_formateado = procesar_valor(clave_mapserver, v)
+            lineas.append(f"{espacio}{clave_mapserver} {valor_formateado}")
             
-            lineas_labels.extend(construir_layer_base(id_global, cfg.tipo_capa, sql, encoding_actual))
-            lineas_labels.extend(crear_bloque_metadata(f"Etiquetas - {cfg.descripcion}"))
-            lineas_labels.append(f'  LABELITEM "{label_item}"')
-            for c in cfg.capas:
-                lineas_labels.extend(crear_bloque_class_etiqueta(c, config_labels, usar_expresion=True))
-            lineas_labels.append("END\n")
+    return lineas
+
+# FUNCIÓN DE PODA ADAPTATIVA
+def podar_diccionario(dicc, modo="BASE"):
+    if not isinstance(dicc, dict): return dicc
+    dicc_limpio = {}
+    for k, v in dicc.items():
+        clave_upper = k.strip().upper()
+        
+        if modo == "BASE" and clave_upper in ["LABELITEM", "LABEL"]: continue
+        if modo == "TEXTO" and clave_upper == "CLASS": continue
+        
+        if isinstance(v, dict):
+            dicc_limpio[k] = podar_diccionario(v, modo)
+        elif isinstance(v, list):
+            dicc_limpio[k] = [podar_diccionario(item, modo) for item in v]
+        else:
+            dicc_limpio[k] = v
+    return dicc_limpio
+
+try:
+    mapa = importlib.import_module(nombre_modulo)
+    config_global_final = deep_update(estructura_base, getattr(mapa, "layer", {}))
+    
+    # Determinamos el tipo de geometría para saber en qué subcarpeta guardar
+    tipo_geom = config_global_final.get("type", "POLYGON").upper()
+    subcarpeta = "poligonos" if "POLYGON" in tipo_geom else "puntos" if "POINT" in tipo_geom else "lineas"
+    ruta_destino = os.path.join(CARPETA_RAIZ, subcarpeta)
+    ruta_destino_labels = os.path.join(CARPETA_RAIZ, 'leyendas')
+    os.makedirs(ruta_destino, exist_ok=True) # Crea las carpetas automáticamente si no existen
+    
+    prefix_output = getattr(mapa, 'output', 'salida_mxsig')
+    archivo_base = os.path.join(ruta_destino, f"{prefix_output}.map")
+    archivo_labels = os.path.join(ruta_destino_labels, f"{prefix_output}.map")
+    
+    contenido_base = []
+    contenido_labels = []
+    procesa_dual = False
+    
+    for ly in getattr(mapa, "layers", [config_global_final]):
+        capa_completa = deep_update(config_global_final, ly)
+        nombre_original = capa_completa.get("name", "capa")
+        titulo_original = capa_completa.get("metadata", {}).get("wms_title", "Capa")
+        
+        # Evaluamos si el usuario definió un labelitem real para procesar el modo dual
+        if capa_completa.get("labelitem", ""):
+            procesa_dual = True
+
+        # 1. PASADA MAPA BASE: Forzamos prefijo "c_" y podamos bloques LABEL
+        capa_base = capa_completa.copy()
+        capa_base = podar_diccionario(capa_base, modo="BASE")
+        contenido_base.extend(renderizar_diccionario({"LAYER": capa_base}))
+        contenido_base.append("")
+        
+        # 2. PASADA TEXTOS: Forzamos prefijo "t_", "Texto..." en título y podamos STYLES
+        if procesa_dual:
+            capa_texto = deep_update(capa_completa, {
+                "name": f"t_{nombre_original}",
+                "metadata": {"wms_title": f"Texto {titulo_original}"}
+            })
+
+            capa_texto["data"]["select"] = capa_texto["data"].get("select", [])
+            if capa_texto["labelitem"] not in capa_texto["data"]["select"]:
+                capa_texto["data"]["select"].append(capa_texto["labelitem"])
+            # Modificamos el Name dentro del bloque CLASS interno para que diga "Texto..."
+            if "class" in capa_texto:
+                for cl in capa_texto["class"]:
+                    cl["name"] = f"Texto {cl.get('name', titulo_original)}"
             
+            capa_texto = podar_diccionario(capa_texto, modo="TEXTO")
+            contenido_labels.extend(renderizar_diccionario({"LAYER": capa_texto}))
+            contenido_labels.append("")
 
+    # Guardamos los archivos en sus respectivas rutas estructuradas
+    with open(archivo_base, "w", encoding="utf-8") as f:
+        f.write("# =================================================================\n")
+        f.write("# MAPA BASE DE GEOMETRÍAS\n")
+        f.write(f"# ARCHIVO GENERADO AUTOMÁTICAMENTE A PARTIR DE LA DEFINICIÓN: {nombre_modulo} \n")
+        f.write(f"# DESCRIPCIÓN: {mapa.descripcion} \n")
+        f.write("# =================================================================\n\n")
+        f.write("\n".join(contenido_base))
+    print(f"Mapfile BASE generado con éxito en: '{archivo_base}'")
 
-        with open(nombre_salida_leyendas, "w", encoding="utf-8") as f:
-            f.write("\n".join(lineas_labels))
-        print(f" Capa de leyendas guardada en: {nombre_salida_leyendas}")
+    if procesa_dual:
+        with open(archivo_labels, "w", encoding="utf-8") as f:
+            f.write("# =================================================================\n")
+            f.write("# MAPA EXCLUSIVO DE TEXTOS (leyendas)\n")
+            f.write(f"# ARCHIVO GENERADO AUTOMÁTICAMENTE A PARTIR DE LA DEFINICIÓN: {nombre_modulo} \n")
+            f.write(f"# DESCRIPCIÓN: {mapa.descripcion} \n")
+            f.write("# =================================================================\n\n")
+            f.write("\n".join(contenido_labels))
+        print(f"Mapfile LABELS generado con éxito en: '{archivo_labels}'")
 
-if __name__ == "__main__":
-    main()
+except Exception as e:
+    print(f"Error durante la compilación: {e}")
