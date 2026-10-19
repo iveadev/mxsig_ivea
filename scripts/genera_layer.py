@@ -96,7 +96,7 @@ def renderizar_diccionario(dicc, nivel=0):
             for elemento in v:
                 lineas.extend(renderizar_diccionario({clave_mapserver: elemento}, nivel))
         else:
-            if str(v).strip() == "": continue
+            #if str(v).strip() == "": continue
             valor_formateado = procesar_valor(clave_mapserver, v)
             if(clave_mapserver == '_EXPRESSION'):
                 clave_mapserver = "EXPRESSION"
