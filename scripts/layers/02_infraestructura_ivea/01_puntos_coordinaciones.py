@@ -41,7 +41,9 @@ for cz in coordinaciones:
                 "color": f"{cz['color']}"
             },
             "label" : label_base | {
-                'priority': randrange(1, 10),
+                'priority': 10,
+			    'buffer': 1,
+                'position': 'cc',
             }
         }
     )

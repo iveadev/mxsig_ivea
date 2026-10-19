@@ -24,9 +24,10 @@ LAYER
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
-      POSITION auto
+      POSITION cc
       TYPE truetype
-      PRIORITY 2
+      PRIORITY 10
+      BUFFER 1
     END
   END
   CLASS
@@ -37,9 +38,10 @@ LAYER
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
-      POSITION auto
+      POSITION cc
       TYPE truetype
-      PRIORITY 5
+      PRIORITY 10
+      BUFFER 1
     END
   END
   CLASS
@@ -50,9 +52,10 @@ LAYER
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
-      POSITION auto
+      POSITION cc
       TYPE truetype
-      PRIORITY 4
+      PRIORITY 10
+      BUFFER 1
     END
   END
   CLASS
@@ -63,9 +66,10 @@ LAYER
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
-      POSITION auto
+      POSITION cc
       TYPE truetype
-      PRIORITY 4
+      PRIORITY 10
+      BUFFER 1
     END
   END
   CLASS
@@ -76,9 +80,10 @@ LAYER
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
-      POSITION auto
+      POSITION cc
       TYPE truetype
-      PRIORITY 8
+      PRIORITY 10
+      BUFFER 1
     END
   END
   CLASS
@@ -89,9 +94,10 @@ LAYER
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
-      POSITION auto
+      POSITION cc
       TYPE truetype
-      PRIORITY 5
+      PRIORITY 10
+      BUFFER 1
     END
   END
   CLASS
@@ -102,9 +108,10 @@ LAYER
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
-      POSITION auto
+      POSITION cc
       TYPE truetype
-      PRIORITY 3
+      PRIORITY 10
+      BUFFER 1
     END
   END
   CLASS
@@ -115,9 +122,10 @@ LAYER
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
-      POSITION auto
+      POSITION cc
       TYPE truetype
-      PRIORITY 2
+      PRIORITY 10
+      BUFFER 1
     END
   END
   CLASS
@@ -128,9 +136,10 @@ LAYER
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
-      POSITION auto
+      POSITION cc
       TYPE truetype
-      PRIORITY 4
+      PRIORITY 10
+      BUFFER 1
     END
   END
   CLASS
@@ -141,9 +150,10 @@ LAYER
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
-      POSITION auto
+      POSITION cc
       TYPE truetype
-      PRIORITY 2
+      PRIORITY 10
+      BUFFER 1
     END
   END
   CLASS
@@ -154,9 +164,10 @@ LAYER
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
-      POSITION auto
+      POSITION cc
       TYPE truetype
-      PRIORITY 1
+      PRIORITY 10
+      BUFFER 1
     END
   END
   CLASS
@@ -167,9 +178,10 @@ LAYER
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
-      POSITION auto
+      POSITION cc
       TYPE truetype
-      PRIORITY 3
+      PRIORITY 10
+      BUFFER 1
     END
   END
   CLASS
@@ -180,9 +192,10 @@ LAYER
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
-      POSITION auto
+      POSITION cc
       TYPE truetype
-      PRIORITY 7
+      PRIORITY 10
+      BUFFER 1
     END
   END
   CLASS
@@ -193,9 +206,10 @@ LAYER
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
-      POSITION auto
+      POSITION cc
       TYPE truetype
-      PRIORITY 6
+      PRIORITY 10
+      BUFFER 1
     END
   END
   CLASS
@@ -206,9 +220,10 @@ LAYER
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
-      POSITION auto
+      POSITION cc
       TYPE truetype
-      PRIORITY 7
+      PRIORITY 10
+      BUFFER 1
     END
   END
   CLASS
@@ -219,9 +234,10 @@ LAYER
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
-      POSITION auto
+      POSITION cc
       TYPE truetype
-      PRIORITY 1
+      PRIORITY 10
+      BUFFER 1
     END
   END
   CLASS
@@ -232,9 +248,10 @@ LAYER
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
-      POSITION auto
+      POSITION cc
       TYPE truetype
-      PRIORITY 9
+      PRIORITY 10
+      BUFFER 1
     END
   END
   CLASS
@@ -245,9 +262,10 @@ LAYER
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
-      POSITION auto
+      POSITION cc
       TYPE truetype
-      PRIORITY 5
+      PRIORITY 10
+      BUFFER 1
     END
   END
   CLASS
@@ -258,9 +276,10 @@ LAYER
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
-      POSITION auto
+      POSITION cc
       TYPE truetype
-      PRIORITY 7
+      PRIORITY 10
+      BUFFER 1
     END
   END
   CLASS
@@ -271,9 +290,10 @@ LAYER
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
-      POSITION auto
+      POSITION cc
       TYPE truetype
-      PRIORITY 5
+      PRIORITY 10
+      BUFFER 1
     END
   END
   CLASS
@@ -284,9 +304,10 @@ LAYER
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
-      POSITION auto
+      POSITION cc
       TYPE truetype
-      PRIORITY 1
+      PRIORITY 10
+      BUFFER 1
     END
   END
   CLASS
@@ -297,9 +318,10 @@ LAYER
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
-      POSITION auto
+      POSITION cc
       TYPE truetype
-      PRIORITY 5
+      PRIORITY 10
+      BUFFER 1
     END
   END
   CLASS
@@ -310,9 +332,10 @@ LAYER
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
-      POSITION auto
+      POSITION cc
       TYPE truetype
-      PRIORITY 2
+      PRIORITY 10
+      BUFFER 1
     END
   END
   CLASS
@@ -323,9 +346,10 @@ LAYER
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
-      POSITION auto
+      POSITION cc
       TYPE truetype
-      PRIORITY 2
+      PRIORITY 10
+      BUFFER 1
     END
   END
   CLASS
@@ -336,9 +360,10 @@ LAYER
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
-      POSITION auto
+      POSITION cc
       TYPE truetype
-      PRIORITY 6
+      PRIORITY 10
+      BUFFER 1
     END
   END
 END
