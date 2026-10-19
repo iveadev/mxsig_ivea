@@ -5,7 +5,6 @@
 # -----------------------------------------------------------------
 INCLUDE "/opt/map/mdm60/ivea/poligonos/marco_geoestadistico_ver.map"            #marco_geoestadistico
 INCLUDE "/opt/map/mdm60/ivea/poligonos/coordinaciones_zona.map"                 #Coordinaciones de zona
-INCLUDE "/opt/map/mdm60/ivea/poligonos/poblacion_veracruz.map"                  #Poblacion de Veracruz
 INCLUDE "/opt/map/mdm60/ivea/puntos/oficinas_cz.map"                            #Puntos de ubicación de las CZ
 # DENUE
 INCLUDE "/opt/map/mdm60/ivea/puntos/denue_escuelas.map"                         #Escuelas primarias, secundarias y media superior
