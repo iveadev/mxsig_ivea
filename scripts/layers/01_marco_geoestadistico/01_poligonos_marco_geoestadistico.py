@@ -35,7 +35,7 @@ layers =  [
         'labelitem': 'nomgeo',
         'class': {
             'style': {
-                'outlinecolor': '122,234,10',
+                'outlinecolor': '90,90,90',
             },
         }
     },
