@@ -317,7 +317,7 @@ define(function() {
                             label:'Estatal',
                             synonymous:['estado','estatales'],
                             scale:1,
-                            position:1,
+                            position:200,
                             active:true,
                         },
                         c_mun_ver:{
