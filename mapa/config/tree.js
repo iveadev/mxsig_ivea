@@ -161,94 +161,34 @@ coordinaciones.forEach((cz) => {
     }
 });
 
-const layers_poblacion = {};
-const poblacion = [
+const layers_coneval = {};
+const coneval = [
   {
-    "id_capa": "c_poblacion_1",
-    "label": "Rango de población 1 ",
-    
+    "id_capa": "t_tematico_pobreza",
+    "label": "Pobreza",
   },
   {
-    "id_capa": "c_poblacion_2",
-    "label": "Rango de población 2 ",
-    
+    "id_capa": "t_tematico_marginacion",
+    "label": "Marginación",  
   },
   {
-    "id_capa": "c_poblacion_3",
-    "label": "Rango de población 3 ",
-    
+    "id_capa": "t_tematico_rezago_social",
+    "label": "Rezago Social",
   },
-  {
-    "id_capa": "c_poblacion_4",
-    "label": "Rango de población 4 ",
-    
-  },
-  {
-    "id_capa": "c_poblacion_5",
-    "label": "Rango de población 5 ",
-    
-  },
-  {
-    "id_capa": "c_poblacion_6",
-    "label": "Rango de población 6 ",
-    
-  },
-  {
-    "id_capa": "c_poblacion_7",
-    "label": "Rango de población 7",
-    
-  },
-  {
-    "id_capa": "c_poblacion_8",
-    "label": "Rango de población 8",
-    
-  }
 ];
 
-poblacion.forEach((p)=> {
-  layers_poblacion[p.id_capa] = 
+
+coneval.forEach((p)=> {
+  layers_coneval[p.id_capa] = 
      {
         label: p.label,
         scale: 1,
         position: posicion_capa++,
-        active: false
-    };
-})
-
-const layers_pobreza = {};
-const pobreza = [
-  {"id_capa": "c_pobreza_0",
-        "label": "Menor al 50%",
-    },
-    {
-        "id_capa": "c_pobreza_50",
-        "label": "50% a 59%",
-    },
-    {
-        "id_capa": "c_pobreza_60",
-        "label": "60% a 69%",
-    },
-    {
-        "id_capa": "c_pobreza_70",
-        "label": "70% a 79%",
-    },
-    {
-        "id_capa": "c_pobreza_80",
-        "label": "80% a 89%",
-    },
-    {
-        "id_capa": "c_pobreza_90",
-        "label": "90% o más",
-    }
-];
-
-pobreza.forEach((p)=> {
-  layers_pobreza[p.id_capa] = 
-     {
-        label: p.label,
-        scale: 1,
-        position: posicion_capa++,
-        active: false
+        active: false,
+        texts:{
+          scale:1,
+          active:false
+        }
     };
 })
 
@@ -420,8 +360,8 @@ define(function() {
               }
           },
       G4:{
-              label:'Porcentaje de pobreza CONEVAL',
-              layers:layers_pobreza,
+              label:'CONEVAL',
+              layers:layers_coneval,
           },
 
 			G5:{
@@ -481,7 +421,42 @@ define(function() {
                 }
               }
             },
-          },   
+          },
+          G9:{
+            label:'DENUE',
+            layers:{
+              c_denue_escuelas_primarias:{
+                label: 'Escuelas primarias',
+                scale:1,
+                position:posicion_capa++,
+                active:false,
+                texts:{
+                  scale:1,
+                  active:false
+                }
+              },
+              c_denue_escuelas_secundarias:{
+                label: 'Escuelas secundarias',
+                scale:1,
+                position: posicion_capa++,
+                active:false,
+                texts:{
+                  scale:1,
+                  active:false
+                }
+              },
+              c_denue_escuelas_media_superior:{
+                label: 'Escuelas Media Superior',
+                scale:1,
+                position: posicion_capa++,
+                active:false,
+                texts:{
+                  scale:1,
+                  active:false
+                }
+              },
+            },
+          },      
         },
       }
     };
