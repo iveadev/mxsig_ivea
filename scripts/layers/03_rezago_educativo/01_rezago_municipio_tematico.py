@@ -73,11 +73,10 @@ for campo in mapas_tematico:
         clases.append(
             {
                 "name": estilo['name'],
+                "expression": condicionales[i],
                 "style": {
                     "color": estilo['color'],
-                    "expression": condicionales[i],
                 }
-                    
             }
         )
     layers.append({

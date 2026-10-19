@@ -17,30 +17,30 @@ LAYER
   END
   CLASS
     NAME "bajo"
+    EXPRESSION ([porcentaje_analfabetismo] <=7.5375)
     STYLE
       COLOR 255 255 0
-      EXPRESSION ([porcentaje_analfabetismo] <=7.5375)
     END
   END
   CLASS
     NAME "medio"
+    EXPRESSION ([porcentaje_analfabetismo] >7.5375 and [porcentaje_analfabetismo] <=10.995000000000001)
     STYLE
       COLOR 0 128 0
-      EXPRESSION ([porcentaje_analfabetismo] >7.5375 and [porcentaje_analfabetismo] <=10.995000000000001)
     END
   END
   CLASS
     NAME "alto"
+    EXPRESSION ([porcentaje_analfabetismo] >10.995000000000001 and [porcentaje_analfabetismo] <=15.14)
     STYLE
       COLOR 240 120 15
-      EXPRESSION ([porcentaje_analfabetismo] >10.995000000000001 and [porcentaje_analfabetismo] <=15.14)
     END
   END
   CLASS
     NAME "muy_alto"
+    EXPRESSION ([porcentaje_analfabetismo] >15.14)
     STYLE
       COLOR 255 0 0
-      EXPRESSION ([porcentaje_analfabetismo] >15.14)
     END
   END
 END
@@ -58,30 +58,30 @@ LAYER
   END
   CLASS
     NAME "bajo"
+    EXPRESSION ([porcentaje_sin_primaria] <=13.795)
     STYLE
       COLOR 255 255 0
-      EXPRESSION ([porcentaje_sin_primaria] <=13.795)
     END
   END
   CLASS
     NAME "medio"
+    EXPRESSION ([porcentaje_sin_primaria] >13.795 and [porcentaje_sin_primaria] <=17.655)
     STYLE
       COLOR 0 128 0
-      EXPRESSION ([porcentaje_sin_primaria] >13.795 and [porcentaje_sin_primaria] <=17.655)
     END
   END
   CLASS
     NAME "alto"
+    EXPRESSION ([porcentaje_sin_primaria] >17.655 and [porcentaje_sin_primaria] <=20.715)
     STYLE
       COLOR 240 120 15
-      EXPRESSION ([porcentaje_sin_primaria] >17.655 and [porcentaje_sin_primaria] <=20.715)
     END
   END
   CLASS
     NAME "muy_alto"
+    EXPRESSION ([porcentaje_sin_primaria] >20.715)
     STYLE
       COLOR 255 0 0
-      EXPRESSION ([porcentaje_sin_primaria] >20.715)
     END
   END
 END
@@ -99,30 +99,30 @@ LAYER
   END
   CLASS
     NAME "bajo"
+    EXPRESSION ([porcentaje_sin_secundaria] <=2.95)
     STYLE
       COLOR 255 255 0
-      EXPRESSION ([porcentaje_sin_secundaria] <=2.95)
     END
   END
   CLASS
     NAME "medio"
+    EXPRESSION ([porcentaje_sin_secundaria] >2.95 and [porcentaje_sin_secundaria] <=3.46)
     STYLE
       COLOR 0 128 0
-      EXPRESSION ([porcentaje_sin_secundaria] >2.95 and [porcentaje_sin_secundaria] <=3.46)
     END
   END
   CLASS
     NAME "alto"
+    EXPRESSION ([porcentaje_sin_secundaria] >3.46 and [porcentaje_sin_secundaria] <=3.99)
     STYLE
       COLOR 240 120 15
-      EXPRESSION ([porcentaje_sin_secundaria] >3.46 and [porcentaje_sin_secundaria] <=3.99)
     END
   END
   CLASS
     NAME "muy_alto"
+    EXPRESSION ([porcentaje_sin_secundaria] >3.99)
     STYLE
       COLOR 255 0 0
-      EXPRESSION ([porcentaje_sin_secundaria] >3.99)
     END
   END
 END
@@ -140,30 +140,30 @@ LAYER
   END
   CLASS
     NAME "bajo"
+    EXPRESSION ([porcentaje_rezago_total] <=25.975)
     STYLE
       COLOR 255 255 0
-      EXPRESSION ([porcentaje_rezago_total] <=25.975)
     END
   END
   CLASS
     NAME "medio"
+    EXPRESSION ([porcentaje_rezago_total] >25.975 and [porcentaje_rezago_total] <=33.75)
     STYLE
       COLOR 0 128 0
-      EXPRESSION ([porcentaje_rezago_total] >25.975 and [porcentaje_rezago_total] <=33.75)
     END
   END
   CLASS
     NAME "alto"
+    EXPRESSION ([porcentaje_rezago_total] >33.75 and [porcentaje_rezago_total] <=40.55)
     STYLE
       COLOR 240 120 15
-      EXPRESSION ([porcentaje_rezago_total] >33.75 and [porcentaje_rezago_total] <=40.55)
     END
   END
   CLASS
     NAME "muy_alto"
+    EXPRESSION ([porcentaje_rezago_total] >40.55)
     STYLE
       COLOR 255 0 0
-      EXPRESSION ([porcentaje_rezago_total] >40.55)
     END
   END
 END
