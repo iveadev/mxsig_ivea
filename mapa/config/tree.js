@@ -5,127 +5,127 @@ Archivo personalizado para IVEA, sustituye al archivo original de MXSIG
 // Definición de las coordinaciones de zona IVEA
 const coordinaciones = [
   {
-    "id": "cz3001",
+    "id": "c_cz3001",
     "label": "Tantoyuca",
     "regional": "Norte"
   },
   {
-    "id": "cz3003",
+    "id": "c_cz3003",
     "label": "Chicontepec",
     "regional": "Norte"
   },
   {
-    "id": "cz3004",
+    "id": "c_cz3004",
     "label": "Tuxpan",
     "regional": "Norte"
   },
   {
-    "id": "cz3005",
+    "id": "c_cz3005",
     "label": "Poza Rica",
     "regional": "Norte"
   },
   {
-    "id": "cz3006",
+    "id": "c_cz3006",
     "label": "Papantla",
     "regional": "Norte"
   },
   {
-    "id": "cz3007",
+    "id": "c_cz3007",
     "label": "Espinal",
     "regional": "Norte"
   },
   {
-    "id": "cz3008",
+    "id": "c_cz3008",
     "label": "Martinez",
     "regional": "Norte"
   },
   {
-    "id": "cz3009",
+    "id": "c_cz3009",
     "label": "Perote",
     "regional": "Centro"
   },
   {
-    "id": "cz3010",
+    "id": "c_cz3010",
     "label": "Xalapa",
     "regional": "Centro"
   },
   {
-    "id": "cz3011",
+    "id": "c_cz3011",
     "label": "Coatepec",
     "regional": "Centro"
   },
   {
-    "id": "cz3012",
+    "id": "c_cz3012",
     "label": "Huatusco",
     "regional": "Centro"
   },
   {
-    "id": "cz3013",
+    "id": "c_cz3013",
     "label": "Orizaba",
     "regional": "Centro"
   },
   {
-    "id": "cz3014",
+    "id": "c_cz3014",
     "label": "Cordoba",
     "regional": "Centro"
   },
   {
-    "id": "cz3015",
+    "id": "c_cz3015",
     "label": "Zongolica",
     "regional": "Centro"
   },
   {
-    "id": "cz3016",
+    "id": "c_cz3016",
     "label": "Veracruz",
     "regional": "Centro"
   },
   {
-    "id": "cz3017",
+    "id": "c_cz3017",
     "label": "Boca del Rio",
     "regional": "Sur"
   },
   {
-    "id": "cz3018",
+    "id": "c_cz3018",
     "label": "Tierra Blanca",
     "regional": "Sur"
   },
   {
-    "id": "cz3019",
+    "id": "c_cz3019",
     "label": "Cosamaloapan",
     "regional": "Sur"
   },
   {
-    "id": "cz3020",
+    "id": "c_cz3020",
     "label": "San Andres",
     "regional": "Sur"
   },
   {
-    "id": "cz3021",
+    "id": "c_cz3021",
     "label": "Acayucan",
     "regional": "Sur"
   },
   {
-    "id": "cz3022",
+    "id": "c_cz3022",
     "label": "Minatitlan",
     "regional": "Sur"
   },
   {
-    "id": "cz3023",
+    "id": "c_cz3023",
     "label": "Coatzacoalcos",
     "regional": "Sur"
   },
   {
-    "id": "cz3024",
+    "id": "c_cz3024",
     "label": "Huayacocotla",
     "regional": "Norte"
   },
   {
-    "id": "cz3025",
+    "id": "c_cz3025",
     "label": "Panuco",
     "regional": "Norte"
   },
   {
-    "id": "cz3029",
+    "id": "c_cz3029",
     "label": "Jaltipan",
     "regional": "Sur"
   }
@@ -373,9 +373,16 @@ define(function() {
 			G1:{
                     label:'L&iacute;mites del Marco Geoestad&iacute;stico de Veracruz 2025',
                     layers:{
-                        c30_ver:{
+                        c_edo_ver:{
                             label:'Estatal',
                             synonymous:['estado','estatales'],
+                            scale:1,
+                            position:1,
+                            active:true,
+                        },
+                        c_mun_ver:{
+                            label:'Municipal',
+                            synonymous:['municipios','mun'],
                             scale:1,
                             position:1,
                             active:false,
@@ -389,7 +396,7 @@ define(function() {
       G2:{
               label:'Infraestructura IVEA',
               layers: {
-                capa_oficinas_cz:{
+                c_oficinas_cz:{
                   label: 'Ubicación de las Coordinaciones de Zona (puntos)',
                   scale:1,
                   position:2,
@@ -430,6 +437,35 @@ define(function() {
                 layers:layers_sur,
             },
             
+          G8:{
+            label:'Estimación del Rezago Educativo INEA2025 (tematico)',
+            layers:{
+              c_rezago_educativo_porcentaje_rezago_total:{
+                label: 'Porcentaje total del rezago en Veracruz',
+                scale:1,
+                position:posicion_capa++,
+                active:false,
+              },
+              c_rezago_educativo_porcentaje_analfabetismo:{
+                label: 'Porcentaje de analfabetismo',
+                scale:1,
+                position: posicion_capa++,
+                active:false,
+              },
+              c_rezago_educativo_porcentaje_sin_primaria:{
+                label: 'Porcentaje sin primaria',
+                scale:1,
+                position: posicion_capa++,
+                active:false,
+              },
+              c_rezago_educativo_porcentaje_sin_secundaria:{
+                label: 'Porcentaje sin secundaria',
+                scale:1,
+                position: posicion_capa++,
+                active:false,
+              }
+            },
+          },   
         },
       }
     };
