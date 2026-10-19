@@ -108,7 +108,7 @@ def podar_diccionario(dicc, modo="BASE"):
         clave_upper = k.strip().upper()
         
         if modo == "BASE" and clave_upper in ["LABELITEM", "LABEL"]: continue
-        if modo == "TEXTO" and clave_upper in ["STYLE", "CLASSITEM"]: continue
+        if modo == "TEXTO" and clave_upper in ["STYLE"]: continue
         
         if isinstance(v, dict):
             dicc_limpio[k] = podar_diccionario(v, modo)
@@ -152,7 +152,6 @@ for ly in getattr(mapa, "layers", [config_global_final]):
      #Se define cuando se evalua un valor de tipo string
     if "classitem" in capa_base:
             for cl in capa_base["class"]:
-                print(cl)
                 if 'expression' in cl:
                     #harcodeando la variable expression
                     cl["_expression"] = cl["expression"]

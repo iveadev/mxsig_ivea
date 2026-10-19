@@ -46,6 +46,14 @@ for mapa in pobreza:
         {
             "color":mapa['color'],
             "outlinecolor":mapa['color'],
+        },
+        "label": {
+            "font": "arial",
+            "size": "8",
+            "color": "0 0 0",
+            "outlinecolor": "255 255 255",
+            "position": "auto",
+            "type": "truetype"
         }
     })
 layer = {

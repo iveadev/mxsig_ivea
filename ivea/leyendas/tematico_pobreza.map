@@ -18,26 +18,75 @@ LAYER
   LABELITEM "porcentaje"
   CLASS
     NAME "bajo/bajo"
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      POSITION auto
+      TYPE truetype
+    END
     EXPRESSION "bajo/bajo"
   END
   CLASS
     NAME "bajo/medio"
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      POSITION auto
+      TYPE truetype
+    END
     EXPRESSION "bajo/medio"
   END
   CLASS
     NAME "bajo/alto"
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      POSITION auto
+      TYPE truetype
+    END
     EXPRESSION "bajo/alto"
   END
   CLASS
     NAME "medio/medio"
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      POSITION auto
+      TYPE truetype
+    END
     EXPRESSION "medio/medio"
   END
   CLASS
     NAME "medio/alto"
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      POSITION auto
+      TYPE truetype
+    END
     EXPRESSION "medio/alto"
   END
   CLASS
     NAME "alto/medio"
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      POSITION auto
+      TYPE truetype
+    END
     EXPRESSION "alto/medio"
   END
+  CLASSITEM "porcentaje"
 END
