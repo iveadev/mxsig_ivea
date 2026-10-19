@@ -16,29 +16,29 @@ LAYER
     "wms_enable_request" "*"
   END
   CLASS
+    NAME "bajo"
     STYLE
-      NAME "bajo"
       COLOR 255 255 0
       EXPRESSION ([porcentaje_analfabetismo] <=7.5375)
     END
   END
   CLASS
+    NAME "medio"
     STYLE
-      NAME "medio"
       COLOR 0 128 0
       EXPRESSION ([porcentaje_analfabetismo] >7.5375 and [porcentaje_analfabetismo] <=10.995000000000001)
     END
   END
   CLASS
+    NAME "alto"
     STYLE
-      NAME "alto"
       COLOR 240 120 15
       EXPRESSION ([porcentaje_analfabetismo] >10.995000000000001 and [porcentaje_analfabetismo] <=15.14)
     END
   END
   CLASS
+    NAME "muy_alto"
     STYLE
-      NAME "muy_alto"
       COLOR 255 0 0
       EXPRESSION ([porcentaje_analfabetismo] >15.14)
     END
@@ -57,29 +57,29 @@ LAYER
     "wms_enable_request" "*"
   END
   CLASS
+    NAME "bajo"
     STYLE
-      NAME "bajo"
       COLOR 255 255 0
       EXPRESSION ([porcentaje_sin_primaria] <=13.795)
     END
   END
   CLASS
+    NAME "medio"
     STYLE
-      NAME "medio"
       COLOR 0 128 0
       EXPRESSION ([porcentaje_sin_primaria] >13.795 and [porcentaje_sin_primaria] <=17.655)
     END
   END
   CLASS
+    NAME "alto"
     STYLE
-      NAME "alto"
       COLOR 240 120 15
       EXPRESSION ([porcentaje_sin_primaria] >17.655 and [porcentaje_sin_primaria] <=20.715)
     END
   END
   CLASS
+    NAME "muy_alto"
     STYLE
-      NAME "muy_alto"
       COLOR 255 0 0
       EXPRESSION ([porcentaje_sin_primaria] >20.715)
     END
@@ -98,29 +98,29 @@ LAYER
     "wms_enable_request" "*"
   END
   CLASS
+    NAME "bajo"
     STYLE
-      NAME "bajo"
       COLOR 255 255 0
       EXPRESSION ([porcentaje_sin_secundaria] <=2.95)
     END
   END
   CLASS
+    NAME "medio"
     STYLE
-      NAME "medio"
       COLOR 0 128 0
       EXPRESSION ([porcentaje_sin_secundaria] >2.95 and [porcentaje_sin_secundaria] <=3.46)
     END
   END
   CLASS
+    NAME "alto"
     STYLE
-      NAME "alto"
       COLOR 240 120 15
       EXPRESSION ([porcentaje_sin_secundaria] >3.46 and [porcentaje_sin_secundaria] <=3.99)
     END
   END
   CLASS
+    NAME "muy_alto"
     STYLE
-      NAME "muy_alto"
       COLOR 255 0 0
       EXPRESSION ([porcentaje_sin_secundaria] >3.99)
     END
@@ -139,29 +139,29 @@ LAYER
     "wms_enable_request" "*"
   END
   CLASS
+    NAME "bajo"
     STYLE
-      NAME "bajo"
       COLOR 255 255 0
       EXPRESSION ([porcentaje_rezago_total] <=25.975)
     END
   END
   CLASS
+    NAME "medio"
     STYLE
-      NAME "medio"
       COLOR 0 128 0
       EXPRESSION ([porcentaje_rezago_total] >25.975 and [porcentaje_rezago_total] <=33.75)
     END
   END
   CLASS
+    NAME "alto"
     STYLE
-      NAME "alto"
       COLOR 240 120 15
       EXPRESSION ([porcentaje_rezago_total] >33.75 and [porcentaje_rezago_total] <=40.55)
     END
   END
   CLASS
+    NAME "muy_alto"
     STYLE
-      NAME "muy_alto"
       COLOR 255 0 0
       EXPRESSION ([porcentaje_rezago_total] >40.55)
     END

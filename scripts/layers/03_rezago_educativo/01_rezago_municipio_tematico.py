@@ -72,8 +72,8 @@ for campo in mapas_tematico:
         estilo = colores[i]
         clases.append(
             {
+                "name": estilo['name'],
                 "style": {
-                    "name": estilo['name'],
                     "color": estilo['color'],
                     "expression": condicionales[i],
                 }
