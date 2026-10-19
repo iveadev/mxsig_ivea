@@ -1,6 +1,169 @@
 # =================================================================
 # MAPA BASE DE GEOMETRÍAS
-# ARCHIVO GENERADO AUTOMÁTICAMENTE A PARTIR DE LA DEFINICIÓN: layers.04_rezago_educativo.01_rezago_municipio_tematico 
+# ARCHIVO GENERADO AUTOMÁTICAMENTE A PARTIR DE LA DEFINICIÓN: layers.03_rezago_educativo.01_rezago_municipio_tematico 
 # DESCRIPCIÓN: Mapa tematico de la estimación del rezago educativo INEA2025 
 # =================================================================
 
+LAYER
+  NAME "c_rezago_educativo_porcentaje_analfabetismo"
+  STATUS ON
+  TYPE POLYGON
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom FROM rezago_educativo_estimacion_inea2025.tematico_indice_alfa) AS t1 USING UNIQUE gid USING SRID=900913"
+  METADATA
+    "wms_title" "Mapa tematico de la estimación del rezago educativo INEA2025 (porcentaje_analfabetismo)"
+    "wms_enable_request" "*"
+  END
+  CLASS
+    STYLE
+      NAME "bajo"
+      COLOR 255 255 0
+      EXPRESSION ([porcentaje_analfabetismo] <=7.5375)
+    END
+  END
+  CLASS
+    STYLE
+      NAME "medio"
+      COLOR 0 128 0
+      EXPRESSION ([porcentaje_analfabetismo] >7.5375 and [porcentaje_analfabetismo] <=10.995000000000001)
+    END
+  END
+  CLASS
+    STYLE
+      NAME "alto"
+      COLOR 240 120 15
+      EXPRESSION ([porcentaje_analfabetismo] >10.995000000000001 and [porcentaje_analfabetismo] <=15.14)
+    END
+  END
+  CLASS
+    STYLE
+      NAME "muy_alto"
+      COLOR 255 0 0
+      EXPRESSION ([porcentaje_analfabetismo] >15.14)
+    END
+  END
+END
+
+LAYER
+  NAME "c_rezago_educativo_porcentaje_sin_primaria"
+  STATUS ON
+  TYPE POLYGON
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom FROM rezago_educativo_estimacion_inea2025.tematico_indice_alfa) AS t1 USING UNIQUE gid USING SRID=900913"
+  METADATA
+    "wms_title" "Mapa tematico de la estimación del rezago educativo INEA2025 (porcentaje_sin_primaria)"
+    "wms_enable_request" "*"
+  END
+  CLASS
+    STYLE
+      NAME "bajo"
+      COLOR 255 255 0
+      EXPRESSION ([porcentaje_sin_primaria] <=13.795)
+    END
+  END
+  CLASS
+    STYLE
+      NAME "medio"
+      COLOR 0 128 0
+      EXPRESSION ([porcentaje_sin_primaria] >13.795 and [porcentaje_sin_primaria] <=17.655)
+    END
+  END
+  CLASS
+    STYLE
+      NAME "alto"
+      COLOR 240 120 15
+      EXPRESSION ([porcentaje_sin_primaria] >17.655 and [porcentaje_sin_primaria] <=20.715)
+    END
+  END
+  CLASS
+    STYLE
+      NAME "muy_alto"
+      COLOR 255 0 0
+      EXPRESSION ([porcentaje_sin_primaria] >20.715)
+    END
+  END
+END
+
+LAYER
+  NAME "c_rezago_educativo_porcentaje_sin_secundaria"
+  STATUS ON
+  TYPE POLYGON
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom FROM rezago_educativo_estimacion_inea2025.tematico_indice_alfa) AS t1 USING UNIQUE gid USING SRID=900913"
+  METADATA
+    "wms_title" "Mapa tematico de la estimación del rezago educativo INEA2025 (porcentaje_sin_secundaria)"
+    "wms_enable_request" "*"
+  END
+  CLASS
+    STYLE
+      NAME "bajo"
+      COLOR 255 255 0
+      EXPRESSION ([porcentaje_sin_secundaria] <=2.95)
+    END
+  END
+  CLASS
+    STYLE
+      NAME "medio"
+      COLOR 0 128 0
+      EXPRESSION ([porcentaje_sin_secundaria] >2.95 and [porcentaje_sin_secundaria] <=3.46)
+    END
+  END
+  CLASS
+    STYLE
+      NAME "alto"
+      COLOR 240 120 15
+      EXPRESSION ([porcentaje_sin_secundaria] >3.46 and [porcentaje_sin_secundaria] <=3.99)
+    END
+  END
+  CLASS
+    STYLE
+      NAME "muy_alto"
+      COLOR 255 0 0
+      EXPRESSION ([porcentaje_sin_secundaria] >3.99)
+    END
+  END
+END
+
+LAYER
+  NAME "c_rezago_educativo_porcentaje_rezago_total"
+  STATUS ON
+  TYPE POLYGON
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom FROM rezago_educativo_estimacion_inea2025.tematico_indice_alfa) AS t1 USING UNIQUE gid USING SRID=900913"
+  METADATA
+    "wms_title" "Mapa tematico de la estimación del rezago educativo INEA2025 (porcentaje_rezago_total)"
+    "wms_enable_request" "*"
+  END
+  CLASS
+    STYLE
+      NAME "bajo"
+      COLOR 255 255 0
+      EXPRESSION ([porcentaje_rezago_total] <=25.975)
+    END
+  END
+  CLASS
+    STYLE
+      NAME "medio"
+      COLOR 0 128 0
+      EXPRESSION ([porcentaje_rezago_total] >25.975 and [porcentaje_rezago_total] <=33.75)
+    END
+  END
+  CLASS
+    STYLE
+      NAME "alto"
+      COLOR 240 120 15
+      EXPRESSION ([porcentaje_rezago_total] >33.75 and [porcentaje_rezago_total] <=40.55)
+    END
+  END
+  CLASS
+    STYLE
+      NAME "muy_alto"
+      COLOR 255 0 0
+      EXPRESSION ([porcentaje_rezago_total] >40.55)
+    END
+  END
+END
