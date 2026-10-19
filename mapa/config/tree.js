@@ -139,21 +139,21 @@ let posicion_capa=10
 coordinaciones.forEach((cz) => {
     if(cz.regional === 'Norte') {
         layers_norte[cz.id] = {
-            label: cz.id.toUpperCase().replace("c_","") + ' - ' + cz.label,
+            label: cz.id.toUpperCase().replace("C_","") + ' - ' + cz.label,
             scale: 1,
             position: posicion_capa++,
             active: false
         };
     } else if(cz.regional === 'Centro') {
         layers_centro[cz.id] = {
-            label: cz.id.toUpperCase().replace("c_","") + ' - ' + cz.label,
+            label: cz.id.toUpperCase().replace("C_","") + ' - ' + cz.label,
             scale: 1,
             position: posicion_capa++,
             active: false
         };
     } else if(cz.regional === 'Sur') {
         layers_sur[cz.id] = {
-            label: cz.id.toUpperCase().replace("c_","") + ' - ' + cz.label,
+            label: cz.id.toUpperCase().replace("C_","") + ' - ' + cz.label,
             scale: 1,
             position: posicion_capa++,
             active: false
