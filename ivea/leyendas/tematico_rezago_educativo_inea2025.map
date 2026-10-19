@@ -1,0 +1,253 @@
+# =================================================================
+# MAPA EXCLUSIVO DE TEXTOS (leyendas)
+# ARCHIVO GENERADO AUTOMÁTICAMENTE A PARTIR DE LA DEFINICIÓN: layers.03_rezago_educativo.01_rezago_municipio_tematico 
+# DESCRIPCIÓN: Mapa tematico de la estimación del rezago educativo INEA2025 
+# =================================================================
+
+LAYER
+  NAME "t_rezago_educativo_porcentaje_analfabetismo"
+  STATUS ON
+  TYPE POLYGON
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom, porcentaje_analfabetismo FROM rezago_educativo_estimacion_inea2025.tematico_indice_alfa) AS t1 USING UNIQUE gid USING SRID=900913"
+  METADATA
+    "wms_title" "Texto Mapa tematico de la estimación del rezago educativo INEA2025 (porcentaje_analfabetismo)"
+    "wms_enable_request" "*"
+  END
+  LABELITEM "porcentaje_analfabetismo"
+  CLASS
+    NAME "bajo"
+    EXPRESSION ([porcentaje_analfabetismo] <=7.5375)
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      POSITION auto
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "medio"
+    EXPRESSION ([porcentaje_analfabetismo] >7.5375 and [porcentaje_analfabetismo] <=10.995000000000001)
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      POSITION auto
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "alto"
+    EXPRESSION ([porcentaje_analfabetismo] >10.995000000000001 and [porcentaje_analfabetismo] <=15.14)
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      POSITION auto
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "muy_alto"
+    EXPRESSION ([porcentaje_analfabetismo] >15.14)
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      POSITION auto
+      TYPE truetype
+    END
+  END
+END
+
+LAYER
+  NAME "t_rezago_educativo_porcentaje_sin_primaria"
+  STATUS ON
+  TYPE POLYGON
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom, porcentaje_sin_primaria FROM rezago_educativo_estimacion_inea2025.tematico_indice_alfa) AS t1 USING UNIQUE gid USING SRID=900913"
+  METADATA
+    "wms_title" "Texto Mapa tematico de la estimación del rezago educativo INEA2025 (porcentaje_sin_primaria)"
+    "wms_enable_request" "*"
+  END
+  LABELITEM "porcentaje_sin_primaria"
+  CLASS
+    NAME "bajo"
+    EXPRESSION ([porcentaje_sin_primaria] <=13.795)
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      POSITION auto
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "medio"
+    EXPRESSION ([porcentaje_sin_primaria] >13.795 and [porcentaje_sin_primaria] <=17.655)
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      POSITION auto
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "alto"
+    EXPRESSION ([porcentaje_sin_primaria] >17.655 and [porcentaje_sin_primaria] <=20.715)
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      POSITION auto
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "muy_alto"
+    EXPRESSION ([porcentaje_sin_primaria] >20.715)
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      POSITION auto
+      TYPE truetype
+    END
+  END
+END
+
+LAYER
+  NAME "t_rezago_educativo_porcentaje_sin_secundaria"
+  STATUS ON
+  TYPE POLYGON
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom, porcentaje_sin_secundaria FROM rezago_educativo_estimacion_inea2025.tematico_indice_alfa) AS t1 USING UNIQUE gid USING SRID=900913"
+  METADATA
+    "wms_title" "Texto Mapa tematico de la estimación del rezago educativo INEA2025 (porcentaje_sin_secundaria)"
+    "wms_enable_request" "*"
+  END
+  LABELITEM "porcentaje_sin_secundaria"
+  CLASS
+    NAME "bajo"
+    EXPRESSION ([porcentaje_sin_secundaria] <=2.95)
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      POSITION auto
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "medio"
+    EXPRESSION ([porcentaje_sin_secundaria] >2.95 and [porcentaje_sin_secundaria] <=3.46)
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      POSITION auto
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "alto"
+    EXPRESSION ([porcentaje_sin_secundaria] >3.46 and [porcentaje_sin_secundaria] <=3.99)
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      POSITION auto
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "muy_alto"
+    EXPRESSION ([porcentaje_sin_secundaria] >3.99)
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      POSITION auto
+      TYPE truetype
+    END
+  END
+END
+
+LAYER
+  NAME "t_rezago_educativo_porcentaje_rezago_total"
+  STATUS ON
+  TYPE POLYGON
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom, porcentaje_rezago_total FROM rezago_educativo_estimacion_inea2025.tematico_indice_alfa) AS t1 USING UNIQUE gid USING SRID=900913"
+  METADATA
+    "wms_title" "Texto Mapa tematico de la estimación del rezago educativo INEA2025 (porcentaje_rezago_total)"
+    "wms_enable_request" "*"
+  END
+  LABELITEM "porcentaje_rezago_total"
+  CLASS
+    NAME "bajo"
+    EXPRESSION ([porcentaje_rezago_total] <=25.975)
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      POSITION auto
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "medio"
+    EXPRESSION ([porcentaje_rezago_total] >25.975 and [porcentaje_rezago_total] <=33.75)
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      POSITION auto
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "alto"
+    EXPRESSION ([porcentaje_rezago_total] >33.75 and [porcentaje_rezago_total] <=40.55)
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      POSITION auto
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "muy_alto"
+    EXPRESSION ([porcentaje_rezago_total] >40.55)
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      POSITION auto
+      TYPE truetype
+    END
+  END
+END

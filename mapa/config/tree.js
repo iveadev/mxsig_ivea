@@ -445,24 +445,40 @@ define(function() {
                 scale:1,
                 position:posicion_capa++,
                 active:false,
+                texts:{
+                  scale:1,
+                  active:false
+                }
               },
               c_rezago_educativo_porcentaje_analfabetismo:{
                 label: 'Porcentaje de analfabetismo',
                 scale:1,
                 position: posicion_capa++,
                 active:false,
+                texts:{
+                  scale:1,
+                  active:false
+                }
               },
               c_rezago_educativo_porcentaje_sin_primaria:{
                 label: 'Porcentaje sin primaria',
                 scale:1,
                 position: posicion_capa++,
                 active:false,
+                texts:{
+                  scale:1,
+                  active:false
+                }
               },
               c_rezago_educativo_porcentaje_sin_secundaria:{
                 label: 'Porcentaje sin secundaria',
                 scale:1,
                 position: posicion_capa++,
                 active:false,
+                texts:{
+                  scale:1,
+                  active:false
+                }
               }
             },
           },   

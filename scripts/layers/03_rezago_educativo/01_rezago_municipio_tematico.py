@@ -20,12 +20,12 @@ layer = {
     "data": {
         'table': tabla,
     },
-    "class": {
-        'style': {
-            'outlinecolor': '0,0,0',
-            "width" : 0.8
-        }
-    }
+}
+
+style_base =  {
+    'outlinecolor': '0,0,0',
+    "width" : 0.8,
+    "opacity" : 60,
 }
 
 # datos para personalizar
@@ -74,16 +74,27 @@ for campo in mapas_tematico:
             {
                 "name": estilo['name'],
                 "expression": condicionales[i],
-                "style": {
+                "style": style_base | {
                     "color": estilo['color'],
+                    "outlinecolor": estilo['color'],
+                },
+                "label": {
+                    "font": "arial",
+                    "size": "8",
+                    "color": "0 0 0",
+                    "outlinecolor": "255 255 255",
+                    "position": "auto",
+                    "type": "truetype"
                 }
-            }
+            },
+            
         )
     layers.append({
         "name": f"rezago_educativo_{campo}",
          "data": {
             "select": [campo]
         },
+        "labelitem": campo,
         "metadata": {
             'wms_title': f"{descripcion} ({campo})"
         },
