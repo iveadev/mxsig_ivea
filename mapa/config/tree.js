@@ -261,7 +261,7 @@ define(function() {
         themes:{
 			T1:{
 				label:'Coordinaciones de Zona IVEA',
-                    layers:coordinaciones.map(cz => cz.id).concat(['oficinas_cz']),
+                    layers:coordinaciones.map(cz => cz.id).concat(['c_oficinas_cz']),
                     desc:'Coordinaciones de Zona IVEA',
                     img:'mexico.jpg'
                 },
