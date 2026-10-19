@@ -33,13 +33,15 @@ estructura_base = {
             'priority': 1,
             'buffer': 1,
             'position': 'uc',
-            "type": "truetype"
+            "type": "truetype",
+            'wrap': ' ',
+            'maxlength': 15
         }
     }
     
 }
 
-requiere_doble_comillas = ["NAME", "WMS_TITLE", "WMS_ENABLE_REQUEST", "LABELITEM", "CONNECTION", "FONT", "SYMBOL", "CLASSITEM", "_EXPRESSION"]
+requiere_doble_comillas = ["NAME", "WMS_TITLE", "WMS_ENABLE_REQUEST", "LABELITEM", "CONNECTION", "FONT", "SYMBOL", "CLASSITEM", "_EXPRESSION", "WRAP"]
 
 def deep_update(dicc_base, dicc_usuario):
     resultado = dicc_base.copy()

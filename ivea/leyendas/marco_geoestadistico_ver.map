@@ -26,6 +26,7 @@ LAYER
       BUFFER 1
       POSITION uc
       TYPE truetype
+      MAXLENGTH 15
     END
   END
 END
