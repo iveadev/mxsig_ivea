@@ -25,7 +25,9 @@ label_base = {
     "size": "8",
     "color": "0 0 0",
     "outlinecolor": "255 255 255",
-    "position": "auto",
+    'priority': 10,
+    'buffer': 5,
+    'position': 'uc',
     "type": "truetype"
 }
 
@@ -41,9 +43,6 @@ for cz in coordinaciones:
                 "color": f"{cz['color']}"
             },
             "label" : label_base | {
-                'priority': 10,
-			    'buffer': 1,
-                'position': 'cc',
             }
         }
     )

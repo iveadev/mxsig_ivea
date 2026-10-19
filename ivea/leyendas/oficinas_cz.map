@@ -24,10 +24,10 @@ LAYER
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
-      POSITION cc
-      TYPE truetype
       PRIORITY 10
-      BUFFER 1
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
     END
   END
   CLASS
@@ -38,10 +38,10 @@ LAYER
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
-      POSITION cc
-      TYPE truetype
       PRIORITY 10
-      BUFFER 1
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
     END
   END
   CLASS
@@ -52,10 +52,10 @@ LAYER
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
-      POSITION cc
-      TYPE truetype
       PRIORITY 10
-      BUFFER 1
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
     END
   END
   CLASS
@@ -66,10 +66,10 @@ LAYER
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
-      POSITION cc
-      TYPE truetype
       PRIORITY 10
-      BUFFER 1
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
     END
   END
   CLASS
@@ -80,10 +80,10 @@ LAYER
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
-      POSITION cc
-      TYPE truetype
       PRIORITY 10
-      BUFFER 1
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
     END
   END
   CLASS
@@ -94,10 +94,10 @@ LAYER
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
-      POSITION cc
-      TYPE truetype
       PRIORITY 10
-      BUFFER 1
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
     END
   END
   CLASS
@@ -108,10 +108,10 @@ LAYER
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
-      POSITION cc
-      TYPE truetype
       PRIORITY 10
-      BUFFER 1
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
     END
   END
   CLASS
@@ -122,10 +122,10 @@ LAYER
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
-      POSITION cc
-      TYPE truetype
       PRIORITY 10
-      BUFFER 1
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
     END
   END
   CLASS
@@ -136,10 +136,10 @@ LAYER
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
-      POSITION cc
-      TYPE truetype
       PRIORITY 10
-      BUFFER 1
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
     END
   END
   CLASS
@@ -150,10 +150,10 @@ LAYER
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
-      POSITION cc
-      TYPE truetype
       PRIORITY 10
-      BUFFER 1
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
     END
   END
   CLASS
@@ -164,10 +164,10 @@ LAYER
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
-      POSITION cc
-      TYPE truetype
       PRIORITY 10
-      BUFFER 1
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
     END
   END
   CLASS
@@ -178,10 +178,10 @@ LAYER
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
-      POSITION cc
-      TYPE truetype
       PRIORITY 10
-      BUFFER 1
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
     END
   END
   CLASS
@@ -192,10 +192,10 @@ LAYER
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
-      POSITION cc
-      TYPE truetype
       PRIORITY 10
-      BUFFER 1
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
     END
   END
   CLASS
@@ -206,10 +206,10 @@ LAYER
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
-      POSITION cc
-      TYPE truetype
       PRIORITY 10
-      BUFFER 1
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
     END
   END
   CLASS
@@ -220,10 +220,10 @@ LAYER
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
-      POSITION cc
-      TYPE truetype
       PRIORITY 10
-      BUFFER 1
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
     END
   END
   CLASS
@@ -234,10 +234,10 @@ LAYER
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
-      POSITION cc
-      TYPE truetype
       PRIORITY 10
-      BUFFER 1
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
     END
   END
   CLASS
@@ -248,10 +248,10 @@ LAYER
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
-      POSITION cc
-      TYPE truetype
       PRIORITY 10
-      BUFFER 1
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
     END
   END
   CLASS
@@ -262,10 +262,10 @@ LAYER
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
-      POSITION cc
-      TYPE truetype
       PRIORITY 10
-      BUFFER 1
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
     END
   END
   CLASS
@@ -276,10 +276,10 @@ LAYER
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
-      POSITION cc
-      TYPE truetype
       PRIORITY 10
-      BUFFER 1
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
     END
   END
   CLASS
@@ -290,10 +290,10 @@ LAYER
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
-      POSITION cc
-      TYPE truetype
       PRIORITY 10
-      BUFFER 1
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
     END
   END
   CLASS
@@ -304,10 +304,10 @@ LAYER
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
-      POSITION cc
-      TYPE truetype
       PRIORITY 10
-      BUFFER 1
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
     END
   END
   CLASS
@@ -318,10 +318,10 @@ LAYER
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
-      POSITION cc
-      TYPE truetype
       PRIORITY 10
-      BUFFER 1
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
     END
   END
   CLASS
@@ -332,10 +332,10 @@ LAYER
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
-      POSITION cc
-      TYPE truetype
       PRIORITY 10
-      BUFFER 1
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
     END
   END
   CLASS
@@ -346,10 +346,10 @@ LAYER
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
-      POSITION cc
-      TYPE truetype
       PRIORITY 10
-      BUFFER 1
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
     END
   END
   CLASS
@@ -360,10 +360,10 @@ LAYER
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
-      POSITION cc
-      TYPE truetype
       PRIORITY 10
-      BUFFER 1
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
     END
   END
 END
