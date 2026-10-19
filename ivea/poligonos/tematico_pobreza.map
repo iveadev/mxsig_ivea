@@ -1,156 +1,78 @@
 # =================================================================
-# ARCHIVO GENERADO AUTOMÁTICAMENTE A PARTIR DE LA DEFINICIÓN: layers.02_tematico_pobreza_coneval 
-# Indice de Pobreza del CONEVAL en munucipios de Veracruz 
+# MAPA BASE DE GEOMETRÍAS
+# ARCHIVO GENERADO AUTOMÁTICAMENTE A PARTIR DE LA DEFINICIÓN: layers.05_coneval.01_pobreza 
+# DESCRIPCIÓN: Mapa tematico de pobreza 
 # =================================================================
 
-
-# Capa: Menor al 50%
 LAYER
-  NAME "c_pobreza_0"
+  NAME "c_tematico_pobreza"
   STATUS ON
   TYPE POLYGON
   CONNECTIONTYPE POSTGIS
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
-  DATA "the_geom FROM (SELECT gid, the_geom, porcentaje FROM coneval.indice_pobreza WHERE porcentaje<50) AS t1 USING UNIQUE gid USING SRID=900913"
-
+  DATA "the_geom FROM (SELECT gid, the_geom, porcentaje FROM coneval.indice_pobreza) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Menor al 50%"
+    "wms_title" "capa base"
     "wms_enable_request" "*"
   END
-
   CLASS
-    NAME "Menor al 50%"
+    NAME "bajo/bajo"
+    EXPRESSION ([porcentaje] = "bajo/bajo")
     STYLE
-      COLOR 255 255 255
-      OPACITY 60
-      OUTLINECOLOR 60 60 60
+      OUTLINECOLOR 244 142 95
       WIDTH 0.8
+      OPACITY 60
+      COLOR 244 142 95
+    END
+  END
+  CLASS
+    NAME "bajo/medio"
+    EXPRESSION ([porcentaje] = "bajo/medio")
+    STYLE
+      OUTLINECOLOR 186 116 56
+      WIDTH 0.8
+      OPACITY 60
+      COLOR 186 116 56
+    END
+  END
+  CLASS
+    NAME "bajo/alto"
+    EXPRESSION ([porcentaje] = "bajo/alto")
+    STYLE
+      OUTLINECOLOR 214 110 27
+      WIDTH 0.8
+      OPACITY 60
+      COLOR 214 110 27
+    END
+  END
+  CLASS
+    NAME "medio/medio"
+    EXPRESSION ([porcentaje] = "medio/medio")
+    STYLE
+      OUTLINECOLOR 196 75 68
+      WIDTH 0.8
+      OPACITY 60
+      COLOR 196 75 68
+    END
+  END
+  CLASS
+    NAME "medio/alto"
+    EXPRESSION ([porcentaje] = "medio/alto")
+    STYLE
+      OUTLINECOLOR 237 21 21
+      WIDTH 0.8
+      OPACITY 60
+      COLOR 237 21 21
+    END
+  END
+  CLASS
+    NAME "alto/medio"
+    EXPRESSION ([porcentaje] = "alto/medio")
+    STYLE
+      OUTLINECOLOR 139 79 37
+      WIDTH 0.8
+      OPACITY 60
+      COLOR 139 79 37
     END
   END
 END
-  
-# Capa: 50% a 59%
-LAYER
-  NAME "c_pobreza_50"
-  STATUS ON
-  TYPE POLYGON
-  CONNECTIONTYPE POSTGIS
-  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
-  DATA "the_geom FROM (SELECT gid, the_geom, porcentaje FROM coneval.indice_pobreza WHERE porcentaje>=50 and porcentaje<60) AS t1 USING UNIQUE gid USING SRID=900913"
-
-  METADATA
-    "wms_title" "50% a 59%"
-    "wms_enable_request" "*"
-  END
-
-  CLASS
-    NAME "50% a 59%"
-    STYLE
-      COLOR 240 219 201
-      OPACITY 60
-      OUTLINECOLOR 60 60 60
-      WIDTH 0.8
-    END
-  END
-END
-  
-# Capa: 60% a 69%
-LAYER
-  NAME "c_pobreza_60"
-  STATUS ON
-  TYPE POLYGON
-  CONNECTIONTYPE POSTGIS
-  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
-  DATA "the_geom FROM (SELECT gid, the_geom, porcentaje FROM coneval.indice_pobreza WHERE porcentaje>=60 and porcentaje<70) AS t1 USING UNIQUE gid USING SRID=900913"
-
-  METADATA
-    "wms_title" "60% a 69%"
-    "wms_enable_request" "*"
-  END
-
-  CLASS
-    NAME "60% a 69%"
-    STYLE
-      COLOR 204 169 137
-      OPACITY 60
-      OUTLINECOLOR 60 60 60
-      WIDTH 0.8
-    END
-  END
-END
-  
-# Capa: 70% a 79%
-LAYER
-  NAME "c_pobreza_70"
-  STATUS ON
-  TYPE POLYGON
-  CONNECTIONTYPE POSTGIS
-  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
-  DATA "the_geom FROM (SELECT gid, the_geom, porcentaje FROM coneval.indice_pobreza WHERE porcentaje>=70 and porcentaje<80) AS t1 USING UNIQUE gid USING SRID=900913"
-
-  METADATA
-    "wms_title" "70% a 79%"
-    "wms_enable_request" "*"
-  END
-
-  CLASS
-    NAME "70% a 79%"
-    STYLE
-      COLOR 186 126 69
-      OPACITY 60
-      OUTLINECOLOR 60 60 60
-      WIDTH 0.8
-    END
-  END
-END
-  
-# Capa: 80% a 89%
-LAYER
-  NAME "c_pobreza_80"
-  STATUS ON
-  TYPE POLYGON
-  CONNECTIONTYPE POSTGIS
-  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
-  DATA "the_geom FROM (SELECT gid, the_geom, porcentaje FROM coneval.indice_pobreza WHERE porcentaje>=80 and porcentaje<90) AS t1 USING UNIQUE gid USING SRID=900913"
-
-  METADATA
-    "wms_title" "80% a 89%"
-    "wms_enable_request" "*"
-  END
-
-  CLASS
-    NAME "80% a 89%"
-    STYLE
-      COLOR 143 98 20
-      OPACITY 60
-      OUTLINECOLOR 60 60 60
-      WIDTH 0.8
-    END
-  END
-END
-  
-# Capa: 90% o más
-LAYER
-  NAME "c_pobreza_90"
-  STATUS ON
-  TYPE POLYGON
-  CONNECTIONTYPE POSTGIS
-  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
-  DATA "the_geom FROM (SELECT gid, the_geom, porcentaje FROM coneval.indice_pobreza WHERE porcentaje>=90) AS t1 USING UNIQUE gid USING SRID=900913"
-
-  METADATA
-    "wms_title" "90% o más"
-    "wms_enable_request" "*"
-  END
-
-  CLASS
-    NAME "90% o más"
-    STYLE
-      COLOR 66 52 28
-      OPACITY 60
-      OUTLINECOLOR 60 60 60
-      WIDTH 0.8
-    END
-  END
-END
-  

@@ -6,7 +6,8 @@ if len(sys.argv) < 2:
     print("Uso: python genera_layers.py archivo_configuracion.py")
     sys.exit(1)
 
-nombre_modulo = sys.argv[1].replace(".py", "").replace("/", ".").replace("\\", ".").replace("scripts.", "")
+nombre_modulo = sys.argv[1].replace(".py", "").replace("/", ".").replace("\\", ".").replace("scripts.", "").replace("..", "")
+print(nombre_modulo)
 
 CARPETA_RAIZ = "ivea"
 
