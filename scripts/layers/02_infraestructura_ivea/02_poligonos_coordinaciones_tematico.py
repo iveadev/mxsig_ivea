@@ -1,13 +1,9 @@
-import importlib
+import sys
 import os
 
 # Import de la definición de coordinaciones de zona
-ruta_archivo = 'scripts/layers/00_constantes.py'
-nombre_modulo = os.path.splitext(os.path.basename(ruta_archivo))[0]
-spec = importlib.util.spec_from_file_location(nombre_modulo, ruta_archivo)
-def_coordinaciones = importlib.util.module_from_spec(spec)
-spec.loader.exec_module(def_coordinaciones)
-coordinaciones = getattr(def_coordinaciones, 'coordinaciones')
+sys.path.append(os.getcwd())
+from scripts.layers.constantes import coordinaciones
 
 #==========================================================================
 # Definición de la capa

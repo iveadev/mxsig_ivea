@@ -19,7 +19,7 @@ LAYER
     NAME "Tantoyuca"
     EXPRESSION ([clv_cz] = 1)
     STYLE
-      SYMBOL circulor
+      SYMBOL "circulor"
       SIZE 9
       OUTLINECOLOR 0 0 0
       COLOR 235 151 78
@@ -29,7 +29,7 @@ LAYER
     NAME "Chicontepec"
     EXPRESSION ([clv_cz] = 3)
     STYLE
-      SYMBOL circulor
+      SYMBOL "circulor"
       SIZE 9
       OUTLINECOLOR 0 0 0
       COLOR 93 188 210
@@ -39,7 +39,7 @@ LAYER
     NAME "Tuxpan"
     EXPRESSION ([clv_cz] = 4)
     STYLE
-      SYMBOL circulor
+      SYMBOL "circulor"
       SIZE 9
       OUTLINECOLOR 0 0 0
       COLOR 158 53 147
@@ -49,7 +49,7 @@ LAYER
     NAME "Poza Rica"
     EXPRESSION ([clv_cz] = 5)
     STYLE
-      SYMBOL circulor
+      SYMBOL "circulor"
       SIZE 9
       OUTLINECOLOR 0 0 0
       COLOR 196 46 96
@@ -59,7 +59,7 @@ LAYER
     NAME "Papantla"
     EXPRESSION ([clv_cz] = 6)
     STYLE
-      SYMBOL circulor
+      SYMBOL "circulor"
       SIZE 9
       OUTLINECOLOR 0 0 0
       COLOR 74 163 113
@@ -69,7 +69,7 @@ LAYER
     NAME "Espinal"
     EXPRESSION ([clv_cz] = 7)
     STYLE
-      SYMBOL circulor
+      SYMBOL "circulor"
       SIZE 9
       OUTLINECOLOR 0 0 0
       COLOR 249 220 101
@@ -79,7 +79,7 @@ LAYER
     NAME "Martinez"
     EXPRESSION ([clv_cz] = 8)
     STYLE
-      SYMBOL circulor
+      SYMBOL "circulor"
       SIZE 9
       OUTLINECOLOR 0 0 0
       COLOR 235 151 78
@@ -89,7 +89,7 @@ LAYER
     NAME "Perote"
     EXPRESSION ([clv_cz] = 9)
     STYLE
-      SYMBOL circulor
+      SYMBOL "circulor"
       SIZE 9
       OUTLINECOLOR 0 0 0
       COLOR 93 188 210
@@ -99,7 +99,7 @@ LAYER
     NAME "Xalapa"
     EXPRESSION ([clv_cz] = 10)
     STYLE
-      SYMBOL circulor
+      SYMBOL "circulor"
       SIZE 9
       OUTLINECOLOR 0 0 0
       COLOR 158 53 147
@@ -109,7 +109,7 @@ LAYER
     NAME "Coatepec"
     EXPRESSION ([clv_cz] = 11)
     STYLE
-      SYMBOL circulor
+      SYMBOL "circulor"
       SIZE 9
       OUTLINECOLOR 0 0 0
       COLOR 196 46 96
@@ -119,7 +119,7 @@ LAYER
     NAME "Huatusco"
     EXPRESSION ([clv_cz] = 12)
     STYLE
-      SYMBOL circulor
+      SYMBOL "circulor"
       SIZE 9
       OUTLINECOLOR 0 0 0
       COLOR 74 163 113
@@ -129,7 +129,7 @@ LAYER
     NAME "Orizaba"
     EXPRESSION ([clv_cz] = 13)
     STYLE
-      SYMBOL circulor
+      SYMBOL "circulor"
       SIZE 9
       OUTLINECOLOR 0 0 0
       COLOR 249 220 101
@@ -139,7 +139,7 @@ LAYER
     NAME "Cordoba"
     EXPRESSION ([clv_cz] = 14)
     STYLE
-      SYMBOL circulor
+      SYMBOL "circulor"
       SIZE 9
       OUTLINECOLOR 0 0 0
       COLOR 235 151 78
@@ -149,7 +149,7 @@ LAYER
     NAME "Zongolica"
     EXPRESSION ([clv_cz] = 15)
     STYLE
-      SYMBOL circulor
+      SYMBOL "circulor"
       SIZE 9
       OUTLINECOLOR 0 0 0
       COLOR 93 188 210
@@ -159,7 +159,7 @@ LAYER
     NAME "Veracruz"
     EXPRESSION ([clv_cz] = 16)
     STYLE
-      SYMBOL circulor
+      SYMBOL "circulor"
       SIZE 9
       OUTLINECOLOR 0 0 0
       COLOR 158 53 147
@@ -169,7 +169,7 @@ LAYER
     NAME "Boca del Rio"
     EXPRESSION ([clv_cz] = 17)
     STYLE
-      SYMBOL circulor
+      SYMBOL "circulor"
       SIZE 9
       OUTLINECOLOR 0 0 0
       COLOR 196 46 96
@@ -179,7 +179,7 @@ LAYER
     NAME "Tierra Blanca"
     EXPRESSION ([clv_cz] = 18)
     STYLE
-      SYMBOL circulor
+      SYMBOL "circulor"
       SIZE 9
       OUTLINECOLOR 0 0 0
       COLOR 74 163 113
@@ -189,7 +189,7 @@ LAYER
     NAME "Cosamaloapan"
     EXPRESSION ([clv_cz] = 19)
     STYLE
-      SYMBOL circulor
+      SYMBOL "circulor"
       SIZE 9
       OUTLINECOLOR 0 0 0
       COLOR 249 220 101
@@ -199,7 +199,7 @@ LAYER
     NAME "San Andres"
     EXPRESSION ([clv_cz] = 20)
     STYLE
-      SYMBOL circulor
+      SYMBOL "circulor"
       SIZE 9
       OUTLINECOLOR 0 0 0
       COLOR 235 151 78
@@ -209,7 +209,7 @@ LAYER
     NAME "Acayucan"
     EXPRESSION ([clv_cz] = 21)
     STYLE
-      SYMBOL circulor
+      SYMBOL "circulor"
       SIZE 9
       OUTLINECOLOR 0 0 0
       COLOR 93 188 210
@@ -219,7 +219,7 @@ LAYER
     NAME "Minatitlan"
     EXPRESSION ([clv_cz] = 22)
     STYLE
-      SYMBOL circulor
+      SYMBOL "circulor"
       SIZE 9
       OUTLINECOLOR 0 0 0
       COLOR 158 53 147
@@ -229,7 +229,7 @@ LAYER
     NAME "Coatzacoalcos"
     EXPRESSION ([clv_cz] = 23)
     STYLE
-      SYMBOL circulor
+      SYMBOL "circulor"
       SIZE 9
       OUTLINECOLOR 0 0 0
       COLOR 196 46 96
@@ -239,7 +239,7 @@ LAYER
     NAME "Huayacocotla"
     EXPRESSION ([clv_cz] = 24)
     STYLE
-      SYMBOL circulor
+      SYMBOL "circulor"
       SIZE 9
       OUTLINECOLOR 0 0 0
       COLOR 74 163 113
@@ -249,7 +249,7 @@ LAYER
     NAME "Panuco"
     EXPRESSION ([clv_cz] = 25)
     STYLE
-      SYMBOL circulor
+      SYMBOL "circulor"
       SIZE 9
       OUTLINECOLOR 0 0 0
       COLOR 249 220 101
@@ -259,7 +259,7 @@ LAYER
     NAME "Jaltipan"
     EXPRESSION ([clv_cz] = 29)
     STYLE
-      SYMBOL circulor
+      SYMBOL "circulor"
       SIZE 9
       OUTLINECOLOR 0 0 0
       COLOR 235 151 78

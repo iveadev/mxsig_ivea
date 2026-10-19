@@ -26,6 +26,7 @@ LAYER
       OUTLINECOLOR 255 255 255
       POSITION auto
       TYPE truetype
+      PRIORITY 1
     END
   END
   CLASS
@@ -38,6 +39,7 @@ LAYER
       OUTLINECOLOR 255 255 255
       POSITION auto
       TYPE truetype
+      PRIORITY 3
     END
   END
   CLASS
@@ -50,6 +52,7 @@ LAYER
       OUTLINECOLOR 255 255 255
       POSITION auto
       TYPE truetype
+      PRIORITY 4
     END
   END
   CLASS
@@ -62,6 +65,7 @@ LAYER
       OUTLINECOLOR 255 255 255
       POSITION auto
       TYPE truetype
+      PRIORITY 5
     END
   END
   CLASS
@@ -74,6 +78,7 @@ LAYER
       OUTLINECOLOR 255 255 255
       POSITION auto
       TYPE truetype
+      PRIORITY 6
     END
   END
   CLASS
@@ -86,6 +91,7 @@ LAYER
       OUTLINECOLOR 255 255 255
       POSITION auto
       TYPE truetype
+      PRIORITY 7
     END
   END
   CLASS
@@ -98,6 +104,7 @@ LAYER
       OUTLINECOLOR 255 255 255
       POSITION auto
       TYPE truetype
+      PRIORITY 8
     END
   END
   CLASS
@@ -110,6 +117,7 @@ LAYER
       OUTLINECOLOR 255 255 255
       POSITION auto
       TYPE truetype
+      PRIORITY 9
     END
   END
   CLASS
@@ -122,6 +130,7 @@ LAYER
       OUTLINECOLOR 255 255 255
       POSITION auto
       TYPE truetype
+      PRIORITY 10
     END
   END
   CLASS
@@ -134,6 +143,7 @@ LAYER
       OUTLINECOLOR 255 255 255
       POSITION auto
       TYPE truetype
+      PRIORITY 11
     END
   END
   CLASS
@@ -146,6 +156,7 @@ LAYER
       OUTLINECOLOR 255 255 255
       POSITION auto
       TYPE truetype
+      PRIORITY 12
     END
   END
   CLASS
@@ -158,6 +169,7 @@ LAYER
       OUTLINECOLOR 255 255 255
       POSITION auto
       TYPE truetype
+      PRIORITY 13
     END
   END
   CLASS
@@ -170,6 +182,7 @@ LAYER
       OUTLINECOLOR 255 255 255
       POSITION auto
       TYPE truetype
+      PRIORITY 14
     END
   END
   CLASS
@@ -182,6 +195,7 @@ LAYER
       OUTLINECOLOR 255 255 255
       POSITION auto
       TYPE truetype
+      PRIORITY 15
     END
   END
   CLASS
@@ -194,6 +208,7 @@ LAYER
       OUTLINECOLOR 255 255 255
       POSITION auto
       TYPE truetype
+      PRIORITY 16
     END
   END
   CLASS
@@ -206,6 +221,7 @@ LAYER
       OUTLINECOLOR 255 255 255
       POSITION auto
       TYPE truetype
+      PRIORITY 17
     END
   END
   CLASS
@@ -218,6 +234,7 @@ LAYER
       OUTLINECOLOR 255 255 255
       POSITION auto
       TYPE truetype
+      PRIORITY 18
     END
   END
   CLASS
@@ -230,6 +247,7 @@ LAYER
       OUTLINECOLOR 255 255 255
       POSITION auto
       TYPE truetype
+      PRIORITY 19
     END
   END
   CLASS
@@ -242,6 +260,7 @@ LAYER
       OUTLINECOLOR 255 255 255
       POSITION auto
       TYPE truetype
+      PRIORITY 20
     END
   END
   CLASS
@@ -254,6 +273,7 @@ LAYER
       OUTLINECOLOR 255 255 255
       POSITION auto
       TYPE truetype
+      PRIORITY 21
     END
   END
   CLASS
@@ -266,6 +286,7 @@ LAYER
       OUTLINECOLOR 255 255 255
       POSITION auto
       TYPE truetype
+      PRIORITY 22
     END
   END
   CLASS
@@ -278,6 +299,7 @@ LAYER
       OUTLINECOLOR 255 255 255
       POSITION auto
       TYPE truetype
+      PRIORITY 23
     END
   END
   CLASS
@@ -290,6 +312,7 @@ LAYER
       OUTLINECOLOR 255 255 255
       POSITION auto
       TYPE truetype
+      PRIORITY 24
     END
   END
   CLASS
@@ -302,6 +325,7 @@ LAYER
       OUTLINECOLOR 255 255 255
       POSITION auto
       TYPE truetype
+      PRIORITY 25
     END
   END
   CLASS
@@ -314,6 +338,7 @@ LAYER
       OUTLINECOLOR 255 255 255
       POSITION auto
       TYPE truetype
+      PRIORITY 29
     END
   END
 END
