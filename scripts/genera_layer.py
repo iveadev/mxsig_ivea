@@ -30,7 +30,9 @@ estructura_base = {
             "size": "8",
             "color": "0 0 0",
             "outlinecolor": "255 255 255",
-            "position": "auto",
+            'priority': 1,
+            'buffer': 1,
+            'position': 'uc',
             "type": "truetype"
         }
     }
