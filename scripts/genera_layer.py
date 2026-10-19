@@ -35,7 +35,7 @@ estructura_base = {
             'position': 'uc',
             "type": "truetype",
             'wrap': ' ',
-            'maxlength': 15
+            'maxlength': 10
         }
     }
     
