@@ -10,7 +10,7 @@ LAYER
   TYPE POLYGON
   CONNECTIONTYPE POSTGIS
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
-  DATA "the_geom FROM (SELECT gid, the_geom FROM rezago_educativo_estimacion_inea2025.tematico_indice_alfa) AS t1 USING UNIQUE gid USING SRID=900913"
+  DATA "the_geom FROM (SELECT gid, the_geom, porcentaje_analfabetismo FROM rezago_educativo_estimacion_inea2025.tematico_indice_alfa) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
     "wms_title" "Mapa tematico de la estimación del rezago educativo INEA2025 (porcentaje_analfabetismo)"
     "wms_enable_request" "*"
@@ -51,7 +51,7 @@ LAYER
   TYPE POLYGON
   CONNECTIONTYPE POSTGIS
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
-  DATA "the_geom FROM (SELECT gid, the_geom FROM rezago_educativo_estimacion_inea2025.tematico_indice_alfa) AS t1 USING UNIQUE gid USING SRID=900913"
+  DATA "the_geom FROM (SELECT gid, the_geom, porcentaje_sin_primaria FROM rezago_educativo_estimacion_inea2025.tematico_indice_alfa) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
     "wms_title" "Mapa tematico de la estimación del rezago educativo INEA2025 (porcentaje_sin_primaria)"
     "wms_enable_request" "*"
@@ -92,7 +92,7 @@ LAYER
   TYPE POLYGON
   CONNECTIONTYPE POSTGIS
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
-  DATA "the_geom FROM (SELECT gid, the_geom FROM rezago_educativo_estimacion_inea2025.tematico_indice_alfa) AS t1 USING UNIQUE gid USING SRID=900913"
+  DATA "the_geom FROM (SELECT gid, the_geom, porcentaje_sin_secundaria FROM rezago_educativo_estimacion_inea2025.tematico_indice_alfa) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
     "wms_title" "Mapa tematico de la estimación del rezago educativo INEA2025 (porcentaje_sin_secundaria)"
     "wms_enable_request" "*"
@@ -133,7 +133,7 @@ LAYER
   TYPE POLYGON
   CONNECTIONTYPE POSTGIS
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
-  DATA "the_geom FROM (SELECT gid, the_geom FROM rezago_educativo_estimacion_inea2025.tematico_indice_alfa) AS t1 USING UNIQUE gid USING SRID=900913"
+  DATA "the_geom FROM (SELECT gid, the_geom, porcentaje_rezago_total FROM rezago_educativo_estimacion_inea2025.tematico_indice_alfa) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
     "wms_title" "Mapa tematico de la estimación del rezago educativo INEA2025 (porcentaje_rezago_total)"
     "wms_enable_request" "*"

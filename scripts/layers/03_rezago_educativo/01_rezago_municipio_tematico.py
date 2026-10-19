@@ -81,6 +81,9 @@ for campo in mapas_tematico:
         )
     layers.append({
         "name": f"rezago_educativo_{campo}",
+         "data": {
+            "select": [campo]
+        },
         "metadata": {
             'wms_title': f"{descripcion} ({campo})"
         },
