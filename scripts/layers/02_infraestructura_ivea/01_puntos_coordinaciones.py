@@ -1,3 +1,4 @@
+from random import randrange
 import sys
 import os
 
@@ -40,7 +41,7 @@ for cz in coordinaciones:
                 "color": f"{cz['color']}"
             },
             "label" : label_base | {
-                'priority': cz['id_cz'],
+                'priority': randrange(1, 10),
             }
         }
     )
