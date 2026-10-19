@@ -351,7 +351,7 @@ define(function() {
        G3:{
               label:'Marco Geoestadístico IVEA',
               layers: {
-                c_tematico_cz:{
+                c_coordinaciones_zona_tematico:{
                   label: 'Coordinaciones de Zona (tematico)',
                   scale:1,
                   position:3,
