@@ -17,62 +17,63 @@ LAYER
   END
   CLASS
     NAME "bajo/bajo"
-    EXPRESSION ([porcentaje] = "bajo/bajo")
     STYLE
       OUTLINECOLOR 244 142 95
       WIDTH 0.8
       OPACITY 60
       COLOR 244 142 95
     END
+    EXPRESSION "bajo/bajo"
   END
   CLASS
     NAME "bajo/medio"
-    EXPRESSION ([porcentaje] = "bajo/medio")
     STYLE
       OUTLINECOLOR 186 116 56
       WIDTH 0.8
       OPACITY 60
       COLOR 186 116 56
     END
+    EXPRESSION "bajo/medio"
   END
   CLASS
     NAME "bajo/alto"
-    EXPRESSION ([porcentaje] = "bajo/alto")
     STYLE
       OUTLINECOLOR 214 110 27
       WIDTH 0.8
       OPACITY 60
       COLOR 214 110 27
     END
+    EXPRESSION "bajo/alto"
   END
   CLASS
     NAME "medio/medio"
-    EXPRESSION ([porcentaje] = "medio/medio")
     STYLE
       OUTLINECOLOR 196 75 68
       WIDTH 0.8
       OPACITY 60
       COLOR 196 75 68
     END
+    EXPRESSION "medio/medio"
   END
   CLASS
     NAME "medio/alto"
-    EXPRESSION ([porcentaje] = "medio/alto")
     STYLE
       OUTLINECOLOR 237 21 21
       WIDTH 0.8
       OPACITY 60
       COLOR 237 21 21
     END
+    EXPRESSION "medio/alto"
   END
   CLASS
     NAME "alto/medio"
-    EXPRESSION ([porcentaje] = "alto/medio")
     STYLE
       OUTLINECOLOR 139 79 37
       WIDTH 0.8
       OPACITY 60
       COLOR 139 79 37
     END
+    EXPRESSION "alto/medio"
   END
+  CLASSITEM "porcentaje"
 END

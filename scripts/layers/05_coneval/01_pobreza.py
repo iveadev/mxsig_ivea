@@ -41,7 +41,7 @@ clases = []
 for mapa in pobreza:
     clases.append({
         'name': mapa['name'],
-        "expression": f'[porcentaje] = "{mapa['name']}"',
+        "expression": f'{mapa['name']}',
         "style": style_base |
         {
             "color":mapa['color'],
@@ -54,5 +54,7 @@ layer = {
         "table": tabla,
         "select":['porcentaje'],
     },
+    'classitem': 'porcentaje',
+    'labelitem': 'porcentaje',
     "class":clases
 }   

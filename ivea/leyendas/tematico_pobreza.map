@@ -1,0 +1,43 @@
+# =================================================================
+# MAPA EXCLUSIVO DE TEXTOS (leyendas)
+# ARCHIVO GENERADO AUTOMÁTICAMENTE A PARTIR DE LA DEFINICIÓN: layers.05_coneval.01_pobreza 
+# DESCRIPCIÓN: Mapa tematico de pobreza 
+# =================================================================
+
+LAYER
+  NAME "t_tematico_pobreza"
+  STATUS ON
+  TYPE POLYGON
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom, porcentaje FROM coneval.indice_pobreza) AS t1 USING UNIQUE gid USING SRID=900913"
+  METADATA
+    "wms_title" "Texto capa base"
+    "wms_enable_request" "*"
+  END
+  LABELITEM "porcentaje"
+  CLASS
+    NAME "bajo/bajo"
+    EXPRESSION "bajo/bajo"
+  END
+  CLASS
+    NAME "bajo/medio"
+    EXPRESSION "bajo/medio"
+  END
+  CLASS
+    NAME "bajo/alto"
+    EXPRESSION "bajo/alto"
+  END
+  CLASS
+    NAME "medio/medio"
+    EXPRESSION "medio/medio"
+  END
+  CLASS
+    NAME "medio/alto"
+    EXPRESSION "medio/alto"
+  END
+  CLASS
+    NAME "alto/medio"
+    EXPRESSION "alto/medio"
+  END
+END

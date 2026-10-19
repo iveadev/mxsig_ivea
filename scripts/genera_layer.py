@@ -7,7 +7,6 @@ if len(sys.argv) < 2:
     sys.exit(1)
 
 nombre_modulo = sys.argv[1].replace(".py", "").replace("/", ".").replace("\\", ".").replace("scripts.", "").replace("..", "")
-print(nombre_modulo)
 
 CARPETA_RAIZ = "ivea"
 
@@ -38,7 +37,7 @@ estructura_base = {
     
 }
 
-requiere_doble_comillas = ["NAME", "WMS_TITLE", "WMS_ENABLE_REQUEST", "LABELITEM", "CONNECTION", "FONT", "SYMBOL"]
+requiere_doble_comillas = ["NAME", "WMS_TITLE", "WMS_ENABLE_REQUEST", "LABELITEM", "CONNECTION", "FONT", "SYMBOL", "CLASSITEM", "_EXPRESSION"]
 
 def deep_update(dicc_base, dicc_usuario):
     resultado = dicc_base.copy()
@@ -95,6 +94,8 @@ def renderizar_diccionario(dicc, nivel=0):
         else:
             if str(v).strip() == "": continue
             valor_formateado = procesar_valor(clave_mapserver, v)
+            if(clave_mapserver == '_EXPRESSION'):
+                clave_mapserver = "EXPRESSION"
             lineas.append(f"{espacio}{clave_mapserver} {valor_formateado}")
             
     return lineas
@@ -107,7 +108,7 @@ def podar_diccionario(dicc, modo="BASE"):
         clave_upper = k.strip().upper()
         
         if modo == "BASE" and clave_upper in ["LABELITEM", "LABEL"]: continue
-        if modo == "TEXTO" and clave_upper == "STYLE": continue
+        if modo == "TEXTO" and clave_upper in ["STYLE", "CLASSITEM"]: continue
         
         if isinstance(v, dict):
             dicc_limpio[k] = podar_diccionario(v, modo)
@@ -148,10 +149,19 @@ for ly in getattr(mapa, "layers", [config_global_final]):
     # 1. PASADA MAPA BASE: Forzamos prefijo "c_" y podamos bloques LABEL
     capa_base = capa_completa.copy()
     capa_base["name"] = f"c_{nombre_original}"
+     #Se define cuando se evalua un valor de tipo string
+    if "classitem" in capa_base:
+            for cl in capa_base["class"]:
+                print(cl)
+                if 'expression' in cl:
+                    #harcodeando la variable expression
+                    cl["_expression"] = cl["expression"]
+                    cl.pop('expression')
+
     capa_base = podar_diccionario(capa_base, modo="BASE")
     contenido_base.extend(renderizar_diccionario({"LAYER": capa_base}))
     contenido_base.append("")
-    
+
     # 2. PASADA TEXTOS: Forzamos prefijo "t_", "Texto..." en título y podamos STYLES
     if procesa_dual:
         capa_texto = deep_update(capa_completa, {
@@ -162,10 +172,6 @@ for ly in getattr(mapa, "layers", [config_global_final]):
         capa_texto["data"]["select"] = capa_texto["data"].get("select", [])
         if capa_texto["labelitem"] not in capa_texto["data"]["select"]:
             capa_texto["data"]["select"].append(capa_texto["labelitem"])
-        # # Modificamos el Name dentro del bloque CLASS interno para que diga "Texto..."
-        # if "class" in capa_texto:
-        #     for cl in capa_texto["class"]:
-        #         cl["name"] = f"Texto {cl.get('name', titulo_original)}"
         
         capa_texto = podar_diccionario(capa_texto, modo="TEXTO")
         contenido_labels.extend(renderizar_diccionario({"LAYER": capa_texto}))
