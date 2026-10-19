@@ -26,7 +26,7 @@ label_base = {
     "color": "0 0 0",
     "outlinecolor": "255 255 255",
     'priority': 10,
-    'buffer': 5,
+    'buffer': 1,
     'position': 'uc',
     "type": "truetype"
 }

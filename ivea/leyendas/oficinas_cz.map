@@ -25,7 +25,7 @@ LAYER
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
       PRIORITY 10
-      BUFFER 5
+      BUFFER 1
       POSITION uc
       TYPE truetype
     END
@@ -39,7 +39,7 @@ LAYER
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
       PRIORITY 10
-      BUFFER 5
+      BUFFER 1
       POSITION uc
       TYPE truetype
     END
@@ -53,7 +53,7 @@ LAYER
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
       PRIORITY 10
-      BUFFER 5
+      BUFFER 1
       POSITION uc
       TYPE truetype
     END
@@ -67,7 +67,7 @@ LAYER
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
       PRIORITY 10
-      BUFFER 5
+      BUFFER 1
       POSITION uc
       TYPE truetype
     END
@@ -81,7 +81,7 @@ LAYER
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
       PRIORITY 10
-      BUFFER 5
+      BUFFER 1
       POSITION uc
       TYPE truetype
     END
@@ -95,7 +95,7 @@ LAYER
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
       PRIORITY 10
-      BUFFER 5
+      BUFFER 1
       POSITION uc
       TYPE truetype
     END
@@ -109,7 +109,7 @@ LAYER
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
       PRIORITY 10
-      BUFFER 5
+      BUFFER 1
       POSITION uc
       TYPE truetype
     END
@@ -123,7 +123,7 @@ LAYER
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
       PRIORITY 10
-      BUFFER 5
+      BUFFER 1
       POSITION uc
       TYPE truetype
     END
@@ -137,7 +137,7 @@ LAYER
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
       PRIORITY 10
-      BUFFER 5
+      BUFFER 1
       POSITION uc
       TYPE truetype
     END
@@ -151,7 +151,7 @@ LAYER
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
       PRIORITY 10
-      BUFFER 5
+      BUFFER 1
       POSITION uc
       TYPE truetype
     END
@@ -165,7 +165,7 @@ LAYER
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
       PRIORITY 10
-      BUFFER 5
+      BUFFER 1
       POSITION uc
       TYPE truetype
     END
@@ -179,7 +179,7 @@ LAYER
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
       PRIORITY 10
-      BUFFER 5
+      BUFFER 1
       POSITION uc
       TYPE truetype
     END
@@ -193,7 +193,7 @@ LAYER
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
       PRIORITY 10
-      BUFFER 5
+      BUFFER 1
       POSITION uc
       TYPE truetype
     END
@@ -207,7 +207,7 @@ LAYER
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
       PRIORITY 10
-      BUFFER 5
+      BUFFER 1
       POSITION uc
       TYPE truetype
     END
@@ -221,7 +221,7 @@ LAYER
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
       PRIORITY 10
-      BUFFER 5
+      BUFFER 1
       POSITION uc
       TYPE truetype
     END
@@ -235,7 +235,7 @@ LAYER
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
       PRIORITY 10
-      BUFFER 5
+      BUFFER 1
       POSITION uc
       TYPE truetype
     END
@@ -249,7 +249,7 @@ LAYER
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
       PRIORITY 10
-      BUFFER 5
+      BUFFER 1
       POSITION uc
       TYPE truetype
     END
@@ -263,7 +263,7 @@ LAYER
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
       PRIORITY 10
-      BUFFER 5
+      BUFFER 1
       POSITION uc
       TYPE truetype
     END
@@ -277,7 +277,7 @@ LAYER
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
       PRIORITY 10
-      BUFFER 5
+      BUFFER 1
       POSITION uc
       TYPE truetype
     END
@@ -291,7 +291,7 @@ LAYER
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
       PRIORITY 10
-      BUFFER 5
+      BUFFER 1
       POSITION uc
       TYPE truetype
     END
@@ -305,7 +305,7 @@ LAYER
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
       PRIORITY 10
-      BUFFER 5
+      BUFFER 1
       POSITION uc
       TYPE truetype
     END
@@ -319,7 +319,7 @@ LAYER
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
       PRIORITY 10
-      BUFFER 5
+      BUFFER 1
       POSITION uc
       TYPE truetype
     END
@@ -333,7 +333,7 @@ LAYER
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
       PRIORITY 10
-      BUFFER 5
+      BUFFER 1
       POSITION uc
       TYPE truetype
     END
@@ -347,7 +347,7 @@ LAYER
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
       PRIORITY 10
-      BUFFER 5
+      BUFFER 1
       POSITION uc
       TYPE truetype
     END
@@ -361,7 +361,7 @@ LAYER
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
       PRIORITY 10
-      BUFFER 5
+      BUFFER 1
       POSITION uc
       TYPE truetype
     END
