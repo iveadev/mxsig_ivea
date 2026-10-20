@@ -93,7 +93,8 @@ layer = {
         'wms_title': descripcion,
     },
     'data': {
-        'table': 'marco_geoestadistico.mun_ver'
+        'table': 'marco_geoestadistico.mun_ver',
+        'select': ['lengua']
     },
     "labelitem": 'lengua',
     "classitem": 'lengua',
