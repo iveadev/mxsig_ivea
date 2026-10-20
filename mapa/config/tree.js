@@ -518,6 +518,16 @@ define(function() {
                   active:false
                 }
               },
+              c_mun_regiones_pvd:{
+                label: 'Regiones del Plan Veracruzano de Desarrollo',
+                scale:1,
+                position: posicion_capa++,
+                active:false,
+                texts:{
+                  scale:1,
+                  active:false
+                }
+              },
             },
           },     
         },
