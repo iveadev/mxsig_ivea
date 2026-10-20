@@ -19,6 +19,7 @@ LAYER
     STYLE
       SYMBOL "circulor"
       SIZE 10
+      OUTLINECOLOR 235 216 52
       COLOR 0 0 0
     END
   END

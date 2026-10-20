@@ -16,6 +16,7 @@ layer = {
         'style': {
             "symbol" : "circulor",
             "size": 10,
+            "outlinecolor": "235,216,52",
             "color": "0,0,0",
         }
     }
