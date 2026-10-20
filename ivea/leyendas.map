@@ -7,3 +7,4 @@ INCLUDE "/opt/map/mdm60/ivea/leyendas/oficinas_cz.map"                  #Nombre 
 INCLUDE "/opt/map/mdm60/ivea/leyendas/denue_escuelas.map"               #Nombre de las escuelas promarias, secundarias y media sup. DENUE
 INCLUDE "/opt/map/mdm60/ivea/leyendas/tematico_rezago_educativo_inea2025.map"  #Estimacion de rezago educativo INEA 2025
 INCLUDE "/opt/map/mdm60/ivea/leyendas/tematico_pobreza.map"                    #Coneval pobreza
+INCLUDE "/opt/map/mdm60/ivea/leyendas/lengua_indigena_mun.map"                 #LENGUA IND. POR MUNICIPIO
