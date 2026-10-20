@@ -1,0 +1,34 @@
+# =================================================================
+# MAPA EXCLUSIVO DE TEXTOS (leyendas)
+# ARCHIVO GENERADO AUTOMÁTICAMENTE A PARTIR DE LA DEFINICIÓN: layers.09_tematicos_generales.02_lenguas_indigenas_por_municipios 
+# DESCRIPCIÓN: Lenguas indigenas por municipio 
+# =================================================================
+
+LAYER
+  NAME "t_lengua_indigena_mun"
+  STATUS ON
+  TYPE POLYGON
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom, lengua FROM marco_geoestadistico.mun_ver) AS t1 USING UNIQUE gid USING SRID=900913"
+  METADATA
+    "wms_title" "Texto Lenguas indigenas por municipio"
+    "wms_enable_request" "*"
+  END
+  LABELITEM "lengua"
+  CLASS
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      PRIORITY 1
+      BUFFER 1
+      POSITION uc
+      TYPE truetype
+      WRAP " "
+      MAXLENGTH 10
+      ALIGN center
+    END
+  END
+END
