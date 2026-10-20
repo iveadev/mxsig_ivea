@@ -384,6 +384,16 @@ define(function() {
                       active:false
                   }
                 },
+                c_plazas_comunitarias:{
+                  label: 'Ubicación de las plazas comunitarias (puntos)',
+                  scale:1,
+                  position:2,
+                  active:false,
+                  texts:{
+                      scale:1,
+                      active:false
+                  }
+                },
               },
             },
        G3:{

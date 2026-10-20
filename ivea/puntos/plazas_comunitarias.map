@@ -1,0 +1,25 @@
+# =================================================================
+# MAPA BASE DE GEOMETRÍAS
+# ARCHIVO GENERADO AUTOMÁTICAMENTE A PARTIR DE LA DEFINICIÓN: layers.02_infraestructura_ivea.04_puntos_plazas_comunitarias 
+# DESCRIPCIÓN: Ubicacion de las plazas comunitarias 
+# =================================================================
+
+LAYER
+  NAME "c_plazas_comunitarias"
+  STATUS ON
+  TYPE POINT
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom FROM ivea.plazas_comunitarias) AS t1 USING UNIQUE gid USING SRID=900913"
+  METADATA
+    "wms_title" "Ubicacion de las plazas comunitarias"
+    "wms_enable_request" "*"
+  END
+  CLASS
+    STYLE
+      SYMBOL "circulor"
+      SIZE 9
+      OUTLINECOLOR 0 0 0
+    END
+  END
+END

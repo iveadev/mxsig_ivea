@@ -13,6 +13,7 @@ INCLUDE "/opt/map/mdm60/ivea/puntos/denue_escuelas.map"                         
 # 03.- CAPAS TEMATICAS (múltiples estilos)
 # -----------------------------------------------------------------
 INCLUDE "/opt/map/mdm60/ivea/poligonos/tematico_coordinaciones_zona.map"        #Coordinaciones de zona
+INCLUDE "/opt/map/mdm60/ivea/puntos/plazas_comunitarias.map"                    #Ubicacion plazas comunitarias
 INCLUDE "/opt/map/mdm60/ivea/poligonos/tematico_rezago_educativo_inea2025.map"  #Estimacion de rezago educativo INEA 2025
 #MUNICIPIOS INDIGENAS
 INCLUDE "/opt/map/mdm60/ivea/poligonos/municipios_pvd_indigena.map"             #PVD
