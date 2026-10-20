@@ -28,6 +28,7 @@ LAYER
       TYPE truetype
       WRAP " "
       MAXLENGTH 10
+      ALIGN center
     END
   END
 END
