@@ -199,13 +199,43 @@ coneval.forEach((p)=> {
 define(function() {
     var data = {
         themes:{
-			T1:{
-				label:'Coordinaciones de Zona IVEA',
-                    layers:coordinaciones.map(cz => cz.id).concat(['c_oficinas_cz']),
-                    desc:'Coordinaciones de Zona IVEA',
-                    img:'mexico.jpg'
-                },
-        	},
+          T1:{
+            label:'Coordinaciones de Zona IVEA',
+            layers:coordinaciones.map(cz => cz.id).concat(['c_oficinas_cz']),
+            desc:'Coordinaciones de Zona IVEA',
+            img:'coordinaciones.png'
+          },
+          T2:{
+            label:'Rezago Educativo',
+            layers:['c_oficinas_cz', 'c_rezago_educativo_porcentaje_rezago_total'],
+            desc:'Rezago Educativo',
+            img:'ivea.png'
+          },
+          T3:{
+            label:'Rezago social',
+            layers:['c_grado_rezago_social'],
+            desc:'Rezago social 2020',
+            img:'inegi.png'
+          },
+          T4:{
+            label:'Grado de Marginación',
+            layers:['c_grado_marginacion'],
+            desc:'Grado de Marginación',
+            img:'inegi.png'
+          },
+          T5:{
+            label:'Pobreza',
+            layers:['c_tematico_pobreza'],
+            desc:'Pobreza',
+            img:'inegi.png'
+          },
+          T6:{
+            label:'Pueblos Indígenas PVD',
+            layers:['c_municipios_indigenas_pvd'],
+            desc:'Pueblos Indígenas PVD',
+            img:'mun_indigena_pvd.png'
+          },
+        },
         baseLayers:{
               B1:{
                 type:'Wms',
@@ -472,16 +502,6 @@ define(function() {
               },
               c_municipios_indigenas_pvd:{
                 label: 'Municipios indígenas del Plan Veracruzano de Desarrollo',
-                scale:1,
-                position: posicion_capa++,
-                active:false,
-                texts:{
-                  scale:1,
-                  active:false
-                }
-              },
-              c_denue_escuelas_media_superior:{
-                label: 'Escuelas Media Superior',
                 scale:1,
                 position: posicion_capa++,
                 active:false,
