@@ -375,7 +375,7 @@ define(function() {
               label:'Infraestructura IVEA',
               layers: {
                 c_oficinas_cz:{
-                  label: 'Ubicación de las Coordinaciones de Zona (puntos)',
+                  label: 'Ubicación de las Coordinaciones de Zona',
                   scale:1,
                   position:2,
                   active:false,
@@ -385,7 +385,7 @@ define(function() {
                   }
                 },
                 c_plazas_comunitarias:{
-                  label: 'Ubicación de las plazas comunitarias (puntos)',
+                  label: 'Ubicación de las plazas comunitarias',
                   scale:1,
                   position:2,
                   active:false,
