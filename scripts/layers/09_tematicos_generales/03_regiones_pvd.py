@@ -79,7 +79,7 @@ layer = {
     },
     'data': {
         'table': 'marco_geoestadistico.mun_ver',
-        'select': ['region']
+        'select': ['region_pvd']
     },
     "labelitem": 'region_pvd',
     "classitem": 'region_pvd',
