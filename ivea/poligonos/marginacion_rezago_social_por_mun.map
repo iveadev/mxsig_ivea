@@ -1,0 +1,123 @@
+# =================================================================
+# MAPA BASE DE GEOMETRÍAS
+# ARCHIVO GENERADO AUTOMÁTICAMENTE A PARTIR DE LA DEFINICIÓN: layers.05_coneval.02_marginacion_y_rezago_social 
+# DESCRIPCIÓN: Grado de marginacion y rezago social por municipio (tematico) 
+# =================================================================
+
+LAYER
+  NAME "c_grado_marginacion"
+  STATUS ON
+  TYPE POLYGON
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom, grado_marginacion FROM marco_geoestadistico.mun_ver) AS t1 USING UNIQUE gid USING SRID=900913"
+  METADATA
+    "wms_title" "Grado de marginacion por municipio"
+    "wms_enable_request" "*"
+  END
+  CLASS
+    NAME "Muy bajo"
+    STYLE
+      OUTLINECOLOR 0 0 0
+      WIDTH 1
+      COLOR 39 174 96
+    END
+    EXPRESSION "Muy bajo"
+  END
+  CLASS
+    NAME "Bajo"
+    STYLE
+      OUTLINECOLOR 0 0 0
+      WIDTH 1
+      COLOR 162 217 104
+    END
+    EXPRESSION "Bajo"
+  END
+  CLASS
+    NAME "Medio"
+    STYLE
+      OUTLINECOLOR 0 0 0
+      WIDTH 1
+      COLOR 241 196 15
+    END
+    EXPRESSION "Medio"
+  END
+  CLASS
+    NAME "Alto"
+    STYLE
+      OUTLINECOLOR 0 0 0
+      WIDTH 1
+      COLOR 230 126 34
+    END
+    EXPRESSION "Alto"
+  END
+  CLASS
+    NAME "Muy alto"
+    STYLE
+      OUTLINECOLOR 0 0 0
+      WIDTH 1
+      COLOR 231 76 60
+    END
+    EXPRESSION "Muy alto"
+  END
+  CLASSITEM "grado_marginacion"
+END
+
+LAYER
+  NAME "c_grado_rezago_social"
+  STATUS ON
+  TYPE POLYGON
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom, grado_marginacion, grado_rezago_social FROM marco_geoestadistico.mun_ver) AS t1 USING UNIQUE gid USING SRID=900913"
+  METADATA
+    "wms_title" "rezago social por municipio"
+    "wms_enable_request" "*"
+  END
+  CLASS
+    NAME "Muy bajo"
+    STYLE
+      OUTLINECOLOR 0 0 0
+      WIDTH 1
+      COLOR 39 174 96
+    END
+    EXPRESSION "Muy bajo"
+  END
+  CLASS
+    NAME "Bajo"
+    STYLE
+      OUTLINECOLOR 0 0 0
+      WIDTH 1
+      COLOR 162 217 104
+    END
+    EXPRESSION "Bajo"
+  END
+  CLASS
+    NAME "Medio"
+    STYLE
+      OUTLINECOLOR 0 0 0
+      WIDTH 1
+      COLOR 241 196 15
+    END
+    EXPRESSION "Medio"
+  END
+  CLASS
+    NAME "Alto"
+    STYLE
+      OUTLINECOLOR 0 0 0
+      WIDTH 1
+      COLOR 230 126 34
+    END
+    EXPRESSION "Alto"
+  END
+  CLASS
+    NAME "Muy alto"
+    STYLE
+      OUTLINECOLOR 0 0 0
+      WIDTH 1
+      COLOR 231 76 60
+    END
+    EXPRESSION "Muy alto"
+  END
+  CLASSITEM "grado_rezago_social"
+END
