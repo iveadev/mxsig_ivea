@@ -18,8 +18,8 @@ LAYER
   CLASS
     STYLE
       SYMBOL "circulor"
-      SIZE 9
-      OUTLINECOLOR 0 0 0
+      SIZE 10
+      COLOR 0 0 0
     END
   END
 END
