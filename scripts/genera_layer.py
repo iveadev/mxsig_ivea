@@ -151,6 +151,10 @@ for ly in getattr(mapa, "layers", [config_global_final]):
     if capa_completa.get("labelitem", ""):
         procesa_dual = True
 
+    # se agrega classitem a la seleccion (en caso de que no este)
+    if capa_completa["classitem"] not in capa_completa["data"]["select"]:
+            capa_completa["data"]["select"].append(capa_completa["classitem"])
+
     # 1. PASADA MAPA BASE: Forzamos prefijo "c_" y podamos bloques LABEL
     capa_base = capa_completa.copy()
     capa_base["name"] = f"c_{nombre_original}"

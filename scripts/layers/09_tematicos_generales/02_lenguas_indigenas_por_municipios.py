@@ -90,7 +90,7 @@ layer = {
     },
     'data': {
         'table': 'marco_geoestadistico.mun_ver',
-        'where' "lengua != 'No"
+        'where': "lengua != 'No'",
         'select': ['lengua']
     },
     "labelitem": 'lengua',
