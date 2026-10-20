@@ -16,7 +16,9 @@ INCLUDE "/opt/map/mdm60/ivea/poligonos/tematico_coordinaciones_zona.map"        
 INCLUDE "/opt/map/mdm60/ivea/poligonos/tematico_rezago_educativo_inea2025.map"  #Estimacion de rezago educativo INEA 2025
 #MUNICIPIOS INDIGENAS
 INCLUDE "/opt/map/mdm60/ivea/poligonos/municipios_pvd_indigena.map"             #PVD
+INCLUDE "/opt/map/mdm60/ivea/poligonos/mun_regiones_pvd.map"                    #regiones PVD
 INCLUDE "/opt/map/mdm60/ivea/poligonos/lengua_indigena_mun.map"                 #LENGUA IND. POR MUNICIPIO
+
 
 # CONEVAL
 INCLUDE "/opt/map/mdm60/ivea/poligonos/tematico_pobreza.map"                    #Coordinaciones de zona
