@@ -235,6 +235,14 @@ define(function() {
             desc:'Pueblos Indígenas PVD',
             img:'mun_indigena_pvd.png'
           },
+          T7:{
+            label:'Regiones económicas PVD',
+            layers:['c_mun_regiones_pvd'],
+            desc:'Regiones económicas PVD',
+            img:'regiones.png'
+          },
+
+          
         },
         baseLayers:{
               B1:{
