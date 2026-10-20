@@ -360,7 +360,7 @@ define(function() {
               }
           },
       G4:{
-              label:'CONEVAL',
+              label:'Pobreza multidimencional INGI',
               layers:layers_coneval,
           },
 
@@ -456,7 +456,42 @@ define(function() {
                 }
               },
             },
-          },      
+          },
+          G10:{
+            label:'Otras capas',
+            layers:{
+              c_lengua_indigena_mun:{
+                label: 'Lenguas indígenas por municipio',
+                scale:1,
+                position:posicion_capa++,
+                active:false,
+                texts:{
+                  scale:1,
+                  active:false
+                }
+              },
+              c_municipios_indigenas_pvd:{
+                label: 'Municipios indígenas del Plan Veracruzano de Desarrollo',
+                scale:1,
+                position: posicion_capa++,
+                active:false,
+                texts:{
+                  scale:1,
+                  active:false
+                }
+              },
+              c_denue_escuelas_media_superior:{
+                label: 'Escuelas Media Superior',
+                scale:1,
+                position: posicion_capa++,
+                active:false,
+                texts:{
+                  scale:1,
+                  active:false
+                }
+              },
+            },
+          },     
         },
       }
     };
