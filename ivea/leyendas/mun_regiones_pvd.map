@@ -1,0 +1,160 @@
+# =================================================================
+# MAPA EXCLUSIVO DE TEXTOS (leyendas)
+# ARCHIVO GENERADO AUTOMÁTICAMENTE A PARTIR DE LA DEFINICIÓN: layers.09_tematicos_generales.03_regiones_pvd 
+# DESCRIPCIÓN: Regiones económicas del PVD (tematico) 
+# =================================================================
+
+LAYER
+  NAME "t_mun_regiones_pvd"
+  STATUS ON
+  TYPE POLYGON
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom, region, region_pvd FROM marco_geoestadistico.mun_ver) AS t1 USING UNIQUE gid USING SRID=900913"
+  METADATA
+    "wms_title" "Texto Regiones económicas del PVD (tematico)"
+    "wms_enable_request" "*"
+  END
+  LABELITEM "region_pvd"
+  CLASS
+    NAME "Papaloapan"
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      PRIORITY 10
+      BUFFER 1
+      POSITION uc
+      TYPE truetype
+    END
+    EXPRESSION "Papaloapan"
+  END
+  CLASS
+    NAME "Omealca"
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      PRIORITY 10
+      BUFFER 1
+      POSITION uc
+      TYPE truetype
+    END
+    EXPRESSION "Omealca"
+  END
+  CLASS
+    NAME "Nautla"
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      PRIORITY 10
+      BUFFER 1
+      POSITION uc
+      TYPE truetype
+    END
+    EXPRESSION "Nautla"
+  END
+  CLASS
+    NAME "Los Tuxtlas"
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      PRIORITY 10
+      BUFFER 1
+      POSITION uc
+      TYPE truetype
+    END
+    EXPRESSION "Los Tuxtlas"
+  END
+  CLASS
+    NAME "Las Montañas"
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      PRIORITY 10
+      BUFFER 1
+      POSITION uc
+      TYPE truetype
+    END
+    EXPRESSION "Las Montañas"
+  END
+  CLASS
+    NAME "Huasteca Baja"
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      PRIORITY 10
+      BUFFER 1
+      POSITION uc
+      TYPE truetype
+    END
+    EXPRESSION "Huasteca Baja"
+  END
+  CLASS
+    NAME "Huasteca Alta"
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      PRIORITY 10
+      BUFFER 1
+      POSITION uc
+      TYPE truetype
+    END
+    EXPRESSION "Huasteca Alta"
+  END
+  CLASS
+    NAME "Capital"
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      PRIORITY 10
+      BUFFER 1
+      POSITION uc
+      TYPE truetype
+    END
+    EXPRESSION "Capital"
+  END
+  CLASS
+    NAME "Totonaca"
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      PRIORITY 10
+      BUFFER 1
+      POSITION uc
+      TYPE truetype
+    END
+    EXPRESSION "Totonaca"
+  END
+  CLASS
+    NAME "Sotavento"
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      PRIORITY 10
+      BUFFER 1
+      POSITION uc
+      TYPE truetype
+    END
+    EXPRESSION "Sotavento"
+  END
+  CLASSITEM "region_pvd"
+END

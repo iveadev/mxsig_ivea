@@ -1,0 +1,119 @@
+# =================================================================
+# MAPA BASE DE GEOMETRÍAS
+# ARCHIVO GENERADO AUTOMÁTICAMENTE A PARTIR DE LA DEFINICIÓN: layers.09_tematicos_generales.03_regiones_pvd 
+# DESCRIPCIÓN: Regiones económicas del PVD (tematico) 
+# =================================================================
+
+LAYER
+  NAME "c_mun_regiones_pvd"
+  STATUS ON
+  TYPE POLYGON
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom, region, region_pvd FROM marco_geoestadistico.mun_ver) AS t1 USING UNIQUE gid USING SRID=900913"
+  METADATA
+    "wms_title" "Regiones económicas del PVD (tematico)"
+    "wms_enable_request" "*"
+  END
+  CLASS
+    NAME "Papaloapan"
+    STYLE
+      OUTLINECOLOR 0 0 0
+      WIDTH 1
+      COLOR 185  34  35
+      OPACITY 60
+    END
+    EXPRESSION "Papaloapan"
+  END
+  CLASS
+    NAME "Omealca"
+    STYLE
+      OUTLINECOLOR 0 0 0
+      WIDTH 1
+      COLOR 227  72  140
+      OPACITY 60
+    END
+    EXPRESSION "Omealca"
+  END
+  CLASS
+    NAME "Nautla"
+    STYLE
+      OUTLINECOLOR 0 0 0
+      WIDTH 1
+      COLOR 148  114  189
+      OPACITY 60
+    END
+    EXPRESSION "Nautla"
+  END
+  CLASS
+    NAME "Los Tuxtlas"
+    STYLE
+      OUTLINECOLOR 0 0 0
+      WIDTH 1
+      COLOR 181  57  59
+      OPACITY 60
+    END
+    EXPRESSION "Los Tuxtlas"
+  END
+  CLASS
+    NAME "Las Montañas"
+    STYLE
+      OUTLINECOLOR 0 0 0
+      WIDTH 1
+      COLOR 231  102  143
+      OPACITY 60
+    END
+    EXPRESSION "Las Montañas"
+  END
+  CLASS
+    NAME "Huasteca Baja"
+    STYLE
+      OUTLINECOLOR 0 0 0
+      WIDTH 1
+      COLOR 244  155  172
+      OPACITY 60
+    END
+    EXPRESSION "Huasteca Baja"
+  END
+  CLASS
+    NAME "Huasteca Alta"
+    STYLE
+      OUTLINECOLOR 0 0 0
+      WIDTH 1
+      COLOR 206  169  52
+      OPACITY 60
+    END
+    EXPRESSION "Huasteca Alta"
+  END
+  CLASS
+    NAME "Capital"
+    STYLE
+      OUTLINECOLOR 0 0 0
+      WIDTH 1
+      COLOR 120  174  112
+      OPACITY 60
+    END
+    EXPRESSION "Capital"
+  END
+  CLASS
+    NAME "Totonaca"
+    STYLE
+      OUTLINECOLOR 0 0 0
+      WIDTH 1
+      COLOR 158  77  51
+      OPACITY 60
+    END
+    EXPRESSION "Totonaca"
+  END
+  CLASS
+    NAME "Sotavento"
+    STYLE
+      OUTLINECOLOR 0 0 0
+      WIDTH 1
+      COLOR 204  38  38
+      OPACITY 60
+    END
+    EXPRESSION "Sotavento"
+  END
+  CLASSITEM "region_pvd"
+END
