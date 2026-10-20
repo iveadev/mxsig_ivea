@@ -152,7 +152,8 @@ for ly in getattr(mapa, "layers", [config_global_final]):
         procesa_dual = True
 
     # se agrega classitem a la seleccion (en caso de que no este)
-    if capa_completa["classitem"] not in capa_completa["data"]["select"]:
+    if 'classitem' in capa_completa:
+        if capa_completa["classitem"] not in capa_completa["data"]["select"]:
             capa_completa["data"]["select"].append(capa_completa["classitem"])
 
     # 1. PASADA MAPA BASE: Forzamos prefijo "c_" y podamos bloques LABEL

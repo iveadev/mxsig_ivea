@@ -19,7 +19,8 @@ LAYER
     STYLE
       OUTLINECOLOR 0 0 0
       WIDTH 1
-      COLOR 114  47  55
+      COLOR 114 47 55
+      OPACITY 60
     END
   END
 END

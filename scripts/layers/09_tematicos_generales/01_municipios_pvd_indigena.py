@@ -16,6 +16,7 @@ layer = {
             'outlinecolor' : '0,0,0',
             'width':'1',
             "color": "114,47,55",
+            'opacity':60,
         }
     }
 }

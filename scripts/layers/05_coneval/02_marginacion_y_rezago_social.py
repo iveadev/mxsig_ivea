@@ -47,6 +47,7 @@ for escala in escalas:
             'outlinecolor' : '0,0,0',
             'width':'1',
             "color": escala['color'],
+            'opacity':60,
         },
         "label" : label_base
     })

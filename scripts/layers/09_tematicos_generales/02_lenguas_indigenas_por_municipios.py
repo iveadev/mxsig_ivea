@@ -79,6 +79,7 @@ for lengua in lenguas:
             'outlinecolor' : '0,0,0',
             'width':'1',
             "color": lengua['color'],
+            'opacity':60,
         },
         "label" : label_base
     })

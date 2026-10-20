@@ -21,6 +21,7 @@ LAYER
       OUTLINECOLOR 0 0 0
       WIDTH 1
       COLOR 242  100  87
+      OPACITY 60
     END
     EXPRESSION "Otomí"
   END
@@ -30,6 +31,7 @@ LAYER
       OUTLINECOLOR 0 0 0
       WIDTH 1
       COLOR 246  134  69
+      OPACITY 60
     END
     EXPRESSION "Nahualt de la Huasteca"
   END
@@ -39,6 +41,7 @@ LAYER
       OUTLINECOLOR 0 0 0
       WIDTH 1
       COLOR 249  178  51
+      OPACITY 60
     END
     EXPRESSION "Popoluca"
   END
@@ -48,6 +51,7 @@ LAYER
       OUTLINECOLOR 0 0 0
       WIDTH 1
       COLOR 247  219  96
+      OPACITY 60
     END
     EXPRESSION "Nahua dePajapan"
   END
@@ -57,6 +61,7 @@ LAYER
       OUTLINECOLOR 0 0 0
       WIDTH 1
       COLOR 186  216  101
+      OPACITY 60
     END
     EXPRESSION "Huasteco"
   END
@@ -66,6 +71,7 @@ LAYER
       OUTLINECOLOR 0 0 0
       WIDTH 1
       COLOR 61  131  107
+      OPACITY 60
     END
     EXPRESSION "Nahua de Mecayapan"
   END
@@ -75,6 +81,7 @@ LAYER
       OUTLINECOLOR 0 0 0
       WIDTH 1
       COLOR 43  114  131
+      OPACITY 60
     END
     EXPRESSION "Náhuatl de la Sierra Negra de Zongolica"
   END
@@ -84,6 +91,7 @@ LAYER
       OUTLINECOLOR 0 0 0
       WIDTH 1
       COLOR 52  94  138
+      OPACITY 60
     END
     EXPRESSION "Nahua de Zaragoza"
   END
@@ -93,6 +101,7 @@ LAYER
       OUTLINECOLOR 0 0 0
       WIDTH 1
       COLOR 69  81  133
+      OPACITY 60
     END
     EXPRESSION "Tepehua"
   END
@@ -102,6 +111,7 @@ LAYER
       OUTLINECOLOR 0 0 0
       WIDTH 1
       COLOR 87  75  142
+      OPACITY 60
     END
     EXPRESSION "Totonaco"
   END
@@ -111,6 +121,7 @@ LAYER
       OUTLINECOLOR 0 0 0
       WIDTH 1
       COLOR 124  76  138
+      OPACITY 60
     END
     EXPRESSION "Lenguas zapotecas"
   END
@@ -120,6 +131,7 @@ LAYER
       OUTLINECOLOR 0 0 0
       WIDTH 1
       COLOR 158  79  126
+      OPACITY 60
     END
     EXPRESSION "Nahuatl"
   END
@@ -129,6 +141,7 @@ LAYER
       OUTLINECOLOR 0 0 0
       WIDTH 1
       COLOR 173  71  109
+      OPACITY 60
     END
     EXPRESSION "Lenguas chinantecas"
   END
