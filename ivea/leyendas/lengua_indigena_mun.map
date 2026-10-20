@@ -17,6 +17,7 @@ LAYER
   END
   LABELITEM "lengua"
   CLASS
+    NAME "Otomí"
     LABEL
       FONT "arial"
       SIZE 8
@@ -30,6 +31,7 @@ LAYER
     EXPRESSION "Otomí"
   END
   CLASS
+    NAME "Nahualt de la Huasteca"
     LABEL
       FONT "arial"
       SIZE 8
@@ -43,6 +45,7 @@ LAYER
     EXPRESSION "Nahualt de la Huasteca"
   END
   CLASS
+    NAME "Popoluca"
     LABEL
       FONT "arial"
       SIZE 8
@@ -56,6 +59,7 @@ LAYER
     EXPRESSION "Popoluca"
   END
   CLASS
+    NAME "Nahua dePajapan"
     LABEL
       FONT "arial"
       SIZE 8
@@ -69,6 +73,7 @@ LAYER
     EXPRESSION "Nahua dePajapan"
   END
   CLASS
+    NAME "Huasteco"
     LABEL
       FONT "arial"
       SIZE 8
@@ -82,6 +87,7 @@ LAYER
     EXPRESSION "Huasteco"
   END
   CLASS
+    NAME "No"
     LABEL
       FONT "arial"
       SIZE 8
@@ -95,6 +101,7 @@ LAYER
     EXPRESSION "No"
   END
   CLASS
+    NAME "Nahua de Mecayapan"
     LABEL
       FONT "arial"
       SIZE 8
@@ -108,6 +115,7 @@ LAYER
     EXPRESSION "Nahua de Mecayapan"
   END
   CLASS
+    NAME "Náhuatl de la Sierra Negra de Zongolica"
     LABEL
       FONT "arial"
       SIZE 8
@@ -121,6 +129,7 @@ LAYER
     EXPRESSION "Náhuatl de la Sierra Negra de Zongolica"
   END
   CLASS
+    NAME "Nahua de Zaragoza"
     LABEL
       FONT "arial"
       SIZE 8
@@ -134,6 +143,7 @@ LAYER
     EXPRESSION "Nahua de Zaragoza"
   END
   CLASS
+    NAME "Tepehua"
     LABEL
       FONT "arial"
       SIZE 8
@@ -147,6 +157,7 @@ LAYER
     EXPRESSION "Tepehua"
   END
   CLASS
+    NAME "Totonaco"
     LABEL
       FONT "arial"
       SIZE 8
@@ -160,6 +171,7 @@ LAYER
     EXPRESSION "Totonaco"
   END
   CLASS
+    NAME "Lenguas zapotecas"
     LABEL
       FONT "arial"
       SIZE 8
@@ -173,6 +185,7 @@ LAYER
     EXPRESSION "Lenguas zapotecas"
   END
   CLASS
+    NAME "Nahuatl"
     LABEL
       FONT "arial"
       SIZE 8
@@ -186,6 +199,7 @@ LAYER
     EXPRESSION "Nahuatl"
   END
   CLASS
+    NAME "Lenguas chinantecas"
     LABEL
       FONT "arial"
       SIZE 8

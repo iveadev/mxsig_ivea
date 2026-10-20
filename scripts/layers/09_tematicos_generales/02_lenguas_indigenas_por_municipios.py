@@ -77,9 +77,9 @@ classes = []
 
 for lengua in lenguas:
     classes.append({
+        'name': lengua['lengua'],
         'expression': lengua['lengua'],
         'style': {
-            'name': lengua['lengua'],
             'outlinecolor' : '0,0,0',
             'width':'1',
             "color": lengua['color'],

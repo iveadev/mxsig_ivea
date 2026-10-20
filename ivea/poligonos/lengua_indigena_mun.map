@@ -16,8 +16,8 @@ LAYER
     "wms_enable_request" "*"
   END
   CLASS
+    NAME "Otomí"
     STYLE
-      NAME "Otomí"
       OUTLINECOLOR 0 0 0
       WIDTH 1
       COLOR 242  100  87
@@ -25,8 +25,8 @@ LAYER
     EXPRESSION "Otomí"
   END
   CLASS
+    NAME "Nahualt de la Huasteca"
     STYLE
-      NAME "Nahualt de la Huasteca"
       OUTLINECOLOR 0 0 0
       WIDTH 1
       COLOR 246  134  69
@@ -34,8 +34,8 @@ LAYER
     EXPRESSION "Nahualt de la Huasteca"
   END
   CLASS
+    NAME "Popoluca"
     STYLE
-      NAME "Popoluca"
       OUTLINECOLOR 0 0 0
       WIDTH 1
       COLOR 249  178  51
@@ -43,8 +43,8 @@ LAYER
     EXPRESSION "Popoluca"
   END
   CLASS
+    NAME "Nahua dePajapan"
     STYLE
-      NAME "Nahua dePajapan"
       OUTLINECOLOR 0 0 0
       WIDTH 1
       COLOR 247  219  96
@@ -52,8 +52,8 @@ LAYER
     EXPRESSION "Nahua dePajapan"
   END
   CLASS
+    NAME "Huasteco"
     STYLE
-      NAME "Huasteco"
       OUTLINECOLOR 0 0 0
       WIDTH 1
       COLOR 186  216  101
@@ -61,8 +61,8 @@ LAYER
     EXPRESSION "Huasteco"
   END
   CLASS
+    NAME "No"
     STYLE
-      NAME "No"
       OUTLINECOLOR 0 0 0
       WIDTH 1
       COLOR 122  169  110
@@ -70,8 +70,8 @@ LAYER
     EXPRESSION "No"
   END
   CLASS
+    NAME "Nahua de Mecayapan"
     STYLE
-      NAME "Nahua de Mecayapan"
       OUTLINECOLOR 0 0 0
       WIDTH 1
       COLOR 61  131  107
@@ -79,8 +79,8 @@ LAYER
     EXPRESSION "Nahua de Mecayapan"
   END
   CLASS
+    NAME "Náhuatl de la Sierra Negra de Zongolica"
     STYLE
-      NAME "Náhuatl de la Sierra Negra de Zongolica"
       OUTLINECOLOR 0 0 0
       WIDTH 1
       COLOR 43  114  131
@@ -88,8 +88,8 @@ LAYER
     EXPRESSION "Náhuatl de la Sierra Negra de Zongolica"
   END
   CLASS
+    NAME "Nahua de Zaragoza"
     STYLE
-      NAME "Nahua de Zaragoza"
       OUTLINECOLOR 0 0 0
       WIDTH 1
       COLOR 52  94  138
@@ -97,8 +97,8 @@ LAYER
     EXPRESSION "Nahua de Zaragoza"
   END
   CLASS
+    NAME "Tepehua"
     STYLE
-      NAME "Tepehua"
       OUTLINECOLOR 0 0 0
       WIDTH 1
       COLOR 69  81  133
@@ -106,8 +106,8 @@ LAYER
     EXPRESSION "Tepehua"
   END
   CLASS
+    NAME "Totonaco"
     STYLE
-      NAME "Totonaco"
       OUTLINECOLOR 0 0 0
       WIDTH 1
       COLOR 87  75  142
@@ -115,8 +115,8 @@ LAYER
     EXPRESSION "Totonaco"
   END
   CLASS
+    NAME "Lenguas zapotecas"
     STYLE
-      NAME "Lenguas zapotecas"
       OUTLINECOLOR 0 0 0
       WIDTH 1
       COLOR 124  76  138
@@ -124,8 +124,8 @@ LAYER
     EXPRESSION "Lenguas zapotecas"
   END
   CLASS
+    NAME "Nahuatl"
     STYLE
-      NAME "Nahuatl"
       OUTLINECOLOR 0 0 0
       WIDTH 1
       COLOR 158  79  126
@@ -133,8 +133,8 @@ LAYER
     EXPRESSION "Nahuatl"
   END
   CLASS
+    NAME "Lenguas chinantecas"
     STYLE
-      NAME "Lenguas chinantecas"
       OUTLINECOLOR 0 0 0
       WIDTH 1
       COLOR 173  71  109
