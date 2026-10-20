@@ -168,11 +168,11 @@ const coneval = [
     "label": "Pobreza",
   },
   {
-    "id_capa": "c_tematico_marginacion",
+    "id_capa": "c_grado_marginacion",
     "label": "Marginación",  
   },
   {
-    "id_capa": "c_tematico_rezago_social",
+    "id_capa": "c_grado_rezago_social",
     "label": "Rezago Social",
   },
 ];
