@@ -1,7 +1,7 @@
 # =================================================================
 # MAPA EXCLUSIVO DE TEXTOS (leyendas)
 # ARCHIVO GENERADO AUTOMÁTICAMENTE A PARTIR DE LA DEFINICIÓN: layers.09_tematicos_generales.02_lenguas_indigenas_por_municipios 
-# DESCRIPCIÓN: Lenguas indigenas por municipio 
+# DESCRIPCIÓN: Lenguas indigenas por municipio (tematico) 
 # =================================================================
 
 LAYER
@@ -12,7 +12,7 @@ LAYER
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
   DATA "the_geom FROM (SELECT gid, the_geom, lengua FROM marco_geoestadistico.mun_ver) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Texto Lenguas indigenas por municipio"
+    "wms_title" "Texto Lenguas indigenas por municipio (tematico)"
     "wms_enable_request" "*"
   END
   LABELITEM "lengua"
@@ -22,13 +22,181 @@ LAYER
       SIZE 8
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
-      PRIORITY 1
+      PRIORITY 10
       BUFFER 1
       POSITION uc
       TYPE truetype
-      WRAP " "
-      MAXLENGTH 10
-      ALIGN center
     END
+    EXPRESSION "Otomí"
   END
+  CLASS
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      PRIORITY 10
+      BUFFER 1
+      POSITION uc
+      TYPE truetype
+    END
+    EXPRESSION "Nahualt de la Huasteca"
+  END
+  CLASS
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      PRIORITY 10
+      BUFFER 1
+      POSITION uc
+      TYPE truetype
+    END
+    EXPRESSION "Popoluca"
+  END
+  CLASS
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      PRIORITY 10
+      BUFFER 1
+      POSITION uc
+      TYPE truetype
+    END
+    EXPRESSION "Nahua dePajapan"
+  END
+  CLASS
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      PRIORITY 10
+      BUFFER 1
+      POSITION uc
+      TYPE truetype
+    END
+    EXPRESSION "Huasteco"
+  END
+  CLASS
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      PRIORITY 10
+      BUFFER 1
+      POSITION uc
+      TYPE truetype
+    END
+    EXPRESSION "No"
+  END
+  CLASS
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      PRIORITY 10
+      BUFFER 1
+      POSITION uc
+      TYPE truetype
+    END
+    EXPRESSION "Nahua de Mecayapan"
+  END
+  CLASS
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      PRIORITY 10
+      BUFFER 1
+      POSITION uc
+      TYPE truetype
+    END
+    EXPRESSION "Náhuatl de la Sierra Negra de Zongolica"
+  END
+  CLASS
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      PRIORITY 10
+      BUFFER 1
+      POSITION uc
+      TYPE truetype
+    END
+    EXPRESSION "Nahua de Zaragoza"
+  END
+  CLASS
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      PRIORITY 10
+      BUFFER 1
+      POSITION uc
+      TYPE truetype
+    END
+    EXPRESSION "Tepehua"
+  END
+  CLASS
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      PRIORITY 10
+      BUFFER 1
+      POSITION uc
+      TYPE truetype
+    END
+    EXPRESSION "Totonaco"
+  END
+  CLASS
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      PRIORITY 10
+      BUFFER 1
+      POSITION uc
+      TYPE truetype
+    END
+    EXPRESSION "Lenguas zapotecas"
+  END
+  CLASS
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      PRIORITY 10
+      BUFFER 1
+      POSITION uc
+      TYPE truetype
+    END
+    EXPRESSION "Nahuatl"
+  END
+  CLASS
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      PRIORITY 10
+      BUFFER 1
+      POSITION uc
+      TYPE truetype
+    END
+    EXPRESSION "Lenguas chinantecas"
+  END
+  CLASSITEM "lengua"
 END

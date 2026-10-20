@@ -1,7 +1,7 @@
 # =================================================================
 # MAPA BASE DE GEOMETRÍAS
 # ARCHIVO GENERADO AUTOMÁTICAMENTE A PARTIR DE LA DEFINICIÓN: layers.09_tematicos_generales.02_lenguas_indigenas_por_municipios 
-# DESCRIPCIÓN: Lenguas indigenas por municipio 
+# DESCRIPCIÓN: Lenguas indigenas por municipio (tematico) 
 # =================================================================
 
 LAYER
@@ -12,14 +12,134 @@ LAYER
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
   DATA "the_geom FROM (SELECT gid, the_geom FROM marco_geoestadistico.mun_ver) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Lenguas indigenas por municipio"
+    "wms_title" "Lenguas indigenas por municipio (tematico)"
     "wms_enable_request" "*"
   END
   CLASS
     STYLE
+      NAME "Otomí"
       OUTLINECOLOR 0 0 0
       WIDTH 1
-      COLOR 255 51 34
+      COLOR 242  100  87
     END
+    EXPRESSION "Otomí"
   END
+  CLASS
+    STYLE
+      NAME "Nahualt de la Huasteca"
+      OUTLINECOLOR 0 0 0
+      WIDTH 1
+      COLOR 246  134  69
+    END
+    EXPRESSION "Nahualt de la Huasteca"
+  END
+  CLASS
+    STYLE
+      NAME "Popoluca"
+      OUTLINECOLOR 0 0 0
+      WIDTH 1
+      COLOR 249  178  51
+    END
+    EXPRESSION "Popoluca"
+  END
+  CLASS
+    STYLE
+      NAME "Nahua dePajapan"
+      OUTLINECOLOR 0 0 0
+      WIDTH 1
+      COLOR 247  219  96
+    END
+    EXPRESSION "Nahua dePajapan"
+  END
+  CLASS
+    STYLE
+      NAME "Huasteco"
+      OUTLINECOLOR 0 0 0
+      WIDTH 1
+      COLOR 186  216  101
+    END
+    EXPRESSION "Huasteco"
+  END
+  CLASS
+    STYLE
+      NAME "No"
+      OUTLINECOLOR 0 0 0
+      WIDTH 1
+      COLOR 122  169  110
+    END
+    EXPRESSION "No"
+  END
+  CLASS
+    STYLE
+      NAME "Nahua de Mecayapan"
+      OUTLINECOLOR 0 0 0
+      WIDTH 1
+      COLOR 61  131  107
+    END
+    EXPRESSION "Nahua de Mecayapan"
+  END
+  CLASS
+    STYLE
+      NAME "Náhuatl de la Sierra Negra de Zongolica"
+      OUTLINECOLOR 0 0 0
+      WIDTH 1
+      COLOR 43  114  131
+    END
+    EXPRESSION "Náhuatl de la Sierra Negra de Zongolica"
+  END
+  CLASS
+    STYLE
+      NAME "Nahua de Zaragoza"
+      OUTLINECOLOR 0 0 0
+      WIDTH 1
+      COLOR 52  94  138
+    END
+    EXPRESSION "Nahua de Zaragoza"
+  END
+  CLASS
+    STYLE
+      NAME "Tepehua"
+      OUTLINECOLOR 0 0 0
+      WIDTH 1
+      COLOR 69  81  133
+    END
+    EXPRESSION "Tepehua"
+  END
+  CLASS
+    STYLE
+      NAME "Totonaco"
+      OUTLINECOLOR 0 0 0
+      WIDTH 1
+      COLOR 87  75  142
+    END
+    EXPRESSION "Totonaco"
+  END
+  CLASS
+    STYLE
+      NAME "Lenguas zapotecas"
+      OUTLINECOLOR 0 0 0
+      WIDTH 1
+      COLOR 124  76  138
+    END
+    EXPRESSION "Lenguas zapotecas"
+  END
+  CLASS
+    STYLE
+      NAME "Nahuatl"
+      OUTLINECOLOR 0 0 0
+      WIDTH 1
+      COLOR 158  79  126
+    END
+    EXPRESSION "Nahuatl"
+  END
+  CLASS
+    STYLE
+      NAME "Lenguas chinantecas"
+      OUTLINECOLOR 0 0 0
+      WIDTH 1
+      COLOR 173  71  109
+    END
+    EXPRESSION "Lenguas chinantecas"
+  END
+  CLASSITEM "lengua"
 END
