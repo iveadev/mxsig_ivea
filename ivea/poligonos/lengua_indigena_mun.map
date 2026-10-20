@@ -10,7 +10,7 @@ LAYER
   TYPE POLYGON
   CONNECTIONTYPE POSTGIS
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
-  DATA "the_geom FROM (SELECT gid, the_geom, lengua FROM marco_geoestadistico.mun_ver) AS t1 USING UNIQUE gid USING SRID=900913"
+  DATA "the_geom FROM (SELECT gid, the_geom FROM marco_geoestadistico.mun_ver) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
     "wms_title" "Lenguas indigenas por municipio (tematico)"
     "wms_enable_request" "*"
@@ -59,15 +59,6 @@ LAYER
       COLOR 186  216  101
     END
     EXPRESSION "Huasteco"
-  END
-  CLASS
-    NAME "No"
-    STYLE
-      OUTLINECOLOR 0 0 0
-      WIDTH 1
-      COLOR 122  169  110
-    END
-    EXPRESSION "No"
   END
   CLASS
     NAME "Nahua de Mecayapan"

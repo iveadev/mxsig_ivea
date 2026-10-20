@@ -24,10 +24,6 @@ lenguas = [
     "color": "186, 216, 101"
   },
   {
-    "lengua": "No",
-    "color": "122, 169, 110"
-  },
-  {
     "lengua": "Nahua de Mecayapan",
     "color": "61, 131, 107"
   },
@@ -94,6 +90,7 @@ layer = {
     },
     'data': {
         'table': 'marco_geoestadistico.mun_ver',
+        'where' "lengua != 'No"
         'select': ['lengua']
     },
     "labelitem": 'lengua',
