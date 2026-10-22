@@ -78,7 +78,7 @@ layer = {
         'wms_title': descripcion,
     },
     'data': {
-        'table': 'marco_geoestadistico.mun_ver',
+        'table': 'marco_geoestadistico.regiones_pvd',
         'select': ['region_pvd']
     },
     #"labelitem": 'region_pvd',
