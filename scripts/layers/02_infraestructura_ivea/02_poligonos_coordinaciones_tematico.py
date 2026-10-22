@@ -41,7 +41,7 @@ layer = {
          'wms_title': descripcion,
     },
     "data" : {
-        "table": "marco_geoestadistico.mun_coordinaciones",
+        "table": "ivea.cz_disuelto",
         "select":["clv_zona"],
     },
     "class" : classes
