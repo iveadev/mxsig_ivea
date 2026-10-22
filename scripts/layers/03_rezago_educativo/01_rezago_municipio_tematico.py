@@ -80,7 +80,7 @@ for campo in mapas_tematico:
                 },
                 "label": {
                     "font": "arial",
-                    "size": "8",
+                    "size": "10",
                     "color": "0 0 0",
                     "outlinecolor": "255 255 255",
                     "position": "auto",

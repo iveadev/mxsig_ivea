@@ -21,7 +21,7 @@ LAYER
     EXPRESSION ([porcentaje_analfabetismo] <=7.54)
     LABEL
       FONT "arial"
-      SIZE 8
+      SIZE 10
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
       POSITION auto
@@ -33,7 +33,7 @@ LAYER
     EXPRESSION ([porcentaje_analfabetismo] >7.54 and [porcentaje_analfabetismo] <=11.0)
     LABEL
       FONT "arial"
-      SIZE 8
+      SIZE 10
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
       POSITION auto
@@ -45,7 +45,7 @@ LAYER
     EXPRESSION ([porcentaje_analfabetismo] >11.0 and [porcentaje_analfabetismo] <=15.14)
     LABEL
       FONT "arial"
-      SIZE 8
+      SIZE 10
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
       POSITION auto
@@ -57,7 +57,7 @@ LAYER
     EXPRESSION ([porcentaje_analfabetismo] >15.14)
     LABEL
       FONT "arial"
-      SIZE 8
+      SIZE 10
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
       POSITION auto
@@ -83,7 +83,7 @@ LAYER
     EXPRESSION ([porcentaje_sin_primaria] <=13.79)
     LABEL
       FONT "arial"
-      SIZE 8
+      SIZE 10
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
       POSITION auto
@@ -95,7 +95,7 @@ LAYER
     EXPRESSION ([porcentaje_sin_primaria] >13.79 and [porcentaje_sin_primaria] <=17.66)
     LABEL
       FONT "arial"
-      SIZE 8
+      SIZE 10
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
       POSITION auto
@@ -107,7 +107,7 @@ LAYER
     EXPRESSION ([porcentaje_sin_primaria] >17.66 and [porcentaje_sin_primaria] <=20.71)
     LABEL
       FONT "arial"
-      SIZE 8
+      SIZE 10
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
       POSITION auto
@@ -119,7 +119,7 @@ LAYER
     EXPRESSION ([porcentaje_sin_primaria] >20.71)
     LABEL
       FONT "arial"
-      SIZE 8
+      SIZE 10
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
       POSITION auto
@@ -145,7 +145,7 @@ LAYER
     EXPRESSION ([porcentaje_sin_secundaria] <=2.95)
     LABEL
       FONT "arial"
-      SIZE 8
+      SIZE 10
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
       POSITION auto
@@ -157,7 +157,7 @@ LAYER
     EXPRESSION ([porcentaje_sin_secundaria] >2.95 and [porcentaje_sin_secundaria] <=3.46)
     LABEL
       FONT "arial"
-      SIZE 8
+      SIZE 10
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
       POSITION auto
@@ -169,7 +169,7 @@ LAYER
     EXPRESSION ([porcentaje_sin_secundaria] >3.46 and [porcentaje_sin_secundaria] <=3.99)
     LABEL
       FONT "arial"
-      SIZE 8
+      SIZE 10
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
       POSITION auto
@@ -181,7 +181,7 @@ LAYER
     EXPRESSION ([porcentaje_sin_secundaria] >3.99)
     LABEL
       FONT "arial"
-      SIZE 8
+      SIZE 10
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
       POSITION auto
@@ -207,7 +207,7 @@ LAYER
     EXPRESSION ([porcentaje_rezago_total] <=25.98)
     LABEL
       FONT "arial"
-      SIZE 8
+      SIZE 10
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
       POSITION auto
@@ -219,7 +219,7 @@ LAYER
     EXPRESSION ([porcentaje_rezago_total] >25.98 and [porcentaje_rezago_total] <=33.75)
     LABEL
       FONT "arial"
-      SIZE 8
+      SIZE 10
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
       POSITION auto
@@ -231,7 +231,7 @@ LAYER
     EXPRESSION ([porcentaje_rezago_total] >33.75 and [porcentaje_rezago_total] <=40.55)
     LABEL
       FONT "arial"
-      SIZE 8
+      SIZE 10
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
       POSITION auto
@@ -243,7 +243,7 @@ LAYER
     EXPRESSION ([porcentaje_rezago_total] >40.55)
     LABEL
       FONT "arial"
-      SIZE 8
+      SIZE 10
       COLOR 0 0 0
       OUTLINECOLOR 255 255 255
       POSITION auto
