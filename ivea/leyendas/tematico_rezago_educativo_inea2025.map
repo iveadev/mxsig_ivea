@@ -18,7 +18,7 @@ LAYER
   LABELITEM "porcentaje_analfabetismo"
   CLASS
     NAME "bajo"
-    EXPRESSION ([porcentaje_analfabetismo] <=7.5375)
+    EXPRESSION ([porcentaje_analfabetismo] <=7.54)
     LABEL
       FONT "arial"
       SIZE 8
@@ -30,7 +30,7 @@ LAYER
   END
   CLASS
     NAME "medio"
-    EXPRESSION ([porcentaje_analfabetismo] >7.5375 and [porcentaje_analfabetismo] <=10.995000000000001)
+    EXPRESSION ([porcentaje_analfabetismo] >7.54 and [porcentaje_analfabetismo] <=11.0)
     LABEL
       FONT "arial"
       SIZE 8
@@ -42,7 +42,7 @@ LAYER
   END
   CLASS
     NAME "alto"
-    EXPRESSION ([porcentaje_analfabetismo] >10.995000000000001 and [porcentaje_analfabetismo] <=15.14)
+    EXPRESSION ([porcentaje_analfabetismo] >11.0 and [porcentaje_analfabetismo] <=15.14)
     LABEL
       FONT "arial"
       SIZE 8
@@ -80,7 +80,7 @@ LAYER
   LABELITEM "porcentaje_sin_primaria"
   CLASS
     NAME "bajo"
-    EXPRESSION ([porcentaje_sin_primaria] <=13.795)
+    EXPRESSION ([porcentaje_sin_primaria] <=13.79)
     LABEL
       FONT "arial"
       SIZE 8
@@ -92,7 +92,7 @@ LAYER
   END
   CLASS
     NAME "medio"
-    EXPRESSION ([porcentaje_sin_primaria] >13.795 and [porcentaje_sin_primaria] <=17.655)
+    EXPRESSION ([porcentaje_sin_primaria] >13.79 and [porcentaje_sin_primaria] <=17.66)
     LABEL
       FONT "arial"
       SIZE 8
@@ -104,7 +104,7 @@ LAYER
   END
   CLASS
     NAME "alto"
-    EXPRESSION ([porcentaje_sin_primaria] >17.655 and [porcentaje_sin_primaria] <=20.715)
+    EXPRESSION ([porcentaje_sin_primaria] >17.66 and [porcentaje_sin_primaria] <=20.71)
     LABEL
       FONT "arial"
       SIZE 8
@@ -116,7 +116,7 @@ LAYER
   END
   CLASS
     NAME "muy_alto"
-    EXPRESSION ([porcentaje_sin_primaria] >20.715)
+    EXPRESSION ([porcentaje_sin_primaria] >20.71)
     LABEL
       FONT "arial"
       SIZE 8
@@ -204,7 +204,7 @@ LAYER
   LABELITEM "porcentaje_rezago_total"
   CLASS
     NAME "bajo"
-    EXPRESSION ([porcentaje_rezago_total] <=25.975)
+    EXPRESSION ([porcentaje_rezago_total] <=25.98)
     LABEL
       FONT "arial"
       SIZE 8
@@ -216,7 +216,7 @@ LAYER
   END
   CLASS
     NAME "medio"
-    EXPRESSION ([porcentaje_rezago_total] >25.975 and [porcentaje_rezago_total] <=33.75)
+    EXPRESSION ([porcentaje_rezago_total] >25.98 and [porcentaje_rezago_total] <=33.75)
     LABEL
       FONT "arial"
       SIZE 8

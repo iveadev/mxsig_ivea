@@ -31,6 +31,6 @@ def obtener_cuartiles_desde_postgres(tabla, campo):
     cursor.close()
     conn.close()
     
-    return q1, q2, q3
+    return round(q1,2), round(q2,2), round(q3,2)
 
 

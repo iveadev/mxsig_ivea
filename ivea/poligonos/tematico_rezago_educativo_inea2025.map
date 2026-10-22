@@ -17,7 +17,7 @@ LAYER
   END
   CLASS
     NAME "bajo"
-    EXPRESSION ([porcentaje_analfabetismo] <=7.5375)
+    EXPRESSION ([porcentaje_analfabetismo] <=7.54)
     STYLE
       OUTLINECOLOR 0 128 0
       WIDTH 0.8
@@ -27,7 +27,7 @@ LAYER
   END
   CLASS
     NAME "medio"
-    EXPRESSION ([porcentaje_analfabetismo] >7.5375 and [porcentaje_analfabetismo] <=10.995000000000001)
+    EXPRESSION ([porcentaje_analfabetismo] >7.54 and [porcentaje_analfabetismo] <=11.0)
     STYLE
       OUTLINECOLOR 255 255 0
       WIDTH 0.8
@@ -37,7 +37,7 @@ LAYER
   END
   CLASS
     NAME "alto"
-    EXPRESSION ([porcentaje_analfabetismo] >10.995000000000001 and [porcentaje_analfabetismo] <=15.14)
+    EXPRESSION ([porcentaje_analfabetismo] >11.0 and [porcentaje_analfabetismo] <=15.14)
     STYLE
       OUTLINECOLOR 240 120 15
       WIDTH 0.8
@@ -70,7 +70,7 @@ LAYER
   END
   CLASS
     NAME "bajo"
-    EXPRESSION ([porcentaje_sin_primaria] <=13.795)
+    EXPRESSION ([porcentaje_sin_primaria] <=13.79)
     STYLE
       OUTLINECOLOR 0 128 0
       WIDTH 0.8
@@ -80,7 +80,7 @@ LAYER
   END
   CLASS
     NAME "medio"
-    EXPRESSION ([porcentaje_sin_primaria] >13.795 and [porcentaje_sin_primaria] <=17.655)
+    EXPRESSION ([porcentaje_sin_primaria] >13.79 and [porcentaje_sin_primaria] <=17.66)
     STYLE
       OUTLINECOLOR 255 255 0
       WIDTH 0.8
@@ -90,7 +90,7 @@ LAYER
   END
   CLASS
     NAME "alto"
-    EXPRESSION ([porcentaje_sin_primaria] >17.655 and [porcentaje_sin_primaria] <=20.715)
+    EXPRESSION ([porcentaje_sin_primaria] >17.66 and [porcentaje_sin_primaria] <=20.71)
     STYLE
       OUTLINECOLOR 240 120 15
       WIDTH 0.8
@@ -100,7 +100,7 @@ LAYER
   END
   CLASS
     NAME "muy_alto"
-    EXPRESSION ([porcentaje_sin_primaria] >20.715)
+    EXPRESSION ([porcentaje_sin_primaria] >20.71)
     STYLE
       OUTLINECOLOR 255 0 0
       WIDTH 0.8
@@ -176,7 +176,7 @@ LAYER
   END
   CLASS
     NAME "bajo"
-    EXPRESSION ([porcentaje_rezago_total] <=25.975)
+    EXPRESSION ([porcentaje_rezago_total] <=25.98)
     STYLE
       OUTLINECOLOR 0 128 0
       WIDTH 0.8
@@ -186,7 +186,7 @@ LAYER
   END
   CLASS
     NAME "medio"
-    EXPRESSION ([porcentaje_rezago_total] >25.975 and [porcentaje_rezago_total] <=33.75)
+    EXPRESSION ([porcentaje_rezago_total] >25.98 and [porcentaje_rezago_total] <=33.75)
     STYLE
       OUTLINECOLOR 255 255 0
       WIDTH 0.8
