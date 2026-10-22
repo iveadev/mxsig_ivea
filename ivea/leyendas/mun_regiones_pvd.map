@@ -17,7 +17,7 @@ LAYER
   END
   LABELITEM "region_pvd"
   CLASS
-    NAME "Papaloapan"
+    NAME "Huasteca Alta"
     LABEL
       FONT "arial"
       SIZE 8
@@ -28,63 +28,7 @@ LAYER
       POSITION uc
       TYPE truetype
     END
-    EXPRESSION "Papaloapan"
-  END
-  CLASS
-    NAME "Omealca"
-    LABEL
-      FONT "arial"
-      SIZE 8
-      COLOR 0 0 0
-      OUTLINECOLOR 255 255 255
-      PRIORITY 10
-      BUFFER 1
-      POSITION uc
-      TYPE truetype
-    END
-    EXPRESSION "Omealca"
-  END
-  CLASS
-    NAME "Nautla"
-    LABEL
-      FONT "arial"
-      SIZE 8
-      COLOR 0 0 0
-      OUTLINECOLOR 255 255 255
-      PRIORITY 10
-      BUFFER 1
-      POSITION uc
-      TYPE truetype
-    END
-    EXPRESSION "Nautla"
-  END
-  CLASS
-    NAME "Los Tuxtlas"
-    LABEL
-      FONT "arial"
-      SIZE 8
-      COLOR 0 0 0
-      OUTLINECOLOR 255 255 255
-      PRIORITY 10
-      BUFFER 1
-      POSITION uc
-      TYPE truetype
-    END
-    EXPRESSION "Los Tuxtlas"
-  END
-  CLASS
-    NAME "Las Montañas"
-    LABEL
-      FONT "arial"
-      SIZE 8
-      COLOR 0 0 0
-      OUTLINECOLOR 255 255 255
-      PRIORITY 10
-      BUFFER 1
-      POSITION uc
-      TYPE truetype
-    END
-    EXPRESSION "Las Montañas"
+    EXPRESSION "Huasteca Alta"
   END
   CLASS
     NAME "Huasteca Baja"
@@ -101,7 +45,7 @@ LAYER
     EXPRESSION "Huasteca Baja"
   END
   CLASS
-    NAME "Huasteca Alta"
+    NAME "Totonaca"
     LABEL
       FONT "arial"
       SIZE 8
@@ -112,7 +56,21 @@ LAYER
       POSITION uc
       TYPE truetype
     END
-    EXPRESSION "Huasteca Alta"
+    EXPRESSION "Totonaca"
+  END
+  CLASS
+    NAME "Nautla"
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      PRIORITY 10
+      BUFFER 1
+      POSITION uc
+      TYPE truetype
+    END
+    EXPRESSION "Nautla"
   END
   CLASS
     NAME "Capital"
@@ -129,7 +87,7 @@ LAYER
     EXPRESSION "Capital"
   END
   CLASS
-    NAME "Totonaca"
+    NAME "Las Montañas"
     LABEL
       FONT "arial"
       SIZE 8
@@ -140,7 +98,7 @@ LAYER
       POSITION uc
       TYPE truetype
     END
-    EXPRESSION "Totonaca"
+    EXPRESSION "Las Montañas"
   END
   CLASS
     NAME "Sotavento"
@@ -155,6 +113,48 @@ LAYER
       TYPE truetype
     END
     EXPRESSION "Sotavento"
+  END
+  CLASS
+    NAME "Papaloapan"
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      PRIORITY 10
+      BUFFER 1
+      POSITION uc
+      TYPE truetype
+    END
+    EXPRESSION "Papaloapan"
+  END
+  CLASS
+    NAME "Los Tuxtlas"
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      PRIORITY 10
+      BUFFER 1
+      POSITION uc
+      TYPE truetype
+    END
+    EXPRESSION "Los Tuxtlas"
+  END
+  CLASS
+    NAME "Olmeca"
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      PRIORITY 10
+      BUFFER 1
+      POSITION uc
+      TYPE truetype
+    END
+    EXPRESSION "Olmeca"
   END
   CLASSITEM "region_pvd"
 END
