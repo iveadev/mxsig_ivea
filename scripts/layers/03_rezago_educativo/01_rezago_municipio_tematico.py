@@ -32,11 +32,11 @@ style_base =  {
 colores = [
   {
     "name": "bajo",
-    "color": "255,255,0",
+    "color": "0,128,0",
   },
   {
     "name": "medio",
-    "color": "0,128,0",
+    "color": "255,255,0",
   },
   {
     "name": "alto",

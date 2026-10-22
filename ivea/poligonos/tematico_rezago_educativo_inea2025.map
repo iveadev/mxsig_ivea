@@ -19,20 +19,20 @@ LAYER
     NAME "bajo"
     EXPRESSION ([porcentaje_analfabetismo] <=7.5375)
     STYLE
-      OUTLINECOLOR 255 255 0
+      OUTLINECOLOR 0 128 0
       WIDTH 0.8
       OPACITY 60
-      COLOR 255 255 0
+      COLOR 0 128 0
     END
   END
   CLASS
     NAME "medio"
     EXPRESSION ([porcentaje_analfabetismo] >7.5375 and [porcentaje_analfabetismo] <=10.995000000000001)
     STYLE
-      OUTLINECOLOR 0 128 0
+      OUTLINECOLOR 255 255 0
       WIDTH 0.8
       OPACITY 60
-      COLOR 0 128 0
+      COLOR 255 255 0
     END
   END
   CLASS
@@ -72,20 +72,20 @@ LAYER
     NAME "bajo"
     EXPRESSION ([porcentaje_sin_primaria] <=13.795)
     STYLE
-      OUTLINECOLOR 255 255 0
+      OUTLINECOLOR 0 128 0
       WIDTH 0.8
       OPACITY 60
-      COLOR 255 255 0
+      COLOR 0 128 0
     END
   END
   CLASS
     NAME "medio"
     EXPRESSION ([porcentaje_sin_primaria] >13.795 and [porcentaje_sin_primaria] <=17.655)
     STYLE
-      OUTLINECOLOR 0 128 0
+      OUTLINECOLOR 255 255 0
       WIDTH 0.8
       OPACITY 60
-      COLOR 0 128 0
+      COLOR 255 255 0
     END
   END
   CLASS
@@ -125,20 +125,20 @@ LAYER
     NAME "bajo"
     EXPRESSION ([porcentaje_sin_secundaria] <=2.95)
     STYLE
-      OUTLINECOLOR 255 255 0
+      OUTLINECOLOR 0 128 0
       WIDTH 0.8
       OPACITY 60
-      COLOR 255 255 0
+      COLOR 0 128 0
     END
   END
   CLASS
     NAME "medio"
     EXPRESSION ([porcentaje_sin_secundaria] >2.95 and [porcentaje_sin_secundaria] <=3.46)
     STYLE
-      OUTLINECOLOR 0 128 0
+      OUTLINECOLOR 255 255 0
       WIDTH 0.8
       OPACITY 60
-      COLOR 0 128 0
+      COLOR 255 255 0
     END
   END
   CLASS
@@ -178,20 +178,20 @@ LAYER
     NAME "bajo"
     EXPRESSION ([porcentaje_rezago_total] <=25.975)
     STYLE
-      OUTLINECOLOR 255 255 0
+      OUTLINECOLOR 0 128 0
       WIDTH 0.8
       OPACITY 60
-      COLOR 255 255 0
+      COLOR 0 128 0
     END
   END
   CLASS
     NAME "medio"
     EXPRESSION ([porcentaje_rezago_total] >25.975 and [porcentaje_rezago_total] <=33.75)
     STYLE
-      OUTLINECOLOR 0 128 0
+      OUTLINECOLOR 255 255 0
       WIDTH 0.8
       OPACITY 60
-      COLOR 0 128 0
+      COLOR 255 255 0
     END
   END
   CLASS
