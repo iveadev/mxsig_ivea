@@ -83,7 +83,8 @@ for campo in mapas_tematico:
                     "size": "10",
                     "color": "0 0 0",
                     "outlinecolor": "255 255 255",
-                    "position": "auto",
+                    "buffer": '5',
+                    "position": "uc",
                     "type": "truetype"
                 }
             },
