@@ -81,7 +81,7 @@ layer = {
         'table': 'marco_geoestadistico.regiones_pvd',
         'select': ['region_pvd']
     },
-    #"labelitem": 'region_pvd',
+    "labelitem": 'region_pvd',
     "classitem": 'region_pvd',
     'class':classes
 }

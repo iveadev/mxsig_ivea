@@ -11,4 +11,4 @@ INCLUDE "/opt/map/mdm60/ivea/leyendas/tematico_pobreza.map"                    #
 INCLUDE "/opt/map/mdm60/ivea/leyendas/marginacion_rezago_social_por_mun.map"   #rezago y marginacion
 INCLUDE "/opt/map/mdm60/ivea/leyendas/lengua_indigena_mun.map"                 #LENGUA IND. POR MUNICIPIO
 
-#INCLUDE "/opt/map/mdm60/ivea/leyendas/mun_regiones_pvd.map"                    #regiones PVD
+INCLUDE "/opt/map/mdm60/ivea/leyendas/mun_regiones_pvd.map"                    #regiones PVD
