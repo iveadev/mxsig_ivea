@@ -143,7 +143,7 @@ LAYER
     EXPRESSION "Los Tuxtlas"
   END
   CLASS
-    NAME "Olmeca"
+    NAME "Omealca"
     LABEL
       FONT "arial"
       SIZE 8
@@ -154,7 +154,7 @@ LAYER
       POSITION uc
       TYPE truetype
     END
-    EXPRESSION "Olmeca"
+    EXPRESSION "Omealca"
   END
   CLASSITEM "region_pvd"
 END

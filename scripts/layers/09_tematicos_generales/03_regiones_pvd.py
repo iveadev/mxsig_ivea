@@ -3,16 +3,16 @@ output = "mun_regiones_pvd"
 
 # CONFIGURACIONES GLOBALES
 regiones = [
-  { "region": "Huasteca Alta","color": "224,195,121" },
-  { "region": "Huasteca Baja","color": "236,178,195" },
-  { "region": "Totonaca","color": "173,137,122" },
-  { "region": "Nautla","color": "165,148,199" },
-  { "region": "Capital","color": "146,185,143" },
-  { "region": "Las Montañas","color": "236,178,195" },
-  { "region": "Sotavento","color": "165,148,199" },
-  { "region": "Papaloapan","color": "173,137,122" },
-  { "region": "Los Tuxtlas","color": "236,178,195" },
-  { "region": "Olmeca","color": "146,185,143" }
+  { "region": "Huasteca Alta", "color": "224,195,121" },
+  { "region": "Huasteca Baja", "color": "236,178,195" },
+  { "region": "Totonaca", "color": "173,137,122" },
+  { "region": "Nautla", "color": "165,148,199" },
+  { "region": "Capital", "color": "146,185,143" },
+  { "region": "Las Montañas", "color": "240,135,140" },
+  { "region": "Sotavento", "color": "115,160,195" },
+  { "region": "Papaloapan", "color": "190,120,150" },
+  { "region": "Los Tuxtlas", "color": "215,155,100" },
+  { "region": "Omealca", "color": "130,180,185" }
 ]
 
 label_base = {

@@ -70,7 +70,7 @@ LAYER
     STYLE
       OUTLINECOLOR 0 0 0
       WIDTH 1
-      COLOR 236 178 195
+      COLOR 240 135 140
       OPACITY 60
     END
     EXPRESSION "Las Montañas"
@@ -80,7 +80,7 @@ LAYER
     STYLE
       OUTLINECOLOR 0 0 0
       WIDTH 1
-      COLOR 165 148 199
+      COLOR 115 160 195
       OPACITY 60
     END
     EXPRESSION "Sotavento"
@@ -90,7 +90,7 @@ LAYER
     STYLE
       OUTLINECOLOR 0 0 0
       WIDTH 1
-      COLOR 173 137 122
+      COLOR 190 120 150
       OPACITY 60
     END
     EXPRESSION "Papaloapan"
@@ -100,20 +100,20 @@ LAYER
     STYLE
       OUTLINECOLOR 0 0 0
       WIDTH 1
-      COLOR 236 178 195
+      COLOR 215 155 100
       OPACITY 60
     END
     EXPRESSION "Los Tuxtlas"
   END
   CLASS
-    NAME "Olmeca"
+    NAME "Omealca"
     STYLE
       OUTLINECOLOR 0 0 0
       WIDTH 1
-      COLOR 146 185 143
+      COLOR 130 180 185
       OPACITY 60
     END
-    EXPRESSION "Olmeca"
+    EXPRESSION "Omealca"
   END
   CLASSITEM "region_pvd"
 END
