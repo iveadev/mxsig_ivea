@@ -543,7 +543,52 @@ define(function() {
                 }
               },
             },
-          },     
+          },
+          G11:{
+            label:'Rezago Educativo CENSO 2020',
+            layers:{
+              c_rez_educxloc2020_ver_rezago_total:{
+                label: 'Número de personas en Rezago Educativo por localidad rural',
+                scale:1,
+                position:posicion_capa++,
+                active:false,
+                // texts:{
+                //   scale:1,
+                //   active:false
+                // }
+              },
+              c_rez_educxloc2020_ver_analfabeta:{
+                label: 'Número de personas en condición de analfabetismo por localidad rural',
+                scale:1,
+                position: posicion_capa++,
+                active:false,
+                texts:{
+                  scale:1,
+                  active:false
+                }
+              },
+              c_rez_educxloc2020_ver_sinprimaria:{
+                label: 'Número de personas sin primaria terminada por localidad rural',
+                scale:1,
+                position: posicion_capa++,
+                active:false,
+                texts:{
+                  scale:1,
+                  active:false
+                }
+              },
+              c_rez_educxloc2020_ver_sinsecundaria:{
+                label: 'Número de personas sin secundaria terminada por localidad rural',
+                scale:1,
+                position: posicion_capa++,
+                active:false,
+                texts:{
+                  scale:1,
+                  active:false
+                }
+              }
+            },
+          },    
         },
       }
     };
