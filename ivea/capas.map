@@ -24,3 +24,6 @@ INCLUDE "/opt/map/mdm60/ivea/poligonos/lengua_indigena_mun.map"                 
 # CONEVAL
 INCLUDE "/opt/map/mdm60/ivea/poligonos/tematico_pobreza.map"                    #Coordinaciones de zona
 INCLUDE "/opt/map/mdm60/ivea/poligonos/marginacion_rezago_social_por_mun.map"   #rezago y marginacion
+
+#CENSO 2020
+INCLUDE "/opt/map/mdm60/ivea/puntos/rezago_localidades_rurales.map"             #Rezago por localidades rurales
