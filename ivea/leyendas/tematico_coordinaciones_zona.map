@@ -19,101 +19,351 @@ LAYER
   CLASS
     NAME "Tantoyuca"
     EXPRESSION ([clv_zona] = 1)
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      PRIORITY 10
+      BUFFER 1
+      POSITION uc
+      TYPE truetype
+    END
   END
   CLASS
     NAME "Chicontepec"
     EXPRESSION ([clv_zona] = 3)
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      PRIORITY 10
+      BUFFER 1
+      POSITION uc
+      TYPE truetype
+    END
   END
   CLASS
     NAME "Tuxpan"
     EXPRESSION ([clv_zona] = 4)
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      PRIORITY 10
+      BUFFER 1
+      POSITION uc
+      TYPE truetype
+    END
   END
   CLASS
     NAME "Poza Rica"
     EXPRESSION ([clv_zona] = 5)
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      PRIORITY 10
+      BUFFER 1
+      POSITION uc
+      TYPE truetype
+    END
   END
   CLASS
     NAME "Papantla"
     EXPRESSION ([clv_zona] = 6)
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      PRIORITY 10
+      BUFFER 1
+      POSITION uc
+      TYPE truetype
+    END
   END
   CLASS
     NAME "Espinal"
     EXPRESSION ([clv_zona] = 7)
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      PRIORITY 10
+      BUFFER 1
+      POSITION uc
+      TYPE truetype
+    END
   END
   CLASS
     NAME "Martinez"
     EXPRESSION ([clv_zona] = 8)
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      PRIORITY 10
+      BUFFER 1
+      POSITION uc
+      TYPE truetype
+    END
   END
   CLASS
     NAME "Perote"
     EXPRESSION ([clv_zona] = 9)
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      PRIORITY 10
+      BUFFER 1
+      POSITION uc
+      TYPE truetype
+    END
   END
   CLASS
     NAME "Xalapa"
     EXPRESSION ([clv_zona] = 10)
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      PRIORITY 10
+      BUFFER 1
+      POSITION uc
+      TYPE truetype
+    END
   END
   CLASS
     NAME "Coatepec"
     EXPRESSION ([clv_zona] = 11)
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      PRIORITY 10
+      BUFFER 1
+      POSITION uc
+      TYPE truetype
+    END
   END
   CLASS
     NAME "Huatusco"
     EXPRESSION ([clv_zona] = 12)
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      PRIORITY 10
+      BUFFER 1
+      POSITION uc
+      TYPE truetype
+    END
   END
   CLASS
     NAME "Orizaba"
     EXPRESSION ([clv_zona] = 13)
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      PRIORITY 10
+      BUFFER 1
+      POSITION uc
+      TYPE truetype
+    END
   END
   CLASS
     NAME "Cordoba"
     EXPRESSION ([clv_zona] = 14)
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      PRIORITY 10
+      BUFFER 1
+      POSITION uc
+      TYPE truetype
+    END
   END
   CLASS
     NAME "Zongolica"
     EXPRESSION ([clv_zona] = 15)
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      PRIORITY 10
+      BUFFER 1
+      POSITION uc
+      TYPE truetype
+    END
   END
   CLASS
     NAME "Veracruz"
     EXPRESSION ([clv_zona] = 16)
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      PRIORITY 10
+      BUFFER 1
+      POSITION uc
+      TYPE truetype
+    END
   END
   CLASS
     NAME "Boca del Rio"
     EXPRESSION ([clv_zona] = 17)
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      PRIORITY 10
+      BUFFER 1
+      POSITION uc
+      TYPE truetype
+    END
   END
   CLASS
     NAME "Tierra Blanca"
     EXPRESSION ([clv_zona] = 18)
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      PRIORITY 10
+      BUFFER 1
+      POSITION uc
+      TYPE truetype
+    END
   END
   CLASS
     NAME "Cosamaloapan"
     EXPRESSION ([clv_zona] = 19)
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      PRIORITY 10
+      BUFFER 1
+      POSITION uc
+      TYPE truetype
+    END
   END
   CLASS
     NAME "San Andres"
     EXPRESSION ([clv_zona] = 20)
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      PRIORITY 10
+      BUFFER 1
+      POSITION uc
+      TYPE truetype
+    END
   END
   CLASS
     NAME "Acayucan"
     EXPRESSION ([clv_zona] = 21)
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      PRIORITY 10
+      BUFFER 1
+      POSITION uc
+      TYPE truetype
+    END
   END
   CLASS
     NAME "Minatitlan"
     EXPRESSION ([clv_zona] = 22)
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      PRIORITY 10
+      BUFFER 1
+      POSITION uc
+      TYPE truetype
+    END
   END
   CLASS
     NAME "Coatzacoalcos"
     EXPRESSION ([clv_zona] = 23)
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      PRIORITY 10
+      BUFFER 1
+      POSITION uc
+      TYPE truetype
+    END
   END
   CLASS
     NAME "Huayacocotla"
     EXPRESSION ([clv_zona] = 24)
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      PRIORITY 10
+      BUFFER 1
+      POSITION uc
+      TYPE truetype
+    END
   END
   CLASS
     NAME "Panuco"
     EXPRESSION ([clv_zona] = 25)
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      PRIORITY 10
+      BUFFER 1
+      POSITION uc
+      TYPE truetype
+    END
   END
   CLASS
     NAME "Jaltipan"
     EXPRESSION ([clv_zona] = 29)
+    LABEL
+      FONT "arial"
+      SIZE 8
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      PRIORITY 10
+      BUFFER 1
+      POSITION uc
+      TYPE truetype
+    END
   END
 END

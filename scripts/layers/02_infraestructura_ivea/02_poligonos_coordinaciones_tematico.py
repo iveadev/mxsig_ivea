@@ -17,6 +17,17 @@ style_base = {
     "outlinecolor": "0,0,0",
 }
 
+label_base = {
+    "font": "arial",
+    "size": "8",
+    "color": "0 0 0",
+    "outlinecolor": "255 255 255",
+    'priority': 10,
+    'buffer': 1,
+    'position': 'uc',
+    "type": "truetype"
+}
+
 classes = []
 for cz in coordinaciones:
     classes.append(
@@ -30,7 +41,8 @@ for cz in coordinaciones:
                 "opacity": 60,
                 "outlinecolor": f"{cz['color']}",
                 "width": 0.8
-            }
+            },
+            'label': label_base,
         }
     )
 
