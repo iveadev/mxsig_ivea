@@ -44,5 +44,6 @@ layer = {
         "table": "ivea.cz_disuelto",
         "select":["clv_zona"],
     },
-    "class" : classes
+    "class" : classes,
+    "labelitem": 'coord_zon',
 }

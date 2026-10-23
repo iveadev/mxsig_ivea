@@ -1,0 +1,119 @@
+# =================================================================
+# MAPA EXCLUSIVO DE TEXTOS (leyendas)
+# ARCHIVO GENERADO AUTOMÁTICAMENTE A PARTIR DE LA DEFINICIÓN: layers.02_infraestructura_ivea.02_poligonos_coordinaciones_tematico 
+# DESCRIPCIÓN: Mapa tematico con los municipios que abarcan las coordinaciones de zona del IVEA 
+# =================================================================
+
+LAYER
+  NAME "t_coordinaciones_zona_tematico"
+  STATUS ON
+  TYPE POLYGON
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom, clv_zona, coord_zon FROM ivea.cz_disuelto) AS t1 USING UNIQUE gid USING SRID=900913"
+  METADATA
+    "wms_title" "Texto Mapa tematico con los municipios que abarcan las coordinaciones de zona del IVEA"
+    "wms_enable_request" "*"
+  END
+  LABELITEM "coord_zon"
+  CLASS
+    NAME "Tantoyuca"
+    EXPRESSION ([clv_zona] = 1)
+  END
+  CLASS
+    NAME "Chicontepec"
+    EXPRESSION ([clv_zona] = 3)
+  END
+  CLASS
+    NAME "Tuxpan"
+    EXPRESSION ([clv_zona] = 4)
+  END
+  CLASS
+    NAME "Poza Rica"
+    EXPRESSION ([clv_zona] = 5)
+  END
+  CLASS
+    NAME "Papantla"
+    EXPRESSION ([clv_zona] = 6)
+  END
+  CLASS
+    NAME "Espinal"
+    EXPRESSION ([clv_zona] = 7)
+  END
+  CLASS
+    NAME "Martinez"
+    EXPRESSION ([clv_zona] = 8)
+  END
+  CLASS
+    NAME "Perote"
+    EXPRESSION ([clv_zona] = 9)
+  END
+  CLASS
+    NAME "Xalapa"
+    EXPRESSION ([clv_zona] = 10)
+  END
+  CLASS
+    NAME "Coatepec"
+    EXPRESSION ([clv_zona] = 11)
+  END
+  CLASS
+    NAME "Huatusco"
+    EXPRESSION ([clv_zona] = 12)
+  END
+  CLASS
+    NAME "Orizaba"
+    EXPRESSION ([clv_zona] = 13)
+  END
+  CLASS
+    NAME "Cordoba"
+    EXPRESSION ([clv_zona] = 14)
+  END
+  CLASS
+    NAME "Zongolica"
+    EXPRESSION ([clv_zona] = 15)
+  END
+  CLASS
+    NAME "Veracruz"
+    EXPRESSION ([clv_zona] = 16)
+  END
+  CLASS
+    NAME "Boca del Rio"
+    EXPRESSION ([clv_zona] = 17)
+  END
+  CLASS
+    NAME "Tierra Blanca"
+    EXPRESSION ([clv_zona] = 18)
+  END
+  CLASS
+    NAME "Cosamaloapan"
+    EXPRESSION ([clv_zona] = 19)
+  END
+  CLASS
+    NAME "San Andres"
+    EXPRESSION ([clv_zona] = 20)
+  END
+  CLASS
+    NAME "Acayucan"
+    EXPRESSION ([clv_zona] = 21)
+  END
+  CLASS
+    NAME "Minatitlan"
+    EXPRESSION ([clv_zona] = 22)
+  END
+  CLASS
+    NAME "Coatzacoalcos"
+    EXPRESSION ([clv_zona] = 23)
+  END
+  CLASS
+    NAME "Huayacocotla"
+    EXPRESSION ([clv_zona] = 24)
+  END
+  CLASS
+    NAME "Panuco"
+    EXPRESSION ([clv_zona] = 25)
+  END
+  CLASS
+    NAME "Jaltipan"
+    EXPRESSION ([clv_zona] = 29)
+  END
+END
