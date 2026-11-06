@@ -99,15 +99,6 @@ for i in range(4):
         "class": style_base | {
             "color": color,
         },
-        "label": {
-            "font": "arial",
-            "size": "10",
-            "color": "0 0 0",
-            "outlinecolor": "255 255 255",
-            "buffer": '5',
-            "position": "uc",
-            "type": "truetype"
-        },
         "_tree": {
             "grupo": "rezago_educativo_censo",
         },

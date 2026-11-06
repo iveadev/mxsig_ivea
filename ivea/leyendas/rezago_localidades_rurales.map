@@ -35,15 +35,6 @@ LAYER
     OUTLINECOLOR 0 0 0
     COLOR 42 212 48
   END
-  LABEL
-    FONT "arial"
-    SIZE 10
-    COLOR 0 0 0
-    OUTLINECOLOR 255 255 255
-    BUFFER 5
-    POSITION uc
-    TYPE truetype
-  END
 END
 
 LAYER
@@ -76,15 +67,6 @@ LAYER
     SIZE 10
     OUTLINECOLOR 0 0 0
     COLOR 194 35 194
-  END
-  LABEL
-    FONT "arial"
-    SIZE 10
-    COLOR 0 0 0
-    OUTLINECOLOR 255 255 255
-    BUFFER 5
-    POSITION uc
-    TYPE truetype
   END
 END
 
@@ -119,15 +101,6 @@ LAYER
     OUTLINECOLOR 0 0 0
     COLOR 18 67 227
   END
-  LABEL
-    FONT "arial"
-    SIZE 10
-    COLOR 0 0 0
-    OUTLINECOLOR 255 255 255
-    BUFFER 5
-    POSITION uc
-    TYPE truetype
-  END
 END
 
 LAYER
@@ -160,14 +133,5 @@ LAYER
     SIZE 10
     OUTLINECOLOR 0 0 0
     COLOR 245 90 7
-  END
-  LABEL
-    FONT "arial"
-    SIZE 10
-    COLOR 0 0 0
-    OUTLINECOLOR 255 255 255
-    BUFFER 5
-    POSITION uc
-    TYPE truetype
   END
 END
