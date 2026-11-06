@@ -83,7 +83,7 @@ LAYER
       SYMBOL "circulor"
       SIZE 9
       OUTLINECOLOR 0 0 0
-      COLOR 234 10 122
+      COLOR 255 255 255
     END
   END
 END
