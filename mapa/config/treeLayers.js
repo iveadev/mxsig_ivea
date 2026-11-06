@@ -483,25 +483,41 @@ define(function() {
                         "label": "Número de personas en Rezago Educativo por localidad rural",
                         "scale": 1,
                         "position": 43,
-                        "active": false
+                        "active": false,
+                        "texts": {
+                            "scale": 1,
+                            "active": false
+                        }
                     },
                     "c_sin_primaria": {
                         "label": "Número de personas en condición de analfabetizmo por localidad rural",
                         "scale": 1,
                         "position": 44,
-                        "active": false
+                        "active": false,
+                        "texts": {
+                            "scale": 1,
+                            "active": false
+                        }
                     },
                     "c_sin_secundaria": {
                         "label": "Número de personas sin primaria terminada por localidad rural",
                         "scale": 1,
                         "position": 45,
-                        "active": false
+                        "active": false,
+                        "texts": {
+                            "scale": 1,
+                            "active": false
+                        }
                     },
                     "c_rezago_total": {
                         "label": "Número de personas sin secundaria terminada por localidad rural",
                         "scale": 1,
                         "position": 46,
-                        "active": false
+                        "active": false,
+                        "texts": {
+                            "scale": 1,
+                            "active": false
+                        }
                     }
                 }
             },

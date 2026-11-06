@@ -92,12 +92,21 @@ for i in range(4):
         "data": {
             "select": [campo]
         },
-        #"labelitem": campo,
+        "labelitem": 'nomgeo',
         "metadata": {
             'wms_title': f"Número de personas {wms_titles[i]} por localidad rural"
         },
         "class": style_base | {
             "color": color,
+        },
+        "label": {
+            "font": "arial",
+            "size": "10",
+            "color": "0 0 0",
+            "outlinecolor": "255 255 255",
+            "buffer": '5',
+            "position": "uc",
+            "type": "truetype"
         },
         "_tree": {
             "grupo": "rezago_educativo_censo",
