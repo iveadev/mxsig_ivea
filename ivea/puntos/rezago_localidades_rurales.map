@@ -16,28 +16,25 @@ LAYER
     "wms_enable_request" "*"
   END
   CLASS
-    SYMBOL "circulor"
-    SIZE 10
-    OUTLINECOLOR 0 0 0
     COLOR 42 212 48
     EXPRESSION ([Cluster_FeatureCount] = 1)
   END
   CLASS
     SYMBOL "circulor"
-    SIZE 10
+    SIZE 20
     OUTLINECOLOR 0 0 0
-    COLOR 31 159 36
+    COLOR 0 177 6
     EXPRESSION ([Cluster_FeatureCount] > 1 AND [Cluster_FeatureCount] <= 100)
   END
   CLASS
     SYMBOL "circulor"
-    SIZE 10
+    SIZE 40
     OUTLINECOLOR 0 0 0
-    COLOR 21 106 24
+    COLOR 0 101 3
     EXPRESSION ([Cluster_FeatureCount] > 100)
   END
   CLUSTER
-    MAXDISTANCE 40
+    MAXDISTANCE 65
     REGION "ellipse"
   END
   CLASSITEM "Cluster_FeatureCount"
@@ -55,28 +52,25 @@ LAYER
     "wms_enable_request" "*"
   END
   CLASS
-    SYMBOL "circulor"
-    SIZE 10
-    OUTLINECOLOR 0 0 0
     COLOR 194 35 194
     EXPRESSION ([Cluster_FeatureCount] = 1)
   END
   CLASS
     SYMBOL "circulor"
-    SIZE 10
+    SIZE 20
     OUTLINECOLOR 0 0 0
-    COLOR 145 26 145
+    COLOR 160 0 160
     EXPRESSION ([Cluster_FeatureCount] > 1 AND [Cluster_FeatureCount] <= 100)
   END
   CLASS
     SYMBOL "circulor"
-    SIZE 10
+    SIZE 40
     OUTLINECOLOR 0 0 0
-    COLOR 97 17 97
+    COLOR 91 0 91
     EXPRESSION ([Cluster_FeatureCount] > 100)
   END
   CLUSTER
-    MAXDISTANCE 40
+    MAXDISTANCE 65
     REGION "ellipse"
   END
   CLASSITEM "Cluster_FeatureCount"
@@ -94,28 +88,25 @@ LAYER
     "wms_enable_request" "*"
   END
   CLASS
-    SYMBOL "circulor"
-    SIZE 10
-    OUTLINECOLOR 0 0 0
     COLOR 18 67 227
     EXPRESSION ([Cluster_FeatureCount] = 1)
   END
   CLASS
     SYMBOL "circulor"
-    SIZE 10
+    SIZE 20
     OUTLINECOLOR 0 0 0
-    COLOR 13 50 170
+    COLOR 0 40 171
     EXPRESSION ([Cluster_FeatureCount] > 1 AND [Cluster_FeatureCount] <= 100)
   END
   CLASS
     SYMBOL "circulor"
-    SIZE 10
+    SIZE 40
     OUTLINECOLOR 0 0 0
-    COLOR 9 33 113
+    COLOR 0 22 97
     EXPRESSION ([Cluster_FeatureCount] > 100)
   END
   CLUSTER
-    MAXDISTANCE 40
+    MAXDISTANCE 65
     REGION "ellipse"
   END
   CLASSITEM "Cluster_FeatureCount"
@@ -133,28 +124,25 @@ LAYER
     "wms_enable_request" "*"
   END
   CLASS
-    SYMBOL "circulor"
-    SIZE 10
-    OUTLINECOLOR 0 0 0
     COLOR 245 90 7
     EXPRESSION ([Cluster_FeatureCount] = 1)
   END
   CLASS
     SYMBOL "circulor"
-    SIZE 10
+    SIZE 20
     OUTLINECOLOR 0 0 0
-    COLOR 183 67 5
+    COLOR 176 61 0
     EXPRESSION ([Cluster_FeatureCount] > 1 AND [Cluster_FeatureCount] <= 100)
   END
   CLASS
     SYMBOL "circulor"
-    SIZE 10
+    SIZE 40
     OUTLINECOLOR 0 0 0
-    COLOR 122 45 3
+    COLOR 100 35 0
     EXPRESSION ([Cluster_FeatureCount] > 100)
   END
   CLUSTER
-    MAXDISTANCE 40
+    MAXDISTANCE 65
     REGION "ellipse"
   END
   CLASSITEM "Cluster_FeatureCount"
