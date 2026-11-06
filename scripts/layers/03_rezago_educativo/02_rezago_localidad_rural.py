@@ -10,6 +10,7 @@ sys.path.append(os.getcwd())
 
 descripcion = "Localidades rurales con rezago educativo Censo 2020"
 output = "rezago_localidades_rurales"
+cluster_count = "Cluster_FeatureCount"
 
 
 # CONFIGURACIONES GLOBALES
@@ -43,6 +44,11 @@ colores = [
     '245,90,7',   #naranja
 ]
 
+def intensificar_rgb(rgb_str, factor):
+    rgb = [int(x) for x in rgb_str.split(',')]
+    nuevos_canales = [max(0, int(c * factor)) for c in rgb]
+    return " ".join(str(c) for c in nuevos_canales)
+
 style_base =  {
     "symbol": 'circulor',
     "size": 10,
@@ -54,51 +60,39 @@ style_base =  {
 layers = []
 #for campo in campos:
 for i in range(4):
-    # q1, q2, q3 = obtener_cuartiles_desde_postgres(tabla, campo)
-    # #condicionales de acuerdo a los cuartiles generados a partir de los datos de la DB
-    # condicionales = [
-    #     f"[{campo}] <={q1}",
-    #     f"[{campo}] >{q1} and [{campo}] <={q2}",
-    #     f"[{campo}] >{q2} and [{campo}] <={q3}",
-    #     f"[{campo}] >{q3}",
-    # ]
-    #clases = []
-    # se recorre los colores y las condicionales
-    
     campo = campos[i]
     color = colores[i]
-        # clases.append(
-        #     {
-        #         "name": estilo['name'],
-        #         "expression": condicionales[i],
-        #         "style": style_base | {
-        #             "color": estilo['color'],
-        #             "outlinecolor": estilo['color'],
-        #         },
-        #         "label": {
-        #             "font": "arial",
-        #             "size": "10",
-        #             "color": "0 0 0",
-        #             "outlinecolor": "255 255 255",
-        #             "buffer": '5',
-        #             "position": "uc",
-        #             "type": "truetype"
-        #         }
-        #     },
-            
-        # )
+    color2 = intensificar_rgb(color,0.75)
+    color3 = intensificar_rgb(color,0.5)
+
     layers.append({
         "name": campo,
         "data": {
             "select": [campo]
         },
-        "labelitem": 'nomgeo',
+        #"labelitem": 'nomgeo',
         "metadata": {
             'wms_title': f"Número de personas {wms_titles[i]} por localidad rural"
         },
-        "class": style_base | {
-            "color": color,
+        'cluster': {
+            'maxdistance': 40,
+            'region': 'ellipse',
         },
+        'classitem': cluster_count,
+        "class": [
+            style_base | {
+            "color": color,
+            'expression': f'[{cluster_count}] = 1'
+            },
+            style_base | {
+            "color": color2,
+            'expression': f'[{cluster_count}] > 1 AND [{cluster_count}] <= 100'
+            },
+            style_base | {
+            "color": color3,
+            'expression': f'[{cluster_count}] > 100'
+            }
+        ],
         "_tree": {
             "grupo": "rezago_educativo_censo",
         },

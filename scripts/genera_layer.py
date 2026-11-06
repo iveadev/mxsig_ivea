@@ -42,7 +42,8 @@ estructura_base = {
     
 }
 
-requiere_doble_comillas = ["NAME", "WMS_TITLE", "WMS_ENABLE_REQUEST", "LABELITEM", "CONNECTION", "FONT", "SYMBOL", "CLASSITEM", "_EXPRESSION", "WRAP"]
+requiere_doble_comillas = ["NAME", "WMS_TITLE", "WMS_ENABLE_REQUEST", "LABELITEM", "CONNECTION", "FONT", "SYMBOL", "CLASSITEM", "_EXPRESSION", "WRAP", "REGION"]
+variables_mapserver = ['Cluster_FeatureCount']
 
 def deep_update(dicc_base, dicc_usuario):
     resultado = dicc_base.copy()
@@ -156,13 +157,15 @@ for ly in getattr(mapa, "layers", [config_global_final]):
     # se agrega classitem a la seleccion (en caso de que no este)
     if 'classitem' in capa_completa:
         if capa_completa["classitem"] not in capa_completa["data"]["select"]:
-            capa_completa["data"]["select"].append(capa_completa["classitem"])
+            #se valida que sea un variable propia de mapserver
+            if capa_completa["classitem"] not in variables_mapserver:
+                capa_completa["data"]["select"].append(capa_completa["classitem"])
 
     # 1. PASADA MAPA BASE: Forzamos prefijo "c_" y podamos bloques LABEL
     capa_base = capa_completa.copy()
     capa_base["name"] = f"c_{nombre_original}"
      #Se define cuando se evalua un valor de tipo string
-    if "classitem" in capa_base:
+    if "classitem" in capa_base and capa_base['classitem'] not in variables_mapserver:
             for cl in capa_base["class"]:
                 if 'expression' in cl:
                     #harcodeando la variable expression

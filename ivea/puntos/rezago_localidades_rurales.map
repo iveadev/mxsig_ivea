@@ -20,7 +20,27 @@ LAYER
     SIZE 10
     OUTLINECOLOR 0 0 0
     COLOR 42 212 48
+    EXPRESSION ([Cluster_FeatureCount] = 1)
   END
+  CLASS
+    SYMBOL "circulor"
+    SIZE 10
+    OUTLINECOLOR 0 0 0
+    COLOR 31 159 36
+    EXPRESSION ([Cluster_FeatureCount] > 1 AND [Cluster_FeatureCount] <= 100)
+  END
+  CLASS
+    SYMBOL "circulor"
+    SIZE 10
+    OUTLINECOLOR 0 0 0
+    COLOR 21 106 24
+    EXPRESSION ([Cluster_FeatureCount] > 100)
+  END
+  CLUSTER
+    MAXDISTANCE 40
+    REGION "ellipse"
+  END
+  CLASSITEM "Cluster_FeatureCount"
 END
 
 LAYER
@@ -39,7 +59,27 @@ LAYER
     SIZE 10
     OUTLINECOLOR 0 0 0
     COLOR 194 35 194
+    EXPRESSION ([Cluster_FeatureCount] = 1)
   END
+  CLASS
+    SYMBOL "circulor"
+    SIZE 10
+    OUTLINECOLOR 0 0 0
+    COLOR 145 26 145
+    EXPRESSION ([Cluster_FeatureCount] > 1 AND [Cluster_FeatureCount] <= 100)
+  END
+  CLASS
+    SYMBOL "circulor"
+    SIZE 10
+    OUTLINECOLOR 0 0 0
+    COLOR 97 17 97
+    EXPRESSION ([Cluster_FeatureCount] > 100)
+  END
+  CLUSTER
+    MAXDISTANCE 40
+    REGION "ellipse"
+  END
+  CLASSITEM "Cluster_FeatureCount"
 END
 
 LAYER
@@ -58,7 +98,27 @@ LAYER
     SIZE 10
     OUTLINECOLOR 0 0 0
     COLOR 18 67 227
+    EXPRESSION ([Cluster_FeatureCount] = 1)
   END
+  CLASS
+    SYMBOL "circulor"
+    SIZE 10
+    OUTLINECOLOR 0 0 0
+    COLOR 13 50 170
+    EXPRESSION ([Cluster_FeatureCount] > 1 AND [Cluster_FeatureCount] <= 100)
+  END
+  CLASS
+    SYMBOL "circulor"
+    SIZE 10
+    OUTLINECOLOR 0 0 0
+    COLOR 9 33 113
+    EXPRESSION ([Cluster_FeatureCount] > 100)
+  END
+  CLUSTER
+    MAXDISTANCE 40
+    REGION "ellipse"
+  END
+  CLASSITEM "Cluster_FeatureCount"
 END
 
 LAYER
@@ -77,5 +137,25 @@ LAYER
     SIZE 10
     OUTLINECOLOR 0 0 0
     COLOR 245 90 7
+    EXPRESSION ([Cluster_FeatureCount] = 1)
   END
+  CLASS
+    SYMBOL "circulor"
+    SIZE 10
+    OUTLINECOLOR 0 0 0
+    COLOR 183 67 5
+    EXPRESSION ([Cluster_FeatureCount] > 1 AND [Cluster_FeatureCount] <= 100)
+  END
+  CLASS
+    SYMBOL "circulor"
+    SIZE 10
+    OUTLINECOLOR 0 0 0
+    COLOR 122 45 3
+    EXPRESSION ([Cluster_FeatureCount] > 100)
+  END
+  CLUSTER
+    MAXDISTANCE 40
+    REGION "ellipse"
+  END
+  CLASSITEM "Cluster_FeatureCount"
 END
