@@ -2,7 +2,7 @@ import sys
 import os
 
 sys.path.append(os.getcwd())
-from scripts.utils.postgres import obtener_cuartiles_desde_postgres
+#from scripts.utils.postgres import obtener_cuartiles_desde_postgres
 
 #==========================================================================
 # Definición de la capa
@@ -13,7 +13,7 @@ output = "rezago_localidades_rurales"
 
 
 # CONFIGURACIONES GLOBALES
-tabla = "rezago_educativo_censo_2020.rezago_loc_rurales"
+tabla = "rezago_educativo_censo_2020.rez_loc_rur"
 
 layer = {
     'type' : 'POINT',
@@ -23,10 +23,10 @@ layer = {
 }
 
 campos = [
-    'rez_educxloc2020_ver_analfabeta',
-    'rez_educxloc2020_ver_sinprimaria',
-    'rez_educxloc2020_ver_sinsecundaria',
-    'rez_educxloc2020_ver_rezago_total',
+    'analfabetas',
+    'sin_primaria',
+    'sin_secundaria',
+    'rezago_total',
 ]
 
 wms_titles = [
