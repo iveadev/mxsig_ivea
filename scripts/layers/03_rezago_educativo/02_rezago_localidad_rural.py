@@ -22,6 +22,7 @@ layer = {
     "data": {
         'table': tabla,
     },
+    "processing":"CLOSE_CONNECTION=DEFER",
 }
 
 campos = [

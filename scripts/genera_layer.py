@@ -42,7 +42,7 @@ estructura_base = {
     
 }
 
-requiere_doble_comillas = ["NAME", "WMS_TITLE", "WMS_ENABLE_REQUEST", "LABELITEM", "CONNECTION", "FONT", "SYMBOL", "CLASSITEM", "_EXPRESSION", "WRAP", "REGION"]
+requiere_doble_comillas = ["NAME", "WMS_TITLE", "WMS_ENABLE_REQUEST", "LABELITEM", "CONNECTION", "FONT", "SYMBOL", "CLASSITEM", "_EXPRESSION", "WRAP", "REGION", "PROCESSING"]
 variables_mapserver = ['Cluster_FeatureCount']
 
 def deep_update(dicc_base, dicc_usuario):
@@ -88,7 +88,7 @@ def renderizar_diccionario(dicc, nivel=0):
                     where = ' WHERE '+ where + 'the_geom && !BOX!'
                     campos_select = ", ".join(["gid", "the_geom"] + campos_adicionales)
                     sql = f"the_geom FROM (SELECT {campos_select} FROM {tabla}{where}) AS t1 USING UNIQUE gid USING SRID=900913"
-                
+
                     lineas.append(f'{espacio}DATA "{sql}"')
                 case _:
                     if not v: continue # Evita bloques vacíos
