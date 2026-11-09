@@ -88,7 +88,7 @@ for i in range(4):
         "data": {
             "select": [campo]
         },
-        #"labelitem": 'nomgeo',
+        "labelitem": 'nomgeo',
         "metadata": {
             'wms_title': f"Número de personas {wms_titles[i]} por localidad rural"
         },

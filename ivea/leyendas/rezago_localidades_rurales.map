@@ -1,0 +1,201 @@
+# =================================================================
+# MAPA EXCLUSIVO DE TEXTOS (leyendas)
+# ARCHIVO GENERADO AUTOMÁTICAMENTE A PARTIR DE LA DEFINICIÓN: layers.03_rezago_educativo.02_rezago_localidad_rural 
+# DESCRIPCIÓN: Localidades rurales con rezago educativo Censo 2020 
+# =================================================================
+
+LAYER
+  NAME "t_analfabetas"
+  STATUS ON
+  TYPE POINT
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom, analfabetas, nomgeo FROM rezago_educativo_censo_2020.rez_loc_rur WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
+  METADATA
+    "wms_title" "Texto Número de personas en Rezago Educativo por localidad rural"
+    "wms_enable_request" "*"
+  END
+  LABELITEM "nomgeo"
+  CLASS
+    SYMBOL "circulor"
+    SIZE 8
+    OUTLINECOLOR 42 212 48
+    COLOR 42 212 48
+    EXPRESSION ([Cluster_FeatureCount] = 1)
+  END
+  CLASS
+    SYMBOL "circulor"
+    SIZE 14
+    OUTLINECOLOR 255 255 204
+    COLOR 217 170 40
+    EXPRESSION ([Cluster_FeatureCount] > 1 AND [Cluster_FeatureCount] < 50)
+  END
+  CLASS
+    SYMBOL "circulor"
+    SIZE 22
+    OUTLINECOLOR 210 80 10
+    COLOR 65 182 196
+    EXPRESSION ([Cluster_FeatureCount] >= 50 AND [Cluster_FeatureCount] < 500)
+  END
+  CLASS
+    SYMBOL "circulor"
+    SIZE 32
+    OUTLINECOLOR 150 10 15
+    COLOR 8 29 88
+    EXPRESSION ([Cluster_FeatureCount] >= 500)
+  END
+  PROCESSING "CLOSE_CONNECTION=DEFER"
+  CLUSTER
+    MAXDISTANCE 25
+    REGION "rectangle"
+    BUFFER 0
+  END
+  CLASSITEM "Cluster_FeatureCount"
+END
+
+LAYER
+  NAME "t_sin_primaria"
+  STATUS ON
+  TYPE POINT
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom, sin_primaria, nomgeo FROM rezago_educativo_censo_2020.rez_loc_rur WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
+  METADATA
+    "wms_title" "Texto Número de personas en condición de analfabetizmo por localidad rural"
+    "wms_enable_request" "*"
+  END
+  LABELITEM "nomgeo"
+  CLASS
+    SYMBOL "circulor"
+    SIZE 8
+    OUTLINECOLOR 194 35 194
+    COLOR 194 35 194
+    EXPRESSION ([Cluster_FeatureCount] = 1)
+  END
+  CLASS
+    SYMBOL "circulor"
+    SIZE 14
+    OUTLINECOLOR 255 255 204
+    COLOR 217 170 40
+    EXPRESSION ([Cluster_FeatureCount] > 1 AND [Cluster_FeatureCount] < 50)
+  END
+  CLASS
+    SYMBOL "circulor"
+    SIZE 22
+    OUTLINECOLOR 210 80 10
+    COLOR 65 182 196
+    EXPRESSION ([Cluster_FeatureCount] >= 50 AND [Cluster_FeatureCount] < 500)
+  END
+  CLASS
+    SYMBOL "circulor"
+    SIZE 32
+    OUTLINECOLOR 150 10 15
+    COLOR 8 29 88
+    EXPRESSION ([Cluster_FeatureCount] >= 500)
+  END
+  PROCESSING "CLOSE_CONNECTION=DEFER"
+  CLUSTER
+    MAXDISTANCE 25
+    REGION "rectangle"
+    BUFFER 0
+  END
+  CLASSITEM "Cluster_FeatureCount"
+END
+
+LAYER
+  NAME "t_sin_secundaria"
+  STATUS ON
+  TYPE POINT
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom, sin_secundaria, nomgeo FROM rezago_educativo_censo_2020.rez_loc_rur WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
+  METADATA
+    "wms_title" "Texto Número de personas sin primaria terminada por localidad rural"
+    "wms_enable_request" "*"
+  END
+  LABELITEM "nomgeo"
+  CLASS
+    SYMBOL "circulor"
+    SIZE 8
+    OUTLINECOLOR 18 67 227
+    COLOR 18 67 227
+    EXPRESSION ([Cluster_FeatureCount] = 1)
+  END
+  CLASS
+    SYMBOL "circulor"
+    SIZE 14
+    OUTLINECOLOR 255 255 204
+    COLOR 217 170 40
+    EXPRESSION ([Cluster_FeatureCount] > 1 AND [Cluster_FeatureCount] < 50)
+  END
+  CLASS
+    SYMBOL "circulor"
+    SIZE 22
+    OUTLINECOLOR 210 80 10
+    COLOR 65 182 196
+    EXPRESSION ([Cluster_FeatureCount] >= 50 AND [Cluster_FeatureCount] < 500)
+  END
+  CLASS
+    SYMBOL "circulor"
+    SIZE 32
+    OUTLINECOLOR 150 10 15
+    COLOR 8 29 88
+    EXPRESSION ([Cluster_FeatureCount] >= 500)
+  END
+  PROCESSING "CLOSE_CONNECTION=DEFER"
+  CLUSTER
+    MAXDISTANCE 25
+    REGION "rectangle"
+    BUFFER 0
+  END
+  CLASSITEM "Cluster_FeatureCount"
+END
+
+LAYER
+  NAME "t_rezago_total"
+  STATUS ON
+  TYPE POINT
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom, rezago_total, nomgeo FROM rezago_educativo_censo_2020.rez_loc_rur WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
+  METADATA
+    "wms_title" "Texto Número de personas sin secundaria terminada por localidad rural"
+    "wms_enable_request" "*"
+  END
+  LABELITEM "nomgeo"
+  CLASS
+    SYMBOL "circulor"
+    SIZE 8
+    OUTLINECOLOR 245 90 7
+    COLOR 245 90 7
+    EXPRESSION ([Cluster_FeatureCount] = 1)
+  END
+  CLASS
+    SYMBOL "circulor"
+    SIZE 14
+    OUTLINECOLOR 255 255 204
+    COLOR 217 170 40
+    EXPRESSION ([Cluster_FeatureCount] > 1 AND [Cluster_FeatureCount] < 50)
+  END
+  CLASS
+    SYMBOL "circulor"
+    SIZE 22
+    OUTLINECOLOR 210 80 10
+    COLOR 65 182 196
+    EXPRESSION ([Cluster_FeatureCount] >= 50 AND [Cluster_FeatureCount] < 500)
+  END
+  CLASS
+    SYMBOL "circulor"
+    SIZE 32
+    OUTLINECOLOR 150 10 15
+    COLOR 8 29 88
+    EXPRESSION ([Cluster_FeatureCount] >= 500)
+  END
+  PROCESSING "CLOSE_CONNECTION=DEFER"
+  CLUSTER
+    MAXDISTANCE 25
+    REGION "rectangle"
+    BUFFER 0
+  END
+  CLASSITEM "Cluster_FeatureCount"
+END
