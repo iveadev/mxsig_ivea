@@ -86,12 +86,9 @@ def renderizar_diccionario(dicc, nivel=0):
                     tabla = v['table']
                     where = f"{v['where']} AND " if 'where' in v else ""
                     where = ' WHERE '+ where + 'the_geom && !BOX!'
-                    if len(campos_adicionales) > 0:
-                        # es una capa sencilla
-                        sql = f"the_geom FROM {tabla}{where} USING UNIQUE gid USING SRID=900913"
-                    else: 
-                        campos_select = ", ".join(["gid", "the_geom"] + campos_adicionales)
-                        sql = f"the_geom FROM (SELECT {campos_select} FROM {tabla}{where}) AS t1 USING UNIQUE gid USING SRID=900913"
+                    campos_select = ", ".join(["gid", "the_geom"] + campos_adicionales)
+                    sql = f"the_geom FROM (SELECT {campos_select} FROM {tabla}{where}) AS t1 USING UNIQUE gid USING SRID=900913"
+                
                     lineas.append(f'{espacio}DATA "{sql}"')
                 case _:
                     if not v: continue # Evita bloques vacíos
