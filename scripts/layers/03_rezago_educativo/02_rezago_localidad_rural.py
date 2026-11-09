@@ -99,7 +99,7 @@ for i in range(4):
         },
         'classitem': cluster_count,
         "class": [
-            {
+            style_base | {
             "color": color,
             'outlinecolor': color,
             'size': 10,
@@ -115,7 +115,7 @@ for i in range(4):
             "color": medio[1],
             'outlinecolor': medio[0],
             'size': 40,
-            'expression': f'[{cluster_count}] > 50 AND [{cluster_count}] < 500'
+            'expression': f'[{cluster_count}] >= 50 AND [{cluster_count}] < 500'
             },
             style_base | {
             "color": alto[1],

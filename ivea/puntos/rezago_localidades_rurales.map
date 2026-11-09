@@ -16,9 +16,10 @@ LAYER
     "wms_enable_request" "*"
   END
   CLASS
-    COLOR 42 212 48
-    OUTLINECOLOR 42 212 48
+    SYMBOL "circulor"
     SIZE 10
+    OUTLINECOLOR 42 212 48
+    COLOR 42 212 48
     EXPRESSION ([Cluster_FeatureCount] = 1)
   END
   CLASS
@@ -33,7 +34,7 @@ LAYER
     SIZE 40
     OUTLINECOLOR 210 80 10
     COLOR 65 182 196
-    EXPRESSION ([Cluster_FeatureCount] > 50 AND [Cluster_FeatureCount] < 500)
+    EXPRESSION ([Cluster_FeatureCount] >= 50 AND [Cluster_FeatureCount] < 500)
   END
   CLASS
     SYMBOL "circulor"
@@ -63,9 +64,10 @@ LAYER
     "wms_enable_request" "*"
   END
   CLASS
-    COLOR 194 35 194
-    OUTLINECOLOR 194 35 194
+    SYMBOL "circulor"
     SIZE 10
+    OUTLINECOLOR 194 35 194
+    COLOR 194 35 194
     EXPRESSION ([Cluster_FeatureCount] = 1)
   END
   CLASS
@@ -80,7 +82,7 @@ LAYER
     SIZE 40
     OUTLINECOLOR 210 80 10
     COLOR 65 182 196
-    EXPRESSION ([Cluster_FeatureCount] > 50 AND [Cluster_FeatureCount] < 500)
+    EXPRESSION ([Cluster_FeatureCount] >= 50 AND [Cluster_FeatureCount] < 500)
   END
   CLASS
     SYMBOL "circulor"
@@ -110,9 +112,10 @@ LAYER
     "wms_enable_request" "*"
   END
   CLASS
-    COLOR 18 67 227
-    OUTLINECOLOR 18 67 227
+    SYMBOL "circulor"
     SIZE 10
+    OUTLINECOLOR 18 67 227
+    COLOR 18 67 227
     EXPRESSION ([Cluster_FeatureCount] = 1)
   END
   CLASS
@@ -127,7 +130,7 @@ LAYER
     SIZE 40
     OUTLINECOLOR 210 80 10
     COLOR 65 182 196
-    EXPRESSION ([Cluster_FeatureCount] > 50 AND [Cluster_FeatureCount] < 500)
+    EXPRESSION ([Cluster_FeatureCount] >= 50 AND [Cluster_FeatureCount] < 500)
   END
   CLASS
     SYMBOL "circulor"
@@ -157,9 +160,10 @@ LAYER
     "wms_enable_request" "*"
   END
   CLASS
-    COLOR 245 90 7
-    OUTLINECOLOR 245 90 7
+    SYMBOL "circulor"
     SIZE 10
+    OUTLINECOLOR 245 90 7
+    COLOR 245 90 7
     EXPRESSION ([Cluster_FeatureCount] = 1)
   END
   CLASS
@@ -174,7 +178,7 @@ LAYER
     SIZE 40
     OUTLINECOLOR 210 80 10
     COLOR 65 182 196
-    EXPRESSION ([Cluster_FeatureCount] > 50 AND [Cluster_FeatureCount] < 500)
+    EXPRESSION ([Cluster_FeatureCount] >= 50 AND [Cluster_FeatureCount] < 500)
   END
   CLASS
     SYMBOL "circulor"
