@@ -93,7 +93,7 @@ for i in range(4):
             'wms_title': f"Número de personas {wms_titles[i]} por localidad rural"
         },
         'cluster': {
-            'maxdistance': 20,
+            'maxdistance': 30,
             'region': 'rectangle',
             'buffer': 0,
         },
