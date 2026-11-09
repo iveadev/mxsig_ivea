@@ -121,7 +121,7 @@ for i in range(4):
             "color": alto[1],
             'outlinecolor': alto[0],
             'size': 60,
-            'expression': f'[{cluster_count}] > 500'
+            'expression': f'[{cluster_count}] >= 500'
             }
         ],
         "_tree": {
