@@ -79,8 +79,9 @@ layers = []
 for i in range(4):
     campo = campos[i]
     color = colores[i]
-    color2 = "253 141 60"
-    color3 = "227 26 28"
+    bajo = ["255 255 204","217 170 40"]
+    medio = ["210 80 10","65 182 196"]
+    alto = ["150 10 15","8 29 88"]
 
     layers.append({
         "name": campo,
@@ -103,14 +104,22 @@ for i in range(4):
             'expression': f'[{cluster_count}] = 1'
             },
             style_base | {
-            "color": color2,
+            "color": bajo[1],
+            'outlinecolor': bajo[0],
             'size': 20,
-            'expression': f'[{cluster_count}] > 1 AND [{cluster_count}] <= 100'
+            'expression': f'[{cluster_count}] > 1 AND [{cluster_count}] < 50'
             },
             style_base | {
-            "color": color3,
+            "color": medio[1],
+            'outlinecolor': medio[0],
             'size': 40,
-            'expression': f'[{cluster_count}] > 100'
+            'expression': f'[{cluster_count}] > 50 AND [{cluster_count}] < 500'
+            },
+            style_base | {
+            "color": alto[1],
+            'outlinecolor': alto[0],
+            'size': 60,
+            'expression': f'[{cluster_count}] > 500'
             }
         ],
         "_tree": {
