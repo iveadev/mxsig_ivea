@@ -79,8 +79,8 @@ layers = []
 for i in range(4):
     campo = campos[i]
     color = colores[i]
-    color2 = intensificar_rgb(color,0.70)
-    color3 = intensificar_rgb(color,0.40)
+    color2 = "253 141 60"
+    color3 = "227 26 28"
 
     layers.append({
         "name": campo,

@@ -23,14 +23,14 @@ LAYER
     SYMBOL "circulor"
     SIZE 20
     OUTLINECOLOR 0 0 0
-    COLOR 0 177 6
+    COLOR 253 141 60
     EXPRESSION ([Cluster_FeatureCount] > 1 AND [Cluster_FeatureCount] <= 100)
   END
   CLASS
     SYMBOL "circulor"
     SIZE 40
     OUTLINECOLOR 0 0 0
-    COLOR 0 101 3
+    COLOR 227 26 28
     EXPRESSION ([Cluster_FeatureCount] > 100)
   END
   PROCESSING "CLOSE_CONNECTION=DEFER"
@@ -61,14 +61,14 @@ LAYER
     SYMBOL "circulor"
     SIZE 20
     OUTLINECOLOR 0 0 0
-    COLOR 160 0 160
+    COLOR 253 141 60
     EXPRESSION ([Cluster_FeatureCount] > 1 AND [Cluster_FeatureCount] <= 100)
   END
   CLASS
     SYMBOL "circulor"
     SIZE 40
     OUTLINECOLOR 0 0 0
-    COLOR 91 0 91
+    COLOR 227 26 28
     EXPRESSION ([Cluster_FeatureCount] > 100)
   END
   PROCESSING "CLOSE_CONNECTION=DEFER"
@@ -99,14 +99,14 @@ LAYER
     SYMBOL "circulor"
     SIZE 20
     OUTLINECOLOR 0 0 0
-    COLOR 0 40 171
+    COLOR 253 141 60
     EXPRESSION ([Cluster_FeatureCount] > 1 AND [Cluster_FeatureCount] <= 100)
   END
   CLASS
     SYMBOL "circulor"
     SIZE 40
     OUTLINECOLOR 0 0 0
-    COLOR 0 22 97
+    COLOR 227 26 28
     EXPRESSION ([Cluster_FeatureCount] > 100)
   END
   PROCESSING "CLOSE_CONNECTION=DEFER"
@@ -137,14 +137,14 @@ LAYER
     SYMBOL "circulor"
     SIZE 20
     OUTLINECOLOR 0 0 0
-    COLOR 176 61 0
+    COLOR 253 141 60
     EXPRESSION ([Cluster_FeatureCount] > 1 AND [Cluster_FeatureCount] <= 100)
   END
   CLASS
     SYMBOL "circulor"
     SIZE 40
     OUTLINECOLOR 0 0 0
-    COLOR 100 35 0
+    COLOR 227 26 28
     EXPRESSION ([Cluster_FeatureCount] > 100)
   END
   PROCESSING "CLOSE_CONNECTION=DEFER"
