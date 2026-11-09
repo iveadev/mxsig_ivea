@@ -93,7 +93,7 @@ for i in range(4):
             'wms_title': f"Número de personas {wms_titles[i]} por localidad rural"
         },
         'cluster': {
-            'maxdistance': 65,
+            'maxdistance': 20,
             'region': 'rectangle',
             'buffer': 0,
         },
@@ -102,25 +102,25 @@ for i in range(4):
             style_base | {
             "color": color,
             'outlinecolor': color,
-            'size': 10,
+            'size': 8,
             'expression': f'[{cluster_count}] = 1'
             },
             style_base | {
             "color": bajo[1],
             'outlinecolor': bajo[0],
-            'size': 20,
+            'size': 14,
             'expression': f'[{cluster_count}] > 1 AND [{cluster_count}] < 50'
             },
             style_base | {
             "color": medio[1],
             'outlinecolor': medio[0],
-            'size': 40,
+            'size': 22,
             'expression': f'[{cluster_count}] >= 50 AND [{cluster_count}] < 500'
             },
             style_base | {
             "color": alto[1],
             'outlinecolor': alto[0],
-            'size': 60,
+            'size': 32,
             'expression': f'[{cluster_count}] >= 500'
             }
         ],

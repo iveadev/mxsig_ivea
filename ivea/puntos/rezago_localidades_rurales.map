@@ -17,35 +17,35 @@ LAYER
   END
   CLASS
     SYMBOL "circulor"
-    SIZE 10
+    SIZE 8
     OUTLINECOLOR 42 212 48
     COLOR 42 212 48
     EXPRESSION ([Cluster_FeatureCount] = 1)
   END
   CLASS
     SYMBOL "circulor"
-    SIZE 20
+    SIZE 14
     OUTLINECOLOR 255 255 204
     COLOR 217 170 40
     EXPRESSION ([Cluster_FeatureCount] > 1 AND [Cluster_FeatureCount] < 50)
   END
   CLASS
     SYMBOL "circulor"
-    SIZE 40
+    SIZE 22
     OUTLINECOLOR 210 80 10
     COLOR 65 182 196
     EXPRESSION ([Cluster_FeatureCount] >= 50 AND [Cluster_FeatureCount] < 500)
   END
   CLASS
     SYMBOL "circulor"
-    SIZE 60
+    SIZE 32
     OUTLINECOLOR 150 10 15
     COLOR 8 29 88
     EXPRESSION ([Cluster_FeatureCount] >= 500)
   END
   PROCESSING "CLOSE_CONNECTION=DEFER"
   CLUSTER
-    MAXDISTANCE 65
+    MAXDISTANCE 20
     REGION "rectangle"
     BUFFER 0
   END
@@ -65,35 +65,35 @@ LAYER
   END
   CLASS
     SYMBOL "circulor"
-    SIZE 10
+    SIZE 8
     OUTLINECOLOR 194 35 194
     COLOR 194 35 194
     EXPRESSION ([Cluster_FeatureCount] = 1)
   END
   CLASS
     SYMBOL "circulor"
-    SIZE 20
+    SIZE 14
     OUTLINECOLOR 255 255 204
     COLOR 217 170 40
     EXPRESSION ([Cluster_FeatureCount] > 1 AND [Cluster_FeatureCount] < 50)
   END
   CLASS
     SYMBOL "circulor"
-    SIZE 40
+    SIZE 22
     OUTLINECOLOR 210 80 10
     COLOR 65 182 196
     EXPRESSION ([Cluster_FeatureCount] >= 50 AND [Cluster_FeatureCount] < 500)
   END
   CLASS
     SYMBOL "circulor"
-    SIZE 60
+    SIZE 32
     OUTLINECOLOR 150 10 15
     COLOR 8 29 88
     EXPRESSION ([Cluster_FeatureCount] >= 500)
   END
   PROCESSING "CLOSE_CONNECTION=DEFER"
   CLUSTER
-    MAXDISTANCE 65
+    MAXDISTANCE 20
     REGION "rectangle"
     BUFFER 0
   END
@@ -113,35 +113,35 @@ LAYER
   END
   CLASS
     SYMBOL "circulor"
-    SIZE 10
+    SIZE 8
     OUTLINECOLOR 18 67 227
     COLOR 18 67 227
     EXPRESSION ([Cluster_FeatureCount] = 1)
   END
   CLASS
     SYMBOL "circulor"
-    SIZE 20
+    SIZE 14
     OUTLINECOLOR 255 255 204
     COLOR 217 170 40
     EXPRESSION ([Cluster_FeatureCount] > 1 AND [Cluster_FeatureCount] < 50)
   END
   CLASS
     SYMBOL "circulor"
-    SIZE 40
+    SIZE 22
     OUTLINECOLOR 210 80 10
     COLOR 65 182 196
     EXPRESSION ([Cluster_FeatureCount] >= 50 AND [Cluster_FeatureCount] < 500)
   END
   CLASS
     SYMBOL "circulor"
-    SIZE 60
+    SIZE 32
     OUTLINECOLOR 150 10 15
     COLOR 8 29 88
     EXPRESSION ([Cluster_FeatureCount] >= 500)
   END
   PROCESSING "CLOSE_CONNECTION=DEFER"
   CLUSTER
-    MAXDISTANCE 65
+    MAXDISTANCE 20
     REGION "rectangle"
     BUFFER 0
   END
@@ -161,35 +161,35 @@ LAYER
   END
   CLASS
     SYMBOL "circulor"
-    SIZE 10
+    SIZE 8
     OUTLINECOLOR 245 90 7
     COLOR 245 90 7
     EXPRESSION ([Cluster_FeatureCount] = 1)
   END
   CLASS
     SYMBOL "circulor"
-    SIZE 20
+    SIZE 14
     OUTLINECOLOR 255 255 204
     COLOR 217 170 40
     EXPRESSION ([Cluster_FeatureCount] > 1 AND [Cluster_FeatureCount] < 50)
   END
   CLASS
     SYMBOL "circulor"
-    SIZE 40
+    SIZE 22
     OUTLINECOLOR 210 80 10
     COLOR 65 182 196
     EXPRESSION ([Cluster_FeatureCount] >= 50 AND [Cluster_FeatureCount] < 500)
   END
   CLASS
     SYMBOL "circulor"
-    SIZE 60
+    SIZE 32
     OUTLINECOLOR 150 10 15
     COLOR 8 29 88
     EXPRESSION ([Cluster_FeatureCount] >= 500)
   END
   PROCESSING "CLOSE_CONNECTION=DEFER"
   CLUSTER
-    MAXDISTANCE 65
+    MAXDISTANCE 20
     REGION "rectangle"
     BUFFER 0
   END
