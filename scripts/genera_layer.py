@@ -67,7 +67,7 @@ def procesar_valor(clave, valor):
             case _:
                 return str(valor)
 
-def renderizar_diccionario(dicc, usa_subquery = False, nivel=0):
+def renderizar_diccionario(dicc, nivel=0):
     lineas = []
     espacio = "  " * nivel
     
@@ -82,25 +82,26 @@ def renderizar_diccionario(dicc, usa_subquery = False, nivel=0):
                         lineas.append(f'{espacio}  "{mk.strip().lower()}" "{mv}"')
                     lineas.append(f"{espacio}END")
                 case "DATA":
-                    campos_adicionales = v.get('select', [])
-                    campos_select = ", ".join(["gid", "the_geom"] + campos_adicionales)
+                    campos_adicionales = v.get('select', [])                    
                     tabla = v['table']
-                    where = f" WHERE {v['where']}" if 'where' in v else ""
-                    if usa_subquery:
-                        sql = f"the_geom FROM (SELECT {campos_select} FROM {tabla}{where}) AS t1"
-                    else:
-                        sql = f"{campos_select} FROM {tabla}{where}"
-                    sql = sql + " USING UNIQUE gid USING SRID=900913"
+                    where = f"{v['where']} AND " if 'where' in v else ""
+                    where = ' WHERE '+ where + 'the_geom && !BOX!'
+                    if len(campos_adicionales) > 0:
+                        # es una capa sencilla
+                        sql = f"the_geom FROM {tabla}{where} USING UNIQUE gid USING SRID=900913"
+                    else: 
+                        campos_select = ", ".join(["gid", "the_geom"] + campos_adicionales)
+                        sql = f"the_geom FROM (SELECT {campos_select} FROM {tabla}{where}) AS t1 USING UNIQUE gid USING SRID=900913"
                     lineas.append(f'{espacio}DATA "{sql}"')
                 case _:
                     if not v: continue # Evita bloques vacíos
                     lineas.append(f"{espacio}{clave_mapserver}")
-                    lineas.extend(renderizar_diccionario(v, usa_subquery, nivel + 1))
+                    lineas.extend(renderizar_diccionario(v, nivel + 1))
                     lineas.append(f"{espacio}END")
                 
         elif isinstance(v, list):
             for elemento in v:
-                lineas.extend(renderizar_diccionario({clave_mapserver: elemento}, usa_subquery, nivel))
+                lineas.extend(renderizar_diccionario({clave_mapserver: elemento}, nivel))
         else:
             #if str(v).strip() == "": continue
             valor_formateado = procesar_valor(clave_mapserver, v)
@@ -148,8 +149,6 @@ contenido_labels = []
 procesa_dual = False
 
 for ly in getattr(mapa, "layers", [config_global_final]):
-    #La consulta necesita usar subquery para DATA?
-    usa_subquery = getattr(mapa,'subquery', False);
     capa_completa = deep_update(config_global_final, ly)
     # _tree sólo alimenta el árbol del cliente; no debe llegar a MapServer.
     capa_completa.pop("_tree", None)
@@ -179,7 +178,7 @@ for ly in getattr(mapa, "layers", [config_global_final]):
                     cl.pop('expression')
 
     capa_base = podar_diccionario(capa_base, modo="BASE")
-    contenido_base.extend(renderizar_diccionario({"LAYER": capa_base}, usa_subquery))
+    contenido_base.extend(renderizar_diccionario({"LAYER": capa_base}))
     contenido_base.append("")
 
     # 2. PASADA TEXTOS: Forzamos prefijo "t_", "Texto..." en título y podamos STYLES
