@@ -89,7 +89,7 @@ def renderizar_diccionario(dicc, usa_subquery = False, nivel=0):
                     if usa_subquery:
                         sql = f"the_geom FROM (SELECT {campos_select} FROM {tabla}{where}) AS t1"
                     else:
-                        sql = f"SELECT {campos_select} FROM {tabla}{where}"
+                        sql = f"{campos_select} FROM {tabla}{where}"
                     sql = sql + " USING UNIQUE gid USING SRID=900913"
                     lineas.append(f'{espacio}DATA "{sql}"')
                 case _:
