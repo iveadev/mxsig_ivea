@@ -92,7 +92,8 @@ for i in range(4):
         },
         'cluster': {
             'maxdistance': 65,
-            'region': 'ellipse',
+            'region': 'rectangle',
+            'buffer': 0,
         },
         'classitem': cluster_count,
         "class": [
