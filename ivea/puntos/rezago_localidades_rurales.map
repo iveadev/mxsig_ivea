@@ -17,6 +17,8 @@ LAYER
   END
   CLASS
     COLOR 42 212 48
+    OUTLINECOLOR 42 212 48
+    SIZE 10
     EXPRESSION ([Cluster_FeatureCount] = 1)
   END
   CLASS
@@ -62,6 +64,8 @@ LAYER
   END
   CLASS
     COLOR 194 35 194
+    OUTLINECOLOR 194 35 194
+    SIZE 10
     EXPRESSION ([Cluster_FeatureCount] = 1)
   END
   CLASS
@@ -107,6 +111,8 @@ LAYER
   END
   CLASS
     COLOR 18 67 227
+    OUTLINECOLOR 18 67 227
+    SIZE 10
     EXPRESSION ([Cluster_FeatureCount] = 1)
   END
   CLASS
@@ -152,6 +158,8 @@ LAYER
   END
   CLASS
     COLOR 245 90 7
+    OUTLINECOLOR 245 90 7
+    SIZE 10
     EXPRESSION ([Cluster_FeatureCount] = 1)
   END
   CLASS

@@ -101,6 +101,7 @@ for i in range(4):
         "class": [
             {
             "color": color,
+            'outlinecolor': color,
             'size': 10,
             'expression': f'[{cluster_count}] = 1'
             },
