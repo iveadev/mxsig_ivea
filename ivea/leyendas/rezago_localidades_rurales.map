@@ -10,12 +10,12 @@ LAYER
   TYPE POINT
   CONNECTIONTYPE POSTGIS
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
-  DATA "the_geom FROM (SELECT gid, the_geom, analfabetas, nomgeo FROM rezago_educativo_censo_2020.rez_loc_rur WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
+  DATA "the_geom FROM (SELECT gid, the_geom, analfabetas FROM rezago_educativo_censo_2020.rez_loc_rur WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Texto Número de personas en Rezago Educativo por localidad rural"
+    "wms_title" "Texto Número de personas en condición de analfabetizmo por localidad rural"
     "wms_enable_request" "*"
   END
-  LABELITEM "nomgeo"
+  LABELITEM "analfabetas"
   CLASS
     SYMBOL "circulor"
     SIZE 6
@@ -54,6 +54,7 @@ LAYER
       SIZE 8
       ALIGN center
       POSITION cc
+      FORCE true
       COLOR 0 0 0
     END
   END
@@ -71,6 +72,7 @@ LAYER
       SIZE 9
       ALIGN center
       POSITION cc
+      FORCE true
       COLOR 255 255 255
     END
   END
@@ -88,6 +90,7 @@ LAYER
       SIZE 11
       ALIGN center
       POSITION cc
+      FORCE true
       COLOR 255 255 255
     END
   END
@@ -106,12 +109,12 @@ LAYER
   TYPE POINT
   CONNECTIONTYPE POSTGIS
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
-  DATA "the_geom FROM (SELECT gid, the_geom, sin_primaria, nomgeo FROM rezago_educativo_censo_2020.rez_loc_rur WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
+  DATA "the_geom FROM (SELECT gid, the_geom, sin_primaria FROM rezago_educativo_censo_2020.rez_loc_rur WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Texto Número de personas en condición de analfabetizmo por localidad rural"
+    "wms_title" "Texto Número de personas sin primaria terminada por localidad rural"
     "wms_enable_request" "*"
   END
-  LABELITEM "nomgeo"
+  LABELITEM "sin_primaria"
   CLASS
     SYMBOL "circulor"
     SIZE 6
@@ -150,6 +153,7 @@ LAYER
       SIZE 8
       ALIGN center
       POSITION cc
+      FORCE true
       COLOR 0 0 0
     END
   END
@@ -167,6 +171,7 @@ LAYER
       SIZE 9
       ALIGN center
       POSITION cc
+      FORCE true
       COLOR 255 255 255
     END
   END
@@ -184,6 +189,7 @@ LAYER
       SIZE 11
       ALIGN center
       POSITION cc
+      FORCE true
       COLOR 255 255 255
     END
   END
@@ -202,12 +208,12 @@ LAYER
   TYPE POINT
   CONNECTIONTYPE POSTGIS
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
-  DATA "the_geom FROM (SELECT gid, the_geom, sin_secundaria, nomgeo FROM rezago_educativo_censo_2020.rez_loc_rur WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
+  DATA "the_geom FROM (SELECT gid, the_geom, sin_secundaria FROM rezago_educativo_censo_2020.rez_loc_rur WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Texto Número de personas sin primaria terminada por localidad rural"
+    "wms_title" "Texto Número de personas sin secundaria terminada por localidad rural"
     "wms_enable_request" "*"
   END
-  LABELITEM "nomgeo"
+  LABELITEM "sin_secundaria"
   CLASS
     SYMBOL "circulor"
     SIZE 6
@@ -246,6 +252,7 @@ LAYER
       SIZE 8
       ALIGN center
       POSITION cc
+      FORCE true
       COLOR 0 0 0
     END
   END
@@ -263,6 +270,7 @@ LAYER
       SIZE 9
       ALIGN center
       POSITION cc
+      FORCE true
       COLOR 255 255 255
     END
   END
@@ -280,6 +288,7 @@ LAYER
       SIZE 11
       ALIGN center
       POSITION cc
+      FORCE true
       COLOR 255 255 255
     END
   END
@@ -298,12 +307,12 @@ LAYER
   TYPE POINT
   CONNECTIONTYPE POSTGIS
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
-  DATA "the_geom FROM (SELECT gid, the_geom, rezago_total, nomgeo FROM rezago_educativo_censo_2020.rez_loc_rur WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
+  DATA "the_geom FROM (SELECT gid, the_geom, rezago_total FROM rezago_educativo_censo_2020.rez_loc_rur WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Texto Número de personas sin secundaria terminada por localidad rural"
+    "wms_title" "Texto Número de personas en Rezago Educativo por localidad rural"
     "wms_enable_request" "*"
   END
-  LABELITEM "nomgeo"
+  LABELITEM "rezago_total"
   CLASS
     SYMBOL "circulor"
     SIZE 6
@@ -342,6 +351,7 @@ LAYER
       SIZE 8
       ALIGN center
       POSITION cc
+      FORCE true
       COLOR 0 0 0
     END
   END
@@ -359,6 +369,7 @@ LAYER
       SIZE 9
       ALIGN center
       POSITION cc
+      FORCE true
       COLOR 255 255 255
     END
   END
@@ -376,6 +387,7 @@ LAYER
       SIZE 11
       ALIGN center
       POSITION cc
+      FORCE true
       COLOR 255 255 255
     END
   END

@@ -33,10 +33,10 @@ campos = [
 ]
 
 wms_titles = [
-    'en Rezago Educativo',
     'en condición de analfabetizmo',
     'sin primaria terminada',
-    'sin secundaria terminada'    
+    'sin secundaria terminada',
+    'en Rezago Educativo',
 ]
 
 colores = [
@@ -73,7 +73,8 @@ label_cluster_base = {
     "type": "truetype",
     "size": 9,
     "align": "center",
-    "position": "cc"                # Center-Center (Justo al centro del círculo)
+    "position": "cc",                # Center-Center (Justo al centro del círculo)
+    "force": "true"
 }
 
 layers = []
@@ -85,7 +86,7 @@ for i in range(4):
         "data": {
             "select": [campo]
         },
-        "labelitem": 'nomgeo',
+        "labelitem": campo,
         "metadata": {
             'wms_title': f"Número de personas {wms_titles[i]} por localidad rural"
         },
