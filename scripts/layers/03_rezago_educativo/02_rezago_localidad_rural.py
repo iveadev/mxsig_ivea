@@ -67,14 +67,13 @@ limite_bajo_medio = 10
 limite_medio_alto = 50
 
 # 4. Diccionario base para las etiquetas de los clústeres
-# Tu generador traducirá este bloque como "LABEL ... END" dentro de cada CLASS de clúster
 label_cluster_base = {
-    "text": f"[{cluster_count}]",   # Indica a MapServer que pinte el conteo del grupo
-    "font": "arial",                 # Asegúrate de tener esta fuente mapeada en tu FONTSET
+    "text": f"[{cluster_count}]",   # MapServer renderizará el conteo aquí
+    "font": "arial",                 # Ajusta al alias de tu FONTSET
     "type": "truetype",
     "size": 9,
     "align": "center",
-    "position": "cc"                # Centrado horizontal y verticalmente en el círculo
+    "position": "cc"                # Center-Center (Justo al centro del círculo)
 }
 
 layers = []
@@ -98,28 +97,28 @@ for i in range(4):
         'classitem': cluster_count,
         "class": [
             # =========================================================================
-            # PUNTOS INDIVIDUALES (Sin bloque 'label' para que queden limpios)
+            # PUNTOS INDIVIDUALES 
             # =========================================================================
             style_base | {
                 "name": "Localidad - Rezago Bajo",
                 "color": semaforo_verde,
                 'outlinecolor': semaforo_verde,
                 'size': 6,
-                'expression': f'([{cluster_count}] = 1 AND [{campo}] < {limite_bajo_medio})'
+                'expression': f'[{cluster_count}] = 1 AND [{campo}] < {limite_bajo_medio}'
             },
             style_base | {
                 "name": "Localidad - Rezago Medio",
                 "color": semaforo_amarillo,
                 'outlinecolor': semaforo_amarillo,
                 'size': 7,
-                'expression': f'([{cluster_count}] = 1 AND [{campo}] >= {limite_bajo_medio} AND [{campo}] < {limite_medio_alto})'
+                'expression': f'[{cluster_count}] = 1 AND [{campo}] >= {limite_bajo_medio} AND [{campo}] < {limite_medio_alto}'
             },
             style_base | {
                 "name": "Localidad - Rezago Alto",
                 "color": semaforo_rojo,
                 'outlinecolor': semaforo_rojo,
                 'size': 8,
-                'expression': f'([{cluster_count}] = 1 AND [{campo}] >= {limite_medio_alto})'
+                'expression': f'[{cluster_count}] = 1 AND [{campo}] >= {limite_medio_alto}'
             },
             
             # =========================================================================
@@ -131,7 +130,6 @@ for i in range(4):
                 'outlinecolor': "220 220 220",
                 'size': 14,
                 'expression': f'[{cluster_count}] > 1 AND [{cluster_count}] < 50',
-                # Inyección del Label (texto negro para contraste con fondo claro)
                 'label': label_cluster_base | {"color": "0 0 0", "size": 8}
             },
             style_base | {
@@ -140,7 +138,6 @@ for i in range(4):
                 'outlinecolor': "180 180 180",
                 'size': 22,
                 'expression': f'[{cluster_count}] >= 50 AND [{cluster_count}] < 500',
-                # Inyección del Label (texto blanco para contraste con fondo medio)
                 'label': label_cluster_base | {"color": "255 255 255", "size": 9}
             },
             style_base | {
@@ -149,7 +146,6 @@ for i in range(4):
                 'outlinecolor': "120 120 120",
                 'size': 32,
                 'expression': f'[{cluster_count}] >= 500',
-                # Inyección del Label (texto blanco y más grande)
                 'label': label_cluster_base | {"color": "255 255 255", "size": 11}
             }
         ],

@@ -21,7 +21,7 @@ LAYER
     OUTLINECOLOR 42 212 48
     NAME "Localidad - Rezago Bajo"
     COLOR 42 212 48
-    EXPRESSION (([Cluster_FeatureCount] = 1 AND [analfabetas] < 10))
+    EXPRESSION ([Cluster_FeatureCount] = 1 AND [analfabetas] < 10)
   END
   CLASS
     SYMBOL "circulor"
@@ -29,7 +29,7 @@ LAYER
     OUTLINECOLOR 253 141 60
     NAME "Localidad - Rezago Medio"
     COLOR 253 141 60
-    EXPRESSION (([Cluster_FeatureCount] = 1 AND [analfabetas] >= 10 AND [analfabetas] < 50))
+    EXPRESSION ([Cluster_FeatureCount] = 1 AND [analfabetas] >= 10 AND [analfabetas] < 50)
   END
   CLASS
     SYMBOL "circulor"
@@ -37,7 +37,7 @@ LAYER
     OUTLINECOLOR 227 26 28
     NAME "Localidad - Rezago Alto"
     COLOR 227 26 28
-    EXPRESSION (([Cluster_FeatureCount] = 1 AND [analfabetas] >= 50))
+    EXPRESSION ([Cluster_FeatureCount] = 1 AND [analfabetas] >= 50)
   END
   CLASS
     SYMBOL "circulor"
@@ -47,7 +47,7 @@ LAYER
     COLOR 180 180 180
     EXPRESSION ([Cluster_FeatureCount] > 1 AND [Cluster_FeatureCount] < 50)
     LABEL
-      TEXT [Cluster_FeatureCount]
+      TEXT "[Cluster_FeatureCount]"
       FONT "arial"
       TYPE truetype
       SIZE 8
@@ -64,7 +64,7 @@ LAYER
     COLOR 120 120 120
     EXPRESSION ([Cluster_FeatureCount] >= 50 AND [Cluster_FeatureCount] < 500)
     LABEL
-      TEXT [Cluster_FeatureCount]
+      TEXT "[Cluster_FeatureCount]"
       FONT "arial"
       TYPE truetype
       SIZE 9
@@ -81,7 +81,7 @@ LAYER
     COLOR 70 70 70
     EXPRESSION ([Cluster_FeatureCount] >= 500)
     LABEL
-      TEXT [Cluster_FeatureCount]
+      TEXT "[Cluster_FeatureCount]"
       FONT "arial"
       TYPE truetype
       SIZE 11
@@ -116,7 +116,7 @@ LAYER
     OUTLINECOLOR 42 212 48
     NAME "Localidad - Rezago Bajo"
     COLOR 42 212 48
-    EXPRESSION (([Cluster_FeatureCount] = 1 AND [sin_primaria] < 10))
+    EXPRESSION ([Cluster_FeatureCount] = 1 AND [sin_primaria] < 10)
   END
   CLASS
     SYMBOL "circulor"
@@ -124,7 +124,7 @@ LAYER
     OUTLINECOLOR 253 141 60
     NAME "Localidad - Rezago Medio"
     COLOR 253 141 60
-    EXPRESSION (([Cluster_FeatureCount] = 1 AND [sin_primaria] >= 10 AND [sin_primaria] < 50))
+    EXPRESSION ([Cluster_FeatureCount] = 1 AND [sin_primaria] >= 10 AND [sin_primaria] < 50)
   END
   CLASS
     SYMBOL "circulor"
@@ -132,7 +132,7 @@ LAYER
     OUTLINECOLOR 227 26 28
     NAME "Localidad - Rezago Alto"
     COLOR 227 26 28
-    EXPRESSION (([Cluster_FeatureCount] = 1 AND [sin_primaria] >= 50))
+    EXPRESSION ([Cluster_FeatureCount] = 1 AND [sin_primaria] >= 50)
   END
   CLASS
     SYMBOL "circulor"
@@ -142,7 +142,7 @@ LAYER
     COLOR 180 180 180
     EXPRESSION ([Cluster_FeatureCount] > 1 AND [Cluster_FeatureCount] < 50)
     LABEL
-      TEXT [Cluster_FeatureCount]
+      TEXT "[Cluster_FeatureCount]"
       FONT "arial"
       TYPE truetype
       SIZE 8
@@ -159,7 +159,7 @@ LAYER
     COLOR 120 120 120
     EXPRESSION ([Cluster_FeatureCount] >= 50 AND [Cluster_FeatureCount] < 500)
     LABEL
-      TEXT [Cluster_FeatureCount]
+      TEXT "[Cluster_FeatureCount]"
       FONT "arial"
       TYPE truetype
       SIZE 9
@@ -176,7 +176,7 @@ LAYER
     COLOR 70 70 70
     EXPRESSION ([Cluster_FeatureCount] >= 500)
     LABEL
-      TEXT [Cluster_FeatureCount]
+      TEXT "[Cluster_FeatureCount]"
       FONT "arial"
       TYPE truetype
       SIZE 11
@@ -211,7 +211,7 @@ LAYER
     OUTLINECOLOR 42 212 48
     NAME "Localidad - Rezago Bajo"
     COLOR 42 212 48
-    EXPRESSION (([Cluster_FeatureCount] = 1 AND [sin_secundaria] < 10))
+    EXPRESSION ([Cluster_FeatureCount] = 1 AND [sin_secundaria] < 10)
   END
   CLASS
     SYMBOL "circulor"
@@ -219,7 +219,7 @@ LAYER
     OUTLINECOLOR 253 141 60
     NAME "Localidad - Rezago Medio"
     COLOR 253 141 60
-    EXPRESSION (([Cluster_FeatureCount] = 1 AND [sin_secundaria] >= 10 AND [sin_secundaria] < 50))
+    EXPRESSION ([Cluster_FeatureCount] = 1 AND [sin_secundaria] >= 10 AND [sin_secundaria] < 50)
   END
   CLASS
     SYMBOL "circulor"
@@ -227,7 +227,7 @@ LAYER
     OUTLINECOLOR 227 26 28
     NAME "Localidad - Rezago Alto"
     COLOR 227 26 28
-    EXPRESSION (([Cluster_FeatureCount] = 1 AND [sin_secundaria] >= 50))
+    EXPRESSION ([Cluster_FeatureCount] = 1 AND [sin_secundaria] >= 50)
   END
   CLASS
     SYMBOL "circulor"
@@ -237,7 +237,7 @@ LAYER
     COLOR 180 180 180
     EXPRESSION ([Cluster_FeatureCount] > 1 AND [Cluster_FeatureCount] < 50)
     LABEL
-      TEXT [Cluster_FeatureCount]
+      TEXT "[Cluster_FeatureCount]"
       FONT "arial"
       TYPE truetype
       SIZE 8
@@ -254,7 +254,7 @@ LAYER
     COLOR 120 120 120
     EXPRESSION ([Cluster_FeatureCount] >= 50 AND [Cluster_FeatureCount] < 500)
     LABEL
-      TEXT [Cluster_FeatureCount]
+      TEXT "[Cluster_FeatureCount]"
       FONT "arial"
       TYPE truetype
       SIZE 9
@@ -271,7 +271,7 @@ LAYER
     COLOR 70 70 70
     EXPRESSION ([Cluster_FeatureCount] >= 500)
     LABEL
-      TEXT [Cluster_FeatureCount]
+      TEXT "[Cluster_FeatureCount]"
       FONT "arial"
       TYPE truetype
       SIZE 11
@@ -306,7 +306,7 @@ LAYER
     OUTLINECOLOR 42 212 48
     NAME "Localidad - Rezago Bajo"
     COLOR 42 212 48
-    EXPRESSION (([Cluster_FeatureCount] = 1 AND [rezago_total] < 10))
+    EXPRESSION ([Cluster_FeatureCount] = 1 AND [rezago_total] < 10)
   END
   CLASS
     SYMBOL "circulor"
@@ -314,7 +314,7 @@ LAYER
     OUTLINECOLOR 253 141 60
     NAME "Localidad - Rezago Medio"
     COLOR 253 141 60
-    EXPRESSION (([Cluster_FeatureCount] = 1 AND [rezago_total] >= 10 AND [rezago_total] < 50))
+    EXPRESSION ([Cluster_FeatureCount] = 1 AND [rezago_total] >= 10 AND [rezago_total] < 50)
   END
   CLASS
     SYMBOL "circulor"
@@ -322,7 +322,7 @@ LAYER
     OUTLINECOLOR 227 26 28
     NAME "Localidad - Rezago Alto"
     COLOR 227 26 28
-    EXPRESSION (([Cluster_FeatureCount] = 1 AND [rezago_total] >= 50))
+    EXPRESSION ([Cluster_FeatureCount] = 1 AND [rezago_total] >= 50)
   END
   CLASS
     SYMBOL "circulor"
@@ -332,7 +332,7 @@ LAYER
     COLOR 180 180 180
     EXPRESSION ([Cluster_FeatureCount] > 1 AND [Cluster_FeatureCount] < 50)
     LABEL
-      TEXT [Cluster_FeatureCount]
+      TEXT "[Cluster_FeatureCount]"
       FONT "arial"
       TYPE truetype
       SIZE 8
@@ -349,7 +349,7 @@ LAYER
     COLOR 120 120 120
     EXPRESSION ([Cluster_FeatureCount] >= 50 AND [Cluster_FeatureCount] < 500)
     LABEL
-      TEXT [Cluster_FeatureCount]
+      TEXT "[Cluster_FeatureCount]"
       FONT "arial"
       TYPE truetype
       SIZE 9
@@ -366,7 +366,7 @@ LAYER
     COLOR 70 70 70
     EXPRESSION ([Cluster_FeatureCount] >= 500)
     LABEL
-      TEXT [Cluster_FeatureCount]
+      TEXT "[Cluster_FeatureCount]"
       FONT "arial"
       TYPE truetype
       SIZE 11
