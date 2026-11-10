@@ -70,7 +70,7 @@ limite_medio_alto = 50
 # Tu generador traducirá este bloque como "LABEL ... END" dentro de cada CLASS de clúster
 label_cluster_base = {
     "text": f"[{cluster_count}]",   # Indica a MapServer que pinte el conteo del grupo
-    "font": "sans",                 # Asegúrate de tener esta fuente mapeada en tu FONTSET
+    "font": "arial",                 # Asegúrate de tener esta fuente mapeada en tu FONTSET
     "type": "truetype",
     "size": 9,
     "align": "center",

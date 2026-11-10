@@ -49,7 +49,7 @@ LAYER
     EXPRESSION ([Cluster_FeatureCount] > 1 AND [Cluster_FeatureCount] < 50)
     LABEL
       TEXT [Cluster_FeatureCount]
-      FONT "sans"
+      FONT "arial"
       TYPE truetype
       SIZE 8
       ALIGN center
@@ -66,7 +66,7 @@ LAYER
     EXPRESSION ([Cluster_FeatureCount] >= 50 AND [Cluster_FeatureCount] < 500)
     LABEL
       TEXT [Cluster_FeatureCount]
-      FONT "sans"
+      FONT "arial"
       TYPE truetype
       SIZE 9
       ALIGN center
@@ -83,7 +83,7 @@ LAYER
     EXPRESSION ([Cluster_FeatureCount] >= 500)
     LABEL
       TEXT [Cluster_FeatureCount]
-      FONT "sans"
+      FONT "arial"
       TYPE truetype
       SIZE 11
       ALIGN center
@@ -145,7 +145,7 @@ LAYER
     EXPRESSION ([Cluster_FeatureCount] > 1 AND [Cluster_FeatureCount] < 50)
     LABEL
       TEXT [Cluster_FeatureCount]
-      FONT "sans"
+      FONT "arial"
       TYPE truetype
       SIZE 8
       ALIGN center
@@ -162,7 +162,7 @@ LAYER
     EXPRESSION ([Cluster_FeatureCount] >= 50 AND [Cluster_FeatureCount] < 500)
     LABEL
       TEXT [Cluster_FeatureCount]
-      FONT "sans"
+      FONT "arial"
       TYPE truetype
       SIZE 9
       ALIGN center
@@ -179,7 +179,7 @@ LAYER
     EXPRESSION ([Cluster_FeatureCount] >= 500)
     LABEL
       TEXT [Cluster_FeatureCount]
-      FONT "sans"
+      FONT "arial"
       TYPE truetype
       SIZE 11
       ALIGN center
@@ -241,7 +241,7 @@ LAYER
     EXPRESSION ([Cluster_FeatureCount] > 1 AND [Cluster_FeatureCount] < 50)
     LABEL
       TEXT [Cluster_FeatureCount]
-      FONT "sans"
+      FONT "arial"
       TYPE truetype
       SIZE 8
       ALIGN center
@@ -258,7 +258,7 @@ LAYER
     EXPRESSION ([Cluster_FeatureCount] >= 50 AND [Cluster_FeatureCount] < 500)
     LABEL
       TEXT [Cluster_FeatureCount]
-      FONT "sans"
+      FONT "arial"
       TYPE truetype
       SIZE 9
       ALIGN center
@@ -275,7 +275,7 @@ LAYER
     EXPRESSION ([Cluster_FeatureCount] >= 500)
     LABEL
       TEXT [Cluster_FeatureCount]
-      FONT "sans"
+      FONT "arial"
       TYPE truetype
       SIZE 11
       ALIGN center
@@ -337,7 +337,7 @@ LAYER
     EXPRESSION ([Cluster_FeatureCount] > 1 AND [Cluster_FeatureCount] < 50)
     LABEL
       TEXT [Cluster_FeatureCount]
-      FONT "sans"
+      FONT "arial"
       TYPE truetype
       SIZE 8
       ALIGN center
@@ -354,7 +354,7 @@ LAYER
     EXPRESSION ([Cluster_FeatureCount] >= 50 AND [Cluster_FeatureCount] < 500)
     LABEL
       TEXT [Cluster_FeatureCount]
-      FONT "sans"
+      FONT "arial"
       TYPE truetype
       SIZE 9
       ALIGN center
@@ -371,7 +371,7 @@ LAYER
     EXPRESSION ([Cluster_FeatureCount] >= 500)
     LABEL
       TEXT [Cluster_FeatureCount]
-      FONT "sans"
+      FONT "arial"
       TYPE truetype
       SIZE 11
       ALIGN center
