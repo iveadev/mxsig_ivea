@@ -129,7 +129,7 @@ for i in range(4):
                 "name": "Localidad - Rezago Alto",
                 "color": semaforo_rojo,
                 'outlinecolor': semaforo_rojo,
-                'size': 8,
+                'size': 10,
                 'expression': f'([{cluster_count}] = 1 AND [{campo}] >= {limite_medio_alto})'
             },
             
@@ -140,7 +140,7 @@ for i in range(4):
                 "name": "Grupo Pequeño (2-49)",
                 "color": gris_bajo,
                 'outlinecolor': "220 220 220", # Borde claro para resaltar
-                'size': 14,
+                'size': 18,
                 'expression': f'[{cluster_count}] > 1 AND [{cluster_count}] < 50'
             },
             style_base | {
