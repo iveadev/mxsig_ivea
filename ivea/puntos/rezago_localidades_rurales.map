@@ -33,7 +33,7 @@ LAYER
   END
   CLASS
     SYMBOL "circulor"
-    SIZE 10
+    SIZE 8
     OUTLINECOLOR 227 26 28
     NAME "Localidad - Rezago Alto"
     COLOR 227 26 28
@@ -41,7 +41,7 @@ LAYER
   END
   CLASS
     SYMBOL "circulor"
-    SIZE 18
+    SIZE 14
     OUTLINECOLOR 220 220 220
     NAME "Grupo Pequeño (2-49)"
     COLOR 180 180 180
@@ -101,7 +101,7 @@ LAYER
   END
   CLASS
     SYMBOL "circulor"
-    SIZE 10
+    SIZE 8
     OUTLINECOLOR 227 26 28
     NAME "Localidad - Rezago Alto"
     COLOR 227 26 28
@@ -109,7 +109,7 @@ LAYER
   END
   CLASS
     SYMBOL "circulor"
-    SIZE 18
+    SIZE 14
     OUTLINECOLOR 220 220 220
     NAME "Grupo Pequeño (2-49)"
     COLOR 180 180 180
@@ -169,7 +169,7 @@ LAYER
   END
   CLASS
     SYMBOL "circulor"
-    SIZE 10
+    SIZE 8
     OUTLINECOLOR 227 26 28
     NAME "Localidad - Rezago Alto"
     COLOR 227 26 28
@@ -177,7 +177,7 @@ LAYER
   END
   CLASS
     SYMBOL "circulor"
-    SIZE 18
+    SIZE 14
     OUTLINECOLOR 220 220 220
     NAME "Grupo Pequeño (2-49)"
     COLOR 180 180 180
@@ -237,7 +237,7 @@ LAYER
   END
   CLASS
     SYMBOL "circulor"
-    SIZE 10
+    SIZE 8
     OUTLINECOLOR 227 26 28
     NAME "Localidad - Rezago Alto"
     COLOR 227 26 28
@@ -245,7 +245,7 @@ LAYER
   END
   CLASS
     SYMBOL "circulor"
-    SIZE 18
+    SIZE 14
     OUTLINECOLOR 220 220 220
     NAME "Grupo Pequeño (2-49)"
     COLOR 180 180 180
