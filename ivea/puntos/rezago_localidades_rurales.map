@@ -46,6 +46,15 @@ LAYER
     NAME "Grupo Pequeño (2-49)"
     COLOR 180 180 180
     EXPRESSION ([Cluster_FeatureCount] > 1 AND [Cluster_FeatureCount] < 50)
+    LABEL
+      TEXT [Cluster_FeatureCount]
+      FONT "arial"
+      TYPE truetype
+      SIZE 8
+      ALIGN center
+      POSITION cc
+      COLOR 0 0 0
+    END
   END
   CLASS
     SYMBOL "circulor"
@@ -54,6 +63,15 @@ LAYER
     NAME "Grupo Medio (50-499)"
     COLOR 120 120 120
     EXPRESSION ([Cluster_FeatureCount] >= 50 AND [Cluster_FeatureCount] < 500)
+    LABEL
+      TEXT [Cluster_FeatureCount]
+      FONT "arial"
+      TYPE truetype
+      SIZE 9
+      ALIGN center
+      POSITION cc
+      COLOR 255 255 255
+    END
   END
   CLASS
     SYMBOL "circulor"
@@ -62,6 +80,15 @@ LAYER
     NAME "Grupo Grande (>=500)"
     COLOR 70 70 70
     EXPRESSION ([Cluster_FeatureCount] >= 500)
+    LABEL
+      TEXT [Cluster_FeatureCount]
+      FONT "arial"
+      TYPE truetype
+      SIZE 11
+      ALIGN center
+      POSITION cc
+      COLOR 255 255 255
+    END
   END
   PROCESSING "CLOSE_CONNECTION=DEFER"
   CLUSTER
@@ -114,6 +141,15 @@ LAYER
     NAME "Grupo Pequeño (2-49)"
     COLOR 180 180 180
     EXPRESSION ([Cluster_FeatureCount] > 1 AND [Cluster_FeatureCount] < 50)
+    LABEL
+      TEXT [Cluster_FeatureCount]
+      FONT "arial"
+      TYPE truetype
+      SIZE 8
+      ALIGN center
+      POSITION cc
+      COLOR 0 0 0
+    END
   END
   CLASS
     SYMBOL "circulor"
@@ -122,6 +158,15 @@ LAYER
     NAME "Grupo Medio (50-499)"
     COLOR 120 120 120
     EXPRESSION ([Cluster_FeatureCount] >= 50 AND [Cluster_FeatureCount] < 500)
+    LABEL
+      TEXT [Cluster_FeatureCount]
+      FONT "arial"
+      TYPE truetype
+      SIZE 9
+      ALIGN center
+      POSITION cc
+      COLOR 255 255 255
+    END
   END
   CLASS
     SYMBOL "circulor"
@@ -130,6 +175,15 @@ LAYER
     NAME "Grupo Grande (>=500)"
     COLOR 70 70 70
     EXPRESSION ([Cluster_FeatureCount] >= 500)
+    LABEL
+      TEXT [Cluster_FeatureCount]
+      FONT "arial"
+      TYPE truetype
+      SIZE 11
+      ALIGN center
+      POSITION cc
+      COLOR 255 255 255
+    END
   END
   PROCESSING "CLOSE_CONNECTION=DEFER"
   CLUSTER
@@ -182,6 +236,15 @@ LAYER
     NAME "Grupo Pequeño (2-49)"
     COLOR 180 180 180
     EXPRESSION ([Cluster_FeatureCount] > 1 AND [Cluster_FeatureCount] < 50)
+    LABEL
+      TEXT [Cluster_FeatureCount]
+      FONT "arial"
+      TYPE truetype
+      SIZE 8
+      ALIGN center
+      POSITION cc
+      COLOR 0 0 0
+    END
   END
   CLASS
     SYMBOL "circulor"
@@ -190,6 +253,15 @@ LAYER
     NAME "Grupo Medio (50-499)"
     COLOR 120 120 120
     EXPRESSION ([Cluster_FeatureCount] >= 50 AND [Cluster_FeatureCount] < 500)
+    LABEL
+      TEXT [Cluster_FeatureCount]
+      FONT "arial"
+      TYPE truetype
+      SIZE 9
+      ALIGN center
+      POSITION cc
+      COLOR 255 255 255
+    END
   END
   CLASS
     SYMBOL "circulor"
@@ -198,6 +270,15 @@ LAYER
     NAME "Grupo Grande (>=500)"
     COLOR 70 70 70
     EXPRESSION ([Cluster_FeatureCount] >= 500)
+    LABEL
+      TEXT [Cluster_FeatureCount]
+      FONT "arial"
+      TYPE truetype
+      SIZE 11
+      ALIGN center
+      POSITION cc
+      COLOR 255 255 255
+    END
   END
   PROCESSING "CLOSE_CONNECTION=DEFER"
   CLUSTER
@@ -250,6 +331,15 @@ LAYER
     NAME "Grupo Pequeño (2-49)"
     COLOR 180 180 180
     EXPRESSION ([Cluster_FeatureCount] > 1 AND [Cluster_FeatureCount] < 50)
+    LABEL
+      TEXT [Cluster_FeatureCount]
+      FONT "arial"
+      TYPE truetype
+      SIZE 8
+      ALIGN center
+      POSITION cc
+      COLOR 0 0 0
+    END
   END
   CLASS
     SYMBOL "circulor"
@@ -258,6 +348,15 @@ LAYER
     NAME "Grupo Medio (50-499)"
     COLOR 120 120 120
     EXPRESSION ([Cluster_FeatureCount] >= 50 AND [Cluster_FeatureCount] < 500)
+    LABEL
+      TEXT [Cluster_FeatureCount]
+      FONT "arial"
+      TYPE truetype
+      SIZE 9
+      ALIGN center
+      POSITION cc
+      COLOR 255 255 255
+    END
   END
   CLASS
     SYMBOL "circulor"
@@ -266,6 +365,15 @@ LAYER
     NAME "Grupo Grande (>=500)"
     COLOR 70 70 70
     EXPRESSION ([Cluster_FeatureCount] >= 500)
+    LABEL
+      TEXT [Cluster_FeatureCount]
+      FONT "arial"
+      TYPE truetype
+      SIZE 11
+      ALIGN center
+      POSITION cc
+      COLOR 255 255 255
+    END
   END
   PROCESSING "CLOSE_CONNECTION=DEFER"
   CLUSTER

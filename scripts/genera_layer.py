@@ -115,7 +115,7 @@ def podar_diccionario(dicc, modo="BASE"):
     for k, v in dicc.items():
         clave_upper = k.strip().upper()
         
-        if modo == "BASE" and clave_upper in ["LABELITEM", "LABEL"]: continue
+        if modo == "BASE" and clave_upper in ["LABELITEM"]: continue
         if modo == "TEXTO" and clave_upper in ["STYLE"]: continue
         
         if isinstance(v, dict):
