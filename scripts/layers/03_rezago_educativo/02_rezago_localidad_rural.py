@@ -73,16 +73,25 @@ def intensificar_rgb(rgb_str, factor):
     return ",".join(str(c) for c in nuevos_canales)
 
 
-# construccion de las capas
+# 1. Definición de la escala de Grises para los Clústeres (> 1 punto)
+gris_bajo  = "180 180 180"  # Gris claro para grupos pequeños
+gris_medio = "120 120 120"  # Gris medio
+gris_alto  = "70 70 70"     # Gris oscuro para grupos masivos
+
+# 2. Definición del Esquema Semáforo para Puntos Individuales (== 1 punto)
+semaforo_verde    = "42 212 48"   # Densidad Baja
+semaforo_amarillo = "253 141 60"  # Densidad Media (Naranja/Amarillo brillante)
+semaforo_rojo     = "227 26 28"   # Densidad Alta
+
+# 3. Umbrales de población/densidad para la variable 'campo'
+# Ajusta estos números según el comportamiento real de tus datos del censo
+limite_bajo_medio = 10   # Menos de 10 personas -> Verde
+limite_medio_alto = 50   # Entre 10 y 49 -> Amarillo. 50 o más -> Rojo.
+
 layers = []
-#for campo in campos:
 for i in range(4):
     campo = campos[i]
-    color = colores[i]
-    bajo = ["255 255 204","217 170 40"]
-    medio = ["210 80 10","65 182 196"]
-    alto = ["150 10 15","8 29 88"]
-
+    
     layers.append({
         "name": campo,
         "data": {
@@ -99,33 +108,57 @@ for i in range(4):
         },
         'classitem': cluster_count,
         "class": [
+            # =========================================================================
+            # PUNTOS INDIVIDUALES (Cluster_FeatureCount = 1) - Semáforo por Densidad
+            # =========================================================================
             style_base | {
-            "color": color,
-            'outlinecolor': color,
-            'size': 8,
-            'expression': f'[{cluster_count}] = 1'
+                "name": "Localidad - Rezago Bajo",
+                "color": semaforo_verde,
+                'outlinecolor': semaforo_verde,
+                'size': 6,
+                'expression': f'([{cluster_count}] = 1 AND [{campo}] < {limite_bajo_medio})'
             },
             style_base | {
-            "color": bajo[1],
-            'outlinecolor': bajo[0],
-            'size': 14,
-            'expression': f'[{cluster_count}] > 1 AND [{cluster_count}] < 50'
+                "name": "Localidad - Rezago Medio",
+                "color": semaforo_amarillo,
+                'outlinecolor': semaforo_amarillo,
+                'size': 7,
+                'expression': f'([{cluster_count}] = 1 AND [{campo}] >= {limite_bajo_medio} AND [{campo}] < {limite_medio_alto})'
             },
             style_base | {
-            "color": medio[1],
-            'outlinecolor': medio[0],
-            'size': 22,
-            'expression': f'[{cluster_count}] >= 50 AND [{cluster_count}] < 500'
+                "name": "Localidad - Rezago Alto",
+                "color": semaforo_rojo,
+                'outlinecolor': semaforo_rojo,
+                'size': 8,
+                'expression': f'([{cluster_count}] = 1 AND [{campo}] >= {limite_medio_alto})'
+            },
+            
+            # =========================================================================
+            # CLÚSTERES (Cluster_FeatureCount > 1) - Escala de Grises Neutral
+            # =========================================================================
+            style_base | {
+                "name": "Grupo Pequeño (2-49)",
+                "color": gris_bajo,
+                'outlinecolor': "220 220 220", # Borde claro para resaltar
+                'size': 14,
+                'expression': f'[{cluster_count}] > 1 AND [{cluster_count}] < 50'
             },
             style_base | {
-            "color": alto[1],
-            'outlinecolor': alto[0],
-            'size': 32,
-            'expression': f'[{cluster_count}] >= 500'
+                "name": "Grupo Medio (50-499)",
+                "color": gris_medio,
+                'outlinecolor': "180 180 180",
+                'size': 22,
+                'expression': f'[{cluster_count}] >= 50 AND [{cluster_count}] < 500'
+            },
+            style_base | {
+                "name": "Grupo Grande (>=500)",
+                "color": gris_alto,
+                'outlinecolor': "120 120 120",
+                'size': 32,
+                'expression': f'[{cluster_count}] >= 500'
             }
         ],
         "_tree": {
             "grupo": "rezago_educativo_censo",
         },
     })
-
