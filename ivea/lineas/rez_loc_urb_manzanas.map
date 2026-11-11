@@ -80,3 +80,234 @@ LAYER
     END
   END
 END
+
+LAYER
+  NAME "c_rezago_educativo_sin_prim_loc_urb_manzana"
+  STATUS ON
+  TYPE LINE
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom, analfabeta FROM rezago_educativo_censo_2020.rez_loc_urb_manzanas_limpio WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
+  METADATA
+    "wms_title" "Rezago sin primaria por localidad urbana (manzana)"
+    "wms_enable_request" "*"
+  END
+  CLASS
+    NAME "estilo para el campo sin_prim"
+    STYLE
+      OUTLINECOLOR 255 0 128
+      WIDTH 0.8
+    END
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION cc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "estilo para el campo sin_prim"
+    STYLE
+      OUTLINECOLOR 255 0 128
+      WIDTH 0.8
+    END
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION cc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "estilo para el campo sin_prim"
+    STYLE
+      OUTLINECOLOR 255 0 128
+      WIDTH 0.8
+    END
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION cc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "estilo para el campo sin_prim"
+    STYLE
+      OUTLINECOLOR 255 0 128
+      WIDTH 0.8
+    END
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION cc
+      TYPE truetype
+    END
+  END
+END
+
+LAYER
+  NAME "c_rezago_educativo_sin_sec_loc_urb_manzana"
+  STATUS ON
+  TYPE LINE
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom, analfabeta, sin_prim FROM rezago_educativo_censo_2020.rez_loc_urb_manzanas_limpio WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
+  METADATA
+    "wms_title" "Rezago sin secundaria por localidad urbana (manzana)"
+    "wms_enable_request" "*"
+  END
+  CLASS
+    NAME "estilo para el campo sin_sec"
+    STYLE
+      OUTLINECOLOR 255 0 128
+      WIDTH 0.8
+    END
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION cc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "estilo para el campo sin_sec"
+    STYLE
+      OUTLINECOLOR 255 0 128
+      WIDTH 0.8
+    END
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION cc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "estilo para el campo sin_sec"
+    STYLE
+      OUTLINECOLOR 255 0 128
+      WIDTH 0.8
+    END
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION cc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "estilo para el campo sin_sec"
+    STYLE
+      OUTLINECOLOR 255 0 128
+      WIDTH 0.8
+    END
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION cc
+      TYPE truetype
+    END
+  END
+END
+
+LAYER
+  NAME "c_rezago_educativo_rez_total_loc_urb_manzana"
+  STATUS ON
+  TYPE LINE
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom, analfabeta, sin_prim, sin_sec FROM rezago_educativo_censo_2020.rez_loc_urb_manzanas_limpio WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
+  METADATA
+    "wms_title" "Rezago total de Rezago Educativo por localidad urbana (manzana)"
+    "wms_enable_request" "*"
+  END
+  CLASS
+    NAME "estilo para el campo rez_total"
+    STYLE
+      OUTLINECOLOR 255 0 128
+      WIDTH 0.8
+    END
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION cc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "estilo para el campo rez_total"
+    STYLE
+      OUTLINECOLOR 255 0 128
+      WIDTH 0.8
+    END
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION cc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "estilo para el campo rez_total"
+    STYLE
+      OUTLINECOLOR 255 0 128
+      WIDTH 0.8
+    END
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION cc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "estilo para el campo rez_total"
+    STYLE
+      OUTLINECOLOR 255 0 128
+      WIDTH 0.8
+    END
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION cc
+      TYPE truetype
+    END
+  END
+END

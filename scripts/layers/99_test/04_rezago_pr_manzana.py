@@ -23,16 +23,16 @@ style_base =  {
 
 mapas_tematico = [
     "analfabeta",
-    #"sin_prim",
-    #"sin_sec",
-    #"rez_total",
+    "sin_prim",
+    "sin_sec",
+    "rez_total",
 ]
 
 wms_titles = [
     "de analfabetismo",
-    #"sin primaria",
-    #"sin secundaria",
-    #"total de Rezago Educativo",
+    "sin primaria",
+    "sin secundaria",
+    "total de Rezago Educativo",
 ]
 
 # construccion de las capas
