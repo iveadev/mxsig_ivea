@@ -16,7 +16,7 @@ layer = {
 }
 
 style_base =  {
-    'outlinecolor': '205,205,205',
+    'outlinecolor': '255,0,128',
     "width" : 0.8,
 }
 
