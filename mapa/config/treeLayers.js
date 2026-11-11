@@ -569,6 +569,16 @@ define(function() {
                         "scale": 1,
                         "position": 51,
                         "active": false
+                    },
+                    "c_rezago_educativo_analfabeta_loc_urb_manzana": {
+                        "label": "Rezago de analfabetismo por localidad urbana (manzana)",
+                        "scale": 1,
+                        "position": 52,
+                        "active": false,
+                        "texts": {
+                            "scale": 1,
+                            "active": false
+                        }
                     }
                 }
             }

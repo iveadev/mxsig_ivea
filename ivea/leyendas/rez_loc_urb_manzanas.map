@@ -1,0 +1,67 @@
+# =================================================================
+# MAPA EXCLUSIVO DE TEXTOS (leyendas)
+# ARCHIVO GENERADO AUTOMÁTICAMENTE A PARTIR DE LA DEFINICIÓN: layers.99_test.04_rezago_pr_manzana 
+# DESCRIPCIÓN: Rezago educativo por manzanas, Censo 2020 
+# =================================================================
+
+LAYER
+  NAME "t_rezago_educativo_analfabeta_loc_urb_manzana"
+  STATUS ON
+  TYPE POLYGON
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom, analfabeta FROM rezago_educativo_censo_2020.rez_loc_urb_manzanas_limpio WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
+  METADATA
+    "wms_title" "Texto Rezago de analfabetismo por localidad urbana (manzana)"
+    "wms_enable_request" "*"
+  END
+  LABELITEM "analfabeta"
+  CLASS
+    NAME "estilo para el campo analfabeta"
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION cc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "estilo para el campo analfabeta"
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION cc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "estilo para el campo analfabeta"
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION cc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "estilo para el campo analfabeta"
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION cc
+      TYPE truetype
+    END
+  END
+END

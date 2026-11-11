@@ -17,3 +17,7 @@ INCLUDE "/opt/map/mdm60/ivea/leyendas/mun_regiones_pvd.map"                    #
 INCLUDE "/opt/map/mdm60/ivea/leyendas/rezago_localidades_rurales.map"		   #rezago por localidad
 
 INCLUDE "/opt/map/mdm60/ivea/leyendas/rezago_municipios_indigenas.map"
+
+
+#TEST
+INCLUDE "/opt/map/mdm60/ivea/leyendas/rez_loc_urb_manzanas.map"
