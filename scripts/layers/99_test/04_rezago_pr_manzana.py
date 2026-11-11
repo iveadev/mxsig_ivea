@@ -9,7 +9,7 @@ output = "rez_loc_urb_manzanas"
 tabla = "rezago_educativo_censo_2020.rez_loc_urb_manzanas_limpio"
 
 layer = {
-    'type' : 'POLYGON',
+    'type' : 'LINE',
     "data": {
         'table': tabla,
     },

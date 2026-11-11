@@ -31,4 +31,4 @@ INCLUDE "/opt/map/mdm60/ivea/poligonos/rezago_municipios_indigenas.map"
 
 #TEST
 INCLUDE "/opt/map/mdm60/ivea/poligonos/test_ver.map"							#Caps de prueba
-INCLUDE "/opt/map/mdm60/ivea/poligonos/rez_loc_urb_manzanas.map"
+INCLUDE "/opt/map/mdm60/ivea/lineas/rez_loc_urb_manzanas.map"
