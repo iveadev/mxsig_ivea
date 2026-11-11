@@ -1,0 +1,269 @@
+# =================================================================
+# MAPA EXCLUSIVO DE TEXTOS (leyendas)
+# ARCHIVO GENERADO AUTOMÁTICAMENTE A PARTIR DE LA DEFINICIÓN: layers.03_rezago_educativo.03_rezago_municipios_indigenas 
+# DESCRIPCIÓN: Rezago educativo en municipios índigenas Censo 2020 
+# =================================================================
+
+LAYER
+  NAME "t_rezago_educativo_analfabeta"
+  STATUS ON
+  TYPE POLYGON
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom, analfabeta FROM rezago_educativo_censo_2020.rez_mun_indigena WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
+  METADATA
+    "wms_title" "Texto Porcentaje de analfabetismo en municipios índigenas"
+    "wms_enable_request" "*"
+  END
+  LABELITEM "analfabeta"
+  CLASS
+    NAME "bajo"
+    EXPRESSION ([analfabeta] <=14.67)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "medio"
+    EXPRESSION ([analfabeta] >14.67 and [analfabeta] <=22.95)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "alto"
+    EXPRESSION ([analfabeta] >22.95 and [analfabeta] <=28.35)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "muy_alto"
+    EXPRESSION ([analfabeta] >28.35)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+END
+
+LAYER
+  NAME "t_rezago_educativo_sin_prim"
+  STATUS ON
+  TYPE POLYGON
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom, sin_prim FROM rezago_educativo_censo_2020.rez_mun_indigena WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
+  METADATA
+    "wms_title" "Texto Porcentaje sin primaria en municipios índigenas"
+    "wms_enable_request" "*"
+  END
+  LABELITEM "sin_prim"
+  CLASS
+    NAME "bajo"
+    EXPRESSION ([sin_prim] <=16.7)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "medio"
+    EXPRESSION ([sin_prim] >16.7 and [sin_prim] <=21.8)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "alto"
+    EXPRESSION ([sin_prim] >21.8 and [sin_prim] <=26.92)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "muy_alto"
+    EXPRESSION ([sin_prim] >26.92)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+END
+
+LAYER
+  NAME "t_rezago_educativo_sin_sec"
+  STATUS ON
+  TYPE POLYGON
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom, sin_sec FROM rezago_educativo_censo_2020.rez_mun_indigena WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
+  METADATA
+    "wms_title" "Texto Porcentaje sin secundaria en municipios índigenas"
+    "wms_enable_request" "*"
+  END
+  LABELITEM "sin_sec"
+  CLASS
+    NAME "bajo"
+    EXPRESSION ([sin_sec] <=17.1)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "medio"
+    EXPRESSION ([sin_sec] >17.1 and [sin_sec] <=20.3)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "alto"
+    EXPRESSION ([sin_sec] >20.3 and [sin_sec] <=24.4)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "muy_alto"
+    EXPRESSION ([sin_sec] >24.4)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+END
+
+LAYER
+  NAME "t_rezago_educativo_rez_total"
+  STATUS ON
+  TYPE POLYGON
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom, rez_total FROM rezago_educativo_censo_2020.rez_mun_indigena WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
+  METADATA
+    "wms_title" "Texto Porcentaje total de Rezago Educativo en municipios índigenas"
+    "wms_enable_request" "*"
+  END
+  LABELITEM "rez_total"
+  CLASS
+    NAME "bajo"
+    EXPRESSION ([rez_total] <=57.75)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "medio"
+    EXPRESSION ([rez_total] >57.75 and [rez_total] <=66.95)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "alto"
+    EXPRESSION ([rez_total] >66.95 and [rez_total] <=75.0)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "muy_alto"
+    EXPRESSION ([rez_total] >75.0)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+END

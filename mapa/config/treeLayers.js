@@ -480,7 +480,7 @@ define(function() {
                 "label": "Rezago Educativo CENSO 2020",
                 "layers": {
                     "c_analfabetas": {
-                        "label": "Número de personas en Rezago Educativo por localidad rural",
+                        "label": "Número de personas en condición de analfabetizmo por localidad rural",
                         "scale": 1,
                         "position": 43,
                         "active": false,
@@ -490,7 +490,7 @@ define(function() {
                         }
                     },
                     "c_sin_primaria": {
-                        "label": "Número de personas en condición de analfabetizmo por localidad rural",
+                        "label": "Número de personas sin primaria terminada por localidad rural",
                         "scale": 1,
                         "position": 44,
                         "active": false,
@@ -500,7 +500,7 @@ define(function() {
                         }
                     },
                     "c_sin_secundaria": {
-                        "label": "Número de personas sin primaria terminada por localidad rural",
+                        "label": "Número de personas sin secundaria terminada por localidad rural",
                         "scale": 1,
                         "position": 45,
                         "active": false,
@@ -510,9 +510,49 @@ define(function() {
                         }
                     },
                     "c_rezago_total": {
-                        "label": "Número de personas sin secundaria terminada por localidad rural",
+                        "label": "Número de personas en Rezago Educativo por localidad rural",
                         "scale": 1,
                         "position": 46,
+                        "active": false,
+                        "texts": {
+                            "scale": 1,
+                            "active": false
+                        }
+                    },
+                    "c_rezago_educativo_analfabeta": {
+                        "label": "Porcentaje de analfabetismo en municipios índigenas",
+                        "scale": 1,
+                        "position": 47,
+                        "active": false,
+                        "texts": {
+                            "scale": 1,
+                            "active": false
+                        }
+                    },
+                    "c_rezago_educativo_sin_prim": {
+                        "label": "Porcentaje sin primaria en municipios índigenas",
+                        "scale": 1,
+                        "position": 48,
+                        "active": false,
+                        "texts": {
+                            "scale": 1,
+                            "active": false
+                        }
+                    },
+                    "c_rezago_educativo_sin_sec": {
+                        "label": "Porcentaje sin secundaria en municipios índigenas",
+                        "scale": 1,
+                        "position": 49,
+                        "active": false,
+                        "texts": {
+                            "scale": 1,
+                            "active": false
+                        }
+                    },
+                    "c_rezago_educativo_rez_total": {
+                        "label": "Porcentaje total de Rezago Educativo en municipios índigenas",
+                        "scale": 1,
+                        "position": 50,
                         "active": false,
                         "texts": {
                             "scale": 1,
@@ -527,7 +567,7 @@ define(function() {
                     "c_test_mun_ver": {
                         "label": "Capa de municipios reproyectados",
                         "scale": 1,
-                        "position": 47,
+                        "position": 51,
                         "active": false
                     }
                 }

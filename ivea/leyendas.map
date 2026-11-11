@@ -14,4 +14,6 @@ INCLUDE "/opt/map/mdm60/ivea/leyendas/lengua_indigena_mun.map"                 #
 
 INCLUDE "/opt/map/mdm60/ivea/leyendas/mun_regiones_pvd.map"                    #regiones PVD
 
-INCLUDE "/opt/map/mdm60/ivea/leyendas/rezago_localidades_rurales.map"		   #rezago por localidad	
+INCLUDE "/opt/map/mdm60/ivea/leyendas/rezago_localidades_rurales.map"		   #rezago por localidad
+
+INCLUDE "/opt/map/mdm60/ivea/leyendas/rezago_municipios_indigenas.map"
