@@ -562,10 +562,10 @@ define(function() {
                 }
             },
             "G12": {
-                "label": "Rezago Educativo por edad y sexo CENSO 2020 (alfabetización)",
+                "label": "Rezago Educativo por edad y sexo CENSO 2020",
                 "layers": {
                     "c_rezago_educativo_sexo_edad_alfa_hombres": {
-                        "label": "Personas en rezago por sexo(alfa_hombres, analfabetismo",
+                        "label": "Hombres en condición de analfabetismo",
                         "scale": 1,
                         "position": 51,
                         "active": false,
@@ -575,7 +575,7 @@ define(function() {
                         }
                     },
                     "c_rezago_educativo_sexo_edad_alfa_mujeres": {
-                        "label": "Personas en rezago por sexo(alfa_mujeres, sin secundaria",
+                        "label": "Mujeres en condición de analfabetismo",
                         "scale": 1,
                         "position": 52,
                         "active": false,
@@ -583,14 +583,9 @@ define(function() {
                             "scale": 1,
                             "active": false
                         }
-                    }
-                }
-            },
-            "G13": {
-                "label": "Rezago Educativo por edad y sexo CENSO 2020 (sin secundaria)",
-                "layers": {
+                    },
                     "c_rezago_educativo_sexo_edad_sin_sec_hombres": {
-                        "label": "Personas en rezago por sexo(sin_sec_hombres, analfabetismo",
+                        "label": "Hombres sin secundaria terminada",
                         "scale": 1,
                         "position": 53,
                         "active": false,
@@ -600,7 +595,7 @@ define(function() {
                         }
                     },
                     "c_rezago_educativo_sexo_edad_sin_sec_mujeres": {
-                        "label": "Personas en rezago por sexo(sin_sec_mujeres, sin secundaria",
+                        "label": "Mujeres sin secundaria terminada",
                         "scale": 1,
                         "position": 54,
                         "active": false,
@@ -611,7 +606,7 @@ define(function() {
                     }
                 }
             },
-            "G14": {
+            "G13": {
                 "label": "***Capas de prueba de compatibilidad con MDM***",
                 "layers": {
                     "c_test_mun_ver": {

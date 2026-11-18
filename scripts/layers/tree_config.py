@@ -48,15 +48,12 @@ GRUPOS = {
     "rezago_educativo_censo": {
         "label": "Rezago Educativo CENSO 2020",
     },
-    "rezago_censo_2020_edades_y_sexo_alfa": {
-        'label': 'Rezago Educativo por edad y sexo CENSO 2020 (alfabetización)'
+    "rezago_censo_2020_edades_y_sexo": {
+        'label': 'Rezago Educativo por edad y sexo CENSO 2020'
     },
     # "rezago_censo_2020_edades_y_sexo_sin_prim": {
     #     'label': 'Rezago Educativo por edad y sexo CENSO 2020 (sin primaria)'
     # },
-    "rezago_censo_2020_edades_y_sexo_sin_sec": {
-        'label': 'Rezago Educativo por edad y sexo CENSO 2020 (sin secundaria)'
-    },
     
     "test": {
         "label": "***Capas de prueba de compatibilidad con MDM***"

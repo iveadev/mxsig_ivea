@@ -12,7 +12,7 @@ LAYER
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
   DATA "the_geom FROM (SELECT gid, the_geom, alfa_hombres FROM rezago_educativo_censo_2020.rez_educ_edad_sexo_2020_alfa WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Texto Personas en rezago por sexo(alfa_hombres, analfabetismo"
+    "wms_title" "Texto Hombres en condición de analfabetismo"
     "wms_enable_request" "*"
   END
   LABELITEM "alfa_hombres"
@@ -78,7 +78,7 @@ LAYER
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
   DATA "the_geom FROM (SELECT gid, the_geom, alfa_mujeres FROM rezago_educativo_censo_2020.rez_educ_edad_sexo_2020_alfa WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Texto Personas en rezago por sexo(alfa_mujeres, sin secundaria"
+    "wms_title" "Texto Mujeres en condición de analfabetismo"
     "wms_enable_request" "*"
   END
   LABELITEM "alfa_mujeres"
@@ -144,7 +144,7 @@ LAYER
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
   DATA "the_geom FROM (SELECT gid, the_geom, sin_sec_hombres FROM rezago_educativo_censo_2020.rez_educ_edad_sexo_2020_sin_sec WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Texto Personas en rezago por sexo(sin_sec_hombres, analfabetismo"
+    "wms_title" "Texto Hombres sin secundaria terminada"
     "wms_enable_request" "*"
   END
   LABELITEM "sin_sec_hombres"
@@ -210,7 +210,7 @@ LAYER
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
   DATA "the_geom FROM (SELECT gid, the_geom, sin_sec_mujeres FROM rezago_educativo_censo_2020.rez_educ_edad_sexo_2020_sin_sec WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Texto Personas en rezago por sexo(sin_sec_mujeres, sin secundaria"
+    "wms_title" "Texto Mujeres sin secundaria terminada"
     "wms_enable_request" "*"
   END
   LABELITEM "sin_sec_mujeres"

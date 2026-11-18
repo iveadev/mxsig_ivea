@@ -54,9 +54,9 @@ totales = [ # se le concatena el nombre del nivel
 ]
 
 titulos = [
-    "analfabetismo",
-    #"sin primaria",
-    "sin secundaria",
+    "en condición de analfabetismo",
+    #"sin primaria terminada",
+    "sin secundaria terminada",
 ]
 
 grupo = 'rezago_censo_2020_' # nombrew base para el grupo
@@ -64,12 +64,10 @@ grupo = 'rezago_censo_2020_' # nombrew base para el grupo
 
 # construccion de las capas
 layers = []
-
 for idx in range(2):
     #variables
     prefijo = tablas[idx]
     tabla = esquema+prefijo
-    t=0
     for campo_t in totales:
         campo=prefijo+'_'+campo_t
         print(f"{tabla},{campo}")
@@ -113,12 +111,11 @@ for idx in range(2):
             },
             "labelitem": campo,
             "metadata": {
-                'wms_title': f"Personas en rezago por sexo({campo}, {titulos[t]}"
+                'wms_title': f"{campo_t.capitalize()} {titulos[idx]}"
             },
             "class": clases,
             "_tree": {
-                "grupo": "rezago_censo_2020_edades_y_sexo_"+prefijo,
+                "grupo": "rezago_censo_2020_edades_y_sexo",
             },
         })
-        t=t+1
 
