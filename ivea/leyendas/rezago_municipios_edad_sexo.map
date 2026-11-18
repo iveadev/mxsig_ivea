@@ -137,20 +137,20 @@ LAYER
 END
 
 LAYER
-  NAME "t_rezago_educativo_sexo_edad_sin_sec_hombres"
+  NAME "t_rezago_educativo_sexo_edad_sin_prim_hombres"
   STATUS ON
   TYPE POLYGON
   CONNECTIONTYPE POSTGIS
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
-  DATA "the_geom FROM (SELECT gid, the_geom, sin_sec_hombres FROM rezago_educativo_censo_2020.rez_educ_edad_sexo_2020_sin_sec WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
+  DATA "the_geom FROM (SELECT gid, the_geom, sin_prim_hombres FROM rezago_educativo_censo_2020.rez_educ_edad_sexo_2020_sin_prim WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Texto Hombres sin secundaria terminada"
+    "wms_title" "Texto Hombres sin primaria terminada"
     "wms_enable_request" "*"
   END
-  LABELITEM "sin_sec_hombres"
+  LABELITEM "sin_prim_hombres"
   CLASS
     NAME "bajo"
-    EXPRESSION ([sin_sec_hombres] <=882.25)
+    EXPRESSION ([sin_prim_hombres] <=738.75)
     LABEL
       FONT "arial"
       SIZE 10
@@ -163,7 +163,7 @@ LAYER
   END
   CLASS
     NAME "medio"
-    EXPRESSION ([sin_sec_hombres] >882.25 and [sin_sec_hombres] <=1526.0)
+    EXPRESSION ([sin_prim_hombres] >738.75 and [sin_prim_hombres] <=1199.5)
     LABEL
       FONT "arial"
       SIZE 10
@@ -176,7 +176,7 @@ LAYER
   END
   CLASS
     NAME "alto"
-    EXPRESSION ([sin_sec_hombres] >1526.0 and [sin_sec_hombres] <=2697.0)
+    EXPRESSION ([sin_prim_hombres] >1199.5 and [sin_prim_hombres] <=2391.25)
     LABEL
       FONT "arial"
       SIZE 10
@@ -189,7 +189,7 @@ LAYER
   END
   CLASS
     NAME "muy_alto"
-    EXPRESSION ([sin_sec_hombres] >2697.0)
+    EXPRESSION ([sin_prim_hombres] >2391.25)
     LABEL
       FONT "arial"
       SIZE 10
@@ -203,20 +203,20 @@ LAYER
 END
 
 LAYER
-  NAME "t_rezago_educativo_sexo_edad_sin_sec_mujeres"
+  NAME "t_rezago_educativo_sexo_edad_sin_prim_mujeres"
   STATUS ON
   TYPE POLYGON
   CONNECTIONTYPE POSTGIS
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
-  DATA "the_geom FROM (SELECT gid, the_geom, sin_sec_mujeres FROM rezago_educativo_censo_2020.rez_educ_edad_sexo_2020_sin_sec WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
+  DATA "the_geom FROM (SELECT gid, the_geom, sin_prim_mujeres FROM rezago_educativo_censo_2020.rez_educ_edad_sexo_2020_sin_prim WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Texto Mujeres sin secundaria terminada"
+    "wms_title" "Texto Mujeres sin primaria terminada"
     "wms_enable_request" "*"
   END
-  LABELITEM "sin_sec_mujeres"
+  LABELITEM "sin_prim_mujeres"
   CLASS
     NAME "bajo"
-    EXPRESSION ([sin_sec_mujeres] <=896.25)
+    EXPRESSION ([sin_prim_mujeres] <=703.0)
     LABEL
       FONT "arial"
       SIZE 10
@@ -229,7 +229,7 @@ LAYER
   END
   CLASS
     NAME "medio"
-    EXPRESSION ([sin_sec_mujeres] >896.25 and [sin_sec_mujeres] <=1623.0)
+    EXPRESSION ([sin_prim_mujeres] >703.0 and [sin_prim_mujeres] <=1165.0)
     LABEL
       FONT "arial"
       SIZE 10
@@ -242,7 +242,7 @@ LAYER
   END
   CLASS
     NAME "alto"
-    EXPRESSION ([sin_sec_mujeres] >1623.0 and [sin_sec_mujeres] <=3061.25)
+    EXPRESSION ([sin_prim_mujeres] >1165.0 and [sin_prim_mujeres] <=2367.25)
     LABEL
       FONT "arial"
       SIZE 10
@@ -255,7 +255,7 @@ LAYER
   END
   CLASS
     NAME "muy_alto"
-    EXPRESSION ([sin_sec_mujeres] >3061.25)
+    EXPRESSION ([sin_prim_mujeres] >2367.25)
     LABEL
       FONT "arial"
       SIZE 10

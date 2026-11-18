@@ -1,1 +1,1 @@
-var mdmVersion = '6.2.15.1.43';
+var mdmVersion = '6.2.15.1.44';

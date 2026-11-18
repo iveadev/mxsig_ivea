@@ -584,8 +584,8 @@ define(function() {
                             "active": false
                         }
                     },
-                    "c_rezago_educativo_sexo_edad_sin_sec_hombres": {
-                        "label": "Hombres sin secundaria terminada",
+                    "c_rezago_educativo_sexo_edad_sin_prim_hombres": {
+                        "label": "Hombres sin primaria terminada",
                         "scale": 1,
                         "position": 53,
                         "active": false,
@@ -594,8 +594,8 @@ define(function() {
                             "active": false
                         }
                     },
-                    "c_rezago_educativo_sexo_edad_sin_sec_mujeres": {
-                        "label": "Mujeres sin secundaria terminada",
+                    "c_rezago_educativo_sexo_edad_sin_prim_mujeres": {
+                        "label": "Mujeres sin primaria terminada",
                         "scale": 1,
                         "position": 54,
                         "active": false,

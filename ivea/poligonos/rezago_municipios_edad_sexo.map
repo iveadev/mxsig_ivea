@@ -183,19 +183,19 @@ LAYER
 END
 
 LAYER
-  NAME "c_rezago_educativo_sexo_edad_sin_sec_hombres"
+  NAME "c_rezago_educativo_sexo_edad_sin_prim_hombres"
   STATUS ON
   TYPE POLYGON
   CONNECTIONTYPE POSTGIS
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
-  DATA "the_geom FROM (SELECT gid, the_geom, sin_sec_hombres FROM rezago_educativo_censo_2020.rez_educ_edad_sexo_2020_sin_sec WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
+  DATA "the_geom FROM (SELECT gid, the_geom, sin_prim_hombres FROM rezago_educativo_censo_2020.rez_educ_edad_sexo_2020_sin_prim WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Hombres sin secundaria terminada"
+    "wms_title" "Hombres sin primaria terminada"
     "wms_enable_request" "*"
   END
   CLASS
     NAME "bajo"
-    EXPRESSION ([sin_sec_hombres] <=882.25)
+    EXPRESSION ([sin_prim_hombres] <=738.75)
     STYLE
       OUTLINECOLOR 0 128 0
       WIDTH 0.8
@@ -214,7 +214,7 @@ LAYER
   END
   CLASS
     NAME "medio"
-    EXPRESSION ([sin_sec_hombres] >882.25 and [sin_sec_hombres] <=1526.0)
+    EXPRESSION ([sin_prim_hombres] >738.75 and [sin_prim_hombres] <=1199.5)
     STYLE
       OUTLINECOLOR 255 255 0
       WIDTH 0.8
@@ -233,7 +233,7 @@ LAYER
   END
   CLASS
     NAME "alto"
-    EXPRESSION ([sin_sec_hombres] >1526.0 and [sin_sec_hombres] <=2697.0)
+    EXPRESSION ([sin_prim_hombres] >1199.5 and [sin_prim_hombres] <=2391.25)
     STYLE
       OUTLINECOLOR 240 120 15
       WIDTH 0.8
@@ -252,7 +252,7 @@ LAYER
   END
   CLASS
     NAME "muy_alto"
-    EXPRESSION ([sin_sec_hombres] >2697.0)
+    EXPRESSION ([sin_prim_hombres] >2391.25)
     STYLE
       OUTLINECOLOR 255 0 0
       WIDTH 0.8
@@ -272,19 +272,19 @@ LAYER
 END
 
 LAYER
-  NAME "c_rezago_educativo_sexo_edad_sin_sec_mujeres"
+  NAME "c_rezago_educativo_sexo_edad_sin_prim_mujeres"
   STATUS ON
   TYPE POLYGON
   CONNECTIONTYPE POSTGIS
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
-  DATA "the_geom FROM (SELECT gid, the_geom, sin_sec_mujeres FROM rezago_educativo_censo_2020.rez_educ_edad_sexo_2020_sin_sec WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
+  DATA "the_geom FROM (SELECT gid, the_geom, sin_prim_mujeres FROM rezago_educativo_censo_2020.rez_educ_edad_sexo_2020_sin_prim WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Mujeres sin secundaria terminada"
+    "wms_title" "Mujeres sin primaria terminada"
     "wms_enable_request" "*"
   END
   CLASS
     NAME "bajo"
-    EXPRESSION ([sin_sec_mujeres] <=896.25)
+    EXPRESSION ([sin_prim_mujeres] <=703.0)
     STYLE
       OUTLINECOLOR 0 128 0
       WIDTH 0.8
@@ -303,7 +303,7 @@ LAYER
   END
   CLASS
     NAME "medio"
-    EXPRESSION ([sin_sec_mujeres] >896.25 and [sin_sec_mujeres] <=1623.0)
+    EXPRESSION ([sin_prim_mujeres] >703.0 and [sin_prim_mujeres] <=1165.0)
     STYLE
       OUTLINECOLOR 255 255 0
       WIDTH 0.8
@@ -322,7 +322,7 @@ LAYER
   END
   CLASS
     NAME "alto"
-    EXPRESSION ([sin_sec_mujeres] >1623.0 and [sin_sec_mujeres] <=3061.25)
+    EXPRESSION ([sin_prim_mujeres] >1165.0 and [sin_prim_mujeres] <=2367.25)
     STYLE
       OUTLINECOLOR 240 120 15
       WIDTH 0.8
@@ -341,7 +341,7 @@ LAYER
   END
   CLASS
     NAME "muy_alto"
-    EXPRESSION ([sin_sec_mujeres] >3061.25)
+    EXPRESSION ([sin_prim_mujeres] >2367.25)
     STYLE
       OUTLINECOLOR 255 0 0
       WIDTH 0.8

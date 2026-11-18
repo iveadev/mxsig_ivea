@@ -12,7 +12,7 @@ output = "rezago_municipios_edad_sexo"
 esquema = 'rezago_educativo_censo_2020.rez_educ_edad_sexo_2020_'
 tablas = [
     'alfa',
-    #'sin_prim',
+    'sin_prim',
     'sin_sec',
 ]
 
@@ -55,7 +55,7 @@ totales = [ # se le concatena el nombre del nivel
 
 titulos = [
     "en condición de analfabetismo",
-    #"sin primaria terminada",
+    "sin primaria terminada",
     "sin secundaria terminada",
 ]
 
