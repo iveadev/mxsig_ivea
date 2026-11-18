@@ -1,0 +1,361 @@
+# =================================================================
+# MAPA BASE DE GEOMETRÍAS
+# ARCHIVO GENERADO AUTOMÁTICAMENTE A PARTIR DE LA DEFINICIÓN: layers.03_rezago_educativo.04_rezago_por_edad_y_sexo 
+# DESCRIPCIÓN: Rezago educativo por edad y sexo Censo 2020 
+# =================================================================
+
+LAYER
+  NAME "c_rezago_educativo_sexo_edad_alfa_hombres"
+  STATUS ON
+  TYPE POLYGON
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom, alfa_hombres FROM rezago_educativo_censo_2020.rez_educ_edad_sexo_2020_alfa WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
+  METADATA
+    "wms_title" "Personas en rezago por sexo(alfa_hombres, analfabetismo"
+    "wms_enable_request" "*"
+  END
+  CLASS
+    NAME "bajo"
+    EXPRESSION ([alfa_hombres] <=370.25)
+    STYLE
+      OUTLINECOLOR 0 128 0
+      WIDTH 0.8
+      OPACITY 60
+      COLOR 0 128 0
+    END
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "medio"
+    EXPRESSION ([alfa_hombres] >370.25 and [alfa_hombres] <=716.0)
+    STYLE
+      OUTLINECOLOR 255 255 0
+      WIDTH 0.8
+      OPACITY 60
+      COLOR 255 255 0
+    END
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "alto"
+    EXPRESSION ([alfa_hombres] >716.0 and [alfa_hombres] <=1304.25)
+    STYLE
+      OUTLINECOLOR 240 120 15
+      WIDTH 0.8
+      OPACITY 60
+      COLOR 240 120 15
+    END
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "muy_alto"
+    EXPRESSION ([alfa_hombres] >1304.25)
+    STYLE
+      OUTLINECOLOR 255 0 0
+      WIDTH 0.8
+      OPACITY 60
+      COLOR 255 0 0
+    END
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+END
+
+LAYER
+  NAME "c_rezago_educativo_sexo_edad_alfa_mujeres"
+  STATUS ON
+  TYPE POLYGON
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom, alfa_mujeres FROM rezago_educativo_censo_2020.rez_educ_edad_sexo_2020_alfa WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
+  METADATA
+    "wms_title" "Personas en rezago por sexo(alfa_mujeres, sin secundaria"
+    "wms_enable_request" "*"
+  END
+  CLASS
+    NAME "bajo"
+    EXPRESSION ([alfa_mujeres] <=566.25)
+    STYLE
+      OUTLINECOLOR 0 128 0
+      WIDTH 0.8
+      OPACITY 60
+      COLOR 0 128 0
+    END
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "medio"
+    EXPRESSION ([alfa_mujeres] >566.25 and [alfa_mujeres] <=1001.0)
+    STYLE
+      OUTLINECOLOR 255 255 0
+      WIDTH 0.8
+      OPACITY 60
+      COLOR 255 255 0
+    END
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "alto"
+    EXPRESSION ([alfa_mujeres] >1001.0 and [alfa_mujeres] <=1808.0)
+    STYLE
+      OUTLINECOLOR 240 120 15
+      WIDTH 0.8
+      OPACITY 60
+      COLOR 240 120 15
+    END
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "muy_alto"
+    EXPRESSION ([alfa_mujeres] >1808.0)
+    STYLE
+      OUTLINECOLOR 255 0 0
+      WIDTH 0.8
+      OPACITY 60
+      COLOR 255 0 0
+    END
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+END
+
+LAYER
+  NAME "c_rezago_educativo_sexo_edad_sin_sec_hombres"
+  STATUS ON
+  TYPE POLYGON
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom, sin_sec_hombres FROM rezago_educativo_censo_2020.rez_educ_edad_sexo_2020_sin_sec WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
+  METADATA
+    "wms_title" "Personas en rezago por sexo(sin_sec_hombres, analfabetismo"
+    "wms_enable_request" "*"
+  END
+  CLASS
+    NAME "bajo"
+    EXPRESSION ([sin_sec_hombres] <=882.25)
+    STYLE
+      OUTLINECOLOR 0 128 0
+      WIDTH 0.8
+      OPACITY 60
+      COLOR 0 128 0
+    END
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "medio"
+    EXPRESSION ([sin_sec_hombres] >882.25 and [sin_sec_hombres] <=1526.0)
+    STYLE
+      OUTLINECOLOR 255 255 0
+      WIDTH 0.8
+      OPACITY 60
+      COLOR 255 255 0
+    END
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "alto"
+    EXPRESSION ([sin_sec_hombres] >1526.0 and [sin_sec_hombres] <=2697.0)
+    STYLE
+      OUTLINECOLOR 240 120 15
+      WIDTH 0.8
+      OPACITY 60
+      COLOR 240 120 15
+    END
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "muy_alto"
+    EXPRESSION ([sin_sec_hombres] >2697.0)
+    STYLE
+      OUTLINECOLOR 255 0 0
+      WIDTH 0.8
+      OPACITY 60
+      COLOR 255 0 0
+    END
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+END
+
+LAYER
+  NAME "c_rezago_educativo_sexo_edad_sin_sec_mujeres"
+  STATUS ON
+  TYPE POLYGON
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom, sin_sec_mujeres FROM rezago_educativo_censo_2020.rez_educ_edad_sexo_2020_sin_sec WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
+  METADATA
+    "wms_title" "Personas en rezago por sexo(sin_sec_mujeres, sin secundaria"
+    "wms_enable_request" "*"
+  END
+  CLASS
+    NAME "bajo"
+    EXPRESSION ([sin_sec_mujeres] <=896.25)
+    STYLE
+      OUTLINECOLOR 0 128 0
+      WIDTH 0.8
+      OPACITY 60
+      COLOR 0 128 0
+    END
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "medio"
+    EXPRESSION ([sin_sec_mujeres] >896.25 and [sin_sec_mujeres] <=1623.0)
+    STYLE
+      OUTLINECOLOR 255 255 0
+      WIDTH 0.8
+      OPACITY 60
+      COLOR 255 255 0
+    END
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "alto"
+    EXPRESSION ([sin_sec_mujeres] >1623.0 and [sin_sec_mujeres] <=3061.25)
+    STYLE
+      OUTLINECOLOR 240 120 15
+      WIDTH 0.8
+      OPACITY 60
+      COLOR 240 120 15
+    END
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "muy_alto"
+    EXPRESSION ([sin_sec_mujeres] >3061.25)
+    STYLE
+      OUTLINECOLOR 255 0 0
+      WIDTH 0.8
+      OPACITY 60
+      COLOR 255 0 0
+    END
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+END

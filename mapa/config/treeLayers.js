@@ -562,18 +562,68 @@ define(function() {
                 }
             },
             "G12": {
+                "label": "Rezago Educativo por edad y sexo CENSO 2020 (alfabetización)",
+                "layers": {
+                    "c_rezago_educativo_sexo_edad_alfa_hombres": {
+                        "label": "Personas en rezago por sexo(alfa_hombres, analfabetismo",
+                        "scale": 1,
+                        "position": 51,
+                        "active": false,
+                        "texts": {
+                            "scale": 1,
+                            "active": false
+                        }
+                    },
+                    "c_rezago_educativo_sexo_edad_alfa_mujeres": {
+                        "label": "Personas en rezago por sexo(alfa_mujeres, sin secundaria",
+                        "scale": 1,
+                        "position": 52,
+                        "active": false,
+                        "texts": {
+                            "scale": 1,
+                            "active": false
+                        }
+                    }
+                }
+            },
+            "G13": {
+                "label": "Rezago Educativo por edad y sexo CENSO 2020 (sin secundaria)",
+                "layers": {
+                    "c_rezago_educativo_sexo_edad_sin_sec_hombres": {
+                        "label": "Personas en rezago por sexo(sin_sec_hombres, analfabetismo",
+                        "scale": 1,
+                        "position": 53,
+                        "active": false,
+                        "texts": {
+                            "scale": 1,
+                            "active": false
+                        }
+                    },
+                    "c_rezago_educativo_sexo_edad_sin_sec_mujeres": {
+                        "label": "Personas en rezago por sexo(sin_sec_mujeres, sin secundaria",
+                        "scale": 1,
+                        "position": 54,
+                        "active": false,
+                        "texts": {
+                            "scale": 1,
+                            "active": false
+                        }
+                    }
+                }
+            },
+            "G14": {
                 "label": "***Capas de prueba de compatibilidad con MDM***",
                 "layers": {
                     "c_test_mun_ver": {
                         "label": "Capa de municipios reproyectados",
                         "scale": 1,
-                        "position": 51,
+                        "position": 55,
                         "active": false
                     },
                     "c_rezago_educativo_analfabeta_loc_urb_manzana": {
                         "label": "Rezago de analfabetismo por localidad urbana (manzana)",
                         "scale": 1,
-                        "position": 52,
+                        "position": 56,
                         "active": false,
                         "texts": {
                             "scale": 1,
@@ -583,7 +633,7 @@ define(function() {
                     "c_rezago_educativo_sin_prim_loc_urb_manzana": {
                         "label": "Rezago sin primaria por localidad urbana (manzana)",
                         "scale": 1,
-                        "position": 53,
+                        "position": 57,
                         "active": false,
                         "texts": {
                             "scale": 1,
@@ -593,7 +643,7 @@ define(function() {
                     "c_rezago_educativo_sin_sec_loc_urb_manzana": {
                         "label": "Rezago sin secundaria por localidad urbana (manzana)",
                         "scale": 1,
-                        "position": 54,
+                        "position": 58,
                         "active": false,
                         "texts": {
                             "scale": 1,
@@ -603,7 +653,7 @@ define(function() {
                     "c_rezago_educativo_rez_total_loc_urb_manzana": {
                         "label": "Rezago total de Rezago Educativo por localidad urbana (manzana)",
                         "scale": 1,
-                        "position": 55,
+                        "position": 59,
                         "active": false,
                         "texts": {
                             "scale": 1,
