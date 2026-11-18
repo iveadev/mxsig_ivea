@@ -64,7 +64,7 @@ grupo = 'rezago_censo_2020_' # nombrew base para el grupo
 
 # construccion de las capas
 layers = []
-for idx in range(2):
+for idx in range(3):
     #variables
     prefijo = tablas[idx]
     tabla = esquema+prefijo

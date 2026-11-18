@@ -603,6 +603,26 @@ define(function() {
                             "scale": 1,
                             "active": false
                         }
+                    },
+                    "c_rezago_educativo_sexo_edad_sin_sec_hombres": {
+                        "label": "Hombres sin secundaria terminada",
+                        "scale": 1,
+                        "position": 55,
+                        "active": false,
+                        "texts": {
+                            "scale": 1,
+                            "active": false
+                        }
+                    },
+                    "c_rezago_educativo_sexo_edad_sin_sec_mujeres": {
+                        "label": "Mujeres sin secundaria terminada",
+                        "scale": 1,
+                        "position": 56,
+                        "active": false,
+                        "texts": {
+                            "scale": 1,
+                            "active": false
+                        }
                     }
                 }
             },
@@ -612,13 +632,13 @@ define(function() {
                     "c_test_mun_ver": {
                         "label": "Capa de municipios reproyectados",
                         "scale": 1,
-                        "position": 55,
+                        "position": 57,
                         "active": false
                     },
                     "c_rezago_educativo_analfabeta_loc_urb_manzana": {
                         "label": "Rezago de analfabetismo por localidad urbana (manzana)",
                         "scale": 1,
-                        "position": 56,
+                        "position": 58,
                         "active": false,
                         "texts": {
                             "scale": 1,
@@ -628,7 +648,7 @@ define(function() {
                     "c_rezago_educativo_sin_prim_loc_urb_manzana": {
                         "label": "Rezago sin primaria por localidad urbana (manzana)",
                         "scale": 1,
-                        "position": 57,
+                        "position": 59,
                         "active": false,
                         "texts": {
                             "scale": 1,
@@ -638,7 +658,7 @@ define(function() {
                     "c_rezago_educativo_sin_sec_loc_urb_manzana": {
                         "label": "Rezago sin secundaria por localidad urbana (manzana)",
                         "scale": 1,
-                        "position": 58,
+                        "position": 60,
                         "active": false,
                         "texts": {
                             "scale": 1,
@@ -648,7 +668,7 @@ define(function() {
                     "c_rezago_educativo_rez_total_loc_urb_manzana": {
                         "label": "Rezago total de Rezago Educativo por localidad urbana (manzana)",
                         "scale": 1,
-                        "position": 59,
+                        "position": 61,
                         "active": false,
                         "texts": {
                             "scale": 1,
