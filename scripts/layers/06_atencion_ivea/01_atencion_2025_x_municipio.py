@@ -60,20 +60,21 @@ colores = [
     },
     {
         "name": "bajo",
-        "color": "0,128,0",
+        "color": "255,0,0",
     },
     {
         "name": "medio",
-        "color": "255,255,0",
-    },
-    {
-        "name": "alto",
         "color": "240,120,15",
     },
     {
+        "name": "alto",
+        "color": "255,255,0",
+    },
+
+    {
         "name": "muy_alto",
-        "color": "255,0,0",
-    }
+        "color": "0,128,0",
+    },
 ]
 
 # construccion de las capas
