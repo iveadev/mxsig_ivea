@@ -30,6 +30,8 @@ INCLUDE "/opt/map/mdm60/ivea/puntos/rezago_localidades_rurales.map"             
 INCLUDE "/opt/map/mdm60/ivea/poligonos/rezago_municipios_indigenas.map"
 #munucipios por sexo
 INCLUDE "/opt/map/mdm60/ivea/poligonos/rezago_municipios_edad_sexo.map"
+#resultados IVEA 2025
+INCLUDE "/opt/map/mdm60/ivea/poligonos/atencion_ivea_2025_x_municipio.map"
 
 #TEST
 INCLUDE "/opt/map/mdm60/ivea/poligonos/test_ver.map"							#Caps de prueba

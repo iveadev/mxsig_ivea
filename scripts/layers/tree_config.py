@@ -36,6 +36,9 @@ GRUPOS = {
     "coordinaciones_sur": {
         "label": "Coordinaciones Regional Sur",
     },
+    "atencion_ivea_2025": {
+        "label": "Atención IVEA 2025 por municipio",
+    },
     "rezago_educativo_inea": {
         "label": "Estimación del Rezago Educativo INEA 2025 (temático)",
     },

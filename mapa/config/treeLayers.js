@@ -356,6 +356,10 @@ define(function() {
                 }
             },
             "G8": {
+                "label": "Atención IVEA 2025 por municipio",
+                "layers": {}
+            },
+            "G9": {
                 "label": "Estimación del Rezago Educativo INEA 2025 (temático)",
                 "layers": {
                     "c_rezago_educativo_porcentaje_analfabetismo": {
@@ -400,7 +404,7 @@ define(function() {
                     }
                 }
             },
-            "G9": {
+            "G10": {
                 "label": "DENUE",
                 "layers": {
                     "c_denue_escuelas_primarias": {
@@ -445,7 +449,7 @@ define(function() {
                     }
                 }
             },
-            "G10": {
+            "G11": {
                 "label": "Otras capas",
                 "layers": {
                     "c_municipios_indigenas_pvd": {
@@ -476,7 +480,7 @@ define(function() {
                     }
                 }
             },
-            "G11": {
+            "G12": {
                 "label": "Rezago Educativo CENSO 2020",
                 "layers": {
                     "c_analfabetas": {
@@ -561,7 +565,7 @@ define(function() {
                     }
                 }
             },
-            "G12": {
+            "G13": {
                 "label": "Rezago Educativo por edad y sexo CENSO 2020",
                 "layers": {
                     "c_rezago_educativo_sexo_edad_alfa_hombres": {
@@ -623,22 +627,142 @@ define(function() {
                             "scale": 1,
                             "active": false
                         }
+                    },
+                    "c_atencion_ivea_2025_inc_alfa": {
+                        "label": "Resultados de incorporación en alfabetización",
+                        "scale": 1,
+                        "position": 57,
+                        "active": false,
+                        "texts": {
+                            "scale": 1,
+                            "active": false
+                        }
+                    },
+                    "c_atencion_ivea_2025_inc_prim": {
+                        "label": "Resultados de atención en alfabetización",
+                        "scale": 1,
+                        "position": 58,
+                        "active": false,
+                        "texts": {
+                            "scale": 1,
+                            "active": false
+                        }
+                    },
+                    "c_atencion_ivea_2025_inc_sec": {
+                        "label": "Resultados de conclución de nivel en alfabetización",
+                        "scale": 1,
+                        "position": 59,
+                        "active": false,
+                        "texts": {
+                            "scale": 1,
+                            "active": false
+                        }
+                    },
+                    "c_atencion_ivea_2025_inc_total": {
+                        "label": "Resultados de incorporación en primaria",
+                        "scale": 1,
+                        "position": 60,
+                        "active": false,
+                        "texts": {
+                            "scale": 1,
+                            "active": false
+                        }
+                    },
+                    "c_atencion_ivea_2025_atn_alfa": {
+                        "label": "Resultados de atención en primaria",
+                        "scale": 1,
+                        "position": 61,
+                        "active": false,
+                        "texts": {
+                            "scale": 1,
+                            "active": false
+                        }
+                    },
+                    "c_atencion_ivea_2025_atn_prim": {
+                        "label": "Resultados de conclución de nivel en primaria",
+                        "scale": 1,
+                        "position": 62,
+                        "active": false,
+                        "texts": {
+                            "scale": 1,
+                            "active": false
+                        }
+                    },
+                    "c_atencion_ivea_2025_atn_sec": {
+                        "label": "Resultados de incorporación en secundaria",
+                        "scale": 1,
+                        "position": 63,
+                        "active": false,
+                        "texts": {
+                            "scale": 1,
+                            "active": false
+                        }
+                    },
+                    "c_atencion_ivea_2025_atn_total": {
+                        "label": "Resultados de atención en secundaria",
+                        "scale": 1,
+                        "position": 64,
+                        "active": false,
+                        "texts": {
+                            "scale": 1,
+                            "active": false
+                        }
+                    },
+                    "c_atencion_ivea_2025_ucn_alfa": {
+                        "label": "Resultados de conclución de nivel en secundaria",
+                        "scale": 1,
+                        "position": 65,
+                        "active": false,
+                        "texts": {
+                            "scale": 1,
+                            "active": false
+                        }
+                    },
+                    "c_atencion_ivea_2025_ucn_prim": {
+                        "label": "Resultados de incorporación totales",
+                        "scale": 1,
+                        "position": 66,
+                        "active": false,
+                        "texts": {
+                            "scale": 1,
+                            "active": false
+                        }
+                    },
+                    "c_atencion_ivea_2025_ucn_sec": {
+                        "label": "Resultados de atención totales",
+                        "scale": 1,
+                        "position": 67,
+                        "active": false,
+                        "texts": {
+                            "scale": 1,
+                            "active": false
+                        }
+                    },
+                    "c_atencion_ivea_2025_ucn_total": {
+                        "label": "Resultados de conclución de nivel totales",
+                        "scale": 1,
+                        "position": 68,
+                        "active": false,
+                        "texts": {
+                            "scale": 1,
+                            "active": false
+                        }
                     }
                 }
             },
-            "G13": {
+            "G14": {
                 "label": "***Capas de prueba de compatibilidad con MDM***",
                 "layers": {
                     "c_test_mun_ver": {
                         "label": "Capa de municipios reproyectados",
                         "scale": 1,
-                        "position": 57,
+                        "position": 69,
                         "active": false
                     },
                     "c_rezago_educativo_analfabeta_loc_urb_manzana": {
                         "label": "Rezago de analfabetismo por localidad urbana (manzana)",
                         "scale": 1,
-                        "position": 58,
+                        "position": 70,
                         "active": false,
                         "texts": {
                             "scale": 1,
@@ -648,7 +772,7 @@ define(function() {
                     "c_rezago_educativo_sin_prim_loc_urb_manzana": {
                         "label": "Rezago sin primaria por localidad urbana (manzana)",
                         "scale": 1,
-                        "position": 59,
+                        "position": 71,
                         "active": false,
                         "texts": {
                             "scale": 1,
@@ -658,7 +782,7 @@ define(function() {
                     "c_rezago_educativo_sin_sec_loc_urb_manzana": {
                         "label": "Rezago sin secundaria por localidad urbana (manzana)",
                         "scale": 1,
-                        "position": 60,
+                        "position": 72,
                         "active": false,
                         "texts": {
                             "scale": 1,
@@ -668,7 +792,7 @@ define(function() {
                     "c_rezago_educativo_rez_total_loc_urb_manzana": {
                         "label": "Rezago total de Rezago Educativo por localidad urbana (manzana)",
                         "scale": 1,
-                        "position": 61,
+                        "position": 73,
                         "active": false,
                         "texts": {
                             "scale": 1,

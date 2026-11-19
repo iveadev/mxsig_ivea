@@ -19,7 +19,8 @@ INCLUDE "/opt/map/mdm60/ivea/leyendas/rezago_localidades_rurales.map"		   #rezag
 INCLUDE "/opt/map/mdm60/ivea/leyendas/rezago_municipios_edad_sexo.map"
 
 INCLUDE "/opt/map/mdm60/ivea/leyendas/rezago_municipios_indigenas.map"
-
+#resultados IVEA 2025
+INCLUDE "/opt/map/mdm60/ivea/leyendas/atencion_ivea_2025_x_municipio.map"
 
 #TEST
 INCLUDE "/opt/map/mdm60/ivea/leyendas/rez_loc_urb_manzanas.map"

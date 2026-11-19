@@ -1,0 +1,953 @@
+# =================================================================
+# MAPA EXCLUSIVO DE TEXTOS (leyendas)
+# ARCHIVO GENERADO AUTOMÁTICAMENTE A PARTIR DE LA DEFINICIÓN: layers.06_atencion_ivea.01_atencion_2025_x_municipio 
+# DESCRIPCIÓN: Atención IVEA 2025 
+# =================================================================
+
+LAYER
+  NAME "t_atencion_ivea_2025_inc_alfa"
+  STATUS ON
+  TYPE POLYGON
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom, inc_alfa FROM ivea.resultados_por_municipio_2025 WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
+  METADATA
+    "wms_title" "Texto Resultados de incorporación en alfabetización"
+    "wms_enable_request" "*"
+  END
+  LABELITEM "inc_alfa"
+  CLASS
+    NAME "nulo"
+    EXPRESSION (inc_alfa] = 0)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "bajo"
+    EXPRESSION (inc_alfa] >1 and [inc_alfa] <=0.0)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "medio"
+    EXPRESSION ([inc_alfa] >0.0 and [inc_alfa] <=1.5)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "alto"
+    EXPRESSION ([inc_alfa] >1.5 and [inc_alfa] <=6.25)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "muy_alto"
+    EXPRESSION ([inc_alfa] >6.25)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+END
+
+LAYER
+  NAME "t_atencion_ivea_2025_inc_prim"
+  STATUS ON
+  TYPE POLYGON
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom, inc_prim FROM ivea.resultados_por_municipio_2025 WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
+  METADATA
+    "wms_title" "Texto Resultados de atención en alfabetización"
+    "wms_enable_request" "*"
+  END
+  LABELITEM "inc_prim"
+  CLASS
+    NAME "nulo"
+    EXPRESSION (inc_prim] = 0)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "bajo"
+    EXPRESSION (inc_prim] >1 and [inc_prim] <=1.0)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "medio"
+    EXPRESSION ([inc_prim] >1.0 and [inc_prim] <=5.0)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "alto"
+    EXPRESSION ([inc_prim] >5.0 and [inc_prim] <=16.0)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "muy_alto"
+    EXPRESSION ([inc_prim] >16.0)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+END
+
+LAYER
+  NAME "t_atencion_ivea_2025_inc_sec"
+  STATUS ON
+  TYPE POLYGON
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom, inc_sec FROM ivea.resultados_por_municipio_2025 WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
+  METADATA
+    "wms_title" "Texto Resultados de conclución de nivel en alfabetización"
+    "wms_enable_request" "*"
+  END
+  LABELITEM "inc_sec"
+  CLASS
+    NAME "nulo"
+    EXPRESSION (inc_sec] = 0)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "bajo"
+    EXPRESSION (inc_sec] >1 and [inc_sec] <=1.0)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "medio"
+    EXPRESSION ([inc_sec] >1.0 and [inc_sec] <=6.0)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "alto"
+    EXPRESSION ([inc_sec] >6.0 and [inc_sec] <=18.0)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "muy_alto"
+    EXPRESSION ([inc_sec] >18.0)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+END
+
+LAYER
+  NAME "t_atencion_ivea_2025_inc_total"
+  STATUS ON
+  TYPE POLYGON
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom, inc_total FROM ivea.resultados_por_municipio_2025 WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
+  METADATA
+    "wms_title" "Texto Resultados de incorporación en primaria"
+    "wms_enable_request" "*"
+  END
+  LABELITEM "inc_total"
+  CLASS
+    NAME "nulo"
+    EXPRESSION (inc_total] = 0)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "bajo"
+    EXPRESSION (inc_total] >1 and [inc_total] <=5.0)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "medio"
+    EXPRESSION ([inc_total] >5.0 and [inc_total] <=18.0)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "alto"
+    EXPRESSION ([inc_total] >18.0 and [inc_total] <=38.75)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "muy_alto"
+    EXPRESSION ([inc_total] >38.75)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+END
+
+LAYER
+  NAME "t_atencion_ivea_2025_atn_alfa"
+  STATUS ON
+  TYPE POLYGON
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom, atn_alfa FROM ivea.resultados_por_municipio_2025 WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
+  METADATA
+    "wms_title" "Texto Resultados de atención en primaria"
+    "wms_enable_request" "*"
+  END
+  LABELITEM "atn_alfa"
+  CLASS
+    NAME "nulo"
+    EXPRESSION (atn_alfa] = 0)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "bajo"
+    EXPRESSION (atn_alfa] >1 and [atn_alfa] <=5.0)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "medio"
+    EXPRESSION ([atn_alfa] >5.0 and [atn_alfa] <=13.0)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "alto"
+    EXPRESSION ([atn_alfa] >13.0 and [atn_alfa] <=28.0)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "muy_alto"
+    EXPRESSION ([atn_alfa] >28.0)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+END
+
+LAYER
+  NAME "t_atencion_ivea_2025_atn_prim"
+  STATUS ON
+  TYPE POLYGON
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom, atn_prim FROM ivea.resultados_por_municipio_2025 WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
+  METADATA
+    "wms_title" "Texto Resultados de conclución de nivel en primaria"
+    "wms_enable_request" "*"
+  END
+  LABELITEM "atn_prim"
+  CLASS
+    NAME "nulo"
+    EXPRESSION (atn_prim] = 0)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "bajo"
+    EXPRESSION (atn_prim] >1 and [atn_prim] <=6.0)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "medio"
+    EXPRESSION ([atn_prim] >6.0 and [atn_prim] <=17.0)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "alto"
+    EXPRESSION ([atn_prim] >17.0 and [atn_prim] <=36.0)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "muy_alto"
+    EXPRESSION ([atn_prim] >36.0)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+END
+
+LAYER
+  NAME "t_atencion_ivea_2025_atn_sec"
+  STATUS ON
+  TYPE POLYGON
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom, atn_sec FROM ivea.resultados_por_municipio_2025 WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
+  METADATA
+    "wms_title" "Texto Resultados de incorporación en secundaria"
+    "wms_enable_request" "*"
+  END
+  LABELITEM "atn_sec"
+  CLASS
+    NAME "nulo"
+    EXPRESSION (atn_sec] = 0)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "bajo"
+    EXPRESSION (atn_sec] >1 and [atn_sec] <=12.0)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "medio"
+    EXPRESSION ([atn_sec] >12.0 and [atn_sec] <=28.0)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "alto"
+    EXPRESSION ([atn_sec] >28.0 and [atn_sec] <=60.5)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "muy_alto"
+    EXPRESSION ([atn_sec] >60.5)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+END
+
+LAYER
+  NAME "t_atencion_ivea_2025_atn_total"
+  STATUS ON
+  TYPE POLYGON
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom, atn_total FROM ivea.resultados_por_municipio_2025 WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
+  METADATA
+    "wms_title" "Texto Resultados de atención en secundaria"
+    "wms_enable_request" "*"
+  END
+  LABELITEM "atn_total"
+  CLASS
+    NAME "nulo"
+    EXPRESSION (atn_total] = 0)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "bajo"
+    EXPRESSION (atn_total] >1 and [atn_total] <=30.0)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "medio"
+    EXPRESSION ([atn_total] >30.0 and [atn_total] <=62.0)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "alto"
+    EXPRESSION ([atn_total] >62.0 and [atn_total] <=126.5)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "muy_alto"
+    EXPRESSION ([atn_total] >126.5)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+END
+
+LAYER
+  NAME "t_atencion_ivea_2025_ucn_alfa"
+  STATUS ON
+  TYPE POLYGON
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom, ucn_alfa FROM ivea.resultados_por_municipio_2025 WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
+  METADATA
+    "wms_title" "Texto Resultados de conclución de nivel en secundaria"
+    "wms_enable_request" "*"
+  END
+  LABELITEM "ucn_alfa"
+  CLASS
+    NAME "nulo"
+    EXPRESSION (ucn_alfa] = 0)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "bajo"
+    EXPRESSION (ucn_alfa] >1 and [ucn_alfa] <=5.0)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "medio"
+    EXPRESSION ([ucn_alfa] >5.0 and [ucn_alfa] <=16.5)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "alto"
+    EXPRESSION ([ucn_alfa] >16.5 and [ucn_alfa] <=38.0)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "muy_alto"
+    EXPRESSION ([ucn_alfa] >38.0)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+END
+
+LAYER
+  NAME "t_atencion_ivea_2025_ucn_prim"
+  STATUS ON
+  TYPE POLYGON
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom, ucn_prim FROM ivea.resultados_por_municipio_2025 WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
+  METADATA
+    "wms_title" "Texto Resultados de incorporación totales"
+    "wms_enable_request" "*"
+  END
+  LABELITEM "ucn_prim"
+  CLASS
+    NAME "nulo"
+    EXPRESSION (ucn_prim] = 0)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "bajo"
+    EXPRESSION (ucn_prim] >1 and [ucn_prim] <=6.0)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "medio"
+    EXPRESSION ([ucn_prim] >6.0 and [ucn_prim] <=16.0)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "alto"
+    EXPRESSION ([ucn_prim] >16.0 and [ucn_prim] <=31.0)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "muy_alto"
+    EXPRESSION ([ucn_prim] >31.0)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+END
+
+LAYER
+  NAME "t_atencion_ivea_2025_ucn_sec"
+  STATUS ON
+  TYPE POLYGON
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom, ucn_sec FROM ivea.resultados_por_municipio_2025 WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
+  METADATA
+    "wms_title" "Texto Resultados de atención totales"
+    "wms_enable_request" "*"
+  END
+  LABELITEM "ucn_sec"
+  CLASS
+    NAME "nulo"
+    EXPRESSION (ucn_sec] = 0)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "bajo"
+    EXPRESSION (ucn_sec] >1 and [ucn_sec] <=13.0)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "medio"
+    EXPRESSION ([ucn_sec] >13.0 and [ucn_sec] <=32.0)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "alto"
+    EXPRESSION ([ucn_sec] >32.0 and [ucn_sec] <=59.25)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "muy_alto"
+    EXPRESSION ([ucn_sec] >59.25)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+END
+
+LAYER
+  NAME "t_atencion_ivea_2025_ucn_total"
+  STATUS ON
+  TYPE POLYGON
+  CONNECTIONTYPE POSTGIS
+  CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
+  DATA "the_geom FROM (SELECT gid, the_geom, ucn_total FROM ivea.resultados_por_municipio_2025 WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
+  METADATA
+    "wms_title" "Texto Resultados de conclución de nivel totales"
+    "wms_enable_request" "*"
+  END
+  LABELITEM "ucn_total"
+  CLASS
+    NAME "nulo"
+    EXPRESSION (ucn_total] = 0)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "bajo"
+    EXPRESSION (ucn_total] >1 and [ucn_total] <=33.0)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "medio"
+    EXPRESSION ([ucn_total] >33.0 and [ucn_total] <=71.0)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "alto"
+    EXPRESSION ([ucn_total] >71.0 and [ucn_total] <=128.75)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+  CLASS
+    NAME "muy_alto"
+    EXPRESSION ([ucn_total] >128.75)
+    LABEL
+      FONT "arial"
+      SIZE 10
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      BUFFER 5
+      POSITION uc
+      TYPE truetype
+    END
+  END
+END
