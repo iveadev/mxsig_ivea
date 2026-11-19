@@ -38,8 +38,8 @@ titulos_atn = [
     "conclución de nivel",
 ]
 titulos = []
-for tn in titulos_nivel:
-    for ta in titulos_atn:
+for tn in titulos_atn:
+    for ta in titulos_nivel:
         titulos.append(f"Resultados de {ta} {tn}")
 
 layer = {

@@ -12,7 +12,7 @@ LAYER
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
   DATA "the_geom FROM (SELECT gid, the_geom, inc_alfa FROM ivea.resultados_por_municipio_2025 WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Resultados de incorporación en alfabetización"
+    "wms_title" "Resultados de en alfabetización incorporación"
     "wms_enable_request" "*"
   END
   CLASS
@@ -120,7 +120,7 @@ LAYER
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
   DATA "the_geom FROM (SELECT gid, the_geom, inc_prim FROM ivea.resultados_por_municipio_2025 WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Resultados de atención en alfabetización"
+    "wms_title" "Resultados de en primaria incorporación"
     "wms_enable_request" "*"
   END
   CLASS
@@ -228,7 +228,7 @@ LAYER
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
   DATA "the_geom FROM (SELECT gid, the_geom, inc_sec FROM ivea.resultados_por_municipio_2025 WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Resultados de conclución de nivel en alfabetización"
+    "wms_title" "Resultados de en secundaria incorporación"
     "wms_enable_request" "*"
   END
   CLASS
@@ -336,7 +336,7 @@ LAYER
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
   DATA "the_geom FROM (SELECT gid, the_geom, inc_total FROM ivea.resultados_por_municipio_2025 WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Resultados de incorporación en primaria"
+    "wms_title" "Resultados de totales incorporación"
     "wms_enable_request" "*"
   END
   CLASS
@@ -444,7 +444,7 @@ LAYER
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
   DATA "the_geom FROM (SELECT gid, the_geom, atn_alfa FROM ivea.resultados_por_municipio_2025 WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Resultados de atención en primaria"
+    "wms_title" "Resultados de en alfabetización atención"
     "wms_enable_request" "*"
   END
   CLASS
@@ -552,7 +552,7 @@ LAYER
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
   DATA "the_geom FROM (SELECT gid, the_geom, atn_prim FROM ivea.resultados_por_municipio_2025 WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Resultados de conclución de nivel en primaria"
+    "wms_title" "Resultados de en primaria atención"
     "wms_enable_request" "*"
   END
   CLASS
@@ -660,7 +660,7 @@ LAYER
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
   DATA "the_geom FROM (SELECT gid, the_geom, atn_sec FROM ivea.resultados_por_municipio_2025 WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Resultados de incorporación en secundaria"
+    "wms_title" "Resultados de en secundaria atención"
     "wms_enable_request" "*"
   END
   CLASS
@@ -768,7 +768,7 @@ LAYER
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
   DATA "the_geom FROM (SELECT gid, the_geom, atn_total FROM ivea.resultados_por_municipio_2025 WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Resultados de atención en secundaria"
+    "wms_title" "Resultados de totales atención"
     "wms_enable_request" "*"
   END
   CLASS
@@ -876,7 +876,7 @@ LAYER
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
   DATA "the_geom FROM (SELECT gid, the_geom, ucn_alfa FROM ivea.resultados_por_municipio_2025 WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Resultados de conclución de nivel en secundaria"
+    "wms_title" "Resultados de en alfabetización conclución de nivel"
     "wms_enable_request" "*"
   END
   CLASS
@@ -984,7 +984,7 @@ LAYER
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
   DATA "the_geom FROM (SELECT gid, the_geom, ucn_prim FROM ivea.resultados_por_municipio_2025 WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Resultados de incorporación totales"
+    "wms_title" "Resultados de en primaria conclución de nivel"
     "wms_enable_request" "*"
   END
   CLASS
@@ -1092,7 +1092,7 @@ LAYER
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
   DATA "the_geom FROM (SELECT gid, the_geom, ucn_sec FROM ivea.resultados_por_municipio_2025 WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Resultados de atención totales"
+    "wms_title" "Resultados de en secundaria conclución de nivel"
     "wms_enable_request" "*"
   END
   CLASS
@@ -1200,7 +1200,7 @@ LAYER
   CONNECTION "host=mxsig-db port=5432 dbname=mdm6data user=postgres password=P0stgr3s"
   DATA "the_geom FROM (SELECT gid, the_geom, ucn_total FROM ivea.resultados_por_municipio_2025 WHERE the_geom && !BOX!) AS t1 USING UNIQUE gid USING SRID=900913"
   METADATA
-    "wms_title" "Resultados de conclución de nivel totales"
+    "wms_title" "Resultados de totales conclución de nivel"
     "wms_enable_request" "*"
   END
   CLASS
