@@ -125,7 +125,7 @@ for campo in campos:
         },
         "class": clases,
         "_tree": {
-            "grupo": "rezago_censo_2020_edades_y_sexo",
+            "grupo": "atencion_ivea_2025",
         },
     })
     t=t+1
