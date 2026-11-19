@@ -83,8 +83,8 @@ for campo in campos:
     q1, q2, q3 = obtener_cuartiles_desde_postgres(tabla, campo)
     #condicionales de acuerdo a los cuartiles generados a partir de los datos de la DB
     condicionales = [
-        f"{campo}] = 0",
-        f"{campo}] >1 and [{campo}] <={q1}",
+        f"[{campo}] = 0",
+        f"[{campo}] >1 and [{campo}] <={q1}",
         f"[{campo}] >{q1} and [{campo}] <={q2}",
         f"[{campo}] >{q2} and [{campo}] <={q3}",
         f"[{campo}] >{q3}",

@@ -17,7 +17,7 @@ LAYER
   END
   CLASS
     NAME "nulo"
-    EXPRESSION (inc_alfa] = 0)
+    EXPRESSION ([inc_alfa] = 0)
     STYLE
       OUTLINECOLOR 80 80 80
       WIDTH 0.8
@@ -36,7 +36,7 @@ LAYER
   END
   CLASS
     NAME "bajo"
-    EXPRESSION (inc_alfa] >1 and [inc_alfa] <=0.0)
+    EXPRESSION ([inc_alfa] >1 and [inc_alfa] <=0.0)
     STYLE
       OUTLINECOLOR 0 128 0
       WIDTH 0.8
@@ -125,7 +125,7 @@ LAYER
   END
   CLASS
     NAME "nulo"
-    EXPRESSION (inc_prim] = 0)
+    EXPRESSION ([inc_prim] = 0)
     STYLE
       OUTLINECOLOR 80 80 80
       WIDTH 0.8
@@ -144,7 +144,7 @@ LAYER
   END
   CLASS
     NAME "bajo"
-    EXPRESSION (inc_prim] >1 and [inc_prim] <=1.0)
+    EXPRESSION ([inc_prim] >1 and [inc_prim] <=1.0)
     STYLE
       OUTLINECOLOR 0 128 0
       WIDTH 0.8
@@ -233,7 +233,7 @@ LAYER
   END
   CLASS
     NAME "nulo"
-    EXPRESSION (inc_sec] = 0)
+    EXPRESSION ([inc_sec] = 0)
     STYLE
       OUTLINECOLOR 80 80 80
       WIDTH 0.8
@@ -252,7 +252,7 @@ LAYER
   END
   CLASS
     NAME "bajo"
-    EXPRESSION (inc_sec] >1 and [inc_sec] <=1.0)
+    EXPRESSION ([inc_sec] >1 and [inc_sec] <=1.0)
     STYLE
       OUTLINECOLOR 0 128 0
       WIDTH 0.8
@@ -341,7 +341,7 @@ LAYER
   END
   CLASS
     NAME "nulo"
-    EXPRESSION (inc_total] = 0)
+    EXPRESSION ([inc_total] = 0)
     STYLE
       OUTLINECOLOR 80 80 80
       WIDTH 0.8
@@ -360,7 +360,7 @@ LAYER
   END
   CLASS
     NAME "bajo"
-    EXPRESSION (inc_total] >1 and [inc_total] <=5.0)
+    EXPRESSION ([inc_total] >1 and [inc_total] <=5.0)
     STYLE
       OUTLINECOLOR 0 128 0
       WIDTH 0.8
@@ -449,7 +449,7 @@ LAYER
   END
   CLASS
     NAME "nulo"
-    EXPRESSION (atn_alfa] = 0)
+    EXPRESSION ([atn_alfa] = 0)
     STYLE
       OUTLINECOLOR 80 80 80
       WIDTH 0.8
@@ -468,7 +468,7 @@ LAYER
   END
   CLASS
     NAME "bajo"
-    EXPRESSION (atn_alfa] >1 and [atn_alfa] <=5.0)
+    EXPRESSION ([atn_alfa] >1 and [atn_alfa] <=5.0)
     STYLE
       OUTLINECOLOR 0 128 0
       WIDTH 0.8
@@ -557,7 +557,7 @@ LAYER
   END
   CLASS
     NAME "nulo"
-    EXPRESSION (atn_prim] = 0)
+    EXPRESSION ([atn_prim] = 0)
     STYLE
       OUTLINECOLOR 80 80 80
       WIDTH 0.8
@@ -576,7 +576,7 @@ LAYER
   END
   CLASS
     NAME "bajo"
-    EXPRESSION (atn_prim] >1 and [atn_prim] <=6.0)
+    EXPRESSION ([atn_prim] >1 and [atn_prim] <=6.0)
     STYLE
       OUTLINECOLOR 0 128 0
       WIDTH 0.8
@@ -665,7 +665,7 @@ LAYER
   END
   CLASS
     NAME "nulo"
-    EXPRESSION (atn_sec] = 0)
+    EXPRESSION ([atn_sec] = 0)
     STYLE
       OUTLINECOLOR 80 80 80
       WIDTH 0.8
@@ -684,7 +684,7 @@ LAYER
   END
   CLASS
     NAME "bajo"
-    EXPRESSION (atn_sec] >1 and [atn_sec] <=12.0)
+    EXPRESSION ([atn_sec] >1 and [atn_sec] <=12.0)
     STYLE
       OUTLINECOLOR 0 128 0
       WIDTH 0.8
@@ -773,7 +773,7 @@ LAYER
   END
   CLASS
     NAME "nulo"
-    EXPRESSION (atn_total] = 0)
+    EXPRESSION ([atn_total] = 0)
     STYLE
       OUTLINECOLOR 80 80 80
       WIDTH 0.8
@@ -792,7 +792,7 @@ LAYER
   END
   CLASS
     NAME "bajo"
-    EXPRESSION (atn_total] >1 and [atn_total] <=30.0)
+    EXPRESSION ([atn_total] >1 and [atn_total] <=30.0)
     STYLE
       OUTLINECOLOR 0 128 0
       WIDTH 0.8
@@ -881,7 +881,7 @@ LAYER
   END
   CLASS
     NAME "nulo"
-    EXPRESSION (ucn_alfa] = 0)
+    EXPRESSION ([ucn_alfa] = 0)
     STYLE
       OUTLINECOLOR 80 80 80
       WIDTH 0.8
@@ -900,7 +900,7 @@ LAYER
   END
   CLASS
     NAME "bajo"
-    EXPRESSION (ucn_alfa] >1 and [ucn_alfa] <=5.0)
+    EXPRESSION ([ucn_alfa] >1 and [ucn_alfa] <=5.0)
     STYLE
       OUTLINECOLOR 0 128 0
       WIDTH 0.8
@@ -989,7 +989,7 @@ LAYER
   END
   CLASS
     NAME "nulo"
-    EXPRESSION (ucn_prim] = 0)
+    EXPRESSION ([ucn_prim] = 0)
     STYLE
       OUTLINECOLOR 80 80 80
       WIDTH 0.8
@@ -1008,7 +1008,7 @@ LAYER
   END
   CLASS
     NAME "bajo"
-    EXPRESSION (ucn_prim] >1 and [ucn_prim] <=6.0)
+    EXPRESSION ([ucn_prim] >1 and [ucn_prim] <=6.0)
     STYLE
       OUTLINECOLOR 0 128 0
       WIDTH 0.8
@@ -1097,7 +1097,7 @@ LAYER
   END
   CLASS
     NAME "nulo"
-    EXPRESSION (ucn_sec] = 0)
+    EXPRESSION ([ucn_sec] = 0)
     STYLE
       OUTLINECOLOR 80 80 80
       WIDTH 0.8
@@ -1116,7 +1116,7 @@ LAYER
   END
   CLASS
     NAME "bajo"
-    EXPRESSION (ucn_sec] >1 and [ucn_sec] <=13.0)
+    EXPRESSION ([ucn_sec] >1 and [ucn_sec] <=13.0)
     STYLE
       OUTLINECOLOR 0 128 0
       WIDTH 0.8
@@ -1205,7 +1205,7 @@ LAYER
   END
   CLASS
     NAME "nulo"
-    EXPRESSION (ucn_total] = 0)
+    EXPRESSION ([ucn_total] = 0)
     STYLE
       OUTLINECOLOR 80 80 80
       WIDTH 0.8
@@ -1224,7 +1224,7 @@ LAYER
   END
   CLASS
     NAME "bajo"
-    EXPRESSION (ucn_total] >1 and [ucn_total] <=33.0)
+    EXPRESSION ([ucn_total] >1 and [ucn_total] <=33.0)
     STYLE
       OUTLINECOLOR 0 128 0
       WIDTH 0.8
