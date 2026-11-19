@@ -349,7 +349,7 @@
             "label": "Atención IVEA 2025 por municipio",
             "layers": {
                 "c_atencion_ivea_2025_inc_alfa": {
-                    "label": "Resultados de en alfabetización incorporación",
+                    "label": "Resultados de incorporación en alfabetización",
                     "scale": 1,
                     "position": 32,
                     "active": false,
@@ -359,7 +359,7 @@
                     }
                 },
                 "c_atencion_ivea_2025_inc_prim": {
-                    "label": "Resultados de en primaria incorporación",
+                    "label": "Resultados de incorporación en primaria",
                     "scale": 1,
                     "position": 33,
                     "active": false,
@@ -369,7 +369,7 @@
                     }
                 },
                 "c_atencion_ivea_2025_inc_sec": {
-                    "label": "Resultados de en secundaria incorporación",
+                    "label": "Resultados de incorporación en secundaria",
                     "scale": 1,
                     "position": 34,
                     "active": false,
@@ -379,7 +379,7 @@
                     }
                 },
                 "c_atencion_ivea_2025_inc_total": {
-                    "label": "Resultados de totales incorporación",
+                    "label": "Resultados de incorporación totales",
                     "scale": 1,
                     "position": 35,
                     "active": false,
@@ -389,7 +389,7 @@
                     }
                 },
                 "c_atencion_ivea_2025_atn_alfa": {
-                    "label": "Resultados de en alfabetización atención",
+                    "label": "Resultados de atención en alfabetización",
                     "scale": 1,
                     "position": 36,
                     "active": false,
@@ -399,7 +399,7 @@
                     }
                 },
                 "c_atencion_ivea_2025_atn_prim": {
-                    "label": "Resultados de en primaria atención",
+                    "label": "Resultados de atención en primaria",
                     "scale": 1,
                     "position": 37,
                     "active": false,
@@ -409,7 +409,7 @@
                     }
                 },
                 "c_atencion_ivea_2025_atn_sec": {
-                    "label": "Resultados de en secundaria atención",
+                    "label": "Resultados de atención en secundaria",
                     "scale": 1,
                     "position": 38,
                     "active": false,
@@ -419,7 +419,7 @@
                     }
                 },
                 "c_atencion_ivea_2025_atn_total": {
-                    "label": "Resultados de totales atención",
+                    "label": "Resultados de atención totales",
                     "scale": 1,
                     "position": 39,
                     "active": false,
@@ -429,7 +429,7 @@
                     }
                 },
                 "c_atencion_ivea_2025_ucn_alfa": {
-                    "label": "Resultados de en alfabetización conclución de nivel",
+                    "label": "Resultados de conclución de nivel en alfabetización",
                     "scale": 1,
                     "position": 40,
                     "active": false,
@@ -439,7 +439,7 @@
                     }
                 },
                 "c_atencion_ivea_2025_ucn_prim": {
-                    "label": "Resultados de en primaria conclución de nivel",
+                    "label": "Resultados de conclución de nivel en primaria",
                     "scale": 1,
                     "position": 41,
                     "active": false,
@@ -449,7 +449,7 @@
                     }
                 },
                 "c_atencion_ivea_2025_ucn_sec": {
-                    "label": "Resultados de en secundaria conclución de nivel",
+                    "label": "Resultados de conclución de nivel en secundaria",
                     "scale": 1,
                     "position": 42,
                     "active": false,
@@ -459,7 +459,7 @@
                     }
                 },
                 "c_atencion_ivea_2025_ucn_total": {
-                    "label": "Resultados de totales conclución de nivel",
+                    "label": "Resultados de conclución de nivel totales",
                     "scale": 1,
                     "position": 43,
                     "active": false,
